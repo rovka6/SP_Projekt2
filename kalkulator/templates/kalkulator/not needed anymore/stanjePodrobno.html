@@ -1,0 +1,20 @@
+{% extends "kalkulator/stanje.html" %}
+
+{% block izpisStanja %}
+		
+	
+	<br>
+	Stanje na racunu: {{ vsota }}€<br>
+	-----------------------------------------<br>
+	{% for vnos in vnosi %}			
+		{{vnos}}  <br>
+	{% endfor %}	
+
+		
+	
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,40 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+
+	<div id="Obrazec">
+												
+		<form action="VpisiPrihodekPodrobno"> {% csrf_token %} 	
+								
+			<label>Kategorija:</label><select name="kategorija">		
+										<option selected>plača</option>
+										<option>darilo</option>										
+										<option>ostali prihodki</option>											<
+										</select>								
+			<label>Racun:</label><select name="racun">		
+										{% for racun in racuni %}		
+											{% if user.username == racun.uporabnik.username %}
+												<option>{{racun.ime}}</option>	
+											{% endif %}
+										{% endfor%}																									
+										</select>
+			<label>Znesek:</label><input type="text" placeholder="Vpisite znesek" name="znesek">													
+			<label>Podrobnosti:</label><textarea rows="2" placeholder="Vpisite podrobnosti prihodka" name="podrobnosti"></textarea>							
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>
+		
+	
+		
+	<div id="izpisStanja"> 								
+			
+		{% block vpisPrihodka %}		
+		{% endblock %}	
+		
+		{{warning}}
+		
+	</div>
+					
+	</div>		
+ 
+{% endblock %}

@@ -1,0 +1,123 @@
+body{		
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div { 	
+	
+}
+
+#page {	
+	width: 100%;
+	height:98vh; 
+}
+
+#banner { 	
+	position: relative;
+	border: 1px solid white;
+	box-sizing: border-box;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	text-align: right;			
+	color: white;	
+	overflow: hidden;	
+	background-color: #404040;		
+}
+
+#main {
+	height: 83.4%;	
+	border: 1px solid black;
+	box-sizing: border-box;	
+}
+
+#logout {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+#tekst {	
+	float: left;
+	clear: both;
+}
+
+#meniVrstica {		
+	height:20px;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.meniGumb {			
+	background-color: #404040;		
+	float:left;
+	width:25%;
+	height:100%;
+	text-align: center;
+	font-size: 100%;	
+	color: white;
+	box-sizing:border-box;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+
+#Obrazec, #Stanje, #Porocilo {	
+	padding: 10% 15%;		
+}
+
+select, input, textarea {	
+	clear: both;
+	float: left;	
+	width: 200px;
+	margin: 2px 0px;	
+	text-align: right;	
+}
+
+label {
+	float: left;
+	clear: both;
+	width: 200px;	
+	font-weight: bolder;
+}
+
+#activeButton {
+	color: black;		
+	text-decoration: underline;	
+	font-weight: bolder;
+}
+
+#gumbVpisRegistracija {
+	width: 80px;		
+}
+
+#izpisStanja {
+	clear: left;	
+}
+
+#VpisRegisterLink   {	
+	margin: 10%;
+	float: left;
+	color: blue;
+	position: relative;
+	clear: both;	
+}
+
+#Vpis {
+	width: 210px;
+	height: 200px;
+	margin: auto;
+	padding: 25% 0px;		
+}
+
+#yay {
+	
+	position: absolute;
+	top: 88.32%;
+	
+}

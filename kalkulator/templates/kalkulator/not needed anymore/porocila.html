@@ -1,0 +1,41 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Porocilo"> 
+	
+		<form action="PorocilaPodrobno"> 		
+			
+			<label>Izberi racun:</label><select name="racun">	
+										{% for racun in racuni %}		
+											{% if user.username == racun.uporabnik.username %}
+												<option>{{racun.ime}}</option>	
+											{% endif %}
+										{% endfor%}																						
+										</select>			
+			<label>Izberi kategorijo:</label><select name="kategorija">		
+										<option selected>plača</option>
+										<option>darilo</option>
+										<option>ostali prihodki</option>
+										<option>živila</option>
+										<option>stroški stanovanje</option>
+										<option>stroški avtomobil</option>	
+										<option>ostali odhodki</option>	
+										</select>
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
+															
+		<div id="izpisStanja"> 
+			
+			{% block izpisStanja %}
+			
+			{% endblock %}
+			
+			{{warning}}
+			
+		</div>	
+		
+	</div>	
+
+{% endblock %}
+
+

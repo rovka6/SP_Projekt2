@@ -1,0 +1,14 @@
+{% extends "kalkulator/porocila.html" %}
+
+{% block izpisStanja %}
+
+	<br>
+	Skupaj: {{ vsota }}€<br>
+	-----------------------------------------<br>
+	{% for vnos in vnosi %}			
+		{{vnos}}  <br>
+	{% endfor %}	
+
+{% endblock %}
+
+

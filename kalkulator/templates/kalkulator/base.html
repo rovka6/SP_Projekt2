@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href="{% static 'kalkulator/style.css' %}" rel="stylesheet"/>	
+		<meta charset="utf-8" />
+		<title>Kalkulator življenskih stroškov</title>
+	</head>
+	
+	<body>
+	
+		<div id="page">
+	
+			<div id="banner">
+
+				{% block logout %}
+				
+					<div id="logout">							
+							
+								{% if user.is_authenticated %}
+									{{ user.username }}
+									<a href="{% url 'login' %}">Odjavi se</a>
+								{% else %}
+								
+								{% endif %}
+														
+					</div>	
+					
+				{% endblock %}		
+			</div>			
+			
+			<!--- id="activeButton" --->
+			
+			<!--
+			 {% block buttons %}
+				<div id="meniVrstica"> 
+					<div class="meniGumb"><a href="stanje.html">Stanje</a></div>
+					<div class="meniGumb"><a href="vpisiPrihodek.html">Vpiši prihodek</a></div>
+					<div class="meniGumb"><a href="vpisiOdhodek.html">Vpiši odhodek</a></div>
+					<div class="meniGumb"><a href="porocila.html">Poročila</a></div>			
+				</div>
+			{% endblock %}
+			
+			
+			
+			
+			
+			
+			
+			-->
+			
+			
+			
+			
+			<div id="main">
+				
+				 {% block main %}
+					
+				 {% endblock %}
+				
+						
+			</div>						
+			
+		</div>		
+	
+	</body>
+</html>
+
+<!--- 
+	
+	{% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+      <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+
+
+->

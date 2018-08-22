@@ -1,0 +1,40 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+							
+		<form action="AdministracijaPodrobno">	{% csrf_token %} 											
+			<label>Seznam uporabnikov:</label><select name="dropdown">	
+										{% for uporabnik in uporabniki %}		
+											
+												<option>{{uporabnik.username}}</option>	
+											
+										{% endfor%}																						
+										</select>			
+			<input type="submit" id="vpisi" value="Izbrisi">	
+		</form>		
+		
+		<span id="tekst"></span>
+		
+		<div id="izpisStanja"> 								
+							
+			{{warning}}								
+					
+		</div>					
+					
+	</div>
+{% endblock %}
+
+
+<!-- 
+
+{% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+      <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+
+
+-->
