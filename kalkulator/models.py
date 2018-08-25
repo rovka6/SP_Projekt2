@@ -5,14 +5,19 @@ import datetime
 # Create your models here.
 class Tipkovnice(models.Model):     
     znamka = models.CharField(max_length=20)
-    vrstaPrikljucka = models.CharField(max_length=20)
-    brezZicna = models.BooleanField(default=False)
+    prikljucek = models.CharField(max_length=20)
+    povezava = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)
     
-class Procesorji(models.Model):    
+class Graficne(models.Model):     
     znamka = models.CharField(max_length=20)
-    podnozje = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
-        
+    pomnilnik = models.CharField(max_length=20)
+    povezava = models.CharField(max_length=20)
+    opis = models.CharField(max_length=100)
+    kolicina = models.CharField(max_length=20)
+
+    
 class Racun(models.Model):
 	uporabnik = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 	ime = models.CharField(max_length=20)

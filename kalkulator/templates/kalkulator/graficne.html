@@ -1,0 +1,48 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+					
+		<form> 											
+			<label>Izberi prikljucek:</label>
+										<select name="znamka">		
+											<option selected>Vsi</option>
+											<option>AMD</option><
+											<option>NVIDIA</option>							
+										</select>										
+										<select name="povezava">		
+											<option selected>Vsi</option>
+											<option>AGP</option><
+											<option>PCIE</option>							
+										</select>							
+																				
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		
+		{% for graficna in graficne %}			
+		{{graficna.znamka}} {{graficna.model}} {{graficna.pomnilnik}}  {{graficna.povezava}}  {{graficna.opis}} {{graficna.kolicina}}  <br>
+		{% endfor %}
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Racun, Vnos, Procesorji, Tipkovnice
+from .models import Racun, Vnos, Graficne, Tipkovnice
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
 from kalkulator.models import Racun
+from kalkulator.models import Tipkovnice
 from django.contrib.auth.decorators import login_required
 from email.utils import parseaddr
 
@@ -64,21 +65,61 @@ def stanje(request):
     return render(request, 'kalkulator/stanje.html', context)
     
 @login_required 
-def procesorji(request):          
-    context = {}
-    procesorji = Procesorji.objects.all()       
-    context['procesorji'] = procesorji  
-    
-    return render(request, 'kalkulator/procesorji.html', context)
- 
-@login_required 
-def tipkovnice(request):          
+def tipkovnice(request):   
+
+    # Če želimo samo tipkovnice z določenim priključkom
+    if request.method == 'GET'  and 'prikljucek' in request.GET: 
+             
+        # izbran prikljucek v dropdown listu  
+        prikljucek1 = request.GET['prikljucek']   
+          
+        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
+        if prikljucek1 != 'Vsi':         
+            
+            context = {}   
+            tipkovnice = Tipkovnice.objects.filter(prikljucek=prikljucek1)        
+            context['tipkovnice'] = tipkovnice 
+            return render(request, 'kalkulator/tipkovnice.html', context)
+         
     context = {}
     tipkovnice = Tipkovnice.objects.all()       
     context['tipkovnice'] = tipkovnice  
     
     return render(request, 'kalkulator/tipkovnice.html', context)
+ 
+@login_required 
+def graficne(request):    
     
+    context = {}
+    graficne = Graficne.objects.all()  
+    
+    # Če želimo samo grafične z določenim priključkom
+    if request.method == 'GET'  and 'znamka' in request.GET: 
+          
+        
+          
+        # izbran prikljucek v dropdown listu  
+        znamka1 = request.GET['znamka']   
+        povezava1 = request.GET['povezava'] 
+        
+        if znamka1 != 'Vsi':
+            graficne = Graficne.objects.filter(znamka=znamka1) 
+            
+        if povezava1 != 'Vsi':    
+            graficne = graficne.filter(povezava=povezava1)   
+           
+        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
+        #if prikljucek1 != 'Vsi':         
+            
+            #context = {}   
+            #tipkovnice = Tipkovnice.objects.filter(prikljucek=prikljucek1)        
+        context['graficne'] = graficne
+        return render(request, 'kalkulator/graficne.html', context)
+         
+         
+    context['graficne'] = graficne  
+    
+    return render(request, 'kalkulator/graficne.html', context)   
     
 @login_required     
 def dodajRacun(request):

@@ -23,8 +23,8 @@ urlpatterns = [
 	url(r'^stanje', views.stanje, name='stanje'), 
 	url(r'^StanjePodrobno', views.StanjePodrobno, name='StanjePodrobno'), 
 	
-    # procesorji
-    url(r'^procesorji', views.procesorji, name='procesorji'),
+    # graficne
+    url(r'^graficne', views.graficne, name='graficne'),
     
      # tipkovnice
     url(r'^tipkovnice', views.tipkovnice, name='tipkovnice'),

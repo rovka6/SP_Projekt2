@@ -4,11 +4,23 @@
 	<div id="Stanje"> 
 			
 		
-			
+		<form> 											
+			<label>Izberi prikljucek:</label>
+										<select name="prikljucek">		
+											<option selected>Vsi</option>
+											<option>USB</option><
+											<option>PS/2</option>										
+										</select>	
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
 
+		<br>
+		<br>
+		<br>
+		<br>
 		
 		{% for tipkovnica in tipkovnice %}			
-		{{tipkovnica.znamka}}  <br>
+		{{tipkovnica.znamka}}   {{tipkovnica.prikljucek}} {{tipkovnica.povezava}}<br>
 		{% endfor %}
 
 		
