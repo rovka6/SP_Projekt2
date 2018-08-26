@@ -26,8 +26,15 @@ urlpatterns = [
     # graficne
     url(r'^graficne', views.graficne, name='graficne'),
     
-     # tipkovnice
+    # tipkovnice
     url(r'^tipkovnice', views.tipkovnice, name='tipkovnice'),
+    
+    # dodajTipkovnico
+    url(r'^dodajTipkovnico', views.dodajTipkovnico, name='dodajTipkovnico'),
+    
+     # dodajGraficno
+    url(r'^dodajGraficno', views.dodajGraficno, name='dodajGraficno'),
+    
     
 	# vpisi prihodek
 	url(r'^vpisiPrihodek', views.vpisiPrihodek, name='vpisiPrihodek'),

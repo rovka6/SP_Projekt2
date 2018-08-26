@@ -93,37 +93,67 @@ def graficne(request):
     context = {}
     graficne = Graficne.objects.all()  
     
-    # Če želimo samo grafične z določenim priključkom
-    if request.method == 'GET'  and 'znamka' in request.GET: 
-          
-        
+    # Če želimo samo grafične z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'znamka' in request.GET:                   
           
         # izbran prikljucek v dropdown listu  
         znamka1 = request.GET['znamka']   
         povezava1 = request.GET['povezava'] 
-        
+                
         if znamka1 != 'Vsi':
             graficne = Graficne.objects.filter(znamka=znamka1) 
             
         if povezava1 != 'Vsi':    
             graficne = graficne.filter(povezava=povezava1)   
-           
-        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
-        #if prikljucek1 != 'Vsi':         
-            
-            #context = {}   
-            #tipkovnice = Tipkovnice.objects.filter(prikljucek=prikljucek1)        
+                          
         context['graficne'] = graficne
         return render(request, 'kalkulator/graficne.html', context)
-         
-         
+                  
     context['graficne'] = graficne  
     
     return render(request, 'kalkulator/graficne.html', context)   
     
+@login_required
+def dodajTipkovnico(request):
+    
+    context = {}
+
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        prikljucek = request.GET['prikljucek']
+        povezava = request.GET['povezava']
+        kolicina = request.GET['kolicina']
+        
+        nova_tipkovnica = Tipkovnice(znamka=znamka, prikljucek=prikljucek, povezava=povezava, kolicina=kolicina)
+        nova_tipkovnica.save()
+            
+    return render(request, 'kalkulator/dodajTipkovnico.html', context)    
+    
+@login_required
+def dodajGraficno(request):
+    
+    context = {}
+
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        model = request.GET['model']
+        pomnilnik = request.GET['pomnilnik']        
+        povezava = request.GET['povezava']
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nova_graficna = Graficne(znamka=znamka, model=model, pomnilnik=pomnilnik, povezava=povezava, opis=opis, kolicina=kolicina)
+        nova_graficna.save()
+            
+    return render(request, 'kalkulator/dodajGraficno.html', context)    
+  
+    
+    
 @login_required     
 def dodajRacun(request):
-            
+           
     context = {}   
     racuni = Racun.objects.all() 
     context['racuni'] = racuni       
