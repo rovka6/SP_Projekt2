@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 
 """ i added """
-LOGIN_REDIRECT_URL = '../stanje.html'
+LOGIN_REDIRECT_URL = '../main'
 
 
 
