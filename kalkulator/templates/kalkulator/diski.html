@@ -1,0 +1,47 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+			
+		
+		<form> 	
+			<label>znamka:</label><input type="text" placeholder="znamka" name="znamka">
+			<label>Prikljucek:</label><input type="text" placeholder="Prikljucek" name="prikljucek">
+			<label>Velikost:</label><input type="text" placeholder="Velikost" name="velikost">
+			
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		{% for disk in diski %}			
+		{{disk.znamka}}   {{disk.prikljucek}} {{disk.velikost}} {{disk.opis}} {{disk.kolicina}}<br>
+		{% endfor %}
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

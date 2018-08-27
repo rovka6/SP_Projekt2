@@ -1,0 +1,46 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+			
+		
+		<form> 	
+			<label>znamka:</label><input type="text" placeholder="znamka" name="znamka">
+			<label>Prikljucek:</label><input type="text" placeholder="Prikljucek" name="prikljucek">
+			<label>Povezava:</label><input type="text" placeholder="Povezava" name="povezava">
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		{% for miska in miske %}			
+		{{miska.znamka}}   {{miska.prikljucek}} {{miska.povezava}} {{miska.kolicina}}<br>
+		{% endfor %}
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

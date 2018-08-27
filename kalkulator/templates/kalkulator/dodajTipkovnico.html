@@ -4,18 +4,12 @@
 	<div id="Stanje"> 
 			
 		
-		<form action="dodajTipkovnico"> {% csrf_token %} 		
-
-			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">			
-			<label>Prikljucek:</label><select name="prikljucek">		
-										<option selected>PS/2</option>
-										<option>USB</option>														
-										</select>
-			<label>Povezava:</label><select name="povezava">		
-										<option selected>Zicna</option>
-										<option>Brezzicna</option>														
-										</select>
-			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
+		<form action="dodajTipkovnico"> {% csrf_token %} 				
+		
+			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
+			<label>Prikljucek:</label><input type="text" placeholder="Prikljucek" name="prikljucek">
+			<label>Povezava:</label><input type="text" placeholder="Povezava" name="povezava">
+			<label>Kolicina:</label><input type="text" placeholder="Kolicina" name="kolicina">										
 										
 			<input type="submit" id="vpisi" value="Vpisi">			
 			

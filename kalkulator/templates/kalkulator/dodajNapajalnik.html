@@ -1,0 +1,34 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+			
+		
+		<form action="dodajNapajalnik"> {% csrf_token %} 		
+
+			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
+			<label>Moc:</label><input type="text" placeholder="Moc" name="moc">				
+			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
+			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
+										
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>
+		
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

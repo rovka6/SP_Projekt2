@@ -6,10 +6,7 @@
 		
 		<form action="dodajProcesor"> {% csrf_token %} 		
 
-			<label>Znamka:</label><select name="znamka">		
-										<option selected>INTEL</option>
-										<option>AMD</option>														
-										</select>
+			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
 			<label>Podnozje:</label><input type="text" placeholder="Podnozje" name="podnozje">			
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
