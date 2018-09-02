@@ -63,8 +63,7 @@ def tipkovnice(request):
 
     context = {} 
     tipkovnice = Tipkovnica.objects.all() 
-    
-    
+        
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Tipkovnica.objects.values_list('znamka', flat=True).distinct()
     prikljucki = Tipkovnica.objects.values_list('prikljucek', flat=True).distinct()
@@ -174,24 +173,30 @@ def procesorji(request):
 def maticne(request):    
     
     context = {}
-    maticne = Maticna.objects.all()  
+    maticne = Maticna.objects.all() 
+
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Maticna.objects.values_list('znamka', flat=True).distinct()
+    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct()   
+    context['znamke'] = znamke 
+    context['podnozja'] = podnozja    
     
     # Če želimo samo procesorje z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
-          
+                 
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka'].upper()   
-        model = request.GET['model'].upper()
+        znamka = request.GET['znamka']  
+        model = request.GET['model']
         podnozje = request.GET['podnozje'] 
         opis = request.GET['opis'] 
-                
-        if znamka != '':
+                            
+        if znamka != 'Vsi':            
             maticne = Maticna.objects.filter(znamka=znamka)
-         
-        if model != '':   
+       
+        if model != '':
             maticne = maticne.filter(model=model)         
             
-        if podnozje != '':    
+        if podnozje != 'Vsi':    
             maticne = maticne.filter(podnozje=podnozje)   
                           
         context['maticne'] = maticne
@@ -263,21 +268,25 @@ def miske(request):
     context = {}
     miske = Miska.objects.all()  
     
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Miska.objects.values_list('znamka', flat=True).distinct()       
+    context['znamke'] = znamke         
+        
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka'].upper()   
-        prikljucek = request.GET['prikljucek'].upper()
-        povezava = request.GET['povezava'].upper()
+        znamka = request.GET['znamka']  
+        prikljucek = request.GET['prikljucek']
+        povezava = request.GET['povezava']
          
-        if znamka != '':
+        if znamka != 'Vsi':
             miske = Miska.objects.filter(znamka=znamka)
          
-        if prikljucek != '':   
+        if prikljucek != 'Vsi':   
             miske = miske.filter(prikljucek=prikljucek)         
          
-        if povezava != '':   
+        if povezava != 'Vsi':   
             miske = miske.filter(povezava=povezava)         
          
          
@@ -294,21 +303,27 @@ def diski(request):
     context = {}
     diski = Disk.objects.all()  
     
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Disk.objects.values_list('znamka', flat=True).distinct()   
+    velikosti = Disk.objects.values_list('velikost', flat=True).distinct()
+    context['znamke'] = znamke   
+    context['velikosti'] = velikosti           
+    
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka'].upper()   
-        prikljucek = request.GET['prikljucek'].upper()
-        velikost = request.GET['velikost'].upper()
+        znamka = request.GET['znamka'] 
+        prikljucek = request.GET['prikljucek']
+        velikost = request.GET['velikost']
                  
-        if znamka != '':
+        if znamka != 'Vsi':
             diski = Disk.objects.filter(znamka=znamka)
          
-        if prikljucek != '':   
+        if prikljucek != 'Vsi':   
             diski = diski.filter(prikljucek=prikljucek)         
          
-        if velikost != '':   
+        if velikost != 'Vsi':   
             diski = diski.filter(velikost=velikost)         
          
          
@@ -333,12 +348,10 @@ def dodajTipkovnico(request):
     znamke = Tipkovnica.objects.values_list('znamka', flat=True).distinct()     
     context['znamke'] = znamke   
     
-    if request.method == 'GET'  and 'znamka' in request.GET:
-        print('notr')
+    if request.method == 'GET'  and 'znamka' in request.GET:        
         znamka = request.GET['znamka']        
         if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-            print(znamka)
+            znamka = request.GET['znamka1']            
         prikljucek = request.GET['prikljucek']
         povezava = request.GET['povezava']
         opis = request.GET['opis']   
@@ -348,7 +361,89 @@ def dodajTipkovnico(request):
         nova_tipkovnica.save()
             
     return render(request, 'kalkulator/dodajTipkovnico.html', context)    
+
+@login_required
+def dodajDisk(request):
     
+    context = {}
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Disk.objects.values_list('znamka', flat=True).distinct()   
+    velikosti = Disk.objects.values_list('velikost', flat=True).distinct()
+    context['znamke'] = znamke   
+    context['velikosti'] = velikosti        
+
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']  
+        prikljucek = request.GET['prikljucek']
+        velikost = request.GET['velikost']
+        if(request.GET['velikost1'] != ''):
+            velikost = request.GET['velikost1']  
+        opis = request.GET['opis']       
+        kolicina = request.GET['kolicina']
+        
+        nov_disk = Disk(znamka=znamka, prikljucek=prikljucek, velikost=velikost, opis=opis, kolicina=kolicina)
+        nov_disk.save()
+            
+    return render(request, 'kalkulator/dodajDisk.html', context) 
+     
+@login_required
+def dodajMaticno(request):
+    
+    context = {}
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Maticna.objects.values_list('znamka', flat=True).distinct()
+    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct()   
+    context['znamke'] = znamke 
+    context['podnozja'] = podnozja
+    
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']
+        model = request.GET['model']       
+        podnozje = request.GET['podnozje']
+        if(request.GET['podnozje1'] != ''):
+            podnozje = request.GET['podnozje1']
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
+        nova_maticna.save()
+            
+    return render(request, 'kalkulator/dodajMaticno.html', context)    
+  
+@login_required
+def dodajMisko(request):
+    
+    context = {}
+    
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Miska.objects.values_list('znamka', flat=True).distinct()     
+    context['znamke'] = znamke 
+    
+    
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+           znamka = request.GET['znamka1']
+        prikljucek = request.GET['prikljucek']
+        povezava = request.GET['povezava']    
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nova_miska = Miska(znamka=znamka, prikljucek=prikljucek, povezava=povezava, opis=opis, kolicina=kolicina)
+        nova_miska.save()
+            
+    return render(request, 'kalkulator/dodajMisko.html', context) 
+  
 @login_required
 def dodajGraficno(request):
     
@@ -360,7 +455,6 @@ def dodajGraficno(request):
     context['znamke'] = znamke   
     context['pomnilniki'] = pomnilniki
         
-
     if request.method == 'GET'  and 'znamka' in request.GET:
 
         znamka = request.GET['znamka']
@@ -396,24 +490,7 @@ def dodajProcesor(request):
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
-@login_required
-def dodajMaticno(request):
-    
-    context = {}
-
-    if request.method == 'GET'  and 'znamka' in request.GET:
-
-        znamka = request.GET['znamka'].upper()
-        model = request.GET['model'].upper()        
-        podnozje = request.GET['podnozje'].upper()
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
-        
-        nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
-        nova_maticna.save()
-            
-    return render(request, 'kalkulator/dodajMaticno.html', context)    
-    
+  
 @login_required
 def dodajZvocno(request):
     
@@ -449,39 +526,6 @@ def dodajNapajalnik(request):
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context) 
  
-@login_required
-def dodajMisko(request):
-    
-    context = {}
 
-    if request.method == 'GET'  and 'znamka' in request.GET:
 
-        znamka = request.GET['znamka'].upper()
-        prikljucek = request.GET['prikljucek'].upper() 
-        povezava = request.GET['povezava'].upper()       
-        kolicina = request.GET['kolicina']
-        
-        nova_miska = Miska(znamka=znamka, prikljucek=prikljucek, povezava=povezava, kolicina=kolicina)
-        nova_miska.save()
-            
-    return render(request, 'kalkulator/dodajMisko.html', context) 
-
-@login_required
-def dodajDisk(request):
-    
-    context = {}
-
-    if request.method == 'GET'  and 'znamka' in request.GET:
-
-        znamka = request.GET['znamka'].upper()
-        prikljucek = request.GET['prikljucek'].upper() 
-        velikost = request.GET['velikost'].upper()
-        opis = request.GET['opis'].upper()        
-        kolicina = request.GET['kolicina']
-        
-        nov_disk = Disk(znamka=znamka, prikljucek=prikljucek, velikost=velikost, opis=opis, kolicina=kolicina)
-        nov_disk.save()
-            
-    return render(request, 'kalkulator/dodajDisk.html', context) 
-     
  

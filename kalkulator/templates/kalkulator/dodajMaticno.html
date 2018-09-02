@@ -6,9 +6,19 @@
 		
 		<form action="dodajMaticno"> {% csrf_token %} 		
 
-			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
+			<label>Znamka:</label><select name="znamka">											
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
-			<label>Podnozje:</label><input type="text" placeholder="Podnozje" name="podnozje">
+			<label>Podnozje:</label><select name="podnozje">											
+										{% for podnozje in podnozja %}													
+												<option>{{podnozje}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo podnozje" name="podnozje1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										

@@ -13,13 +13,15 @@
 										</select>
 			<label>Prikljucek:</label><select name="prikljucek">	
 										<option>Vsi</option>
-										<option>PS/2</option>
-										<option>USB</option>										
+										<option>PATA</option>
+										<option>SATA</option>
+										<option>Ostalo</option>										
 										</select>		
-			<label>Povezava:</label><select name="povezava">	
+			<label>Velikost:</label><select name="velikost">	
 										<option>Vsi</option>
-										<option>Zicna</option>
-										<option>Brezzicna</option>
+										{% for velikost in velikosti %}													
+												<option>{{velikost}}</option>												
+										{% endfor%}
 										</select>	
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>

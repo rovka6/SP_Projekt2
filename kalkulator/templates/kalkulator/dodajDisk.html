@@ -6,9 +6,25 @@
 		
 		<form action="dodajDisk"> {% csrf_token %} 		
 
-			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">			
-			<label>Prikljucek:</label><input type="text" placeholder="Prikljucek" name="prikljucek">
-			<label>Velikost:</label><input type="text" placeholder="Velikost" name="velikost">	
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">			
+			<label>Prikljucek:</label><select name="prikljucek">	
+										<option>Vsi</option>
+										<option>PATA</option>
+										<option>SATA</option>
+										<option>Ostalo</option>
+										</select>
+			<label>Velikost:</label><select name="velikost">
+										<option>Vsi</option>
+										{% for velikost in velikosti %}													
+												<option>{{velikost}}</option>												
+										{% endfor%}	
+										<input type="text" placeholder="Vpisite novo velikost" name="velikost1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										

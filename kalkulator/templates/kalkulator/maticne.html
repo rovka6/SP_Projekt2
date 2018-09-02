@@ -4,9 +4,19 @@
 	<div id="Stanje"> 
 					
 		<form> 
-			<label>Znamka:</label><input type="text" placeholder="Znamka" name="znamka">	
-			<label>Model:</label><input type="text" placeholder="Model" name="model">
-			<label>Podnozje:</label><input type="text" placeholder="Podnozje" name="podnozje">
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>	
+			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">
+			<label>Podnozje:</label><select name="podnozje">	
+										<option>Vsi</option>
+										{% for podnozje in podnozja %}													
+												<option>{{podnozje}}</option>												
+										{% endfor%}																						
+										</select>
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="text" placeholder="Kolicina" name="kolicina">												
 																									
@@ -30,8 +40,8 @@
 		<br>
 		<br>
 		
-		{% for zvocna in zvocne %}			
-		{{maticna.znamka}} {{maticna.model}} {{ maticna.prikljucek }} {{ maticna.opis}}  {{ maticna.kolicina }}  <br>
+		{% for maticna in maticne %}			
+		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.opis}}  {{ maticna.kolicina }}  <br>
 		{% endfor %}
 				
 
