@@ -6,9 +6,20 @@
 		
 		<form action="dodajZvocno"> {% csrf_token %} 		
 
-			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
-			<label>Prikljucek:</label><input type="text" placeholder="Prikljucek" name="prikljucek">
+			<label>Prikljucek:</label><select name="prikljucek">	
+										<option>Vsi</option>
+										<option>PCI</option>									
+										<option>PCIE</option>	
+										<option>ostalo</option>
+										</select>
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										

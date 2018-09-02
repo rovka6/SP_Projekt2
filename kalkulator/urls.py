@@ -38,6 +38,15 @@ urlpatterns = [
     # diski
     url(r'^diski', views.diski, name='diski'),
     
+    # rami
+    url(r'^rami', views.rami, name='rami'),
+    
+    # mrezne
+    #url(r'^mrezne', views.mrezne, name='mrezne'),
+    
+    # zasloni
+    #url(r'^zasloni', views.zasloni, name='zasloni'),
+    
     # napajalniki
     url(r'^napajalniki', views.napajalniki, name='napajalniki'),
     
@@ -64,6 +73,15 @@ urlpatterns = [
     
     # dodajDisk
     url(r'^dodajDisk', views.dodajDisk, name='dodajDisk'),
+    
+    # dodajRam
+    url(r'^dodajRam', views.dodajRam, name='dodajRam'),
+    
+    # dodajMrezno
+    #url(r'^dodajMrezno', views.dodajMrezno, name='dodajMrezno'),
+    
+    # dodajZaslon
+    #url(r'^dodajZaslon', views.dodajZaslon, name='dodajZaslon'),
       		
 ]
 

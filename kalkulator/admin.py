@@ -10,5 +10,6 @@ admin.site.register(models.Zvocna)
 admin.site.register(models.Napajalnik)
 admin.site.register(models.Miska)
 admin.site.register(models.Disk)
+admin.site.register(models.Ram)
 
 

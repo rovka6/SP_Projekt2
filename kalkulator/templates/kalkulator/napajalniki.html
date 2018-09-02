@@ -5,11 +5,18 @@
 					
 		<form>
 			
-			<label>Znamka:</label><input type="text" placeholder="Znamka" name="znamka">			
-			<label>Moc:</label><input type="text" placeholder="Moc" name="moc">
-			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
-			<label>Kolicina:</label><input type="text" placeholder="Kolicina" name="kolicina">														
-																				
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>													
+			<label>Moc:</label><select name="moc">	
+										<option>Vsi</option>
+										{% for moc in moci %}													
+												<option>{{moc}}</option>												
+										{% endfor%}																						
+										</select>															
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 		
