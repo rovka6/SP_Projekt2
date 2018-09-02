@@ -26,32 +26,19 @@
 														
 					</div>	
 					
+					<div id="back_button">	
+							
+						<a href="main">
+						
+							<img src="https://image.flaticon.com/icons/svg/60/60817.svg" style="width:44px;height:44px;">
+						
+						</a>
+														
+					</div>	
+					
 				{% endblock %}		
 			</div>			
-			
-			<!--- id="activeButton" --->
-			
-			<!--
-			 {% block buttons %}
-				<div id="meniVrstica"> 
-					<div class="meniGumb"><a href="stanje.html">Stanje</a></div>
-					<div class="meniGumb"><a href="vpisiPrihodek.html">Vpiši prihodek</a></div>
-					<div class="meniGumb"><a href="vpisiOdhodek.html">Vpiši odhodek</a></div>
-					<div class="meniGumb"><a href="porocila.html">Poročila</a></div>			
-				</div>
-			{% endblock %}
-			
-			
-			
-			
-			
-			
-			
-			-->
-			
-			
-			
-			
+						
 			<div id="main">
 				
 				 {% block main %}
@@ -65,16 +52,3 @@
 	
 	</body>
 </html>
-
-<!--- 
-	
-	{% if user.is_authenticated %}
-      Hi {{ user.username }}!
-      <a href="{% url 'logout' %}">logout</a>
-    {% else %}
-      <a href="{% url 'login' %}">login</a>
-    {% endif %}
-
-
-
-->

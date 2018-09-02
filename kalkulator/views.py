@@ -61,21 +61,40 @@ def main(request):
 @login_required 
 def tipkovnice(request):   
 
+    context = {} 
+    tipkovnice = Tipkovnica.objects.all() 
+    
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Tipkovnica.objects.values_list('znamka', flat=True).distinct()
+    prikljucki = Tipkovnica.objects.values_list('prikljucek', flat=True).distinct()
+    povezave = Tipkovnica.objects.values_list('povezava', flat=True).distinct()    
+    context['znamke'] = znamke 
+    context['prikljucki'] = prikljucki
+    context['povezave'] = povezave
+
     # Če želimo samo tipkovnice z določenim priključkom
     if request.method == 'GET'  and 'prikljucek' in request.GET: 
              
         # izbran prikljucek v dropdown listu  
-        prikljucek1 = request.GET['prikljucek'].upper()   
-          
+        znamka = request.GET['znamka']
+        prikljucek = request.GET['prikljucek']
+        povezava = request.GET['povezava']
+        
         # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
-        if prikljucek1 != '':         
+        if znamka != 'Vsi':                          
+            tipkovnice = Tipkovnica.objects.filter(znamka=znamka)   
+
+        if prikljucek != 'Vsi':    
+            tipkovnice = tipkovnice.filter(prikljucek=prikljucek)
             
-            context = {}   
-            tipkovnice = Tipkovnica.objects.filter(prikljucek=prikljucek1)        
-            context['tipkovnice'] = tipkovnice
-            return render(request, 'kalkulator/tipkovnice.html', context)
-         
-    context = {}
+        if povezava != 'Vsi':    
+            tipkovnice = tipkovnice.filter(povezava=povezava)    
+
+            
+        context['tipkovnice'] = tipkovnice
+        return render(request, 'kalkulator/tipkovnice.html', context)
+          
     tipkovnice = Tipkovnica.objects.all()       
     context['tipkovnice'] = tipkovnice  
     
@@ -85,20 +104,34 @@ def tipkovnice(request):
 def graficne(request):    
     
     context = {}
-    graficne = Graficna.objects.all()  
-    
+    graficne = Graficna.objects.all() 
+
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Graficna.objects.values_list('znamka', flat=True).distinct()
+    povezave = Graficna.objects.values_list('povezava', flat=True).distinct()
+    pomnilniki = Graficna.objects.values_list('pomnilnik', flat=True).distinct()
+    context['znamke'] = znamke 
+    context['povezave'] = povezave
+    context['pomnilniki'] = pomnilniki
+      
+      
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
-    if request.method == 'GET'  and 'znamka' in request.GET:                   
+    if request.method == 'GET'  and 'znamka' in request.GET:   
+           
           
         # izbran prikljucek v dropdown listu  
-        znamka1 = request.GET['znamka'].upper()   
-        povezava1 = request.GET['povezava'].upper() 
+        znamka1 = request.GET['znamka']   
+        povezava1 = request.GET['povezava'] 
+        pomnilnik = request.GET['pomnilnik']              
                 
-        if znamka1 != '':
+        if znamka1 != 'Vsi':            
             graficne = Graficna.objects.filter(znamka=znamka1) 
             
-        if povezava1 != '':    
-            graficne = graficne.filter(povezava=povezava1)   
+        if povezava1 != 'Vsi':    
+            graficne = graficne.filter(povezava=povezava1)
+
+        if pomnilnik != 'Vsi':    
+            graficne = graficne.filter(pomnilnik=pomnilnik)          
                           
         context['graficne'] = graficne
         return render(request, 'kalkulator/graficne.html', context)
@@ -295,17 +328,23 @@ def diski(request):
 def dodajTipkovnico(request):
     
     context = {}
-
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Tipkovnica.objects.values_list('znamka', flat=True).distinct()     
+    context['znamke'] = znamke   
+    
     if request.method == 'GET'  and 'znamka' in request.GET:
-
-        znamka = request.GET['znamka'].upper()
-        prikljucek = request.GET['prikljucek'].upper()
-        povezava = request.GET['povezava'].upper()
-        kolicina = request.GET['kolicina']
-                
-        print(znamka)
-        
-        nova_tipkovnica = Tipkovnica(znamka=znamka, prikljucek=prikljucek, povezava=povezava, kolicina=kolicina)
+        print('notr')
+        znamka = request.GET['znamka']        
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']
+            print(znamka)
+        prikljucek = request.GET['prikljucek']
+        povezava = request.GET['povezava']
+        opis = request.GET['opis']   
+        kolicina = request.GET['kolicina']         
+               
+        nova_tipkovnica = Tipkovnica(znamka=znamka, prikljucek=prikljucek, povezava=povezava, opis=opis, kolicina=kolicina)
         nova_tipkovnica.save()
             
     return render(request, 'kalkulator/dodajTipkovnico.html', context)    
@@ -314,13 +353,24 @@ def dodajTipkovnico(request):
 def dodajGraficno(request):
     
     context = {}
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Graficna.objects.values_list('znamka', flat=True).distinct()  
+    pomnilniki = Graficna.objects.values_list('pomnilnik', flat=True).distinct()
+    context['znamke'] = znamke   
+    context['pomnilniki'] = pomnilniki
+        
 
     if request.method == 'GET'  and 'znamka' in request.GET:
 
-        znamka = request.GET['znamka'].upper()
-        model = request.GET['model'].upper()
-        pomnilnik = request.GET['pomnilnik']        
-        povezava = request.GET['povezava'].upper()
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']
+        model = request.GET['model']
+        pomnilnik = request.GET['pomnilnik']
+        if(request.GET['pomnilnik1'] != ''):
+            pomnilnik = request.GET['pomnilnik1'] 
+        povezava = request.GET['povezava']
         opis = request.GET['opis']
         kolicina = request.GET['kolicina']
         
@@ -434,12 +484,4 @@ def dodajDisk(request):
             
     return render(request, 'kalkulator/dodajDisk.html', context) 
      
-
  
-   
-        
-
-  
-  
-  
-  

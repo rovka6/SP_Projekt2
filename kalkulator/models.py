@@ -7,6 +7,7 @@ class Tipkovnica(models.Model):
     znamka = models.CharField(max_length=20)
     prikljucek = models.CharField(max_length=20)
     povezava = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     
 class Graficna(models.Model):     

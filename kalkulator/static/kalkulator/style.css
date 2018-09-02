@@ -26,6 +26,15 @@ div {
 	overflow: hidden;	
 	background-color: #404040;		
 }
+#back_button{
+	
+	position: relative;
+	margin-right : 90%;
+	margin-top : 4%;
+	width: 100px;
+	height: 100px;
+	
+}
 
 #main {
 	height: 83.4%;	
