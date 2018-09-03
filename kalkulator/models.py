@@ -64,6 +64,20 @@ class Ram(models.Model):
     velikost = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
-        
-        
+     
+class Mrezna(models.Model):
+    znamka = models.CharField(max_length=20)
+    prikljucek = models.CharField(max_length=20)
+    vrsta = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20) 
+   
+class Zaslon(models.Model):
+    znamka = models.CharField(max_length=20)
+    model = models.CharField(max_length=20)    
+    vrsta = models.CharField(max_length=20)
+    velikost = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20) 
+    
        

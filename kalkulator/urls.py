@@ -42,10 +42,10 @@ urlpatterns = [
     url(r'^rami', views.rami, name='rami'),
     
     # mrezne
-    #url(r'^mrezne', views.mrezne, name='mrezne'),
+    url(r'^mrezne', views.mrezne, name='mrezne'),
     
     # zasloni
-    #url(r'^zasloni', views.zasloni, name='zasloni'),
+    url(r'^zasloni', views.zasloni, name='zasloni'),
     
     # napajalniki
     url(r'^napajalniki', views.napajalniki, name='napajalniki'),
@@ -78,10 +78,10 @@ urlpatterns = [
     url(r'^dodajRam', views.dodajRam, name='dodajRam'),
     
     # dodajMrezno
-    #url(r'^dodajMrezno', views.dodajMrezno, name='dodajMrezno'),
+    url(r'^dodajMrezno', views.dodajMrezno, name='dodajMrezno'),
     
     # dodajZaslon
-    #url(r'^dodajZaslon', views.dodajZaslon, name='dodajZaslon'),
+    url(r'^dodajZaslon', views.dodajZaslon, name='dodajZaslon'),
       		
 ]
 

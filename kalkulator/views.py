@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Tipkovnica, Procesor, Maticna, Zvocna, Napajalnik, Miska, Disk, Ram
+from .models import Graficna, Tipkovnica, Procesor, Maticna, Zvocna, Napajalnik, Miska, Disk, Ram, Mrezna, Zaslon
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -98,6 +98,48 @@ def tipkovnice(request):
     context['tipkovnice'] = tipkovnice  
     
     return render(request, 'kalkulator/tipkovnice.html', context)
+ 
+@login_required 
+def zasloni(request):   
+
+    context = {} 
+    zasloni = Zaslon.objects.all() 
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Zaslon.objects.values_list('znamka', flat=True).distinct()
+    velikosti = Zaslon.objects.values_list('velikost', flat=True).distinct()      
+    context['znamke'] = znamke 
+    context['velikosti'] = velikosti
+ 
+
+    # Če želimo samo tipkovnice z določenim priključkom
+    if request.method == 'GET'  and 'znamka' in request.GET: 
+             
+        # izbran prikljucek v dropdown listu  
+        znamka = request.GET['znamka']
+        vrsta = request.GET['vrsta']
+        velikost = request.GET['velikost']
+        
+        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
+        if znamka != 'Vsi':                          
+            zasloni = Zaslon.objects.filter(znamka=znamka)   
+
+        if vrsta != 'Vsi':    
+            zasloni = zasloni.filter(vrsta=vrsta)
+            
+        if velikost != 'Vsi':    
+            zasloni = zasloni.filter(velikost=velikost)    
+
+            
+        context['zasloni'] = zasloni
+        return render(request, 'kalkulator/zasloni.html', context)
+          
+    zasloni = Zaslon.objects.all()       
+    context['zasloni'] = zasloni  
+    
+    return render(request, 'kalkulator/zasloni.html', context)
+ 
+ 
  
 @login_required 
 def graficne(request):    
@@ -347,7 +389,43 @@ def miske(request):
     context['miske'] = miske  
     
     return render(request, 'kalkulator/miske.html', context)    
+
+@login_required 
+def mrezne(request):    
+    
+    context = {}
+    mrezne = Mrezna.objects.all()  
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Mrezna.objects.values_list('znamka', flat=True).distinct()       
+    context['znamke'] = znamke         
+        
+    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'znamka' in request.GET:                   
+          
+        # izbran prikljucek v dropdown listu  
+        znamka = request.GET['znamka']  
+        prikljucek = request.GET['prikljucek']
+        vrsta = request.GET['vrsta']
+         
+        if znamka != 'Vsi':
+            mrezne = Mrezna.objects.filter(znamka=znamka)
+         
+        if prikljucek != 'Vsi':   
+            mrezne = mrezne.filter(prikljucek=prikljucek)         
+         
+        if vrsta != 'Vsi':   
+            mrezne = mrezne.filter(vrsta=vrsta)         
+         
+         
+        context['mrezne'] = mrezne
+        return render(request, 'kalkulator/mrezne.html', context)
+                  
+    context['mrezne'] = mrezne  
+    
+    return render(request, 'kalkulator/mrezne.html', context)    
  
+    
 @login_required 
 def diski(request):    
     
@@ -582,6 +660,32 @@ def dodajMisko(request):
     return render(request, 'kalkulator/dodajMisko.html', context) 
   
 @login_required
+def dodajMrezno(request):
+    
+    context = {}
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Mrezna.objects.values_list('znamka', flat=True).distinct()     
+    context['znamke'] = znamke 
+        
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+           znamka = request.GET['znamka1']
+        prikljucek = request.GET['prikljucek']
+        vrsta = request.GET['vrsta']    
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nova_mrezna = Mrezna(znamka=znamka, prikljucek=prikljucek, vrsta=vrsta, opis=opis, kolicina=kolicina)
+        nova_mrezna.save()
+            
+    return render(request, 'kalkulator/dodajMrezno.html', context) 
+   
+  
+  
+@login_required
 def dodajGraficno(request):
     
     context = {}
@@ -627,6 +731,37 @@ def dodajProcesor(request):
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
+    
+@login_required
+def dodajZaslon(request):
+    
+    context = {}
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Zaslon.objects.values_list('znamka', flat=True).distinct()  
+    velikosti = Zaslon.objects.values_list('velikost', flat=True).distinct()     
+    context['znamke'] = znamke     
+    context['velikosti'] = velikosti
+
+    
+    if request.method == 'GET'  and 'znamka' in request.GET:
+
+        znamka = request.GET['znamka']
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']
+        model = request.GET['model']        
+        vrsta = request.GET['vrsta']
+        velikost = request.GET['velikost']
+        if(request.GET['velikost1'] != ''):
+            velikost = request.GET['velikost1']
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nov_zaslon = Zaslon(znamka=znamka, model=model, vrsta=vrsta, velikost=velikost, opis=opis, kolicina=kolicina)
+        nov_zaslon.save()
+            
+    return render(request, 'kalkulator/dodajZaslon.html', context) 
+ 
   
 
 

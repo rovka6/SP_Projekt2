@@ -11,5 +11,5 @@ admin.site.register(models.Napajalnik)
 admin.site.register(models.Miska)
 admin.site.register(models.Disk)
 admin.site.register(models.Ram)
-
-
+admin.site.register(models.Mrezna)
+admin.site.register(models.Zaslon)
