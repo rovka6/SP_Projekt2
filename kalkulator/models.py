@@ -27,17 +27,12 @@ class Procesor(models.Model):
 class Maticna(models.Model):     
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
-    podnozje = models.CharField(max_length=20)    
+    podnozje = models.CharField(max_length=20)
+    ram = models.CharField(max_length=20)
+    graficna = models.CharField(max_length=20)
     opis = models.CharField(max_length=20) 
     kolicina = models.CharField(max_length=20)
     
-class Zvocna(models.Model):     
-    znamka = models.CharField(max_length=20)
-    model = models.CharField(max_length=20)
-    prikljucek = models.CharField(max_length=20)    
-    opis = models.CharField(max_length=20) 
-    kolicina = models.CharField(max_length=20)   
-	
 class Napajalnik(models.Model):     
     znamka = models.CharField(max_length=20)    
     moc = models.CharField(max_length=20)       
@@ -65,10 +60,11 @@ class Ram(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
      
-class Mrezna(models.Model):
+class Razsiritvena(models.Model):
     znamka = models.CharField(max_length=20)
-    prikljucek = models.CharField(max_length=20)
+    model = models.CharField(max_length=20) 
     vrsta = models.CharField(max_length=20)
+    prikljucek = models.CharField(max_length=20)    
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20) 
    
@@ -79,5 +75,11 @@ class Zaslon(models.Model):
     velikost = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20) 
+    
+class Kabel(models.Model):        
+    vrsta = models.CharField(max_length=20)   
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)   
+    
     
        

@@ -9,16 +9,25 @@
 										{% for znamka in znamke %}													
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
-										</select>	
-			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">
+										</select>				
 			<label>Podnozje:</label><select name="podnozje">	
 										<option>Vsi</option>
 										{% for podnozje in podnozja %}													
 												<option>{{podnozje}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
-			<label>Kolicina:</label><input type="text" placeholder="Kolicina" name="kolicina">												
+			<label>Vrsta ram-a:</label><select name="ram">	
+										<option>Vsi</option>
+										{% for ram in rami %}													
+												<option>{{ram}}</option>												
+										{% endfor%}																						
+										</select>
+			<label>Vrsta grafične kartice:</label><select name="graficna">	
+										<option>Vsi</option>
+										{% for graficna in graficne %}													
+												<option>{{graficna}}</option>												
+										{% endfor%}																						
+										</select>						
 																									
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
@@ -41,7 +50,7 @@
 		<br>
 		
 		{% for maticna in maticne %}			
-		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.opis}}  {{ maticna.kolicina }}  <br>
+		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.ram }} {{ maticna.graficna }} {{ maticna.opis}}  {{ maticna.kolicina }}  <br>
 		{% endfor %}
 				
 

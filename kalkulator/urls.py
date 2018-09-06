@@ -28,10 +28,7 @@ urlpatterns = [
     
     # maticne
     url(r'^maticne', views.maticne, name='maticne'),
-    
-    # zvocne
-    url(r'^zvocne', views.zvocne, name='zvocne'),
-    
+            
     # miske
     url(r'^miske', views.miske, name='miske'),
     
@@ -40,15 +37,18 @@ urlpatterns = [
     
     # rami
     url(r'^rami', views.rami, name='rami'),
-    
-    # mrezne
-    url(r'^mrezne', views.mrezne, name='mrezne'),
-    
+           
     # zasloni
     url(r'^zasloni', views.zasloni, name='zasloni'),
     
     # napajalniki
     url(r'^napajalniki', views.napajalniki, name='napajalniki'),
+    
+    # razsiritvene
+    url(r'^razsiritvene', views.razsiritvene, name='razsiritvene'),
+    
+    # kabli
+    url(r'^kabli', views.kabli, name='kabli'),
     
     # dodajTipkovnico
     url(r'^dodajTipkovnico', views.dodajTipkovnico, name='dodajTipkovnico'),
@@ -60,10 +60,7 @@ urlpatterns = [
     url(r'^dodajProcesor', views.dodajProcesor, name='dodajProcesor'),
     
     # dodajMaticno
-    url(r'^dodajMaticno', views.dodajMaticno, name='dodajMaticno'),
-    
-    # dodajMaticno
-    url(r'^dodajZvocno', views.dodajZvocno, name='dodajZvocno'),
+    url(r'^dodajMaticno', views.dodajMaticno, name='dodajMaticno'),      
     
     # dodajNapajalnik
     url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),
@@ -76,12 +73,14 @@ urlpatterns = [
     
     # dodajRam
     url(r'^dodajRam', views.dodajRam, name='dodajRam'),
-    
-    # dodajMrezno
-    url(r'^dodajMrezno', views.dodajMrezno, name='dodajMrezno'),
-    
+           
     # dodajZaslon
     url(r'^dodajZaslon', views.dodajZaslon, name='dodajZaslon'),
-      		
+    
+    # dodajRazsiritveno
+    url(r'^dodajRazsiritveno', views.dodajRazsiritveno, name='dodajRazsiritveno'),
+    
+    # dodajKabel
+    url(r'^dodajKabel', views.dodajKabel, name='dodajKabel'),    
 ]
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Tipkovnica, Procesor, Maticna, Zvocna, Napajalnik, Miska, Disk, Ram, Mrezna, Zaslon
+from .models import Graficna, Tipkovnica, Procesor, Maticna, Napajalnik, Miska, Disk, Ram, Razsiritvena, Zaslon, Kabel
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -252,34 +252,42 @@ def procesorji(request):
     return render(request, 'kalkulator/procesorji.html', context)
 
 @login_required 
-def maticne(request):    
+def maticne(request):     
     
     context = {}
     maticne = Maticna.objects.all() 
 
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Maticna.objects.values_list('znamka', flat=True).distinct()
-    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct()   
+    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct()  
+    rami = Maticna.objects.values_list('ram', flat=True).distinct() 
+    graficne = Maticna.objects.values_list('graficna', flat=True).distinct()    
     context['znamke'] = znamke 
-    context['podnozja'] = podnozja    
+    context['podnozja'] = podnozja   
+    context['rami'] = rami
+    context['graficne'] = graficne   
     
     # Če želimo samo procesorje z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
                  
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka']  
-        model = request.GET['model']
+        znamka = request.GET['znamka']         
         podnozje = request.GET['podnozje'] 
-        opis = request.GET['opis'] 
-                            
+        ram = request.GET['ram']
+        graficna = request.GET['graficna']
+        
         if znamka != 'Vsi':            
-            maticne = Maticna.objects.filter(znamka=znamka)
-       
-        if model != '':
-            maticne = maticne.filter(model=model)         
+            maticne = Maticna.objects.filter(znamka=znamka)                     
             
         if podnozje != 'Vsi':    
-            maticne = maticne.filter(podnozje=podnozje)   
+            maticne = maticne.filter(podnozje=podnozje) 
+
+        if ram != 'Vsi':    
+            maticne = maticne.filter(ram=ram)
+        
+        if graficna != 'Vsi':    
+            maticne = maticne.filter(graficna=graficna)
+            
                           
         context['maticne'] = maticne
         return render(request, 'kalkulator/maticne.html', context)
@@ -288,41 +296,6 @@ def maticne(request):
     
     return render(request, 'kalkulator/maticne.html', context)
 
-@login_required 
-def zvocne(request):    
-    
-    context = {}
-    zvocne = Zvocna.objects.all()  
-    
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Zvocna.objects.values_list('znamka', flat=True).distinct()       
-    context['znamke'] = znamke 
-    
-    
-    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
-    if request.method == 'GET'  and 'znamka' in request.GET:                   
-          
-        # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka']
-        model = request.GET['model']
-        prikljucek = request.GET['prikljucek']               
-         
-        if znamka != 'Vsi':
-            zvocne = Zvocna.objects.filter(znamka=znamka)
-         
-        if model != '':   
-            zvocne = zvocne.filter(model=model)         
-            
-        if prikljucek != 'Vsi':    
-            zvocne = zvocne.filter(prikljucek=prikljucek)   
-                          
-        context['zvocne'] = zvocne
-        return render(request, 'kalkulator/zvocne.html', context)
-                  
-    context['zvocne'] = zvocne  
-    
-    return render(request, 'kalkulator/zvocne.html', context)
- 
 @login_required 
 def napajalniki(request):    
     
@@ -355,6 +328,36 @@ def napajalniki(request):
     
     return render(request, 'kalkulator/napajalniki.html', context)    
 
+@login_required 
+def kabli(request):    
+    
+    context = {}
+    kabli = Kabel.objects.all() 
+
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    vrste = Kabel.objects.values_list('vrsta', flat=True).distinct()    
+    context['vrste'] = vrste 
+    
+    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'vrsta' in request.GET:                   
+          
+        # izbran prikljucek v dropdown listu  
+        vrsta = request.GET['vrsta']                            
+         
+        if vrsta != 'Vsi':
+            kabli = Kabel.objects.filter(vrsta=vrsta)
+         
+                 
+                                
+        context['kabli'] = kabli
+        return render(request, 'kalkulator/kabli.html', context)
+                  
+    context['kabli'] = kabli  
+    
+    return render(request, 'kalkulator/kabli.html', context)    
+   
+    
+    
 @login_required 
 def miske(request):    
     
@@ -391,39 +394,44 @@ def miske(request):
     return render(request, 'kalkulator/miske.html', context)    
 
 @login_required 
-def mrezne(request):    
+def razsiritvene(request):    
     
     context = {}
-    mrezne = Mrezna.objects.all()  
+    razsiritvene = Razsiritvena.objects.all()  
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Mrezna.objects.values_list('znamka', flat=True).distinct()       
-    context['znamke'] = znamke         
+    znamke = Razsiritvena.objects.values_list('znamka', flat=True).distinct() 
+    vrste = Razsiritvena.objects.values_list('vrsta', flat=True).distinct() 
+    prikljucki = Razsiritvena.objects.values_list('prikljucek', flat=True).distinct()
+    context['znamke'] = znamke
+    context['vrste'] = vrste  
+    context['prikljucki'] = prikljucki  
         
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka']  
+        znamka = request.GET['znamka'] 
+        vrsta = request.GET['vrsta']  
         prikljucek = request.GET['prikljucek']
-        vrsta = request.GET['vrsta']
-         
+                 
         if znamka != 'Vsi':
-            mrezne = Mrezna.objects.filter(znamka=znamka)
-         
-        if prikljucek != 'Vsi':   
-            mrezne = mrezne.filter(prikljucek=prikljucek)         
+            razsiritvene = Razsiritvena.objects.filter(znamka=znamka)
          
         if vrsta != 'Vsi':   
-            mrezne = mrezne.filter(vrsta=vrsta)         
+            razsiritvene = razsiritvene.filter(vrsta=vrsta)         
          
+        if prikljucek != 'Vsi':   
+            razsiritvene = razsiritvene.filter(prikljucek=prikljucek)         
          
-        context['mrezne'] = mrezne
-        return render(request, 'kalkulator/mrezne.html', context)
+      
+         
+        context['razsiritvene'] = razsiritvene
+        return render(request, 'kalkulator/razsiritvene.html', context)
                   
-    context['mrezne'] = mrezne  
+    context['razsiritvene'] = razsiritvene  
     
-    return render(request, 'kalkulator/mrezne.html', context)    
+    return render(request, 'kalkulator/razsiritvene.html', context)    
  
     
 @login_required 
@@ -559,9 +567,15 @@ def dodajMaticno(request):
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Maticna.objects.values_list('znamka', flat=True).distinct()
-    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct()   
+    podnozja = Maticna.objects.values_list('podnozje', flat=True).distinct() 
+    rami = Maticna.objects.values_list('ram', flat=True).distinct() 
+    graficne = Maticna.objects.values_list('graficna', flat=True).distinct() 
     context['znamke'] = znamke 
     context['podnozja'] = podnozja
+    context['rami'] = rami
+    context['graficne'] = graficne
+    
+    
     
     if request.method == 'GET'  and 'znamka' in request.GET:
 
@@ -572,10 +586,16 @@ def dodajMaticno(request):
         podnozje = request.GET['podnozje']
         if(request.GET['podnozje1'] != ''):
             podnozje = request.GET['podnozje1']
+        ram = request.GET['ram']
+        if(request.GET['ram1'] != ''):
+            ram = request.GET['ram1'] 
+        graficna = request.GET['graficna']
+        if(request.GET['graficna1'] != ''):
+            graficna = request.GET['graficna1']        
         opis = request.GET['opis']
         kolicina = request.GET['kolicina']
         
-        nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
+        nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, ram=ram, graficna=graficna, opis=opis, kolicina=kolicina)
         nova_maticna.save()
             
     return render(request, 'kalkulator/dodajMaticno.html', context)    
@@ -607,34 +627,7 @@ def dodajNapajalnik(request):
         nov_napajalnik.save()
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
- 
- 
-@login_required
-def dodajZvocno(request):
-    
-    context = {}
-    
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Zvocna.objects.values_list('znamka', flat=True).distinct()       
-    context['znamke'] = znamke     
-    
-    if request.method == 'GET'  and 'znamka' in request.GET:
-
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model']        
-        prikljucek = request.GET['prikljucek']
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
-        
-        nova_zvocna = Zvocna(znamka=znamka, model=model, prikljucek=prikljucek, opis=opis, kolicina=kolicina)
-        nova_zvocna.save()
-            
-    return render(request, 'kalkulator/dodajZvocno.html', context) 
- 
-
- 
+   
 @login_required
 def dodajMisko(request):
     
@@ -658,33 +651,7 @@ def dodajMisko(request):
         nova_miska.save()
             
     return render(request, 'kalkulator/dodajMisko.html', context) 
-  
-@login_required
-def dodajMrezno(request):
     
-    context = {}
-        
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Mrezna.objects.values_list('znamka', flat=True).distinct()     
-    context['znamke'] = znamke 
-        
-    if request.method == 'GET'  and 'znamka' in request.GET:
-
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-           znamka = request.GET['znamka1']
-        prikljucek = request.GET['prikljucek']
-        vrsta = request.GET['vrsta']    
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
-        
-        nova_mrezna = Mrezna(znamka=znamka, prikljucek=prikljucek, vrsta=vrsta, opis=opis, kolicina=kolicina)
-        nova_mrezna.save()
-            
-    return render(request, 'kalkulator/dodajMrezno.html', context) 
-   
-  
-  
 @login_required
 def dodajGraficno(request):
     
@@ -731,6 +698,29 @@ def dodajProcesor(request):
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
+@login_required
+def dodajKabel(request):
+    
+    context = {}
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    vrste = Kabel.objects.values_list('vrsta', flat=True).distinct()  
+    context['vrste'] = vrste
+    
+    if request.method == 'GET'  and 'vrsta' in request.GET:
+
+        vrsta = request.GET['vrsta']
+        if(request.GET['vrsta1'] != ''):
+            vrsta = request.GET['vrsta1']
+        opis = request.GET['opis']
+        kolicina = request.GET['kolicina']
+        
+        nov_kabel = Kabel(vrsta=vrsta, opis=opis, kolicina=kolicina)
+        nov_kabel.save()
+            
+    return render(request, 'kalkulator/dodajKabel.html', context)    
+    
+    
     
 @login_required
 def dodajZaslon(request):
@@ -762,7 +752,39 @@ def dodajZaslon(request):
             
     return render(request, 'kalkulator/dodajZaslon.html', context) 
  
-  
+@login_required
+def dodajRazsiritveno(request):
+    
+    context = {}
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    znamke = Razsiritvena.objects.values_list('znamka', flat=True).distinct() 
+    vrste = Razsiritvena.objects.values_list('vrsta', flat=True).distinct() 
+    prikljucki = Razsiritvena.objects.values_list('prikljucek', flat=True).distinct()
+    context['znamke'] = znamke
+    context['vrste'] = vrste  
+    context['prikljucki'] = prikljucki
+    
+    if request.method == 'GET'  and 'znamka' in request.GET:        
+        znamka = request.GET['znamka']        
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']
+        model = request.GET['model']      
+        vrsta = request.GET['vrsta']  
+        if(request.GET['vrsta1'] != ''):
+            vrsta = request.GET['vrsta1']    
+        prikljucek = request.GET['prikljucek']
+        if(request.GET['prikljucek1'] != ''):
+            prikljucek = request.GET['prikljucek1']
+        opis = request.GET['opis']   
+        kolicina = request.GET['kolicina']         
+               
+        nova_razsiritvena = Razsiritvena(znamka=znamka, model=model, vrsta=vrsta, prikljucek=prikljucek, opis=opis, kolicina=kolicina)
+        nova_razsiritvena.save()
+            
+    return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
+
+ 
 
 
  

@@ -1,0 +1,53 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+					
+		<form action="dodajRazsiritveno"> {% csrf_token %} 		
+
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
+			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">								
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
+										{% for vrsta in vrste %}													
+												<option>{{vrsta}}</option>												
+										{% endfor%}		
+										</select>	
+										<input type="text" placeholder="Vpisite novo znamko" name="vrsta1">
+			<label>Prikljucek:</label><select name="prikljucek">	
+										<option>Vsi</option>
+										{% for prikljucek in prikljucki %}													
+												<option>{{prikljucek}}</option>												
+										{% endfor%}	
+										</select>	
+										<input type="text" placeholder="Vpisite novo znamko" name="prikljucek1">
+			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
+			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
+										
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>
+		
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

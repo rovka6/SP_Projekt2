@@ -6,19 +6,35 @@
 		
 		<form action="dodajMaticno"> {% csrf_token %} 		
 
-			<label>Znamka:</label><select name="znamka">											
+			<label>Znamka:</label><select name="znamka">
+										<option>Vsi</option>
 										{% for znamka in znamke %}													
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
 										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
-			<label>Podnozje:</label><select name="podnozje">											
+			<label>Podnozje:</label><select name="podnozje">
+										<option>Vsi</option>
 										{% for podnozje in podnozja %}													
 												<option>{{podnozje}}</option>												
 										{% endfor%}																						
 										</select>
 										<input type="text" placeholder="Vpisite novo podnozje" name="podnozje1">
+			<label>Vrsta ram-a:</label><select name="ram">	
+										<option>Vsi</option>
+										{% for ram in rami %}													
+												<option>{{ram}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo vrsto ram-a" name="ram1">
+			<label>Vrsta grafične kartice:</label><select name="graficna">	
+										<option>Vsi</option>
+										{% for graficna in graficne %}													
+												<option>{{graficna}}</option>												
+										{% endfor%}																						
+										</select>	
+										<input type="text" placeholder="Vpisite novo vrsto grafične" name="graficna1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										
