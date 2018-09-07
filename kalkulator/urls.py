@@ -20,18 +20,15 @@ urlpatterns = [
     # graficne
     url(r'^graficne', views.graficne, name='graficne'),
     
-    # tipkovnice
-    url(r'^tipkovnice', views.tipkovnice, name='tipkovnice'),
+    # inputi
+    url(r'^inputi', views.inputi, name='inputi'),
     
     # procesorji
     url(r'^procesorji', views.procesorji, name='procesorji'),
     
     # maticne
-    url(r'^maticne', views.maticne, name='maticne'),
-            
-    # miske
-    url(r'^miske', views.miske, name='miske'),
-    
+    url(r'^maticne', views.maticne, name='maticne'),           
+       
     # diski
     url(r'^diski', views.diski, name='diski'),
     
@@ -50,8 +47,8 @@ urlpatterns = [
     # kabli
     url(r'^kabli', views.kabli, name='kabli'),
     
-    # dodajTipkovnico
-    url(r'^dodajTipkovnico', views.dodajTipkovnico, name='dodajTipkovnico'),
+    # dodajInput
+    url(r'^dodajInput', views.dodajInput, name='dodajInput'),
     
      # dodajGraficno
     url(r'^dodajGraficno', views.dodajGraficno, name='dodajGraficno'),
@@ -64,9 +61,7 @@ urlpatterns = [
     
     # dodajNapajalnik
     url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),
-    
-    # dodajMisko
-    url(r'^dodajMisko', views.dodajMisko, name='dodajMisko'),
+        
     
     # dodajDisk
     url(r'^dodajDisk', views.dodajDisk, name='dodajDisk'),

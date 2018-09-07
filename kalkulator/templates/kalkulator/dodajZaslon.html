@@ -23,10 +23,17 @@
 			<label>Velikost:</label><select name="velikost">
 										<option>Vsi</option>
 										{% for velikost in velikosti %}													
-												<option>{{velikost}}</option>												
+												<option>{{velikost}}</option>											
 										{% endfor%}																						
 										</select>
-										<input type="text" placeholder="Vpisite novo znamko" name="velikost1">
+										<input type="text" placeholder="Vpisite novo velikost v inčih" name="velikost1">
+			<label>Input-i:</label><select name="input">
+										<option>Vsi</option>
+										{% for input in inputi %}													
+												<option>{{input}}</option>												
+										{% endfor%}																						
+										</select>	
+										<input type="text" placeholder="Vpisite nov input" name="input1">	
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										

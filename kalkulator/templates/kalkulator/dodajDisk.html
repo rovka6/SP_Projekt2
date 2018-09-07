@@ -19,12 +19,12 @@
 										<option>SATA</option>
 										<option>Ostalo</option>
 										</select>
-			<label>Velikost:</label><select name="velikost">
+			<label>Velikost v GB:</label><select name="velikost">
 										<option>Vsi</option>
 										{% for velikost in velikosti %}													
 												<option>{{velikost}}</option>												
 										{% endfor%}	
-										<input type="text" placeholder="Vpisite novo velikost" name="velikost1">
+										<input type="text" placeholder="Vpisite novo velikost v GB" name="velikost1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
 										

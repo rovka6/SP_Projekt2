@@ -6,11 +6,22 @@
 		
 		<form action="dodajProcesor"> {% csrf_token %} 		
 
-			<label>Znamka:</label><input type="text" placeholder="Vpisite znamko" name="znamka">
-			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
-			<label>Podnozje:</label><input type="text" placeholder="Podnozje" name="podnozje">			
-			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
-										
+			<label>znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
+			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">							
+			<label>Podnozje:</label><select name="podnozje">	
+										<option>Vsi</option>										
+										{% for podnozje in podnozja %}													
+												<option>{{podnozje}}</option>												
+										{% endfor%}											
+										</select>
+										<input type="text" placeholder="Vpisite novo podnozje" name="podnozje1">
+			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">										
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>

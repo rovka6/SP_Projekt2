@@ -1,5 +1,8 @@
 {% extends "kalkulator/base.html" %}
 
+
+
+
 {% block main %}
 	<div id="Stanje"> 
 			
@@ -20,10 +23,17 @@
 			<label>Velikost:</label><select name="velikost">
 										<option>Vsi</option>
 										{% for velikost in velikosti %}													
-												<option>{{velikost}}</option>												
+												<option>{{velikost}}"</option>												
 										{% endfor%}																						
 										</select>
-			<input type="submit" id="vpisi" value="Prikazi">	
+			<label>Input-i:</label><select name="input">
+										<option>Vsi</option>
+										{% for input in inputi %}													
+												<option>{{input}}</option>												
+										{% endfor%}																						
+										</select>									
+			<input type="submit" id="vpisi" value="Prikazi">
+				
 		</form>
 
 		<br>
@@ -40,7 +50,7 @@
 		<br>
 		
 		{% for zaslon in zasloni %}			
-		{{zaslon.znamka}}   {{zaslon.model}} {{zaslon.vrsta}} {{zaslon.velikost}} {{zaslon.opis}} {{miska.kolicina}}<br>
+		{{zaslon.znamka}}   {{zaslon.model}} {{zaslon.vrsta}} {{zaslon.velikost}}" {{zaslon.input}} {{zaslon.opis}} {{miska.kolicina}}<br>
 		{% endfor %}
 
 		

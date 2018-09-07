@@ -1,0 +1,69 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+			
+		
+		<form> 	
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
+										{% for vrsta in vrste %}													
+												<option>{{vrsta}}</option>												
+										{% endfor%}																						
+										</select>		
+			<label>Znamka:</label><select name="znamka">	
+										<option>Vsi</option>
+										{% for znamka in znamke %}													
+												<option>{{znamka}}</option>												
+										{% endfor%}																						
+										</select>										
+			<label>Prikljucek:</label><select name="prikljucek">	
+										<option>Vsi</option>
+										{% for prikljucek in prikljucki %}													
+												<option>{{prikljucek}}</option>												
+										{% endfor%}										
+										</select>
+			<label>Povezava:</label><select name="povezava">										
+										<option>Vsi</option>
+										<option>Zicna</option>
+										<option>Brezzicna</option>
+										<option>Ostalo</option>										
+										</select>							
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		{% for input in inputi %}			
+		{{input.vrsta}} {{input.znamka}}   {{input.prikljucek}} {{input.povezava}} {{input.kolicina}}<br>
+		{% endfor %}
+
+		
+		<a href="dodajInput" style="margin-left:150px">			
+			<button> DODAJ NOVO INPUT NAPRAVO</button>
+		</a>
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		

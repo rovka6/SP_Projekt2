@@ -130,3 +130,7 @@ label {
 	top: 88.32%;
 	
 }
+
+p {
+    clear: left;
+}

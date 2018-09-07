@@ -14,7 +14,7 @@
 			<label>Moc:</label><select name="moc">	
 										<option>Vsi</option>
 										{% for moc in moci %}													
-												<option>{{moc}}</option>												
+												<option>{{moc}}W</option>												
 										{% endfor%}																						
 										</select>															
 			<input type="submit" id="vpisi" value="Prikazi">	
@@ -33,7 +33,7 @@
 		
 		
 		{% for napajalnik in napajalniki %}			
-		{{napajalnik.znamka}} {{napajalnik.moc}} {{napajalnik.opis}}  {{napajalnik.kolicina}}  <br>
+		{{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}}  <br>
 		{% endfor %}
 
 		

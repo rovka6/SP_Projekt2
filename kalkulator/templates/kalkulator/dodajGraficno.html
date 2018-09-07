@@ -14,17 +14,17 @@
 										</select>
 										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">	
-			<label>Pomnilnik:</label><select name="pomnilnik">
+			<label>Pomnilnik v MB:</label><select name="pomnilnik">
 										<option>Vsi</option>
 										{% for pomnilnik in pomnilniki %}													
 												<option>{{pomnilnik}}</option>												
 										{% endfor%}																						
 										</select>	
-										<input type="text" placeholder="pomnilnik v Mb" name="pomnilnik1">	
+										<input type="text" placeholder="pomnilnik v MB" name="pomnilnik1">	
 			<label>Povezava:</label><select name="povezava">	
 										<option>Vsi</option>
-										<option>PCI</option>
 										<option>AGP</option>
+										<option>PCI</option>										
 										<option>PCIE</option>	
 										<option>ostalo</option>
 										</select>	
