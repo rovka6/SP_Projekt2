@@ -6,6 +6,13 @@
 		
 		<form action="dodajNapajalnik"> {% csrf_token %} 		
 
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
+										{% for vrsta in vrste %}													
+												<option>{{vrsta}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite novo vrsto" name="vrsta1">
 			<label>Znamka:</label><select name="znamka">	
 										<option>Vsi</option>
 										{% for znamka in znamke %}													

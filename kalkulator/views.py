@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -59,7 +59,61 @@ def main(request):
     
     
     return render(request, 'kalkulator/main.html', context)
+  
+@login_required 
+def vrsteNapajalnikov(request):          
+    context = {}
+    
+    
+    return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
+
+@login_required 
+def adapterji(request):          
+    context = {} 
+    adapterji = Adapter.objects.all() 
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    vrste = Adapter.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    znamke = Adapter.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
+    voltaze = Adapter.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
+    amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
+    context['vrste'] = vrste 
+    context['znamke'] = znamke 
+    context['voltaze'] = voltaze
+    context['amperaze'] = amperaze
+
+    # Če želimo samo tipkovnice z določenim priključkom
+    if request.method == 'GET'  and 'znamka' in request.GET: 
+             
+        # izbran prikljucek v dropdown listu 
+        vrsta = request.GET['vrsta']
+        znamka = request.GET['znamka']        
+        voltaza = request.GET['voltaza']
+        amperaza = request.GET['amperaza']
+        
+        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
+        if vrsta != 'Vsi':    
+            adapterji = Adapter.objects.filter(vrsta=vrsta)           
+        
+        if znamka != 'Vsi':                          
+            adapterji = adapterji.filter(znamka=znamka)   
+
+      
+        if voltaza != 'Vsi':    
+            adapterji = adapterji.filter(voltaza=voltaza)    
+
+        if amperaza != 'Vsi':    
+            adapterji = adapterji.filter(amperaza=amperaza)    
+            
+        context['adapterji'] = adapterji
+        return render(request, 'kalkulator/adapterji.html', context)
+          
+    zasloni = Adapter.objects.all()       
+    context['adapterji'] = adapterji  
+    
+    return render(request, 'kalkulator/adapterji.html', context)
      
+  
 @login_required 
 def zasloni(request):   
 
@@ -276,22 +330,25 @@ def napajalniki(request):
     context = {}
     napajalniki = Napajalnik.objects.all() 
 
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk    
+    vrste = Napajalnik.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     znamke = Napajalnik.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
+    context['vrste'] = vrste
     context['znamke'] = znamke 
     context['moci'] = moci 
     
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
-        # izbran prikljucek v dropdown listu  
+        # izbran prikljucek v dropdown listu         
+        vrsta = request.GET['vrsta']
+        if vrsta != 'Vsi':
+            napajalniki = Napajalnik.objects.filter(vrsta=vrsta)                     
         znamka = request.GET['znamka']  
-        moc = request.GET['moc']                     
-         
         if znamka != 'Vsi':
             napajalniki = Napajalnik.objects.filter(znamka=znamka)
-         
+        moc = request.GET['moc'] 
         if moc != 'Vsi':   
             napajalniki = napajalniki.filter(moc=moc)         
                                 
@@ -562,15 +619,21 @@ def dodajNapajalnik(request):
     
     context = {}
     
+    
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    vrste = Napajalnik.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     znamke = Napajalnik.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)
+    moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
+    context['vrste'] = vrste
     context['znamke'] = znamke 
     context['moci'] = moci
     
 
     if request.method == 'GET'  and 'znamka' in request.GET:
 
+        vrsta = request.GET['vrsta']
+        if(request.GET['vrsta1'] != ''):
+            vrsta = request.GET['vrsta1']
         znamka = request.GET['znamka']
         if(request.GET['znamka1'] != ''):
             znamka = request.GET['znamka1']
@@ -580,7 +643,7 @@ def dodajNapajalnik(request):
         opis = request.GET['opis']
         kolicina = request.GET['kolicina']
         
-        nov_napajalnik = Napajalnik(znamka=znamka, moc=moc, opis=opis, kolicina=kolicina)
+        nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, opis=opis, kolicina=kolicina)
         nov_napajalnik.save()
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
@@ -767,6 +830,42 @@ def dodajRazsiritveno(request):
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
+@login_required
+def dodajAdapter(request):
+    
+    context = {}
+        
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    vrste = Adapter.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    znamke = Adapter.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
+    voltaze = Adapter.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
+    amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
+    context['vrste'] = vrste 
+    context['znamke'] = znamke 
+    context['voltaze'] = voltaze
+    context['amperaze'] = amperaze
+    
+    if request.method == 'GET'  and 'znamka' in request.GET:        
+        vrsta = request.GET['vrsta']  
+        if(request.GET['vrsta1'] != ''):
+            vrsta = request.GET['vrsta1']
+        znamka = request.GET['znamka']        
+        if(request.GET['znamka1'] != ''):
+            znamka = request.GET['znamka1']                     
+        voltaza = request.GET['voltaza']
+        if(request.GET['voltaza1'] != ''):
+            voltaza = request.GET['voltaza1']
+        amperaza = request.GET['amperaza']
+        if(request.GET['amperaza1'] != ''):
+            amperaza = request.GET['amperaza1']    
+        opis = request.GET['opis']   
+        kolicina = request.GET['kolicina']         
+               
+        nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, opis=opis, kolicina=kolicina)
+        nov_adapter.save()
+            
+    return render(request, 'kalkulator/dodajAdapter.html', context)    
+    
  
 
 

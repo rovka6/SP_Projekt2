@@ -27,7 +27,8 @@ class Maticna(models.Model):
     opis = models.CharField(max_length=20) 
     kolicina = models.CharField(max_length=20)
     
-class Napajalnik(models.Model):     
+class Napajalnik(models.Model):    
+    vrsta = models.CharField(max_length=20)
     znamka = models.CharField(max_length=20)    
     moc = models.CharField(max_length=20)       
     opis = models.CharField(max_length=20) 
@@ -76,4 +77,13 @@ class Input(models.Model):
     povezava = models.CharField(max_length=20) 
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)  
-       
+   
+class Adapter(models.Model):   
+    vrsta = models.CharField(max_length=20)
+    znamka = models.CharField(max_length=20)    
+    voltaza = models.CharField(max_length=20)       
+    amperaza = models.CharField(max_length=20) 
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)
+
+   

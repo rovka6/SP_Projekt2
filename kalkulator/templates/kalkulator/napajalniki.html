@@ -4,7 +4,12 @@
 	<div id="Stanje"> 
 					
 		<form>
-			
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
+										{% for vrsta in vrste %}													
+												<option>{{vrsta}}</option>												
+										{% endfor%}																						
+										</select>
 			<label>Znamka:</label><select name="znamka">	
 										<option>Vsi</option>
 										{% for znamka in znamke %}													
@@ -14,7 +19,7 @@
 			<label>Moc:</label><select name="moc">	
 										<option>Vsi</option>
 										{% for moc in moci %}													
-												<option>{{moc}}W</option>												
+												<option>{{moc}}</option>												
 										{% endfor%}																						
 										</select>															
 			<input type="submit" id="vpisi" value="Prikazi">	
@@ -33,7 +38,7 @@
 		
 		
 		{% for napajalnik in napajalniki %}			
-		{{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}}  <br>
+		{{napajalnik.vrsta}} {{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}}  <br>
 		{% endfor %}
 
 		
