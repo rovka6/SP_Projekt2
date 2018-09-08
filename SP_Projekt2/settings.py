@@ -75,18 +75,31 @@ WSGI_APPLICATION = 'SP_Projekt2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+DATABASES = {}
+if os.environ.get('DATABASE_URL', '') == 'HEROKU':
+    DATABASES = {
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL', ''))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }   
+
 # HEROKU POSTGRESQL DB SETTING
 # DATABASES = {
 #     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL', ''))
 # }
 
 # SQLITE DB SETTING
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
