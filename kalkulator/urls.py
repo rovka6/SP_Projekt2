@@ -3,6 +3,8 @@
 from django.conf.urls import url
 from . import views
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import static
+from django.conf import settings
 
 urlpatterns = [
 	
@@ -87,4 +89,5 @@ urlpatterns = [
     # dodajAdapter
     url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),    
 ]
+
 

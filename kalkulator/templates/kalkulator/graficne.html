@@ -44,6 +44,7 @@
 		
 		{% for graficna in graficne %}			
 		{{graficna.znamka}} {{graficna.model}} {{graficna.pomnilnik}}MB  {{graficna.povezava}}  {{graficna.opis}} {{graficna.kolicina}}  <br>
+		<img src="{{graficna.image.url}}" height="117" width="200">
 		{% endfor %}
 
 		

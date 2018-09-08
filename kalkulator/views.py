@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from email.utils import parseaddr
 from django.db.models.functions import Length
 from django.db.models.functions import Lower
+from .form_config.forms import ImageUploadForm
 
 import logging
 logger = logging.getLogger(__name__)
@@ -691,22 +692,24 @@ def dodajGraficno(request):
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by(Lower('pomnilnik')).values_list('pomnilnik', flat=True)
     context['znamke'] = znamke   
     context['pomnilniki'] = pomnilniki
-        
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model']
-        pomnilnik = request.GET['pomnilnik']
-        if(request.GET['pomnilnik1'] != ''):
-            pomnilnik = request.GET['pomnilnik1'] 
-        povezava = request.GET['povezava']
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
-        
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        model = request.POST['model']
+        pomnilnik = request.POST['pomnilnik']
+        if(request.POST['pomnilnik1'] != ''):
+            pomnilnik = request.POST['pomnilnik1'] 
+        povezava = request.POST['povezava']
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         nova_graficna = Graficna(znamka=znamka, model=model, pomnilnik=pomnilnik, povezava=povezava, opis=opis, kolicina=kolicina)
-        nova_graficna.save()
+        
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nova_graficna.image = form.cleaned_data['image']
+            nova_graficna.save()
             
     return render(request, 'kalkulator/dodajGraficno.html', context)    
   
