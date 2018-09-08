@@ -10,65 +10,22 @@ from django.db.models.functions import Lower
 from .form_config.forms import ImageUploadForm
 
 import logging
-logger = logging.getLogger(__name__)
-    
-def registracija(request):
-    
-    context = {}
-    
-    if request.method == 'GET' and 'ime' in request.GET:
-    
-        #racuni = Racun.objects.all()        
-        #context['racuni'] = racuni  
-        
-        ime = request.GET['ime']
-        geslo = request.GET['geslo']
-        geslo1 = request.GET['geslo1']
-        email = request.GET['email']       
-        
-        # validacija - preveri če so vsa polja vnešena, če sta gesli enaki in če je @ v email-u 
-        if ime=="" or geslo=="" or geslo1=="" or email=="":
-            context['warning'] = "Izpolnite vsa polja!"
-            return render(request, 'kalkulator/registracija.html', context)
-        
-        if not geslo==geslo1:
-            context['warning'] = "Gesli se ne ujemata!"
-            return render(request, 'kalkulator/registracija.html', context)        
-        
-        if '@' not in email: 
-            context['warning'] = "Vnesite veljaven email naslov!"
-            return render(request, 'kalkulator/registracija.html', context)   
-                  
-        a = User.objects.create_user(username=ime, password=geslo, email=email)
-        group = Group.objects.get(name='user')
-        a.groups.add(group)        
-        a.save()                       
-                
-        login(request, a)
-        
-        context = {}            
-    
-        return render(request, 'kalkulator/main.html', context)
-    
-    return render(request, 'kalkulator/registracija.html')
-    
-    
- 
-@login_required 
+logger = logging.getLogger(__name__)   
+
 def main(request):          
     context = {}
     
     
     return render(request, 'kalkulator/main.html', context)
   
-@login_required 
+ 
 def vrsteNapajalnikov(request):          
     context = {}
     
     
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
 
-@login_required 
+ 
 def adapterji(request):          
     context = {} 
     adapterji = Adapter.objects.all() 
@@ -115,7 +72,7 @@ def adapterji(request):
     return render(request, 'kalkulator/adapterji.html', context)
      
   
-@login_required 
+ 
 def zasloni(request):   
 
     context = {} 
@@ -161,7 +118,7 @@ def zasloni(request):
  
  
  
-@login_required 
+ 
 def graficne(request):    
     
     context = {}
@@ -202,7 +159,7 @@ def graficne(request):
     
     return render(request, 'kalkulator/graficne.html', context)   
  
-@login_required 
+ 
 def rami(request):    
     
     context = {}
@@ -242,7 +199,7 @@ def rami(request):
   
  
  
-@login_required 
+ 
 def procesorji(request):    
     
     context = {}
@@ -280,7 +237,7 @@ def procesorji(request):
     
     return render(request, 'kalkulator/procesorji.html', context)
 
-@login_required 
+ 
 def maticne(request):     
     
     context = {}
@@ -325,7 +282,7 @@ def maticne(request):
     
     return render(request, 'kalkulator/maticne.html', context)
 
-@login_required 
+ 
 def napajalniki(request):    
     
     context = {}
@@ -360,7 +317,7 @@ def napajalniki(request):
     
     return render(request, 'kalkulator/napajalniki.html', context)    
 
-@login_required 
+ 
 def kabli(request):    
     
     context = {}
@@ -390,7 +347,7 @@ def kabli(request):
    
     
     
-@login_required 
+ 
 def inputi(request):    
     
     context = {}
@@ -432,7 +389,7 @@ def inputi(request):
     
     return render(request, 'kalkulator/inputi.html', context)    
 
-@login_required 
+ 
 def razsiritvene(request):    
     
     context = {}
@@ -473,7 +430,7 @@ def razsiritvene(request):
     return render(request, 'kalkulator/razsiritvene.html', context)    
  
     
-@login_required 
+ 
 def diski(request):    
     
     context = {}
@@ -514,7 +471,7 @@ def diski(request):
 
     
 
-@login_required
+
 def dodajDisk(request):
     
     context = {}
@@ -542,7 +499,7 @@ def dodajDisk(request):
             
     return render(request, 'kalkulator/dodajDisk.html', context) 
   
-@login_required
+
 def dodajRam(request):
     
     context = {}
@@ -575,7 +532,7 @@ def dodajRam(request):
     return render(request, 'kalkulator/dodajRam.html', context) 
  
   
-@login_required
+
 def dodajMaticno(request):
     
     context = {}
@@ -615,7 +572,7 @@ def dodajMaticno(request):
             
     return render(request, 'kalkulator/dodajMaticno.html', context)    
  
-@login_required
+
 def dodajNapajalnik(request):
     
     context = {}
@@ -649,7 +606,7 @@ def dodajNapajalnik(request):
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
    
-@login_required
+
 def dodajInput(request):
     
     context = {}
@@ -682,7 +639,7 @@ def dodajInput(request):
             
     return render(request, 'kalkulator/dodajInput.html', context) 
     
-@login_required
+
 def dodajGraficno(request):
     
     context = {}
@@ -713,7 +670,7 @@ def dodajGraficno(request):
             
     return render(request, 'kalkulator/dodajGraficno.html', context)    
   
-@login_required
+
 def dodajProcesor(request):
     
     context = {}
@@ -740,7 +697,7 @@ def dodajProcesor(request):
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
-@login_required
+
 def dodajKabel(request):
     
     context = {}
@@ -764,7 +721,7 @@ def dodajKabel(request):
     
     
     
-@login_required
+
 def dodajZaslon(request):
     
     context = {}
@@ -801,7 +758,7 @@ def dodajZaslon(request):
             
     return render(request, 'kalkulator/dodajZaslon.html', context) 
  
-@login_required
+
 def dodajRazsiritveno(request):
     
     context = {}
@@ -833,7 +790,7 @@ def dodajRazsiritveno(request):
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
-@login_required
+
 def dodajAdapter(request):
     
     context = {}

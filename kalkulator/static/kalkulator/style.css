@@ -13,6 +13,16 @@ div {
 	height:98vh; 
 }
 
+#dodaj {
+	float: left;
+	clear: both;
+}
+
+.dodaj {
+	float: left;
+	clear: both;
+}
+
 #banner { 	
 	position: relative;
 	border: 1px solid white;

@@ -50,11 +50,15 @@
 		{% endfor %}
 
 		
-		<a href="dodajInput" style="margin-left:150px">			
+		
+		
+		{% if user.is_authenticated %}
+			
+			<a href="dodajInput" style="margin-left:150px">			
 			<button> DODAJ NOVO INPUT NAPRAVO</button>
 		</a>
-		
-		
+			{% else %}								
+			{% endif %}
 		
 
 		

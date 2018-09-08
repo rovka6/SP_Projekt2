@@ -119,7 +119,7 @@ USE_I18N = True
 USE_L10N = True
 
 # S tem kreten kaže 1 uro nazaj
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)

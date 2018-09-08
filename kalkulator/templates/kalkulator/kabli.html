@@ -33,11 +33,15 @@
 
 		
 		
-		<a href="dodajKabel" style="margin-left:150px">			
+		
+		
+		{% if user.is_authenticated %}
+			
+			<a href="dodajKabel" style="margin-left:150px">			
 			<button> DODAJ NOV KABEL</button>
 		</a>
-		
-		
+			{% else %}								
+			{% endif %}
 
 		
 		

@@ -37,9 +37,16 @@
 		{% endfor %}
 				
 
-		<a href="dodajProcesor" style="margin-left:150px">			
+		
+		
+		{% if user.is_authenticated %}
+			
+			<a href="dodajProcesor" style="margin-left:150px">			
 			<button> DODAJ NOV PROCESOR</button>
 		</a>
+			{% else %}								
+			{% endif %}
+		
 		
 					
 	</div>

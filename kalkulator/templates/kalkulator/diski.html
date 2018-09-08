@@ -42,11 +42,15 @@
 		{{disk.znamka}}   {{disk.prikljucek}} {{disk.velikost}}GB {{disk.opis}} {{disk.kolicina}}<br>
 		{% endfor %}
 
+		{% if user.is_authenticated %}
 		
-		
-		<a href="dodajDisk" style="margin-left:150px">			
+			<a href="dodajDisk" style="margin-left:150px">			
 			<button> DODAJ NOV DISK</button>
 		</a>
+			{% else %}								
+			{% endif %}
+		
+		
 		
 		
 

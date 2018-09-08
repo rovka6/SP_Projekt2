@@ -9,12 +9,12 @@ from django.conf import settings
 urlpatterns = [
 	
 	# login, logout
-	url( r'^login/$',auth_views.LoginView.as_view(template_name="kalkulator/login.html"), name="login"),    	    
-	url( r'^logout/$',auth_views.LoginView.as_view(template_name="kalkulator/logout.html"), name="logout"),
+	#url( r'^login/$',auth_views.LoginView.as_view(template_name="kalkulator/login.html"), name="login"),    	    
+	#url( r'^logout/$',auth_views.LoginView.as_view(template_name="kalkulator/logout.html"), name="logout"),
     
     
 	# registracija
-	url(r'^registracija', views.registracija, name='registracija'),			
+	#url(r'^registracija', views.registracija, name='registracija'),			
 		
 	# main		
 	url(r'^main', views.main, name='main'), 
@@ -68,8 +68,7 @@ urlpatterns = [
     url(r'^dodajMaticno', views.dodajMaticno, name='dodajMaticno'),      
     
     # dodajNapajalnik
-    url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),
-        
+    url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),     
     
     # dodajDisk
     url(r'^dodajDisk', views.dodajDisk, name='dodajDisk'),
