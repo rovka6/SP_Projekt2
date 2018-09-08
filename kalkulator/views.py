@@ -2,72 +2,33 @@ from django.shortcuts import render
 from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from email.utils import parseaddr
-from django.db.models.functions import Length
 from django.db.models.functions import Lower
+
 
 import logging
 logger = logging.getLogger(__name__)
-    
-def registracija(request):
-    
-    context = {}
-    
-    if request.method == 'GET' and 'ime' in request.GET:
-    
-        #racuni = Racun.objects.all()        
-        #context['racuni'] = racuni  
-        
-        ime = request.GET['ime']
-        geslo = request.GET['geslo']
-        geslo1 = request.GET['geslo1']
-        email = request.GET['email']       
-        
-        # validacija - preveri če so vsa polja vnešena, če sta gesli enaki in če je @ v email-u 
-        if ime=="" or geslo=="" or geslo1=="" or email=="":
-            context['warning'] = "Izpolnite vsa polja!"
-            return render(request, 'kalkulator/registracija.html', context)
-        
-        if not geslo==geslo1:
-            context['warning'] = "Gesli se ne ujemata!"
-            return render(request, 'kalkulator/registracija.html', context)        
-        
-        if '@' not in email: 
-            context['warning'] = "Vnesite veljaven email naslov!"
-            return render(request, 'kalkulator/registracija.html', context)   
-                  
-        a = User.objects.create_user(username=ime, password=geslo, email=email)
-        group = Group.objects.get(name='user')
-        a.groups.add(group)        
-        a.save()                       
-                
-        login(request, a)
-        
-        context = {}            
-    
-        return render(request, 'kalkulator/main.html', context)
-    
-    return render(request, 'kalkulator/registracija.html')
-    
-    
+   
  
-@login_required 
 def main(request):          
     context = {}
-    
-    
+        
     return render(request, 'kalkulator/main.html', context)
-  
-@login_required 
+
+def izbrisiGraficno(request):          
+    context = {}
+        
+    return render(request, 'kalkulator/graficne.html', context)
+
+ 
 def vrsteNapajalnikov(request):          
     context = {}
-    
-    
+        
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
 
-@login_required 
+ 
 def adapterji(request):          
     context = {} 
     adapterji = Adapter.objects.all() 
@@ -77,10 +38,12 @@ def adapterji(request):
     znamke = Adapter.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     voltaze = Adapter.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
     amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
+    moci = Adapter.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)
     context['vrste'] = vrste 
     context['znamke'] = znamke 
     context['voltaze'] = voltaze
     context['amperaze'] = amperaze
+    context['moci'] = moci
 
     # Če želimo samo tipkovnice z določenim priključkom
     if request.method == 'GET'  and 'znamka' in request.GET: 
@@ -90,6 +53,7 @@ def adapterji(request):
         znamka = request.GET['znamka']        
         voltaza = request.GET['voltaza']
         amperaza = request.GET['amperaza']
+        moc = request.GET['moc']
         
         # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
         if vrsta != 'Vsi':    
@@ -104,7 +68,10 @@ def adapterji(request):
 
         if amperaza != 'Vsi':    
             adapterji = adapterji.filter(amperaza=amperaza)    
-            
+        
+        if moc != 'Vsi':    
+            adapterji = adapterji.filter(moc=moc)
+        
         context['adapterji'] = adapterji
         return render(request, 'kalkulator/adapterji.html', context)
           
@@ -114,7 +81,7 @@ def adapterji(request):
     return render(request, 'kalkulator/adapterji.html', context)
      
   
-@login_required 
+ 
 def zasloni(request):   
 
     context = {} 
@@ -160,7 +127,7 @@ def zasloni(request):
  
  
  
-@login_required 
+ 
 def graficne(request):    
     
     context = {}
@@ -174,6 +141,9 @@ def graficne(request):
     context['znamke'] = znamke
     context['povezave'] = povezave
     context['pomnilniki'] = pomnilniki
+      
+    if request.method == 'GET'  and 'graficna' in request.GET:  
+            print('dela')
       
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
@@ -201,7 +171,7 @@ def graficne(request):
     
     return render(request, 'kalkulator/graficne.html', context)   
  
-@login_required 
+ 
 def rami(request):    
     
     context = {}
@@ -241,7 +211,7 @@ def rami(request):
   
  
  
-@login_required 
+ 
 def procesorji(request):    
     
     context = {}
@@ -279,7 +249,7 @@ def procesorji(request):
     
     return render(request, 'kalkulator/procesorji.html', context)
 
-@login_required 
+ 
 def maticne(request):     
     
     context = {}
@@ -324,7 +294,7 @@ def maticne(request):
     
     return render(request, 'kalkulator/maticne.html', context)
 
-@login_required 
+ 
 def napajalniki(request):    
     
     context = {}
@@ -359,7 +329,7 @@ def napajalniki(request):
     
     return render(request, 'kalkulator/napajalniki.html', context)    
 
-@login_required 
+ 
 def kabli(request):    
     
     context = {}
@@ -389,7 +359,7 @@ def kabli(request):
    
     
     
-@login_required 
+ 
 def inputi(request):    
     
     context = {}
@@ -431,7 +401,7 @@ def inputi(request):
     
     return render(request, 'kalkulator/inputi.html', context)    
 
-@login_required 
+ 
 def razsiritvene(request):    
     
     context = {}
@@ -472,7 +442,7 @@ def razsiritvene(request):
     return render(request, 'kalkulator/razsiritvene.html', context)    
  
     
-@login_required 
+ 
 def diski(request):    
     
     context = {}
@@ -513,7 +483,7 @@ def diski(request):
 
     
 
-@login_required
+
 def dodajDisk(request):
     
     context = {}
@@ -541,7 +511,7 @@ def dodajDisk(request):
             
     return render(request, 'kalkulator/dodajDisk.html', context) 
   
-@login_required
+
 def dodajRam(request):
     
     context = {}
@@ -574,7 +544,7 @@ def dodajRam(request):
     return render(request, 'kalkulator/dodajRam.html', context) 
  
   
-@login_required
+
 def dodajMaticno(request):
     
     context = {}
@@ -614,7 +584,7 @@ def dodajMaticno(request):
             
     return render(request, 'kalkulator/dodajMaticno.html', context)    
  
-@login_required
+
 def dodajNapajalnik(request):
     
     context = {}
@@ -648,7 +618,7 @@ def dodajNapajalnik(request):
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
    
-@login_required
+
 def dodajInput(request):
     
     context = {}
@@ -681,7 +651,7 @@ def dodajInput(request):
             
     return render(request, 'kalkulator/dodajInput.html', context) 
     
-@login_required
+
 def dodajGraficno(request):
     
     context = {}
@@ -710,7 +680,7 @@ def dodajGraficno(request):
             
     return render(request, 'kalkulator/dodajGraficno.html', context)    
   
-@login_required
+
 def dodajProcesor(request):
     
     context = {}
@@ -737,7 +707,7 @@ def dodajProcesor(request):
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
-@login_required
+
 def dodajKabel(request):
     
     context = {}
@@ -761,7 +731,7 @@ def dodajKabel(request):
     
     
     
-@login_required
+
 def dodajZaslon(request):
     
     context = {}
@@ -798,7 +768,7 @@ def dodajZaslon(request):
             
     return render(request, 'kalkulator/dodajZaslon.html', context) 
  
-@login_required
+
 def dodajRazsiritveno(request):
     
     context = {}
@@ -830,7 +800,7 @@ def dodajRazsiritveno(request):
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
-@login_required
+
 def dodajAdapter(request):
     
     context = {}
@@ -860,8 +830,10 @@ def dodajAdapter(request):
             amperaza = request.GET['amperaza1']    
         opis = request.GET['opis']   
         kolicina = request.GET['kolicina']         
-               
-        nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, opis=opis, kolicina=kolicina)
+        moc = int(float(voltaza) * float(amperaza))
+        print(moc)
+         
+        nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, moc=moc, opis=opis, kolicina=kolicina)
         nov_adapter.save()
             
     return render(request, 'kalkulator/dodajAdapter.html', context)    

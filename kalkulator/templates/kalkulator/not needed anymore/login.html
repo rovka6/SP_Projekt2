@@ -1,0 +1,26 @@
+{% extends "kalkulator/base.html" %}
+
+{% block logout %}
+	 
+{% endblock %}
+
+
+{% block buttons %}
+	 
+{% endblock %}
+
+
+{% block main %}
+	
+	<div id="Vpis"> 
+		 <form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Login</button>
+		 </form>
+		 
+		<a id="VpisRegisterLink" href="../registracija"> Še niste registrirani ? Registrirate se lahko tukaj.</a>
+
+	</div>
+	
+{% endblock %}

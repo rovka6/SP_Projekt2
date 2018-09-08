@@ -83,6 +83,7 @@ class Adapter(models.Model):
     znamka = models.CharField(max_length=20)    
     voltaza = models.CharField(max_length=20)       
     amperaza = models.CharField(max_length=20) 
+    moc = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
 
