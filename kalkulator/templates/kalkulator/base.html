@@ -19,7 +19,7 @@
 							
 								{% if user.is_authenticated %}
 									{{ user.username }}
-									<a href="{% url 'logout' %}">Odjavi se</a>
+									<a href="{% url 'login' %}">Odjavi se</a>
 								{% else %}
 								
 								{% endif %}

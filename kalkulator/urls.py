@@ -3,8 +3,18 @@
 from django.conf.urls import url
 from . import views
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import static
+from django.conf import settings
 
-urlpatterns = [		   
+urlpatterns = [
+	
+	# login, logout
+	url( r'^login/$',auth_views.LoginView.as_view(template_name="kalkulator/login.html"), name="login"),    	    
+	url( r'^logout/$',auth_views.LoginView.as_view(template_name="kalkulator/logout.html"), name="logout"),
+    
+    
+	# registracija
+	url(r'^registracija', views.registracija, name='registracija'),			
 		
 	# main		
 	url(r'^main', views.main, name='main'), 
@@ -58,7 +68,8 @@ urlpatterns = [
     url(r'^dodajMaticno', views.dodajMaticno, name='dodajMaticno'),      
     
     # dodajNapajalnik
-    url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),      
+    url(r'^dodajNapajalnik', views.dodajNapajalnik, name='dodajNapajalnik'),
+        
     
     # dodajDisk
     url(r'^dodajDisk', views.dodajDisk, name='dodajDisk'),
@@ -76,9 +87,7 @@ urlpatterns = [
     url(r'^dodajKabel', views.dodajKabel, name='dodajKabel'),  
 
     # dodajAdapter
-    url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),   
-
-    # izbrisiGraficno
-    url(r'^izbrisiGraficno', views.izbrisiGraficno, name='izbrisiGraficno1'), 
+    url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),    
 ]
+
 

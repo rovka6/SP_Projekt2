@@ -11,6 +11,7 @@ class Graficna(models.Model):
     povezava = models.CharField(max_length=20)
     opis = models.CharField(max_length=100)
     kolicina = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/graficne', default="/media/no-image.jpg")
 
 class Procesor(models.Model):     
     znamka = models.CharField(max_length=20)
@@ -83,7 +84,6 @@ class Adapter(models.Model):
     znamka = models.CharField(max_length=20)    
     voltaza = models.CharField(max_length=20)       
     amperaza = models.CharField(max_length=20) 
-    moc = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
 

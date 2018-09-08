@@ -1,0 +1,1 @@
+web: gunicorn SP_Projekt2.wsgi --log-file -
