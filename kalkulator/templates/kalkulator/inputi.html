@@ -46,7 +46,12 @@
 		<br>
 		
 		{% for input in inputi %}			
-		{{input.vrsta}} {{input.znamka}}   {{input.prikljucek}} {{input.povezava}} {{input.kolicina}}<br>
+		{{input.vrsta}} {{input.znamka}}   {{input.prikljucek}} {{input.povezava}} {{input.kolicina}}
+		<a href="delete/input/{{ input.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		
+		<br>
 		{% endfor %}
 
 		
@@ -54,8 +59,8 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajInput" style="margin-left:150px">			
-			<button> DODAJ NOVO INPUT NAPRAVO</button>
+			<a href="dodajInput">			
+			<button name="dodaj"> DODAJ NOVO INPUT NAPRAVO</button>
 		</a>
 			{% else %}								
 			{% endif %}

@@ -50,7 +50,13 @@
 		<br>
 		
 		{% for maticna in maticne %}			
-		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.ram }} {{ maticna.graficna }} {{ maticna.opis}}  {{ maticna.kolicina }}  <br>
+		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.ram }} {{ maticna.graficna }} {{ maticna.opis}}  {{ maticna.kolicina }} 
+				<a href="delete/maticna/{{ maticna.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		
+
+		<br>
 		{% endfor %}
 				
 
@@ -58,7 +64,7 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajMaticno" style="margin-left:150px">			
+			<a href="dodajMaticno" >			
 			<button> DODAJ NOVO MATICNO</button>
 		</a>
 			{% else %}								

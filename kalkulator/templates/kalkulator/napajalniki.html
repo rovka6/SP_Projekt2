@@ -38,7 +38,12 @@
 		
 		
 		{% for napajalnik in napajalniki %}			
-		{{napajalnik.vrsta}} {{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}}  <br>
+		{{napajalnik.vrsta}} {{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}} 
+			<a href="delete/napajalnik/{{ napajalnik.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+
+		<br>
 		{% endfor %}
 
 		
@@ -46,7 +51,7 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajNapajalnik" style="margin-left:150px">			
+			<a href="dodajNapajalnik" >			
 			<button> DODAJ NOV NAPAJALNIK</button>
 		</a>
 			{% else %}								

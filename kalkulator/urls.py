@@ -14,8 +14,14 @@ urlpatterns = [
     
     
 	# registracija
-	#url(r'^registracija', views.registracija, name='registracija'),			
-		
+	#url(r'^registracija', views.registracija, name='registracija'),
+    
+    
+
+	
+    # delete		
+	url(r'^delete/(?P<vrsta>\w+)/(?P<id>\d+)$', views.delete, name='delete'),
+    
 	# main		
 	url(r'^main', views.main, name='main'), 
 	 	

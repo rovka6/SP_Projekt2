@@ -28,7 +28,12 @@
 		<br>
 		
 		{% for kabel in kabli %}			
-		{{kabel.vrsta}}   {{kabel.opis}} {{kabel.kolicina}}<br>
+		{{kabel.vrsta}}   {{kabel.opis}} {{kabel.kolicina}}
+		<a href="delete/kabel/{{ kabel.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		
+		<br>
 		{% endfor %}
 
 		
@@ -37,7 +42,7 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajKabel" style="margin-left:150px">			
+			<a href="dodajKabel" >			
 			<button> DODAJ NOV KABEL</button>
 		</a>
 			{% else %}								

@@ -8,10 +8,102 @@ from email.utils import parseaddr
 from django.db.models.functions import Length
 from django.db.models.functions import Lower
 from .form_config.forms import ImageUploadForm
+from django.shortcuts import redirect
 
 import logging
 logger = logging.getLogger(__name__)   
 
+def redirect_view(request):
+    response = redirect('/redirect-success/')
+    return response
+
+
+
+def delete(request, vrsta, id):     
+
+    if vrsta == 'graficna':
+        graficna = Graficna.objects.get(pk=id)                
+        graficna.kolicina = (int(graficna.kolicina) - 1)
+        graficna.save()
+        if(int(graficna.kolicina) == 0):
+            graficna.delete()
+        
+        return redirect('graficne')
+    
+    if vrsta == 'input':
+        input = Input.objects.get(pk=id)
+        input.kolicina = (int(input.kolicina) - 1)
+        input.save()
+        if(int(input.kolicina) == 0):
+            input.delete()
+        return redirect('inputi')
+    
+    if vrsta == 'disk':
+        disk = Disk.objects.get(pk=id)
+        disk.kolicina = (int(disk.kolicina) - 1)
+        disk.save()
+        if(int(disk.kolicina) == 0):
+            disk.delete()
+        return redirect('diski')
+        
+    if vrsta == 'ram':
+        ram = Ram.objects.get(pk=id)
+        ram.kolicina = (int(ram.kolicina) - 1)
+        ram.save()
+        if(int(ram.kolicina) == 0):
+            ram.delete()
+        return redirect('rami')
+        
+    if vrsta == 'razsiritvena':
+        razsiritvena = Razsiritvena.objects.get(pk=id)
+        razsiritvena.kolicina = (int(razsiritvena.kolicina) - 1)
+        razsiritvena.save()
+        if(int(razsiritvena.kolicina) == 0):
+            razsiritvena.delete()
+        return redirect('razsiritvene')
+        
+    if vrsta == 'maticna':
+        maticna = Maticna.objects.get(pk=id)
+        maticna.kolicina = (int(maticna.kolicina) - 1)
+        maticna.save()
+        if(int(maticna.kolicina) == 0):
+            maticna.delete()    
+        return redirect('maticne')
+        
+    if vrsta == 'zaslon':
+        zaslon = Zaslon.objects.get(pk=id)
+        zaslon.kolicina = (int(zaslon.kolicina) - 1)
+        zaslon.save()
+        if(int(zaslon.kolicina) == 0):
+            zaslon.delete()     
+        return redirect('zasloni')
+        
+    if vrsta == 'napajalnik':
+        napajalnik = Napajalnik.objects.get(pk=id)
+        napajalnik.kolicina = (int(napajalnik.kolicina) - 1)
+        napajalnik.save()
+        if(int(napajalnik.kolicina) == 0):
+            napajalnik.delete()
+        return redirect('napajalniki')
+    
+    if vrsta == 'kabel':
+        kabel = Kabel.objects.get(pk=id)
+        kabel.kolicina = (int(kabel.kolicina) - 1)
+        kabel.save()
+        if(int(kabel.kolicina) == 0):
+            kabel.delete()
+        return redirect('kabli')
+    
+    if vrsta == 'procesor':
+        procesor = Procesor.objects.get(pk=id)
+        procesor.kolicina = (int(procesor.kolicina) - 1)
+        procesor.save()
+        if(int(procesor.kolicina) == 0):
+            procesor.delete()
+        return redirect('procesorji')
+       
+    return redirect('main')
+    
 def main(request):          
     context = {}
     
@@ -128,7 +220,7 @@ def graficne(request):
     znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     povezave = Graficna.objects.values('povezava').distinct().order_by(Lower('povezava')).values_list('povezava', flat=True)
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by('pomnilnik').values_list('pomnilnik', flat=True)
-    print(pomnilniki)
+ 
     context['znamke'] = znamke
     context['povezave'] = povezave
     context['pomnilniki'] = pomnilniki
@@ -217,17 +309,17 @@ def procesorji(request):
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
         # izbran prikljucek v dropdown listu  
-        znamka = request.GET['znamka'].upper()   
-        model = request.GET['model'].upper()
+        znamka = request.GET['znamka']
+        model = request.GET['model']
         podnozje = request.GET['podnozje'] 
                 
-        if znamka != '':
+        if znamka != 'Vsi':
             procesorji = Procesor.objects.filter(znamka=znamka)
          
         if model != '':   
             procesorji = procesorji.filter(model=model)         
             
-        if podnozje != '':    
+        if podnozje != 'Vsi':    
             procesorji = procesorji.filter(podnozje=podnozje)   
                           
         context['procesorji'] = procesorji
@@ -471,7 +563,7 @@ def diski(request):
 
     
 
-
+@login_required
 def dodajDisk(request):
     
     context = {}
@@ -499,7 +591,7 @@ def dodajDisk(request):
             
     return render(request, 'kalkulator/dodajDisk.html', context) 
   
-
+@login_required
 def dodajRam(request):
     
     context = {}
@@ -532,7 +624,7 @@ def dodajRam(request):
     return render(request, 'kalkulator/dodajRam.html', context) 
  
   
-
+@login_required
 def dodajMaticno(request):
     
     context = {}
@@ -572,7 +664,7 @@ def dodajMaticno(request):
             
     return render(request, 'kalkulator/dodajMaticno.html', context)    
  
-
+@login_required
 def dodajNapajalnik(request):
     
     context = {}
@@ -606,7 +698,7 @@ def dodajNapajalnik(request):
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
    
-
+@login_required
 def dodajInput(request):
     
     context = {}
@@ -639,7 +731,7 @@ def dodajInput(request):
             
     return render(request, 'kalkulator/dodajInput.html', context) 
     
-
+@login_required
 def dodajGraficno(request):
     
     context = {}
@@ -670,7 +762,7 @@ def dodajGraficno(request):
             
     return render(request, 'kalkulator/dodajGraficno.html', context)    
   
-
+@login_required
 def dodajProcesor(request):
     
     context = {}
@@ -690,14 +782,15 @@ def dodajProcesor(request):
         podnozje = request.GET['podnozje'].upper()
         if(request.GET['podnozje1'] != ''):
             podnozje = request.GET['podnozje1']
+        opis = request.GET['opis']    
         kolicina = request.GET['kolicina']
         
-        nov_procesor = Procesor(znamka=znamka, model=model, podnozje=podnozje, kolicina=kolicina)
+        nov_procesor = Procesor(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
         nov_procesor.save()
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
-
+@login_required
 def dodajKabel(request):
     
     context = {}
@@ -721,7 +814,7 @@ def dodajKabel(request):
     
     
     
-
+@login_required
 def dodajZaslon(request):
     
     context = {}
@@ -758,7 +851,7 @@ def dodajZaslon(request):
             
     return render(request, 'kalkulator/dodajZaslon.html', context) 
  
-
+@login_required
 def dodajRazsiritveno(request):
     
     context = {}
@@ -790,7 +883,7 @@ def dodajRazsiritveno(request):
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
-
+@login_required
 def dodajAdapter(request):
     
     context = {}

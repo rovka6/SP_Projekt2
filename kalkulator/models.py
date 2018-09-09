@@ -9,14 +9,15 @@ class Graficna(models.Model):
     model = models.CharField(max_length=20)
     pomnilnik = models.CharField(max_length=20)
     povezava = models.CharField(max_length=20)
-    opis = models.CharField(max_length=100)
+    opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/graficne', default="/media/no-image.jpg")
 
 class Procesor(models.Model):     
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
-    podnozje = models.CharField(max_length=20)    
+    podnozje = models.CharField(max_length=20) 
+    opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     
 class Maticna(models.Model):     
@@ -25,14 +26,14 @@ class Maticna(models.Model):
     podnozje = models.CharField(max_length=20)
     ram = models.CharField(max_length=20)
     graficna = models.CharField(max_length=20)
-    opis = models.CharField(max_length=20) 
+    opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     
 class Napajalnik(models.Model):    
     vrsta = models.CharField(max_length=20)
     znamka = models.CharField(max_length=20)    
     moc = models.CharField(max_length=20)       
-    opis = models.CharField(max_length=20) 
+    opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)   
 
 class Disk(models.Model):     

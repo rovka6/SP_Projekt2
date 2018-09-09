@@ -50,7 +50,13 @@
 		<br>
 		
 		{% for zaslon in zasloni %}			
-		{{zaslon.znamka}}   {{zaslon.model}} {{zaslon.vrsta}} {{zaslon.velikost}}" {{zaslon.input}} {{zaslon.opis}} {{miska.kolicina}}<br>
+		{{zaslon.znamka}}   {{zaslon.model}} {{zaslon.vrsta}} {{zaslon.velikost}}" {{zaslon.input}} {{zaslon.opis}} {{miska.kolicina}}
+		<a href="delete/zaslon/{{ zaslon.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		
+		
+		<br>
 		{% endfor %}
 
 		
@@ -59,7 +65,7 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajZaslon" style="margin-left:150px">			
+			<a href="dodajZaslon" >			
 			<button> DODAJ NOV ZASLON</button>
 		</a>
 			{% else %}								

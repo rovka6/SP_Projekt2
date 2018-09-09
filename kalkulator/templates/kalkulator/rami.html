@@ -40,7 +40,11 @@
 		<br>
 		
 		{% for ram in rami %}			
-		{{ram.znamka}}   {{ram.vrsta}} {{ram.velikost}} {{ram.opis}} {{ram.kolicina}}<br>
+		{{ram.znamka}}   {{ram.vrsta}} {{ram.velikost}} {{ram.opis}} {{ram.kolicina}}
+		<a href="delete/ram/{{ ram.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		<br>
 		{% endfor %}
 
 		
@@ -49,7 +53,7 @@
 		
 		{% if user.is_authenticated %}
 		
-			<a href="dodajRam" style="margin-left:150px">			
+			<a href="dodajRam" >			
 			<button> DODAJ NOV RAM</button>
 		</a>
 			{% else %}								

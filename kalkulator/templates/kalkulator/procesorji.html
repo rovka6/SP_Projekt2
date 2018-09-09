@@ -33,7 +33,13 @@
 		<br>
 		
 		{% for procesor in procesorji %}			
-		{{procesor.znamka}} {{procesor.model}} {{procesor.podnozje}}  {{procesor.kolicina}}  <br>
+		{{procesor.znamka}} {{procesor.model}} {{procesor.podnozje}}  {{procesor.kolicina}} 
+		<a href="delete/procesor/{{ procesor.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+
+
+		<br>
 		{% endfor %}
 				
 
@@ -41,7 +47,7 @@
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajProcesor" style="margin-left:150px">			
+			<a href="dodajProcesor" >			
 			<button> DODAJ NOV PROCESOR</button>
 		</a>
 			{% else %}								

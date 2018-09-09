@@ -47,14 +47,20 @@
 		<br>
 		
 		{% for adapter in adapterji %}			
-		{{adapter.vrsta}} {{adapter.znamka}} {{adapter.voltaza}} {{adapter.amperaza}}   {{kabel.opis}} {{kabel.kolicina}}<br>
+		{{adapter.vrsta}} {{adapter.znamka}} {{adapter.voltaza}} {{adapter.amperaza}}   {{kabel.opis}} {{kabel.kolicina}}
+		<a href="delete/adapter/{{ adapter.id}}" >	
+					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+				</a>
+		
+		
+		<br>
 		{% endfor %}
 
 		
 		
 		{% if user.is_authenticated %}
 			
-			<a href="dodajAdapter" style="margin-left:150px">			
+			<a href="dodajAdapter" ">			
 			<button> DODAJ NOV ADAPTER</button>
 		</a>
 			{% else %}								
