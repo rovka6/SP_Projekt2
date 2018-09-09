@@ -17,7 +17,79 @@ def redirect_view(request):
     response = redirect('/redirect-success/')
     return response
 
+def add(request, vrsta, id):     
 
+    if vrsta == 'graficna':
+        graficna = Graficna.objects.get(pk=id)                
+        graficna.kolicina = (int(graficna.kolicina) + 1)
+        graficna.save()
+               
+        return redirect('graficne')
+    
+    if vrsta == 'input':
+        input = Input.objects.get(pk=id)
+        input.kolicina = (int(input.kolicina) + 1)
+        input.save()
+        
+        return redirect('inputi')
+    
+    if vrsta == 'disk':
+        disk = Disk.objects.get(pk=id)
+        disk.kolicina = (int(disk.kolicina) + 1)
+        disk.save()
+     
+        return redirect('diski')
+        
+    if vrsta == 'ram':
+        ram = Ram.objects.get(pk=id)
+        ram.kolicina = (int(ram.kolicina) + 1)
+        ram.save()
+      
+        return redirect('rami')
+        
+    if vrsta == 'razsiritvena':
+        razsiritvena = Razsiritvena.objects.get(pk=id)
+        razsiritvena.kolicina = (int(razsiritvena.kolicina) + 1)
+        razsiritvena.save()
+        
+        return redirect('razsiritvene')
+        
+    if vrsta == 'maticna':
+        maticna = Maticna.objects.get(pk=id)
+        maticna.kolicina = (int(maticna.kolicina) + 1)
+        maticna.save()
+        
+        return redirect('maticne')
+        
+    if vrsta == 'zaslon':
+        zaslon = Zaslon.objects.get(pk=id)
+        zaslon.kolicina = (int(zaslon.kolicina) + 1)
+        zaslon.save()
+           
+        return redirect('zasloni')
+        
+    if vrsta == 'napajalnik':
+        napajalnik = Napajalnik.objects.get(pk=id)
+        napajalnik.kolicina = (int(napajalnik.kolicina) + 1)
+        napajalnik.save()
+        
+        return redirect('napajalniki')
+    
+    if vrsta == 'kabel':
+        kabel = Kabel.objects.get(pk=id)
+        kabel.kolicina = (int(kabel.kolicina) + 1)
+        kabel.save()
+       
+        return redirect('kabli')
+    
+    if vrsta == 'procesor':
+        procesor = Procesor.objects.get(pk=id)
+        procesor.kolicina = (int(procesor.kolicina) + 1)
+        procesor.save()
+        
+        return redirect('procesorji')
+       
+    return redirect('main')
 
 def delete(request, vrsta, id):     
 

@@ -4,9 +4,7 @@ body{
 	margin-right: auto;
 }
 
-div { 	
-	
-}
+
 
 #page {	
 	width: 100%;
@@ -48,7 +46,7 @@ div {
 
 #main {
 	height: 83.4%;	
-	border: 1px solid black;
+	border: 5px solid black;
 	box-sizing: border-box;	
 }
 

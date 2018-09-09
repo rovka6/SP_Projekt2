@@ -22,6 +22,10 @@ urlpatterns = [
     # delete		
 	url(r'^delete/(?P<vrsta>\w+)/(?P<id>\d+)$', views.delete, name='delete'),
     
+    
+    # add		
+	url(r'^add/(?P<vrsta>\w+)/(?P<id>\d+)$', views.add, name='add'),
+    
 	# main		
 	url(r'^main', views.main, name='main'), 
 	 	
