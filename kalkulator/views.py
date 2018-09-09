@@ -574,20 +574,24 @@ def dodajDisk(request):
     context['znamke'] = znamke   
     context['velikosti'] = velikosti        
 
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']  
-        prikljucek = request.GET['prikljucek']
-        velikost = request.GET['velikost']
-        if(request.GET['velikost1'] != ''):
-            velikost = request.GET['velikost1']  
-        opis = request.GET['opis']       
-        kolicina = request.GET['kolicina']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']  
+        prikljucek = request.POST['prikljucek']
+        velikost = request.POST['velikost']
+        if(request.POST['velikost1'] != ''):
+            velikost = request.POST['velikost1']  
+        opis = request.POST['opis']       
+        kolicina = request.POST['kolicina']
         
         nov_disk = Disk(znamka=znamka, prikljucek=prikljucek, velikost=velikost, opis=opis, kolicina=kolicina)
-        nov_disk.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_disk.image = form.cleaned_data['image']
+            nov_disk.save()
             
     return render(request, 'kalkulator/dodajDisk.html', context) 
   
@@ -604,22 +608,26 @@ def dodajRam(request):
     context['vrste'] = vrste        
     context['velikosti'] = velikosti 
     
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']  
-        vrsta = request.GET['vrsta']
-        if(request.GET['vrsta1'] != ''):
-            vrsta = request.GET['vrsta1'] 
-        velikost = request.GET['velikost']
-        if(request.GET['velikost1'] != ''):
-            velikost = request.GET['velikost1']  
-        opis = request.GET['opis']       
-        kolicina = request.GET['kolicina']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']  
+        vrsta = request.POST['vrsta']
+        if(request.POST['vrsta1'] != ''):
+            vrsta = request.POST['vrsta1'] 
+        velikost = request.POST['velikost']
+        if(request.POST['velikost1'] != ''):
+            velikost = request.POST['velikost1']  
+        opis = request.POST['opis']       
+        kolicina = request.POST['kolicina']
         
         nov_disk = Ram(znamka=znamka, vrsta=vrsta, velikost=velikost, opis=opis, kolicina=kolicina)
-        nov_disk.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_disk.image = form.cleaned_data['image']
+            nov_disk.save()
             
     return render(request, 'kalkulator/dodajRam.html', context) 
  
@@ -641,26 +649,30 @@ def dodajMaticno(request):
     
     
     
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model']       
-        podnozje = request.GET['podnozje']
-        if(request.GET['podnozje1'] != ''):
-            podnozje = request.GET['podnozje1']
-        ram = request.GET['ram']
-        if(request.GET['ram1'] != ''):
-            ram = request.GET['ram1'] 
-        graficna = request.GET['graficna']
-        if(request.GET['graficna1'] != ''):
-            graficna = request.GET['graficna1']        
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        model = request.POST['model']       
+        podnozje = request.POST['podnozje']
+        if(request.POST['podnozje1'] != ''):
+            podnozje = request.POST['podnozje1']
+        ram = request.POST['ram']
+        if(request.POST['ram1'] != ''):
+            ram = request.POST['ram1'] 
+        graficna = request.POST['graficna']
+        if(request.POST['graficna1'] != ''):
+            graficna = request.POST['graficna1']        
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         
         nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, ram=ram, graficna=graficna, opis=opis, kolicina=kolicina)
-        nova_maticna.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nova_maticna.image = form.cleaned_data['image']
+            nova_maticna.save()
             
     return render(request, 'kalkulator/dodajMaticno.html', context)    
  
@@ -679,22 +691,26 @@ def dodajNapajalnik(request):
     context['moci'] = moci
     
 
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        vrsta = request.GET['vrsta']
-        if(request.GET['vrsta1'] != ''):
-            vrsta = request.GET['vrsta1']
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        moc = request.GET['moc']  
-        if(request.GET['moc1'] != ''):
-            moc = request.GET['moc1']
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
+        vrsta = request.POST['vrsta']
+        if(request.POST['vrsta1'] != ''):
+            vrsta = request.POST['vrsta1']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        moc = request.POST['moc']  
+        if(request.POST['moc1'] != ''):
+            moc = request.POST['moc1']
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         
         nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, opis=opis, kolicina=kolicina)
-        nov_napajalnik.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_napajalnik.image = form.cleaned_data['image']
+            nov_napajalnik.save()
             
     return render(request, 'kalkulator/dodajNapajalnik.html', context)  
    
@@ -711,23 +727,27 @@ def dodajInput(request):
     context['vrste'] = vrste
     context['prikljucki'] = prikljucki
         
-    if request.method == 'GET'  and 'vrsta' in request.GET:
+    if request.method == 'POST'  and 'vrsta' in request.POST:
 
-        vrsta = request.GET['vrsta']
-        if(request.GET['vrsta1'] != ''):
-          vrsta = request.GET['vrsta1']
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-          znamka = request.GET['znamka1']
-        prikljucek = request.GET['prikljucek']
-        if(request.GET['prikljucek1'] != ''):
-          prikljucek = request.GET['prikljucek1']
-        povezava = request.GET['povezava']    
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
+        vrsta = request.POST['vrsta']
+        if(request.POST['vrsta1'] != ''):
+          vrsta = request.POST['vrsta1']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+          znamka = request.POST['znamka1']
+        prikljucek = request.POST['prikljucek']
+        if(request.POST['prikljucek1'] != ''):
+          prikljucek = request.POST['prikljucek1']
+        povezava = request.POST['povezava']    
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         
         nov_input = Input(vrsta=vrsta, znamka=znamka, prikljucek=prikljucek, povezava=povezava, opis=opis, kolicina=kolicina)
-        nov_input.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_input.image = form.cleaned_data['image']
+            nov_input.save()
             
     return render(request, 'kalkulator/dodajInput.html', context) 
     
@@ -773,20 +793,24 @@ def dodajProcesor(request):
     context['znamke'] = znamke 
     context['podnozja'] = podnozja
 
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka'].upper()
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model'].upper()        
-        podnozje = request.GET['podnozje'].upper()
-        if(request.GET['podnozje1'] != ''):
-            podnozje = request.GET['podnozje1']
-        opis = request.GET['opis']    
-        kolicina = request.GET['kolicina']
+        znamka = request.POST['znamka'].upper()
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        model = request.POST['model'].upper()        
+        podnozje = request.POST['podnozje'].upper()
+        if(request.POST['podnozje1'] != ''):
+            podnozje = request.POST['podnozje1']
+        opis = request.POST['opis']    
+        kolicina = request.POST['kolicina']
         
         nov_procesor = Procesor(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
-        nov_procesor.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_procesor.image = form.cleaned_data['image']
+            nov_procesor.save()
             
     return render(request, 'kalkulator/dodajProcesor.html', context)    
 
@@ -799,16 +823,20 @@ def dodajKabel(request):
     vrste = Kabel.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)   
     context['vrste'] = vrste
     
-    if request.method == 'GET'  and 'vrsta' in request.GET:
+    if request.method == 'POST'  and 'vrsta' in request.POST:
 
-        vrsta = request.GET['vrsta']
-        if(request.GET['vrsta1'] != ''):
-            vrsta = request.GET['vrsta1']
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
+        vrsta = request.POST['vrsta']
+        if(request.POST['vrsta1'] != ''):
+            vrsta = request.POST['vrsta1']
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         
         nov_kabel = Kabel(vrsta=vrsta, opis=opis, kolicina=kolicina)
-        nov_kabel.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_kabel.image = form.cleaned_data['image']
+            nov_kabel.save()
             
     return render(request, 'kalkulator/dodajKabel.html', context)    
     
@@ -828,26 +856,30 @@ def dodajZaslon(request):
     context['inputi'] = inputi
 
     
-    if request.method == 'GET'  and 'znamka' in request.GET:
+    if request.method == 'POST'  and 'znamka' in request.POST:
 
-        znamka = request.GET['znamka']
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model']        
-        vrsta = request.GET['vrsta']
-        velikost = request.GET['velikost']
-        if(request.GET['velikost1'] != ''):
-            velikost = request.GET['velikost1']
-        input = request.GET['input']
-        if(request.GET['input1'] != ''):
-            input = request.GET['input1']    
-        opis = request.GET['opis']
-        kolicina = request.GET['kolicina']
+        znamka = request.POST['znamka']
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        model = request.POST['model']        
+        vrsta = request.POST['vrsta']
+        velikost = request.POST['velikost']
+        if(request.POST['velikost1'] != ''):
+            velikost = request.POST['velikost1']
+        input = request.POST['input']
+        if(request.POST['input1'] != ''):
+            input = request.POST['input1']    
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
         
         print(input)
         
         nov_zaslon = Zaslon(znamka=znamka, model=model, vrsta=vrsta, velikost=velikost, input=input, opis=opis, kolicina=kolicina)
-        nov_zaslon.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_zaslon.image = form.cleaned_data['image']
+            nov_zaslon.save()
             
     return render(request, 'kalkulator/dodajZaslon.html', context) 
  
@@ -864,22 +896,26 @@ def dodajRazsiritveno(request):
     context['vrste'] = vrste  
     context['prikljucki'] = prikljucki
     
-    if request.method == 'GET'  and 'znamka' in request.GET:        
-        znamka = request.GET['znamka']        
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']
-        model = request.GET['model']      
-        vrsta = request.GET['vrsta']  
-        if(request.GET['vrsta1'] != ''):
-            vrsta = request.GET['vrsta1']    
-        prikljucek = request.GET['prikljucek']
-        if(request.GET['prikljucek1'] != ''):
-            prikljucek = request.GET['prikljucek1']
-        opis = request.GET['opis']   
-        kolicina = request.GET['kolicina']         
+    if request.method == 'POST'  and 'znamka' in request.POST:        
+        znamka = request.POST['znamka']        
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']
+        model = request.POST['model']      
+        vrsta = request.POST['vrsta']  
+        if(request.POST['vrsta1'] != ''):
+            vrsta = request.POST['vrsta1']    
+        prikljucek = request.POST['prikljucek']
+        if(request.POST['prikljucek1'] != ''):
+            prikljucek = request.POST['prikljucek1']
+        opis = request.POST['opis']   
+        kolicina = request.POST['kolicina']         
                
         nova_razsiritvena = Razsiritvena(znamka=znamka, model=model, vrsta=vrsta, prikljucek=prikljucek, opis=opis, kolicina=kolicina)
-        nova_razsiritvena.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nova_razsiritvena.image = form.cleaned_data['image']
+            nova_razsiritvena.save()
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
@@ -898,24 +934,28 @@ def dodajAdapter(request):
     context['voltaze'] = voltaze
     context['amperaze'] = amperaze
     
-    if request.method == 'GET'  and 'znamka' in request.GET:        
-        vrsta = request.GET['vrsta']  
-        if(request.GET['vrsta1'] != ''):
-            vrsta = request.GET['vrsta1']
-        znamka = request.GET['znamka']        
-        if(request.GET['znamka1'] != ''):
-            znamka = request.GET['znamka1']                     
-        voltaza = request.GET['voltaza']
-        if(request.GET['voltaza1'] != ''):
-            voltaza = request.GET['voltaza1']
-        amperaza = request.GET['amperaza']
-        if(request.GET['amperaza1'] != ''):
-            amperaza = request.GET['amperaza1']    
-        opis = request.GET['opis']   
-        kolicina = request.GET['kolicina']         
+    if request.method == 'POST'  and 'znamka' in request.POST:        
+        vrsta = request.POST['vrsta']  
+        if(request.POST['vrsta1'] != ''):
+            vrsta = request.POST['vrsta1']
+        znamka = request.POST['znamka']        
+        if(request.POST['znamka1'] != ''):
+            znamka = request.POST['znamka1']                     
+        voltaza = request.POST['voltaza']
+        if(request.POST['voltaza1'] != ''):
+            voltaza = request.POST['voltaza1']
+        amperaza = request.POST['amperaza']
+        if(request.POST['amperaza1'] != ''):
+            amperaza = request.POST['amperaza1']    
+        opis = request.POST['opis']   
+        kolicina = request.POST['kolicina']         
                
         nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, opis=opis, kolicina=kolicina)
-        nov_adapter.save()
+
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            nov_adapter.image = form.cleaned_data['image']
+            nov_adapter.save()
             
     return render(request, 'kalkulator/dodajAdapter.html', context)    
     

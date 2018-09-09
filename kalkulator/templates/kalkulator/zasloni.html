@@ -49,7 +49,9 @@
 		<br>
 		<br>
 		
-		{% for zaslon in zasloni %}			
+		{% for zaslon in zasloni %}		
+		<img src="{{zaslon.image.url}}" height="50" width="80">	
+	
 		{{zaslon.znamka}}   {{zaslon.model}} {{zaslon.vrsta}} {{zaslon.velikost}}" {{zaslon.input}} {{zaslon.opis}} {{miska.kolicina}}
 		<a href="delete/zaslon/{{ zaslon.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

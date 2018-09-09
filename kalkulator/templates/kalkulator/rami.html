@@ -39,7 +39,9 @@
 		<br>
 		<br>
 		
-		{% for ram in rami %}			
+		{% for ram in rami %}
+		<img src="{{ram.image.url}}" height="50" width="80">	
+			
 		{{ram.znamka}}   {{ram.vrsta}} {{ram.velikost}} {{ram.opis}} {{ram.kolicina}}
 		<a href="delete/ram/{{ ram.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

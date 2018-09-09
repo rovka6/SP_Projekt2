@@ -37,7 +37,9 @@
 		<br>
 		
 		
-		{% for napajalnik in napajalniki %}			
+		{% for napajalnik in napajalniki %}	
+		<img src="{{napajalnik.image.url}}" height="50" width="80">	
+		
 		{{napajalnik.vrsta}} {{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}} 
 			<a href="delete/napajalnik/{{ napajalnik.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

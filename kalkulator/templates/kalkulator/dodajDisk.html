@@ -4,7 +4,7 @@
 	<div id="Stanje"> 
 			
 		
-		<form action="dodajDisk"> {% csrf_token %} 		
+		<form action="dodajDisk" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
 			<label>Znamka:</label><select name="znamka">	
 										<option>Vsi</option>
@@ -27,7 +27,8 @@
 										<input type="text" placeholder="Vpisite novo velikost v GB" name="velikost1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
-										
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>

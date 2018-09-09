@@ -45,7 +45,9 @@
 		<br>
 		<br>
 		
-		{% for input in inputi %}			
+		{% for input in inputi %}
+		<img src="{{input.image.url}}" height="50" width="80">	
+			
 		{{input.vrsta}} {{input.znamka}}   {{input.prikljucek}} {{input.povezava}} {{input.kolicina}}
 		<a href="delete/input/{{ input.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

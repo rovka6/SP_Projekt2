@@ -46,7 +46,8 @@
 		<br>
 		<br>
 		
-		{% for adapter in adapterji %}			
+		{% for adapter in adapterji %}	
+		<img src="{{adapter.image.url}}" height="50" width="80">			
 		{{adapter.vrsta}} {{adapter.znamka}} {{adapter.voltaza}} {{adapter.amperaza}}   {{kabel.opis}} {{kabel.kolicina}}
 		<a href="delete/adapter/{{ adapter.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

@@ -4,7 +4,7 @@
 	<div id="Stanje"> 
 			
 		
-		<form action="dodajZaslon"> {% csrf_token %} 		
+		<form action="dodajZaslon" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
 			<label>Znamka:</label><select name="znamka">	
 										<option>Vsi</option>
@@ -36,7 +36,8 @@
 										<input type="text" placeholder="Vpisite nov input" name="input1">	
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
-										
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>

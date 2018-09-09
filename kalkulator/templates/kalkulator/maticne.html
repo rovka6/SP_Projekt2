@@ -49,7 +49,9 @@
 		<br>
 		<br>
 		
-		{% for maticna in maticne %}			
+		{% for maticna in maticne %}
+		<img src="{{maticna.image.url}}" height="50" width="80">	
+			
 		{{maticna.znamka}} {{maticna.model}} {{ maticna.podnozje }} {{ maticna.ram }} {{ maticna.graficna }} {{ maticna.opis}}  {{ maticna.kolicina }} 
 				<a href="delete/maticna/{{ maticna.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
