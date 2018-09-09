@@ -27,7 +27,9 @@
 		<br>
 		<br>
 		
-		{% for kabel in kabli %}			
+		{% for kabel in kabli %}
+		<img src="{{kabel.image.url}}" height="50" width="80">	
+			
 		{{kabel.vrsta}}   {{kabel.opis}} {{kabel.kolicina}}
 		<a href="delete/kabel/{{ kabel.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

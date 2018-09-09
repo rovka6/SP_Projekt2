@@ -32,7 +32,9 @@
 		<br>
 		<br>
 		
-		{% for procesor in procesorji %}			
+		{% for procesor in procesorji %}
+		<img src="{{procesor.image.url}}" height="50" width="80">	
+			
 		{{procesor.znamka}} {{procesor.model}} {{procesor.podnozje}}  {{procesor.kolicina}} 
 		<a href="delete/procesor/{{ procesor.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

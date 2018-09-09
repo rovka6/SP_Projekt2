@@ -38,7 +38,9 @@
 		<br>
 		<br>
 		
-		{% for disk in diski %}			
+		{% for disk in diski %}
+		<img src="{{disk.image.url}}" height="50" width="80">	
+			
 		{{disk.znamka}}   {{disk.prikljucek}} {{disk.velikost}}GB {{disk.opis}} {{disk.kolicina}}
 		<a href="delete/disk/{{ disk.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

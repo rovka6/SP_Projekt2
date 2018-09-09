@@ -39,7 +39,9 @@
 		<br>
 		<br>
 		
-		{% for razsiritvena in razsiritvene %}			
+		{% for razsiritvena in razsiritvene %}	
+		<img src="{{razsiritvena.image.url}}" height="50" width="80">	
+		
 		{{razsiritvena.znamka}}   {{razsiritvena.vrsta}} {{razsiritvena.prikljucek}} {{razsiritvena.opis}} {{razsiritvena.kolicina}}
 		<a href="delete/razsiritvena/{{ razsiritvena.id}}" >	
 					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					

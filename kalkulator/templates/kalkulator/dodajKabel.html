@@ -4,7 +4,7 @@
 	<div id="Stanje"> 
 			
 		
-		<form action="dodajKabel"> {% csrf_token %} 		
+		<form action="dodajKabel" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
 			<label>Vrsta:</label><select name="vrsta">	
 										<option>Vsi</option>
@@ -16,7 +16,8 @@
 			
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
-										
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+					
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>
