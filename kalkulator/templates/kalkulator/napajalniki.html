@@ -41,9 +41,27 @@
 		<img src="{{napajalnik.image.url}}" height="50" width="80">	
 		
 		{{napajalnik.vrsta}} {{napajalnik.znamka}} {{napajalnik.moc}}W {{napajalnik.opis}}  {{napajalnik.kolicina}} 
-			<a href="delete/napajalnik/{{ napajalnik.id}}" >	
-					<img src="https://cdn0.iconfinder.com/data/icons/classic-icons/512/058.png" height="13" width="13">					
+			{% if user.is_authenticated %}			
+				
+					<a href="delete/napajalnik/{{ napajalnik.id}}" >	
+					<img src="data:image/png;base64,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" height="13" width="13">					
 				</a>
+				<a href="add/napajalnik/{{ napajalnik.id}}" >	
+					<img src="https://image.spreadshirtmedia.com/image-server/v1/mp/designs/11796061,width=178,height=178/plus-sign.png" height="13" width="13">					
+				</a>
+				
+				
+				{% else %}	
+
+					
+
+				<a href="napajalniki" >	
+						<button>rezerviraj</button>					
+					</a>
+	
+
+				
+				{% endif %}
 
 		<br>
 		{% endfor %}

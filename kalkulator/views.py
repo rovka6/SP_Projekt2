@@ -84,6 +84,14 @@ def add(request, vrsta, id):
        
         return redirect('kabli')
     
+    if vrsta == 'adapter':
+        adapter = Adapter.objects.get(pk=id)
+        adapter.kolicina = (int(adapter.kolicina) + 1)
+        adapter.save()
+       
+        return redirect('adapterji')
+    
+    
     if vrsta == 'procesor':
         procesor = Procesor.objects.get(pk=id)
         procesor.kolicina = (int(procesor.kolicina) + 1)
@@ -168,6 +176,15 @@ def delete(request, vrsta, id):
             kabel.delete()
         return redirect('kabli')
     
+    if vrsta == 'adapter':
+        adapter = Adapter.objects.get(pk=id)
+        adapter.kolicina = (int(adapter.kolicina) - 1)
+        adapter.save()
+        if(int(adapter.kolicina) == 0):
+            adapter.delete()
+        return redirect('adapterji')
+    
+    
     if vrsta == 'procesor':
         procesor = Procesor.objects.get(pk=id)
         procesor.kolicina = (int(procesor.kolicina) - 1)
@@ -195,6 +212,17 @@ def vrsteNapajalnikov(request):
 def vrsteRazsiritvenih(request):          
     context = {}         
 
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='razsiritvena', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
     kategorije = Kategorija.objects.filter(kategorija='razsiritvena')
     context['kategorije'] = kategorije
             
@@ -571,10 +599,10 @@ def razsiritvene(request):
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Razsiritvena.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    vrste = Razsiritvena.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    #vrste = Razsiritvena.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     prikljucki = Razsiritvena.objects.values('prikljucek').distinct().order_by(Lower('prikljucek')).values_list('prikljucek', flat=True)
     context['znamke'] = znamke
-    context['vrste'] = vrste  
+    #context['vrste'] = vrste  
     context['prikljucki'] = prikljucki     
     
     
@@ -582,6 +610,13 @@ def razsiritvene(request):
     
     if izbrani != False:
         razsiritvene = razsiritvene.filter(vrsta=izbrani)
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='razsiritvena')
+    context['vrste'] = vrste
+    
+    
     
     context['izbrani1'] = izbrani        
         
@@ -613,6 +648,10 @@ def razsiritvene(request):
         return render(request, 'kalkulator/razsiritvene.html', context)
                   
     context['razsiritvene'] = razsiritvene  
+    
+       
+    
+    
     
     return render(request, 'kalkulator/razsiritvene.html', context)    
  
@@ -985,10 +1024,10 @@ def dodajRazsiritveno(request):
         
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Razsiritvena.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    vrste = Razsiritvena.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    #vrste = Razsiritvena.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     prikljucki = Razsiritvena.objects.values('prikljucek').distinct().order_by(Lower('prikljucek')).values_list('prikljucek', flat=True)
     context['znamke'] = znamke
-    context['vrste'] = vrste  
+    #context['vrste'] = vrste  
     context['prikljucki'] = prikljucki
     
     if request.method == 'POST'  and 'znamka' in request.POST:        
@@ -996,11 +1035,7 @@ def dodajRazsiritveno(request):
         if(request.POST['znamka1'] != ''):
             znamka = request.POST['znamka1']
         model = request.POST['model']      
-        vrsta = request.POST['vrsta']                 
-        
-        if(request.POST['vrsta1'] != ''):
-            vrsta = request.POST['vrsta1']               
-            
+        vrsta = request.POST['vrsta']          
         prikljucek = request.POST['prikljucek']
         if(request.POST['prikljucek1'] != ''):
             prikljucek = request.POST['prikljucek1']
@@ -1008,23 +1043,18 @@ def dodajRazsiritveno(request):
         kolicina = request.POST['kolicina']         
                
         nova_razsiritvena = Razsiritvena(znamka=znamka, model=model, vrsta=vrsta, prikljucek=prikljucek, opis=opis, kolicina=kolicina)
-
+                
         form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            print('valid form1')
+        if form.is_valid():           
             nova_razsiritvena.image = form.cleaned_data['image']
-        nova_razsiritvena.save()                      
-        
-        # nova kategorija
-        form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            print('valid form2')
-            nova_komponenta = Komponenta(kategorija='razsiritvena', podkategorija=vrsta)
-            nova_komponenta.image = form.cleaned_data['image1']
-            nova_komponenta.save()
-        
-        
-            
+             
+        nova_razsiritvena.save()                          
+   
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='razsiritvena')
+    context['vrste'] = vrste     
+    
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
 @login_required
