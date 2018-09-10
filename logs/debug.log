@@ -8079,3 +8079,722 @@ Not Found: /favicon.ico
 (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:20:30.203072' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:20:30.203072', '0h45ug54jas0uroiew8qcrxulbua7cxh')
 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
 "GET /app/main HTTP/1.1" 200 2836
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:03.219952' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:03.219952', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:04.367553' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:04.367553', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+"GET /media/komponente/graficne/RN_Car_678x452.jpg HTTP/1.1" 304 0
+"GET /media/komponente/graficne/titanx-shop.png HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:06.691295' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:06.691295', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:07.537714' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:07.537714', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"  LIMIT 21; args=()
+Internal Server Error: /app/inputi
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: kalkulator_input.image
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 554, in inputi
+    return render(request, 'kalkulator/inputi.html', context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 250, in __len__
+    self._fetch_all()
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: kalkulator_input.image
+"GET /app/inputi HTTP/1.1" 500 198772
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:11.823297' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:11.823297', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_disk"."znamka", LOWER("kalkulator_disk"."znamka") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_disk"."velikost", LOWER("kalkulator_disk"."znamka") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"  LIMIT 21; args=()
+Internal Server Error: /app/diski
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: kalkulator_disk.image
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 632, in diski
+    return render(request, 'kalkulator/diski.html', context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 250, in __len__
+    self._fetch_all()
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: kalkulator_disk.image
+"GET /app/diski HTTP/1.1" 500 196437
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_adapter" RENAME TO "kalkulator_adapter__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_adapter" RENAME TO "kalkulator_adapter__old"; args=()
+CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_adapter" ("id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_adapter__old"; (params ())
+(0.000) INSERT INTO "kalkulator_adapter" ("id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_adapter__old"; args=()
+DROP TABLE "kalkulator_adapter__old"; (params ())
+(0.001) DROP TABLE "kalkulator_adapter__old"; args=()
+ALTER TABLE "kalkulator_disk" RENAME TO "kalkulator_disk__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_disk" RENAME TO "kalkulator_disk__old"; args=()
+CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_disk" ("id", "znamka", "prikljucek", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "prikljucek", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_disk__old"; (params ())
+(0.000) INSERT INTO "kalkulator_disk" ("id", "znamka", "prikljucek", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "prikljucek", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_disk__old"; args=()
+DROP TABLE "kalkulator_disk__old"; (params ())
+(0.001) DROP TABLE "kalkulator_disk__old"; args=()
+ALTER TABLE "kalkulator_input" RENAME TO "kalkulator_input__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_input" RENAME TO "kalkulator_input__old"; args=()
+CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_input" ("id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_input__old"; (params ())
+(0.000) INSERT INTO "kalkulator_input" ("id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_input__old"; args=()
+DROP TABLE "kalkulator_input__old"; (params ())
+(0.000) DROP TABLE "kalkulator_input__old"; args=()
+ALTER TABLE "kalkulator_kabel" RENAME TO "kalkulator_kabel__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_kabel" RENAME TO "kalkulator_kabel__old"; args=()
+CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_kabel" ("id", "vrsta", "opis", "kolicina", "image") SELECT "id", "vrsta", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_kabel__old"; (params ())
+(0.000) INSERT INTO "kalkulator_kabel" ("id", "vrsta", "opis", "kolicina", "image") SELECT "id", "vrsta", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_kabel__old"; args=()
+DROP TABLE "kalkulator_kabel__old"; (params ())
+(0.000) DROP TABLE "kalkulator_kabel__old"; args=()
+ALTER TABLE "kalkulator_maticna" RENAME TO "kalkulator_maticna__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_maticna" RENAME TO "kalkulator_maticna__old"; args=()
+CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_maticna" ("id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_maticna__old"; (params ())
+(0.000) INSERT INTO "kalkulator_maticna" ("id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_maticna__old"; args=()
+DROP TABLE "kalkulator_maticna__old"; (params ())
+(0.001) DROP TABLE "kalkulator_maticna__old"; args=()
+ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; args=()
+CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_napajalnik__old"; (params ())
+(0.001) INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_napajalnik__old"; args=()
+DROP TABLE "kalkulator_napajalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_napajalnik__old"; args=()
+ALTER TABLE "kalkulator_procesor" RENAME TO "kalkulator_procesor__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_procesor" RENAME TO "kalkulator_procesor__old"; args=()
+CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_procesor" ("id", "znamka", "model", "podnozje", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_procesor__old"; (params ())
+(0.000) INSERT INTO "kalkulator_procesor" ("id", "znamka", "model", "podnozje", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_procesor__old"; args=()
+DROP TABLE "kalkulator_procesor__old"; (params ())
+(0.000) DROP TABLE "kalkulator_procesor__old"; args=()
+ALTER TABLE "kalkulator_ram" RENAME TO "kalkulator_ram__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_ram" RENAME TO "kalkulator_ram__old"; args=()
+CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_ram" ("id", "znamka", "vrsta", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "vrsta", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_ram__old"; (params ())
+(0.000) INSERT INTO "kalkulator_ram" ("id", "znamka", "vrsta", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "vrsta", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_ram__old"; args=()
+DROP TABLE "kalkulator_ram__old"; (params ())
+(0.000) DROP TABLE "kalkulator_ram__old"; args=()
+ALTER TABLE "kalkulator_razsiritvena" RENAME TO "kalkulator_razsiritvena__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_razsiritvena" RENAME TO "kalkulator_razsiritvena__old"; args=()
+CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_razsiritvena" ("id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_razsiritvena__old"; (params ())
+(0.000) INSERT INTO "kalkulator_razsiritvena" ("id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_razsiritvena__old"; args=()
+DROP TABLE "kalkulator_razsiritvena__old"; (params ())
+(0.000) DROP TABLE "kalkulator_razsiritvena__old"; args=()
+ALTER TABLE "kalkulator_zaslon" RENAME TO "kalkulator_zaslon__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_zaslon" RENAME TO "kalkulator_zaslon__old"; args=()
+CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_zaslon" ("id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_zaslon__old"; (params ())
+(0.000) INSERT INTO "kalkulator_zaslon" ("id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_zaslon__old"; args=()
+DROP TABLE "kalkulator_zaslon__old"; (params ())
+(0.000) DROP TABLE "kalkulator_zaslon__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0002_auto_20180909_2321', '2018-09-09 21:21:31.850963'); args=['kalkulator', '0002_auto_20180909_2321', '2018-09-09 21:21:31.850963']
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'adapter'); args=('kalkulator', 'adapter')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'disk'); args=('kalkulator', 'disk')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'graficna'); args=('kalkulator', 'graficna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'input'); args=('kalkulator', 'input')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kabel'); args=('kalkulator', 'kabel')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'maticna'); args=('kalkulator', 'maticna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'napajalnik'); args=('kalkulator', 'napajalnik')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'procesor'); args=('kalkulator', 'procesor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'ram'); args=('kalkulator', 'ram')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'razsiritvena'); args=('kalkulator', 'razsiritvena')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'zaslon'); args=('kalkulator', 'zaslon')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'kalkulator'; args=('kalkulator',)
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:40.578808' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:40.578808', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:41.136908' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:41.136908', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+"GET /media/komponente/graficne/titanx-shop.png HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:43.223617' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:43.223617', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:44.227739' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:44.227739', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1670
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:45.175625' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:45.175625', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."znamka") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."prikljucek") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."prikljucek") ASC; args=()
+"GET /app/dodajInput HTTP/1.1" 200 2165
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:47.480900' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:47.480900', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:48.362905' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:48.362905', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:21:51.510869' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:21:51.510869', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:15.040291' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:15.040291', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1670
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:16.242050' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:16.242050', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:17.019035' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:17.019035', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_disk"."znamka", LOWER("kalkulator_disk"."znamka") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_disk"."velikost", LOWER("kalkulator_disk"."znamka") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_disk"."id", "kalkulator_disk"."znamka", "kalkulator_disk"."prikljucek", "kalkulator_disk"."velikost", "kalkulator_disk"."opis", "kalkulator_disk"."kolicina", "kalkulator_disk"."image" FROM "kalkulator_disk"; args=()
+"GET /app/diski HTTP/1.1" 200 1461
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:17.843939' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:17.843939', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_disk"."znamka", LOWER("kalkulator_disk"."znamka") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_disk"."velikost", LOWER("kalkulator_disk"."velikost") FROM "kalkulator_disk" ORDER BY LOWER("kalkulator_disk"."velikost") ASC; args=()
+"GET /app/dodajDisk HTTP/1.1" 200 1916
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:19.247057' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:19.247057', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:20.096155' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:20.096155', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_ram"."znamka", LOWER("kalkulator_ram"."znamka") FROM "kalkulator_ram" ORDER BY LOWER("kalkulator_ram"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_ram"."vrsta", LOWER("kalkulator_ram"."vrsta") FROM "kalkulator_ram" ORDER BY LOWER("kalkulator_ram"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_ram"."velikost", LOWER("kalkulator_ram"."velikost") FROM "kalkulator_ram" ORDER BY LOWER("kalkulator_ram"."velikost") ASC; args=()
+(0.000) SELECT "kalkulator_ram"."id", "kalkulator_ram"."znamka", "kalkulator_ram"."vrsta", "kalkulator_ram"."velikost", "kalkulator_ram"."opis", "kalkulator_ram"."kolicina", "kalkulator_ram"."image" FROM "kalkulator_ram"; args=()
+"GET /app/rami HTTP/1.1" 200 1400
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:20.743267' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:20.743267', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_ram"."znamka", LOWER("kalkulator_ram"."znamka") FROM "kalkulator_ram" ORDER BY LOWER("kalkulator_ram"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_ram"."vrsta", LOWER("kalkulator_ram"."vrsta") FROM "kalkulator_ram" ORDER BY LOWER("kalkulator_ram"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_ram"."velikost" FROM "kalkulator_ram" ORDER BY "kalkulator_ram"."velikost" ASC; args=()
+"GET /app/dodajRam HTTP/1.1" 200 1940
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:21.686226' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:21.686226', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:22.471251' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:22.471251', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+(0.000) SELECT "kalkulator_razsiritvena"."id", "kalkulator_razsiritvena"."znamka", "kalkulator_razsiritvena"."model", "kalkulator_razsiritvena"."vrsta", "kalkulator_razsiritvena"."prikljucek", "kalkulator_razsiritvena"."opis", "kalkulator_razsiritvena"."kolicina", "kalkulator_razsiritvena"."image" FROM "kalkulator_razsiritvena"; args=()
+"GET /app/razsiritvene HTTP/1.1" 200 1399
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:23.217795' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:23.217795', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:24.015128' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:24.015128', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_maticna"."znamka", LOWER("kalkulator_maticna"."znamka") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_maticna"."podnozje", LOWER("kalkulator_maticna"."podnozje") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."podnozje") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_maticna"."ram", LOWER("kalkulator_maticna"."ram") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."ram") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_maticna"."graficna", LOWER("kalkulator_maticna"."graficna") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."graficna") ASC; args=()
+(0.000) SELECT "kalkulator_maticna"."id", "kalkulator_maticna"."znamka", "kalkulator_maticna"."model", "kalkulator_maticna"."podnozje", "kalkulator_maticna"."ram", "kalkulator_maticna"."graficna", "kalkulator_maticna"."opis", "kalkulator_maticna"."kolicina", "kalkulator_maticna"."image" FROM "kalkulator_maticna"; args=()
+"GET /app/maticne HTTP/1.1" 200 1630
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:24.767559' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:24.767559', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:25.570456' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:25.570456', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_zaslon"."znamka", LOWER("kalkulator_zaslon"."znamka") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."velikost", LOWER("kalkulator_zaslon"."velikost") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."velikost") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."input", LOWER("kalkulator_zaslon"."input") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."input") ASC; args=()
+(0.000) SELECT "kalkulator_zaslon"."id", "kalkulator_zaslon"."znamka", "kalkulator_zaslon"."model", "kalkulator_zaslon"."vrsta", "kalkulator_zaslon"."velikost", "kalkulator_zaslon"."input", "kalkulator_zaslon"."opis", "kalkulator_zaslon"."kolicina", "kalkulator_zaslon"."image" FROM "kalkulator_zaslon"; args=()
+"GET /app/zasloni HTTP/1.1" 200 1651
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:26.530214' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:26.530214', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:27.436546' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:27.436546', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_kabel"."vrsta", LOWER("kalkulator_kabel"."vrsta") FROM "kalkulator_kabel" ORDER BY LOWER("kalkulator_kabel"."vrsta") ASC; args=()
+(0.001) SELECT "kalkulator_kabel"."id", "kalkulator_kabel"."vrsta", "kalkulator_kabel"."opis", "kalkulator_kabel"."kolicina", "kalkulator_kabel"."image" FROM "kalkulator_kabel"; args=()
+"GET /app/kabli HTTP/1.1" 200 1147
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:28.278322' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:28.278322', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:28.819338' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:28.819338', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:29.423984' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:29.423984', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_procesor"."znamka", LOWER("kalkulator_procesor"."znamka") FROM "kalkulator_procesor" ORDER BY LOWER("kalkulator_procesor"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_procesor"."podnozje", LOWER("kalkulator_procesor"."podnozje") FROM "kalkulator_procesor" ORDER BY LOWER("kalkulator_procesor"."podnozje") ASC; args=()
+(0.001) SELECT "kalkulator_procesor"."id", "kalkulator_procesor"."znamka", "kalkulator_procesor"."model", "kalkulator_procesor"."podnozje", "kalkulator_procesor"."opis", "kalkulator_procesor"."kolicina", "kalkulator_procesor"."image" FROM "kalkulator_procesor"; args=()
+"GET /app/procesorji HTTP/1.1" 200 1795
+Not Found: /media/media/no-image.jpg
+"GET /media/media/no-image.jpg HTTP/1.1" 404 1816
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:44.751227' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:44.751227', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:46.778729' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:46.778729', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+"GET /media/komponente/graficne/titanx-shop.png HTTP/1.1" 304 0
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:50.515918' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:50.515918', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:51.419259' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:51.419259', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/vrsteNapajalnikov HTTP/1.1" 200 1145
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:52.719681' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:52.719681', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_napajalnik"."vrsta", LOWER("kalkulator_napajalnik"."vrsta") FROM "kalkulator_napajalnik" ORDER BY LOWER("kalkulator_napajalnik"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_napajalnik"."znamka", LOWER("kalkulator_napajalnik"."znamka") FROM "kalkulator_napajalnik" ORDER BY LOWER("kalkulator_napajalnik"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_napajalnik"."moc", LOWER("kalkulator_napajalnik"."moc") FROM "kalkulator_napajalnik" ORDER BY LOWER("kalkulator_napajalnik"."moc") ASC; args=()
+(0.000) SELECT "kalkulator_napajalnik"."id", "kalkulator_napajalnik"."vrsta", "kalkulator_napajalnik"."znamka", "kalkulator_napajalnik"."moc", "kalkulator_napajalnik"."opis", "kalkulator_napajalnik"."kolicina", "kalkulator_napajalnik"."image" FROM "kalkulator_napajalnik"; args=()
+"GET /app/napajalniki HTTP/1.1" 200 1427
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:53.891660' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:53.891660', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:23:54.708765' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:23:54.708765', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1670
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:07.287429' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:07.287429', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:09.818075' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:09.818075', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+(0.000) SELECT "kalkulator_razsiritvena"."id", "kalkulator_razsiritvena"."znamka", "kalkulator_razsiritvena"."model", "kalkulator_razsiritvena"."vrsta", "kalkulator_razsiritvena"."prikljucek", "kalkulator_razsiritvena"."opis", "kalkulator_razsiritvena"."kolicina", "kalkulator_razsiritvena"."image" FROM "kalkulator_razsiritvena"; args=()
+"GET /app/razsiritvene HTTP/1.1" 200 1399
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:11.449009' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:11.449009', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+"GET /app/dodajRazsiritveno HTTP/1.1" 200 2015
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:28.789234' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:28.789234', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+"POST /app/dodajRazsiritveno HTTP/1.1" 200 2015
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:37.222573' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:37.222573', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:40.449047' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:40.449047', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+(0.000) SELECT "kalkulator_razsiritvena"."id", "kalkulator_razsiritvena"."znamka", "kalkulator_razsiritvena"."model", "kalkulator_razsiritvena"."vrsta", "kalkulator_razsiritvena"."prikljucek", "kalkulator_razsiritvena"."opis", "kalkulator_razsiritvena"."kolicina", "kalkulator_razsiritvena"."image" FROM "kalkulator_razsiritvena"; args=()
+"GET /app/razsiritvene HTTP/1.1" 200 1399
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:27:42.713790' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:27:42.713790', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."vrsta", LOWER("kalkulator_razsiritvena"."vrsta") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+"GET /app/dodajRazsiritveno HTTP/1.1" 200 2015
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:29:13.360824' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:29:13.360824', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:32:42.329186' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:32:42.329186', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:32:43.113142' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:32:43.113142', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+"GET /media/komponente/graficne/RN_Car_678x452.jpg HTTP/1.1" 304 0
+"GET /media/komponente/graficne/titanx-shop.png HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:32:46.200669' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:32:46.200669', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+"GET /app/dodajGraficno HTTP/1.1" 200 2315
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:13.964592' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:13.964592', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:14.776975' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:14.776975', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:16.127642' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:16.127642', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:17.064540' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:17.064540', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1670
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:21.146613' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:21.146613', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:22.080575' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:22.080575', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:22.865271' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:22.865271', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+"GET /app/dodajGraficno HTTP/1.1" 200 2317
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-09 21:33:35.627813' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-09 21:33:35.627813', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:20.052556' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:20.052556', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04657150>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x045BE310>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x045BA970>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Adapters', 'object_name': 'Adapter', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/adapter/', 'add_url': '/admin/kalkulator/adapter/add/'}, {'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Adapters', 'object_name': 'Adapter', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/adapter/', 'add_url': '/admin/kalkulator/adapter/add/'}, {'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04657150>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x045BE310>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x045BA970>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Adapters', 'object_name': 'Adapter', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/adapter/', 'add_url': '/admin/kalkulator/adapter/add/'}, {'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Adapters', 'object_name': 'Adapter', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/adapter/', 'add_url': '/admin/kalkulator/adapter/add/'}, {'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+(0.000) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 1 ORDER BY "django_admin_log"."action_time" DESC  LIMIT 10; args=(1,)
+"GET /admin/ HTTP/1.1" 200 8231
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:25.154761' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:25.154761', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.015) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:26.626747' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:26.626747', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371
+"GET /media/komponente/graficne/RN_Car_678x452.jpg HTTP/1.1" 304 0
+"GET /media/komponente/graficne/titanx-shop.png HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:29.511342' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:29.511342', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+"GET /app/dodajGraficno HTTP/1.1" 200 2317
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:30.883200' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:30.883200', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 2836
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-10 10:04:31.684026' AND "django_session"."session_key" = '0h45ug54jas0uroiew8qcrxulbua7cxh'); args=('2018-09-10 10:04:31.684026', '0h45ug54jas0uroiew8qcrxulbua7cxh')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."povezava", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 9371

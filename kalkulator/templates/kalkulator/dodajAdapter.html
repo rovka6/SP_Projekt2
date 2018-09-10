@@ -26,16 +26,16 @@
 												<option>{{voltaza}}</option>												
 										{% endfor%}	
 										</select>	
-										<input type="text" placeholder="Vpisite novo voltazo" name="voltaza1">
+										<input type="number" placeholder="Vpisite novo voltazo" name="voltaza1">
 			<label>Amperaza:</label><select name="amperaza">	
 										<option>Vsi</option>
 										{% for amperaza in amperaze %}													
 												<option>{{amperaza}}</option>												
 										{% endfor%}	
 										</select>	
-										<input type="text" placeholder="Vpisite novo amperazo" name="amperaza1">							
+										<input type="number" placeholder="Vpisite novo amperazo" name="amperaza1">							
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
-			<label>Kolicina:</label><input type="text" placeholder="Vpisite kolicino" name="kolicina">							
+			<label>Kolicina:</label><input type="number" placeholder="Vpisite kolicino" name="kolicina">							
 			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
 
 			<input type="submit" id="vpisi" value="Vpisi">			
