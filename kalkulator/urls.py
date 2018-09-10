@@ -54,7 +54,11 @@ urlpatterns = [
     url(r'^napajalniki', views.napajalniki, name='napajalniki'),
     
     # razsiritvene
+    url(r'^razsiritvene/(?P<izbrani>\w+)', views.razsiritvene, name='razsiritvene'),
+    
+    # razsiritvene
     url(r'^razsiritvene', views.razsiritvene, name='razsiritvene'),
+    
     
     # kabli
     url(r'^kabli', views.kabli,  name='kabli'),
@@ -64,6 +68,10 @@ urlpatterns = [
     
     # vrsteNapajalnikov
     url(r'^vrsteNapajalnikov', views.vrsteNapajalnikov, name='vrsteNapajalnikov'),
+    
+    # vrsteRazsiritvenih
+    url(r'^vrsteRazsiritvenih', views.vrsteRazsiritvenih, name='vrsteRazsiritvenih'),
+    
     
     # dodajInput
     url(r'^dodajInput', views.dodajInput, name='dodajInput'),
@@ -96,7 +104,8 @@ urlpatterns = [
     url(r'^dodajKabel', views.dodajKabel, name='dodajKabel'),  
 
     # dodajAdapter
-    url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),    
+    url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),      
+    
 ]
 
 

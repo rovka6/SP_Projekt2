@@ -13,8 +13,15 @@
 										</select>
 			<label>Vrsta:</label><select name="vrsta">	
 										<option>Vsi</option>
-										{% for vrsta in vrste %}													
-												<option>{{vrsta}}</option>												
+										{% for vrsta in vrste %}					
+										
+											{% if izbrani1 == vrsta %}
+												<option selected>{{vrsta}}</option>		
+											{% else %}	
+												<option >{{vrsta}}</option>												
+											{% endif %}	
+										
+																							
 										{% endfor%}		
 										</select>							
 			<label>Prikljucek:</label><select name="prikljucek">	
@@ -59,8 +66,8 @@
 		{% if user.is_authenticated %}
 			
 			<a href="dodajRazsiritveno" >			
-			<button> DODAJ NOVO RAZSIRITVENO</button>
-		</a>
+				<button> DODAJ NOVO RAZSIRITVENO</button>
+			</a>
 			{% else %}								
 			{% endif %}
 

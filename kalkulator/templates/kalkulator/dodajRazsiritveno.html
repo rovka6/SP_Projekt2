@@ -11,7 +11,7 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">
+										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">										
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">								
 			<label>Vrsta:</label><select name="vrsta">	
 										<option>Vsi</option>
@@ -20,6 +20,7 @@
 										{% endfor%}		
 										</select>	
 										<input type="text" placeholder="Vpisite novo znamko" name="vrsta1">
+										<label>Slika:</label><input id="id_image" type="file" class="" name="image1">
 			<label>Prikljucek:</label><select name="prikljucek">	
 										<option>Vsi</option>
 										{% for prikljucek in prikljucki %}													

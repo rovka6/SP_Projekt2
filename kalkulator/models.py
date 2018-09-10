@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 import datetime
 
 # Create your models here.
+
+class Kategorija(models.Model):
+    kategorija = models.CharField(max_length=20) 
+    podkategorija = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/kategorije', default="/media/no-image.jpg")
    
 class Graficna(models.Model):     
     znamka = models.CharField(max_length=20)

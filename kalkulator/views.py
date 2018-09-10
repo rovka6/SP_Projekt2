@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -15,8 +15,10 @@ logger = logging.getLogger(__name__)
 
 def redirect_view(request):
     response = redirect('/redirect-success/')
-    return response
-
+    return response       
+   
+   
+    
 def add(request, vrsta, id):     
 
     if vrsta == 'graficna':
@@ -185,10 +187,18 @@ def main(request):
  
 def vrsteNapajalnikov(request):          
     context = {}
+        
     
-    
+        
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
 
+def vrsteRazsiritvenih(request):          
+    context = {}         
+
+    kategorije = Kategorija.objects.filter(kategorija='razsiritvena')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteRazsiritvenih.html', context)          
  
 def adapterji(request):          
     context = {} 
@@ -554,8 +564,8 @@ def inputi(request):
     return render(request, 'kalkulator/inputi.html', context)    
 
  
-def razsiritvene(request):    
-    
+def razsiritvene(request):          
+   
     context = {}
     razsiritvene = Razsiritvena.objects.all()  
     
@@ -565,21 +575,34 @@ def razsiritvene(request):
     prikljucki = Razsiritvena.objects.values('prikljucek').distinct().order_by(Lower('prikljucek')).values_list('prikljucek', flat=True)
     context['znamke'] = znamke
     context['vrste'] = vrste  
-    context['prikljucki'] = prikljucki  
+    context['prikljucki'] = prikljucki     
+    
+    
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        razsiritvene = razsiritvene.filter(vrsta=izbrani)
+    
+    context['izbrani1'] = izbrani        
         
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
-    if request.method == 'GET'  and 'znamka' in request.GET:                   
-          
+    if request.method == 'GET'  and 'znamka' in request.GET:                  
+         
+        razsiritvene = Razsiritvena.objects.all() 
+         
         # izbran prikljucek v dropdown listu  
         znamka = request.GET['znamka'] 
         vrsta = request.GET['vrsta']  
         prikljucek = request.GET['prikljucek']
-                 
+        
+        
         if znamka != 'Vsi':
-            razsiritvene = Razsiritvena.objects.filter(znamka=znamka)
+            razsiritvene = razsiritvene.filter(znamka=znamka)
          
-        if vrsta != 'Vsi':   
-            razsiritvene = razsiritvene.filter(vrsta=vrsta)         
+        if vrsta != 'Vsi': 
+            
+            razsiritvene = razsiritvene.filter(vrsta=vrsta) 
+            
          
         if prikljucek != 'Vsi':   
             razsiritvene = razsiritvene.filter(prikljucek=prikljucek)         
@@ -973,9 +996,11 @@ def dodajRazsiritveno(request):
         if(request.POST['znamka1'] != ''):
             znamka = request.POST['znamka1']
         model = request.POST['model']      
-        vrsta = request.POST['vrsta']  
+        vrsta = request.POST['vrsta']                 
+        
         if(request.POST['vrsta1'] != ''):
-            vrsta = request.POST['vrsta1']    
+            vrsta = request.POST['vrsta1']               
+            
         prikljucek = request.POST['prikljucek']
         if(request.POST['prikljucek1'] != ''):
             prikljucek = request.POST['prikljucek1']
@@ -986,8 +1011,19 @@ def dodajRazsiritveno(request):
 
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
+            print('valid form1')
             nova_razsiritvena.image = form.cleaned_data['image']
-            nova_razsiritvena.save()
+        nova_razsiritvena.save()                      
+        
+        # nova kategorija
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            print('valid form2')
+            nova_komponenta = Komponenta(kategorija='razsiritvena', podkategorija=vrsta)
+            nova_komponenta.image = form.cleaned_data['image1']
+            nova_komponenta.save()
+        
+        
             
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
