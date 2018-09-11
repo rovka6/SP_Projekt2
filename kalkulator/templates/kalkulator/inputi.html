@@ -23,11 +23,24 @@
 												<option>{{prikljucek}}</option>												
 										{% endfor%}										
 										</select>
-			<label>Povezava:</label><select name="povezava">										
-										<option>Vsi</option>
-										<option>Zicna</option>
-										<option>Brezzicna</option>
-										<option>Ostalo</option>										
+			<label>Povezava:</label><select name="povezava">	
+										<option> Vsi </option>	
+										{% if izbrani == "Zicna" %}
+												<option selected>Zicna</option>		
+											{% else %}	
+												<option >Zicna</option>												
+											{% endif %}
+										{% if izbrani == "Brezzicna" %}
+												<option selected>Brezzicna</option>		
+											{% else %}	
+												<option>Brezzicna</option>												
+											{% endif %}	
+										{% if izbrani == "Drugo" %}
+												<option selected>Drugo</option>		
+											{% else %}	
+												<option>Drugo</option>												
+											{% endif %}				
+																				
 										</select>							
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>

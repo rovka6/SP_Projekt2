@@ -13,8 +13,21 @@
 										</select>
 			<label>Prikljucek:</label><select name="prikljucek">	
 										<option>Vsi</option>
-										<option>PATA</option>
-										<option>SATA</option>										
+										{% if izbrani == "PATA" %}
+												<option selected>PATA</option>		
+											{% else %}	
+												<option >PATA</option>												
+											{% endif %}
+										{% if izbrani == "SATA" %}
+												<option selected>SATA</option>		
+											{% else %}	
+												<option>SATA</option>												
+											{% endif %}	
+										{% if izbrani == "Drugo" %}
+												<option selected>Drugo</option>		
+											{% else %}	
+												<option>Drugo</option>												
+											{% endif %}													
 										</select>
 			<label>Velikost:</label><select name="velikost">
 										<option>Vsi</option>

@@ -11,18 +11,13 @@ urlpatterns = [
 	# login, logout
 	#url( r'^login/$',auth_views.LoginView.as_view(template_name="kalkulator/login.html"), name="login"),    	    
 	#url( r'^logout/$',auth_views.LoginView.as_view(template_name="kalkulator/logout.html"), name="logout"),
-    
-    
+        
 	# registracija
-	#url(r'^registracija', views.registracija, name='registracija'),
-    
-    
-
+	#url(r'^registracija', views.registracija, name='registracija'),     
 	
     # delete		
 	url(r'^delete/(?P<vrsta>\w+)/(?P<id>\d+)$', views.delete, name='delete'),
-    
-    
+        
     # add		
 	url(r'^add/(?P<vrsta>\w+)/(?P<id>\d+)$', views.add, name='add'),
     
@@ -71,10 +66,22 @@ urlpatterns = [
     
     # vrsteRazsiritvenih
     url(r'^vrsteRazsiritvenih', views.vrsteRazsiritvenih, name='vrsteRazsiritvenih'),
+   
+    # vrsteRama
+    url(r'^vrsteRama', views.vrsteRama, name='vrsteRama'),
     
+   
+    # vrsteGraficnih
+    url(r'^vrsteGraficnih', views.vrsteGraficnih, name='vrsteGraficnih'),
+    
+    # vrsteInputov
+    url(r'^vrsteInputov', views.vrsteInputov, name='vrsteInputov'),
     
     # dodajInput
     url(r'^dodajInput', views.dodajInput, name='dodajInput'),
+    
+    # vrsteDiskov
+    url(r'^vrsteDiskov', views.vrsteDiskov, name='vrsteDiskov'),
     
      # dodajGraficno
     url(r'^dodajGraficno', views.dodajGraficno, name='dodajGraficno'),

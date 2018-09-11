@@ -13,11 +13,28 @@
 										{% endfor%}																						
 										</select>
 			<label>Povezava:</label><select name="povezava">	
-										<option>Vsi</option>
-										<option>AGP</option>
-										<option>PCI</option>										
-										<option>PCIE</option>	
-										<option>ostalo</option>
+												<option> Vsi </option>
+										{% if izbrani == "AGP" %}
+												<option selected>AGP</option>		
+											{% else %}	
+												<option >AGP</option>												
+											{% endif %}
+										{% if izbrani == "PCI" %}
+												<option selected>PCI</option>		
+											{% else %}	
+												<option>PCI</option>												
+											{% endif %}	
+										{% if izbrani == "PCIE" %}
+												<option selected>PCIE</option>		
+											{% else %}	
+												<option>PCIE</option>												
+											{% endif %}	
+										{% if izbrani == "OSTALO" %}
+												<option selected>OSTALO</option>		
+											{% else %}	
+												<option>OSTALO</option>												
+											{% endif %}	
+											
 										</select>		
 			<label>Pomnilnik:</label><select name="pomnilnik">
 										<option>Vsi</option>

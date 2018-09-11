@@ -13,9 +13,20 @@
 										</select>
 			<label>vrsta:</label><select name="vrsta">	
 										<option>Vsi</option>
-										{% for vrsta in vrste %}													
-												<option>{{vrsta}}</option>												
-										{% endfor%}											
+										{% for vrsta in vrste %}					
+										
+											{% if izbrani == vrsta %}
+												<option selected>{{vrsta}}</option>		
+											{% else %}	
+												<option >{{vrsta}}</option>												
+											{% endif %}	
+										
+																							
+										{% endfor%}
+										
+										
+										
+																					
 										</select>
 			<label>Velikost:</label><select name="velikost">
 										<option>Vsi</option>

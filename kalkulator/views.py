@@ -15,9 +15,7 @@ logger = logging.getLogger(__name__)
 
 def redirect_view(request):
     response = redirect('/redirect-success/')
-    return response       
-   
-   
+    return response   
     
 def add(request, vrsta, id):     
 
@@ -204,11 +202,31 @@ def main(request):
  
 def vrsteNapajalnikov(request):          
     context = {}
-        
-    
+            
         
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
 
+def vrsteDiskov(request):          
+    context = {}
+            
+        
+    return render(request, 'kalkulator/vrsteDiskov.html', context)
+   
+    
+def vrsteGraficnih(request):          
+    context = {}
+            
+        
+    return render(request, 'kalkulator/vrsteGraficnih.html', context)
+ 
+def vrsteInputov(request):          
+    context = {}
+            
+        
+    return render(request, 'kalkulator/vrsteInputov.html', context)
+  
+    
+    
 def vrsteRazsiritvenih(request):          
     context = {}         
 
@@ -227,6 +245,26 @@ def vrsteRazsiritvenih(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteRazsiritvenih.html', context)          
+ 
+def vrsteRama(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='ram', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='ram')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteRama.html', context)          
+ 
  
 def adapterji(request):          
     context = {} 
@@ -338,7 +376,7 @@ def graficne(request):
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:   
-           
+        print('v getu') 
           
         # izbran prikljucek v dropdown listu  
         znamka1 = request.GET['znamka']   
@@ -356,7 +394,14 @@ def graficne(request):
                           
         context['graficne'] = graficne
         return render(request, 'kalkulator/graficne.html', context)
-                  
+    
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        context['izbrani'] = izbrani
+        graficne = graficne.filter(povezava=izbrani)            
+    
+    context['izbrani'] = izbrani         
     context['graficne'] = graficne  
     
     return render(request, 'kalkulator/graficne.html', context)   
@@ -369,11 +414,17 @@ def rami(request):
 
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Ram.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    vrste = Ram.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    #vrste = Ram.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     velikosti = Ram.objects.values('velikost').distinct().order_by(Lower('velikost')).values_list('velikost', flat=True)
     context['znamke'] = znamke 
+    #context['vrste'] = vrste
+    context['velikosti'] = velikosti  
+
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='ram')
     context['vrste'] = vrste
-    context['velikosti'] = velikosti    
+    
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:   
@@ -394,8 +445,19 @@ def rami(request):
                           
         context['rami'] = rami
         return render(request, 'kalkulator/rami.html', context)
-                  
+      
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        rami = rami.filter(vrsta=izbrani)          
+        
+        
+    context['izbrani'] = izbrani  
     context['rami'] = rami  
+    
+   
+    
+    
     
     return render(request, 'kalkulator/rami.html', context)   
   
@@ -586,8 +648,15 @@ def inputi(request):
                   
         context['inputi'] = inputi
         return render(request, 'kalkulator/inputi.html', context)
-                  
-    context['inputi'] = inputi  
+    
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        context['izbrani'] = izbrani
+        inputi = inputi.filter(povezava=izbrani)
+     
+    context['inputi'] = inputi
+    
     
     return render(request, 'kalkulator/inputi.html', context)    
 
@@ -598,11 +667,9 @@ def razsiritvene(request):
     razsiritvene = Razsiritvena.objects.all()  
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Razsiritvena.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    #vrste = Razsiritvena.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    znamke = Razsiritvena.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)    
     prikljucki = Razsiritvena.objects.values('prikljucek').distinct().order_by(Lower('prikljucek')).values_list('prikljucek', flat=True)
-    context['znamke'] = znamke
-    #context['vrste'] = vrste  
+    context['znamke'] = znamke      
     context['prikljucki'] = prikljucki     
     
     
@@ -614,9 +681,7 @@ def razsiritvene(request):
     # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
     vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
     vrste = vrste.filter(kategorija='razsiritvena')
-    context['vrste'] = vrste
-    
-    
+    context['vrste'] = vrste       
     
     context['izbrani1'] = izbrani        
         
@@ -688,7 +753,14 @@ def diski(request):
          
         context['diski'] = diski
         return render(request, 'kalkulator/diski.html', context)
-                  
+    
+
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        context['izbrani'] = izbrani
+        diski = diski.filter(prikljucek=izbrani)
+        
     context['diski'] = diski  
     
     return render(request, 'kalkulator/diski.html', context)    
@@ -736,10 +808,10 @@ def dodajRam(request):
         
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Ram.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    vrste = Ram.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    #vrste = Ram.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     velikosti = Ram.objects.values('velikost').distinct().order_by('velikost').values_list('velikost', flat=True)
     context['znamke'] = znamke   
-    context['vrste'] = vrste        
+    #context['vrste'] = vrste        
     context['velikosti'] = velikosti 
     
     if request.method == 'POST'  and 'znamka' in request.POST:
@@ -762,7 +834,13 @@ def dodajRam(request):
         if form.is_valid():
             nov_disk.image = form.cleaned_data['image']
             nov_disk.save()
-            
+       
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='ram')
+    context['vrste'] = vrste
+
+       
     return render(request, 'kalkulator/dodajRam.html', context) 
  
   
