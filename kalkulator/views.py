@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija, Tiskalnik
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -18,6 +18,13 @@ def redirect_view(request):
     return response   
     
 def add(request, vrsta, id):     
+
+    if vrsta == 'tiskalnik':
+        tiskalnik = Tiskalnik.objects.get(pk=id)                
+        tiskalnik.kolicina = (int(tiskalnik.kolicina) + 1)
+        tiskalnik.save()
+               
+        return redirect('tiskalniki')
 
     if vrsta == 'graficna':
         graficna = Graficna.objects.get(pk=id)                
@@ -100,6 +107,15 @@ def add(request, vrsta, id):
     return redirect('main')
 
 def delete(request, vrsta, id):     
+
+    if vrsta == 'tiskalnik':
+        tiskalnik = Tiskalnik.objects.get(pk=id)                
+        tiskalnik.kolicina = (int(tiskalnik.kolicina) - 1)
+        tiskalnik.save()
+        if(int(tiskalnik.kolicina) == 0):
+            tiskalnik.delete()
+        
+        return redirect('tiskalniki')
 
     if vrsta == 'graficna':
         graficna = Graficna.objects.get(pk=id)                
@@ -246,6 +262,27 @@ def vrsteRazsiritvenih(request):
             
     return render(request, 'kalkulator/vrsteRazsiritvenih.html', context)          
 
+def vrsteTiskalnikov(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='tiskalnik', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='tiskalnik')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteTiskalnikov.html', context)          
+   
+    
+    
 def vrsteKablov(request):          
     context = {}         
 
@@ -749,6 +786,56 @@ def inputi(request):
     
     return render(request, 'kalkulator/inputi.html', context)    
 
+def tiskalniki(request):          
+   
+    context = {}      
+            
+    # napolnimo dropdown samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='tiskalnik')
+    context['vrste'] = vrste
+    
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    tipi = Tiskalnik.objects.values('tip').distinct().order_by(Lower('tip')).values_list('tip', flat=True)    
+    priklopi = Tiskalnik.objects.values('priklop').distinct().order_by(Lower('priklop')).values_list('priklop', flat=True)        
+    context['tipi'] = tipi    
+    context['priklopi'] = priklopi                        
+                   
+    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'vrsta' in request.GET:                  
+         
+        tiskalniki = Tiskalnik.objects.all() 
+         
+        # izbran prikljucek v dropdown listu  
+        vrsta = request.GET['vrsta'] 
+        tip = request.GET['tip'] 
+        priklop = request.GET['priklop']                
+        
+        if vrsta != 'Vsi':
+            tiskalniki = tiskalniki.filter(vrsta=vrsta)
+         
+        if tip != 'Vsi':             
+            tiskalniki = tiskalniki.filter(tip=tip) 
+                     
+        if priklop != 'Vsi':   
+            tiskalniki = tiskalniki.filter(priklop=priklop)         
+                        
+        context['tiskalniki'] = tiskalniki
+        return render(request, 'kalkulator/tiskalniki.html', context)
+     
+    # preverimo katero podkategorijo smo izbrali
+    izbrani = request.GET.get('izbrani', False)    
+    if izbrani != False:
+        tiskalniki = Tiskalnik.objects.filter(vrsta=izbrani) 
+    else: 
+        tiskalniki = Tiskalnik.objects.all()
+        
+    context['izbrani'] = izbrani          
+    context['tiskalniki'] = tiskalniki               
+    
+    return render(request, 'kalkulator/tiskalniki.html', context)    
+     
+    
  
 def razsiritvene(request):          
    
@@ -1245,6 +1332,45 @@ def dodajRazsiritveno(request):
     
     return render(request, 'kalkulator/dodajRazsiritveno.html', context)    
 
+@login_required
+def dodajTiskalnik(request):
+    
+    context = {}
+     
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='tiskalnik')
+    context['vrste'] = vrste 
+     
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
+    tipi = Tiskalnik.objects.values('tip').distinct().order_by(Lower('tip')).values_list('tip', flat=True)    
+    priklopi = Tiskalnik.objects.values('priklop').distinct().order_by(Lower('priklop')).values_list('priklop', flat=True)
+    context['tipi'] = tipi
+    context['priklopi'] = priklopi
+    
+    if request.method == 'POST'  and 'vrsta' in request.POST:        
+        vrsta = request.POST['vrsta']        
+        tip = request.POST['tip'] 
+        if(request.POST['tip1'] != ''):
+            tip = request.POST['tip1']
+        priklop = request.POST['priklop']        
+        if(request.POST['priklop1'] != ''):
+            priklop = request.POST['priklop1']
+        opis = request.POST['opis']   
+        kolicina = request.POST['kolicina']         
+               
+        nov_tiskalnik = Tiskalnik(vrsta=vrsta, tip=tip, priklop=priklop, opis=opis, kolicina=kolicina)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nov_tiskalnik.image = form.cleaned_data['image']
+             
+        nov_tiskalnik.save()                         
+               
+    return render(request, 'kalkulator/dodajTiskalnik.html', context)        
+    
+    
+    
 @login_required
 def dodajAdapter(request):
     

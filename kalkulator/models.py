@@ -102,5 +102,15 @@ class Adapter(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/adapterji', default="/media/no-image.jpg")
+ 
+class Tiskalnik(models.Model):  
+    vrsta = models.CharField(max_length=20)
+    tip = models.CharField(max_length=20)
+    priklop = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg")
+    
+    
 
    

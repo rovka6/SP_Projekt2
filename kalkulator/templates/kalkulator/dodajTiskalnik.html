@@ -1,0 +1,52 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+					
+		<form action="dodajTiskalnik" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
+										{% for vrsta in vrste %}													
+												<option>{{vrsta}}</option>											
+										{% endfor%}		
+										</select>
+			<label>Tip:</label><select name="tip">	
+										<option>Vsi</option>
+										{% for tip in tipi %}													
+												<option>{{tip}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="text" placeholder="Vpisite nov tip" name="tip1">									
+			<label>Priklop:</label><select name="priklop">	
+										<option>Vsi</option>
+										{% for priklop in priklopi %}													
+												<option>{{priklop}}</option>												
+										{% endfor%}	
+										</select>	
+										<input type="text" placeholder="Vpisite nov priklop" name="priklop1">
+			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
+			<label>Kolicina:</label><input type="number" placeholder="Vpisite kolicino" name="kolicina">							
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>
+		
+
+		
+		
+		
+		
+		
+
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
+		
+		
