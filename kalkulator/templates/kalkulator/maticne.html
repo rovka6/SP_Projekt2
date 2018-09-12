@@ -12,9 +12,15 @@
 										</select>				
 			<label>Podnozje:</label><select name="podnozje">	
 										<option>Vsi</option>
-										{% for podnozje in podnozja %}													
-												<option>{{podnozje}}</option>												
-										{% endfor%}																						
+										{% for podnozje in podnozja %}					
+										
+											{% if izbrani == podnozje %}
+												<option selected>{{podnozje}}</option>		
+											{% else %}	
+												<option >{{podnozje}}</option>												
+											{% endif %}	
+											
+										{% endfor%}																					
 										</select>
 			<label>Vrsta ram-a:</label><select name="ram">	
 										<option>Vsi</option>

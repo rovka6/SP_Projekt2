@@ -13,9 +13,15 @@
 			<label>Model:</label><input type="text" placeholder="Vpisite model" name="model">							
 			<label>Podnozje:</label><select name="podnozje">	
 										<option>Vsi</option>										
-										{% for podnozje in podnozja %}													
-												<option>{{podnozje}}</option>												
-										{% endfor%}											
+										{% for podnozje in podnozja %}					
+										
+											{% if izbrani == podnozje %}
+												<option selected>{{podnozje}}</option>		
+											{% else %}	
+												<option >{{podnozje}}</option>												
+											{% endif %}	
+											
+										{% endfor%}										
 										</select>																												
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>

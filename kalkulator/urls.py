@@ -70,12 +70,20 @@ urlpatterns = [
     # vrsteRama
     url(r'^vrsteRama', views.vrsteRama, name='vrsteRama'),
     
+    # vrsteMaticnih
+    url(r'^vrsteMaticnih', views.vrsteMaticnih, name='vrsteMaticnih'),
    
     # vrsteGraficnih
     url(r'^vrsteGraficnih', views.vrsteGraficnih, name='vrsteGraficnih'),
     
     # vrsteInputov
     url(r'^vrsteInputov', views.vrsteInputov, name='vrsteInputov'),
+    
+    # vrsteProcesorjev
+    url(r'^vrsteProcesorjev', views.vrsteProcesorjev, name='vrsteProcesorjev'),
+    
+    # vrsteKablov
+    url(r'^vrsteKablov', views.vrsteKablov, name='vrsteKablov'),
     
     # dodajInput
     url(r'^dodajInput', views.dodajInput, name='dodajInput'),

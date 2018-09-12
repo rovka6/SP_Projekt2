@@ -245,7 +245,26 @@ def vrsteRazsiritvenih(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteRazsiritvenih.html', context)          
- 
+
+def vrsteKablov(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='kabel', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='kabel')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteKablov.html', context) 
+    
 def vrsteRama(request):          
     context = {}         
 
@@ -265,6 +284,45 @@ def vrsteRama(request):
             
     return render(request, 'kalkulator/vrsteRama.html', context)          
  
+def vrsteMaticnih(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='maticna', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='maticna')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteMaticnih.html', context)          
+
+def vrsteProcesorjev(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='procesor', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='procesor')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteProcesorjev.html', context)          
+   
+    
  
 def adapterji(request):          
     context = {} 
@@ -454,9 +512,7 @@ def rami(request):
         
     context['izbrani'] = izbrani  
     context['rami'] = rami  
-    
-   
-    
+           
     
     
     return render(request, 'kalkulator/rami.html', context)   
@@ -471,10 +527,20 @@ def procesorji(request):
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Procesor.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    podnozja = Procesor.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True)    
+    #podnozja = Procesor.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True)    
     context['znamke'] = znamke 
-    context['podnozja'] = podnozja
+    #context['podnozja'] = podnozja
    
+    izbrani = request.GET.get('izbrani', False)
+    context['izbrani'] = izbrani
+    
+    if izbrani != False:
+        procesorji = procesorji.filter(podnozje=izbrani)
+
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    podnozja = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    podnozja = podnozja.filter(kategorija='procesor')
+    context['podnozja'] = podnozja
     
     
     # Če želimo samo procesorje z izbranimi parametri iz dropdowna
@@ -509,13 +575,24 @@ def maticne(request):
 
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Maticna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    podnozja = Maticna.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True) 
+    #podnozja = Maticna.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True) 
     rami = Maticna.objects.values('ram').distinct().order_by(Lower('ram')).values_list('ram', flat=True)
     graficne = Maticna.objects.values('graficna').distinct().order_by(Lower('graficna')).values_list('graficna', flat=True)    
     context['znamke'] = znamke 
-    context['podnozja'] = podnozja   
+    #context['podnozja'] = podnozja   
     context['rami'] = rami
-    context['graficne'] = graficne   
+    context['graficne'] = graficne  
+
+    izbrani = request.GET.get('izbrani', False)
+    context['izbrani'] = izbrani
+    
+    if izbrani != False:
+        maticne = maticne.filter(podnozje=izbrani)
+
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    podnozja = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    podnozja = podnozja.filter(kategorija='maticna')
+    context['podnozja'] = podnozja      
     
     # Če želimo samo procesorje z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
@@ -588,8 +665,20 @@ def kabli(request):
     kabli = Kabel.objects.all() 
 
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    vrste = Kabel.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)    
-    context['vrste'] = vrste 
+    #vrste = Kabel.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)    
+    #context['vrste'] = vrste 
+    
+    izbrani = request.GET.get('izbrani', False)
+    context['izbrani'] = izbrani
+    
+    if izbrani != False:
+        kabli = kabli.filter(vrsta=izbrani)
+
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='kabel')
+    context['vrste'] = vrste
+    
     
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'vrsta' in request.GET:                   
@@ -851,13 +940,20 @@ def dodajMaticno(request):
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Maticna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    podnozja = Maticna.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True) 
+    #podnozja = Maticna.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True) 
     rami = Maticna.objects.values('ram').distinct().order_by(Lower('ram')).values_list('ram', flat=True)
     graficne = Maticna.objects.values('graficna').distinct().order_by(Lower('graficna')).values_list('graficna', flat=True) 
     context['znamke'] = znamke 
-    context['podnozja'] = podnozja
+    #context['podnozja'] = podnozja
     context['rami'] = rami
     context['graficne'] = graficne
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    podnozja = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    podnozja = podnozja.filter(kategorija='maticna')
+    context['podnozja'] = podnozja 
+    
+    
     
     
     
@@ -1001,9 +1097,16 @@ def dodajProcesor(request):
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Procesor.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    podnozja = Procesor.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True)    
+    #podnozja = Procesor.objects.values('podnozje').distinct().order_by(Lower('podnozje')).values_list('podnozje', flat=True)    
     context['znamke'] = znamke 
-    context['podnozja'] = podnozja
+    #context['podnozja'] = podnozja
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    podnozja = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    podnozja = podnozja.filter(kategorija='maticna')
+    context['podnozja'] = podnozja 
+    
+    
 
     if request.method == 'POST'  and 'znamka' in request.POST:
 
@@ -1032,8 +1135,15 @@ def dodajKabel(request):
     context = {}
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    vrste = Kabel.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)   
+    #vrste = Kabel.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)   
+    #context['vrste'] = vrste
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='kabel')
     context['vrste'] = vrste
+    
+    
     
     if request.method == 'POST'  and 'vrsta' in request.POST:
 
