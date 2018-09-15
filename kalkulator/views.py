@@ -43,7 +43,26 @@ def rezerviraj(request, idKomponente, vrstaKomponente):
        
         
     return redirect(vrstaKomponente)   
-   
+ 
+def odstrani(request, idKomponente):
+
+    idKomponent = request.session['idKomponent']    
+    vrstaKomponent = request.session['vrstaKomponent']
+    stElementov = len(idKomponent)
+    
+    for i in range(0, stElementov): 
+        if idKomponent[i] == idKomponente:
+            idKomponent[i] = '-1'
+            vrstaKomponent[i] = '-1'
+            break
+    
+    idKomponent.remove('-1') 
+    vrstaKomponent.remove('-1') 
+
+    request.session['idKomponent'] = idKomponent
+    request.session['vrstaKomponent'] = vrstaKomponent    
+        
+    return redirect(kosarica) 
 
 def kosarica(request):
     
@@ -101,8 +120,7 @@ def kosarica(request):
     context['komponente'] = list           
     
     return render(request, 'kalkulator/kosarica.html', context)
-    
-               
+                  
   
 def add(request, vrsta, id):     
 

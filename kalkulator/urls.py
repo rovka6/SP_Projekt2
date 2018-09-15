@@ -21,6 +21,9 @@ urlpatterns = [
     # rezerviraj		
 	url(r'^rezerviraj/(?P<idKomponente>\d+)/(?P<vrstaKomponente>\w+)$', views.rezerviraj, name='rezerviraj'),
     
+    # odstrani		
+	url(r'^odstrani/(?P<idKomponente>\d+)$', views.odstrani, name='odstrani'),
+    
     # kosarica		
 	url(r'^kosarica', views.kosarica, name='kosarica'),
         

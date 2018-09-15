@@ -8,9 +8,11 @@
 		
 		{% for komponenta in komponente %}	
 
-			{{komponenta}} <br>
-
+			{{komponenta.id}} {{komponenta}}  <a href="odstrani/{{komponenta.id}}" >	
+									<button>odstrani</button>					
+								</a>
 		
+				<br>
 		{% endfor %}
 		
 		
