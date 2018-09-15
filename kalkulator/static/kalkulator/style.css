@@ -85,8 +85,11 @@ a:link { color: white; text-decoration: none;}
 a:visited { color: white; text-decoration: none;}
 
 #Obrazec, #Stanje, #Porocilo {	
-	padding: 10% 15%;		
+	padding: 10% 15%;	
+	
 }
+
+
 
 select, input, textarea {	
 	clear: both;
@@ -141,4 +144,8 @@ label {
 
 p {
     clear: left;
+}
+
+div {
+	border: 5px solid black;
 }

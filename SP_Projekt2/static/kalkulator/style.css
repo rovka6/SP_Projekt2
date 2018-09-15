@@ -13,6 +13,8 @@ div {
 	height:98vh; 
 }
 
+
+
 #banner { 	
 	position: relative;
 	border: 1px solid white;
@@ -80,15 +82,33 @@ a:visited { color: white; text-decoration: none;}
 #Obrazec, #Stanje, #Porocilo {	
 	padding: 8% 15%;
 	
+	
 }
 
-select, input, textarea {	
+select {	
 	clear: both;
 	float: left;	
 	width: 200px;
 	margin: 2px 0px;	
 	text-align: right;	
 }
+
+input {	
+	clear: both;
+	float: left;	
+	width: 200px;
+	margin: 2px 0px;	
+	text-align: right;	
+}
+
+textarea {	
+	clear: both;
+	float: left;	
+	width: 200px;
+	margin: 2px 0px;	
+	text-align: right;	
+}
+
 
 label {
 	float: left;
@@ -135,4 +155,23 @@ label {
 
 p {
     clear: left;
+}
+
+#rezerviraj {
+	clear: right;
+	float: left;
+
+}
+
+button {
+	
+	
+
+}
+
+#drek {
+
+	
+	
+
 }

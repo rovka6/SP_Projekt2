@@ -18,9 +18,21 @@
 					<div id="logout">							
 							
 								{% if user.is_authenticated %}
-									{{ user.username }}
+									<a href="kosarica">
+									{{ user.username }}						
+							
+										</a>
+									
+									
+									
+									
 									
 								{% else %}
+								
+									<a href="kosarica">
+									kosarica					
+							
+										</a>
 								
 								{% endif %}
 														

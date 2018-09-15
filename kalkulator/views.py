@@ -17,55 +17,88 @@ def redirect_view(request):
     response = redirect('/redirect-success/')
     return response   
     
-def rezerviraj(request):        
-        
-    if request.method == 'POST': 
+def rezerviraj(request, idKomponente, vrstaKomponente):           
           
-        if 'idKomponent' not in request.session:
-               print('ni komponente')
-               idKomponent = []
-               vrstaKomponent = []
-               idKomponent.append(request.POST['idKomponente'])
-               vrstaKomponent.append(request.POST['vrstaKomponente'])
-               request.session['idKomponent'] = idKomponent
-               request.session['vrstaKomponent'] = vrstaKomponent                 
-        else:
-               print('je komponenta')
-              
-               idKomponent = request.session['idKomponent']
-               vrstaKomponent = request.session['vrstaKomponent']
-               idKomponent.append(request.POST['idKomponente'])
-               vrstaKomponent.append(request.POST['vrstaKomponente'])
-               
-               request.session['idKomponent'] = idKomponent
-               request.session['vrstaKomponent'] = vrstaKomponent                                                      
- 
- 
-    print(request.session['idKomponent'])
-    print(request.session['vrstaKomponent'])            
-               
-               
-    return redirect('graficne')
+    if 'idKomponent' not in request.session:
+        print('ni komponente')
+        idKomponent = []
+        vrstaKomponent = []
+        #idKomponent.append(request.POST['idKomponente'])
+        #vrstaKomponent.append(request.POST['vrstaKomponente'])
+        idKomponent.append(idKomponente)
+        vrstaKomponent.append(vrstaKomponente)
+        request.session['idKomponent'] = idKomponent
+        request.session['vrstaKomponent'] = vrstaKomponent                 
+    else:
+        print('je komponenta')              
+        idKomponent = request.session['idKomponent']
+        vrstaKomponent = request.session['vrstaKomponent']
+        #idKomponent.append(request.POST['idKomponente'])
+        #vrstaKomponent.append(request.POST['vrstaKomponente'])
+        idKomponent.append(idKomponente)
+        vrstaKomponent.append(vrstaKomponente)               
+        request.session['idKomponent'] = idKomponent
+        request.session['vrstaKomponent'] = vrstaKomponent        
+                  
+       
+        
+    return redirect(vrstaKomponente)   
+   
 
 def kosarica(request):
-
-    
-
     
     context = {}
-    a = request.session['idKomponent']
-    context['idKomponent'] = a
-    context['vrstaKomponent'] = request.session['vrstaKomponent']
+    idKomponent = request.session['idKomponent']    
+    vrstaKomponent = request.session['vrstaKomponent']
+        
+    list = []
+    stElementov = len(idKomponent)
     
+    print('st elementov:' + str(stElementov))
+    for i in range(0, stElementov):           
     
-    context['graficne'] = Graficna.objects.filter(id__in=[8])
-    
-    
-    
-    
-    
-    
-    
+        if vrstaKomponent[i] == 'graficne':
+            list.append(Graficna.objects.get(id=idKomponent[i]))
+         
+        elif vrstaKomponent[i] == 'inputi':
+            list.append(Input.objects.get(id=idKomponent[i]))
+            
+        elif vrstaKomponent[i] == 'diski':
+            list.append(Disk.objects.get(id=idKomponent[i]))
+            
+        elif vrstaKomponent[i] == 'rami':
+            list.append(Ram.objects.get(id=idKomponent[i]))
+            
+        elif vrstaKomponent[i] == 'razsiritvene':
+            list.append(Razsiritvena.objects.get(id=idKomponent[i]))
+            
+        elif vrstaKomponent[i] == 'maticne':
+            list.append(Maticna.objects.get(id=idKomponent[i]))
+            
+            
+        elif vrstaKomponent[i] == 'zasloni':
+            list.append(Zaslon.objects.get(id=idKomponent[i]))
+            
+            
+        elif vrstaKomponent[i] == 'napajalniki':
+            list.append(Napajalnik.objects.get(id=idKomponent[i]))
+
+        elif vrstaKomponent[i] == 'kabli':
+            list.append(Kabel.objects.get(id=idKomponent[i]))
+
+        elif vrstaKomponent[i] == 'procesorji':
+            list.append(Procesor.objects.get(id=idKomponent[i]))    
+            
+            
+        elif vrstaKomponent[i] == 'drugo':
+            list.append(Drugo.objects.get(id=idKomponent[i]))             
+            
+        else: 
+            print('neznana komponenta')
+            print(vrstaKomponent[i])        
+               
+       
+    context['komponente'] = list           
     
     return render(request, 'kalkulator/kosarica.html', context)
     
@@ -289,7 +322,7 @@ def main(request):
             request.session.create()    
             #request.SESSION_EXPIRE_AT_BROWSER_CLOSE = True           
 
-    #request.session.set_expiry(15)              
+    #request.session.set_expiry(1)              
    
     context['idSeje'] = request.session.session_key       
          

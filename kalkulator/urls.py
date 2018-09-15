@@ -19,7 +19,7 @@ urlpatterns = [
 	url(r'^delete/(?P<vrsta>\w+)/(?P<id>\d+)$', views.delete, name='delete'),
     
     # rezerviraj		
-	url(r'^rezerviraj', views.rezerviraj, name='rezerviraj'),
+	url(r'^rezerviraj/(?P<idKomponente>\d+)/(?P<vrstaKomponente>\w+)$', views.rezerviraj, name='rezerviraj'),
     
     # kosarica		
 	url(r'^kosarica', views.kosarica, name='kosarica'),

@@ -31,6 +31,10 @@ class Procesor(models.Model):
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/procesorji', default="/media/no-image.jpg")
     
+    def __str__(self):
+        return self.znamka + ", " + self.model + ", " + self.podnozje + ", " + self.opis + ", " + self.kolicina
+    
+    
 class Maticna(models.Model):     
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
@@ -41,6 +45,10 @@ class Maticna(models.Model):
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/maticne', default="/media/no-image.jpg")
     
+    def __str__(self):
+        return self.znamka + ", " + self.model + ", " + self.podnozje + ", " + self.ram + ", " + self.graficna + ", " + self.opis + ", " + self.kolicina
+    
+    
 class Napajalnik(models.Model):    
     vrsta = models.CharField(max_length=20)
     znamka = models.CharField(max_length=20)    
@@ -48,6 +56,9 @@ class Napajalnik(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/napajalniki', default="/media/no-image.jpg")   
+    
+    def __str__(self):
+        return self.znamka + ", " + self.vrsta + ", " + self.moc + ", " + self.opis + ", " + self.kolicina
 
 class Disk(models.Model):     
     znamka = models.CharField(max_length=20)    
@@ -56,6 +67,9 @@ class Disk(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/diski', default="/media/no-image.jpg")    
+    
+    def __str__(self):
+        return self.znamka + ", " + self.prikljucek + ", " + self.velikost  + ", " + self.opis + ", " + self.kolicina
 	
 class Ram(models.Model):
     znamka = models.CharField(max_length=20)
@@ -64,6 +78,9 @@ class Ram(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/rami', default="/media/no-image.jpg")
+    
+    def __str__(self):
+        return self.znamka + ", " + self.vrsta + ", " + self.velikost + ", " + self.opis + ", " + self.kolicina
      
 class Razsiritvena(models.Model):
     znamka = models.CharField(max_length=20)
@@ -73,6 +90,9 @@ class Razsiritvena(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/razsiritvene', default="/media/no-image.jpg") 
+    
+    def __str__(self):
+        return self.znamka + ", " + self.model + ", " + self.vrsta + ", " + self.prikljucek + ", " + self.opis + ", " + self.kolicina
    
 class Zaslon(models.Model):
     znamka = models.CharField(max_length=20)
@@ -84,11 +104,17 @@ class Zaslon(models.Model):
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/zasloni', default="/media/no-image.jpg") 
     
+    def __str__(self):
+        return self.znamka + ", " + self.model + ", " + self.vrsta + ", " + self.velikost + ", " + self.input + ", " + self.opis + ", " + self.kolicina
+    
 class Kabel(models.Model):        
     vrsta = models.CharField(max_length=20)   
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/kabli', default="/media/no-image.jpg")   
+    
+    def __str__(self):
+        return self.vrsta + ", " + self.opis + ", " + self.kolicina
     
 class Input(models.Model):   
     vrsta = models.CharField(max_length=20)
@@ -98,6 +124,9 @@ class Input(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/inputi', default="/media/no-image.jpg")  
+    
+    def __str__(self):
+        return self.znamka + ", " + self.vrsta + ", " + self.prikljucek + ", " + self.povezava + ", " + self.opis + ", " + self.kolicina
    
 class Adapter(models.Model):   
     vrsta = models.CharField(max_length=20)
@@ -108,6 +137,9 @@ class Adapter(models.Model):
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/adapterji', default="/media/no-image.jpg")
  
+    def __str__(self):
+        return self.znamka + ", " + self.vrsta + ", " + self.voltaza + ", " + self.amperaza + ", " + self.opis + ", " + self.kolicina    
+ 
 class Tiskalnik(models.Model):  
     vrsta = models.CharField(max_length=20)
     tip = models.CharField(max_length=20)
@@ -115,6 +147,9 @@ class Tiskalnik(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg")
+    
+    def __str__(self):
+        return self.vrsta + ", " + self.tip + ", " + self.priklop + ", " + self.opis + ", " + self.kolicina
  
 class Drugo(models.Model): 
     vrsta = models.CharField(max_length=20)
@@ -123,5 +158,7 @@ class Drugo(models.Model):
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg") 
     
-
+    def __str__(self):
+        return self.vrsta + ", " + self.ime + ", " + self.opis + ", " + self.kolicina
+    
    
