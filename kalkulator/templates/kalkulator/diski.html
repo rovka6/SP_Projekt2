@@ -13,26 +13,20 @@
 										</select>
 			<label>Prikljucek:</label><select name="prikljucek">	
 										<option>Vsi</option>
-										{% if izbrani == "PATA" %}
-												<option selected>PATA</option>		
+										{% for prikljucek in prikljucki %}					
+										
+											{% if izbrani == prikljucek %}
+												<option selected>{{prikljucek}}</option>		
 											{% else %}	
-												<option >PATA</option>												
-											{% endif %}
-										{% if izbrani == "SATA" %}
-												<option selected>SATA</option>		
-											{% else %}	
-												<option>SATA</option>												
+												<option >{{prikljucek}}</option>												
 											{% endif %}	
-										{% if izbrani == "Drugo" %}
-												<option selected>Drugo</option>		
-											{% else %}	
-												<option>Drugo</option>												
-											{% endif %}													
+																																	
+										{% endfor%}												
 										</select>
 			<label>Velikost:</label><select name="velikost">
 										<option>Vsi</option>
-										{% for velikost in velikosti %}													
-												<option>{{velikost}}GB</option>												
+										{% for velikost in velikosti %}																									
+												<option>{{velikost}}</option>												
 										{% endfor%}																						
 										</select>			
 			<input type="submit" id="vpisi" value="Prikazi">	

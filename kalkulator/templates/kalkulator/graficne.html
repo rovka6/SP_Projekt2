@@ -12,34 +12,23 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Povezava:</label><select name="povezava">	
-												<option> Vsi </option>
-										{% if izbrani == "AGP" %}
-												<option selected>AGP</option>		
+			<label>Vodilo:</label><select name="vodilo">	
+										<option> Vsi </option>
+										{% for vodilo in vodila %}				
+										
+											{% if izbrani == vodilo %}
+												<option selected>{{vodilo}}</option>		
 											{% else %}	
-												<option >AGP</option>												
-											{% endif %}
-										{% if izbrani == "PCI" %}
-												<option selected>PCI</option>		
-											{% else %}	
-												<option>PCI</option>												
+												<option >{{vodilo}}</option>												
 											{% endif %}	
-										{% if izbrani == "PCIE" %}
-												<option selected>PCIE</option>		
-											{% else %}	
-												<option>PCIE</option>												
-											{% endif %}	
-										{% if izbrani == "OSTALO" %}
-												<option selected>OSTALO</option>		
-											{% else %}	
-												<option>OSTALO</option>												
-											{% endif %}	
+																																
+										{% endfor%}	
 											
 										</select>		
 			<label>Pomnilnik:</label><select name="pomnilnik">
 										<option>Vsi</option>
 										{% for pomnilnik in pomnilniki %}													
-												<option>{{pomnilnik}}MB</option>												
+												<option>{{pomnilnik}}</option>												
 										{% endfor%}																						
 										</select>								
 			<input type="submit" id="vpisi" value="Prikazi">	
@@ -73,14 +62,11 @@
 				
 				
 				{% else %}	
-
 					
-
-				<a href="graficne" >	
-						<button>rezerviraj</button>					
-					</a>
-	
-
+					<form action="rezerviraj" method="post" enctype="multipart/form-data"> {% csrf_token %}
+						<input type="hidden" name="vrstaKomponente" value="graficna" />
+						<input type="submit" id="vpisi" value="{{graficna.id}}" name="idKomponente">					
+					</form>	
 				
 				{% endif %}
 				

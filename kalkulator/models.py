@@ -13,10 +13,15 @@ class Graficna(models.Model):
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
     pomnilnik = models.CharField(max_length=20)
-    povezava = models.CharField(max_length=20)
+    vodilo = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/graficne', default="/media/no-image.jpg")
+    
+    def __str__(self):
+        return self.znamka + ", " + self.model + ", " + self.pomnilnik + ", " + self.vodilo + ", " + self.opis + ", " + self.kolicina
+    
+    
 
 class Procesor(models.Model):     
     znamka = models.CharField(max_length=20)
@@ -110,7 +115,13 @@ class Tiskalnik(models.Model):
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg")
-    
+ 
+class Drugo(models.Model): 
+    vrsta = models.CharField(max_length=20)
+    ime = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg") 
     
 
    

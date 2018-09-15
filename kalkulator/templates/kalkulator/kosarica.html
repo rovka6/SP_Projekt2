@@ -1,0 +1,38 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 		
+		
+		{% for idKomponenta in idKomponent %}	
+
+			{{idKomponenta}}
+
+		
+		{% endfor %}
+		
+		{% for vrstaKomponenta in vrstaKomponent %}	
+
+			{{vrstaKomponenta}}
+
+		
+		{% endfor %}
+		
+		{% for graficna in graficne %}	
+
+			{{graficna}}
+
+		
+		{% endfor %}
+		
+		
+		
+	</div>
+{% endblock %}
+
+	
+
+
+
+
+
+

@@ -17,6 +17,12 @@ urlpatterns = [
 	
     # delete		
 	url(r'^delete/(?P<vrsta>\w+)/(?P<id>\d+)$', views.delete, name='delete'),
+    
+    # rezerviraj		
+	url(r'^rezerviraj', views.rezerviraj, name='rezerviraj'),
+    
+    # kosarica		
+	url(r'^kosarica', views.kosarica, name='kosarica'),
         
     # add		
 	url(r'^add/(?P<vrsta>\w+)/(?P<id>\d+)$', views.add, name='add'),
@@ -60,6 +66,9 @@ urlpatterns = [
     # kabli
     url(r'^kabli', views.kabli,  name='kabli'),
     
+    # drugo
+    url(r'^drugo', views.drugo,  name='drugo'),
+    
     # adapterji
     url(r'^adapterji', views.adapterji,  name='adapterji'),
     
@@ -89,6 +98,9 @@ urlpatterns = [
     
     # vrsteKablov
     url(r'^vrsteKablov', views.vrsteKablov, name='vrsteKablov'),
+    
+    # vrsteDrugo
+    url(r'^vrsteDrugo', views.vrsteDrugo, name='vrsteDrugo'),
     
     # dodajInput
     url(r'^dodajInput', views.dodajInput, name='dodajInput'),
@@ -128,6 +140,9 @@ urlpatterns = [
     
     # dodajTiskalnik
     url(r'^dodajTiskalnik', views.dodajTiskalnik, name='dodajTiskalnik'), 
+    
+    # dodajDrugo
+    url(r'^dodajDrugo', views.dodajDrugo, name='dodajDrugo'), 
     
 ]
 

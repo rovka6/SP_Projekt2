@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija, Tiskalnik
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija, Tiskalnik, Drugo
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -17,6 +17,60 @@ def redirect_view(request):
     response = redirect('/redirect-success/')
     return response   
     
+def rezerviraj(request):        
+        
+    if request.method == 'POST': 
+          
+        if 'idKomponent' not in request.session:
+               print('ni komponente')
+               idKomponent = []
+               vrstaKomponent = []
+               idKomponent.append(request.POST['idKomponente'])
+               vrstaKomponent.append(request.POST['vrstaKomponente'])
+               request.session['idKomponent'] = idKomponent
+               request.session['vrstaKomponent'] = vrstaKomponent                 
+        else:
+               print('je komponenta')
+              
+               idKomponent = request.session['idKomponent']
+               vrstaKomponent = request.session['vrstaKomponent']
+               idKomponent.append(request.POST['idKomponente'])
+               vrstaKomponent.append(request.POST['vrstaKomponente'])
+               
+               request.session['idKomponent'] = idKomponent
+               request.session['vrstaKomponent'] = vrstaKomponent                                                      
+ 
+ 
+    print(request.session['idKomponent'])
+    print(request.session['vrstaKomponent'])            
+               
+               
+    return redirect('graficne')
+
+def kosarica(request):
+
+    
+
+    
+    context = {}
+    a = request.session['idKomponent']
+    context['idKomponent'] = a
+    context['vrstaKomponent'] = request.session['vrstaKomponent']
+    
+    
+    context['graficne'] = Graficna.objects.filter(id__in=[8])
+    
+    
+    
+    
+    
+    
+    
+    
+    return render(request, 'kalkulator/kosarica.html', context)
+    
+               
+  
 def add(request, vrsta, id):     
 
     if vrsta == 'tiskalnik':
@@ -26,6 +80,14 @@ def add(request, vrsta, id):
                
         return redirect('tiskalniki')
 
+    if vrsta == 'drugo':
+        drugo = Drugo.objects.get(pk=id)                
+        drugo.kolicina = (int(drugo.kolicina) + 1)
+        drugo.save()
+               
+        return redirect('drugo')
+    
+        
     if vrsta == 'graficna':
         graficna = Graficna.objects.get(pk=id)                
         graficna.kolicina = (int(graficna.kolicina) + 1)
@@ -117,6 +179,16 @@ def delete(request, vrsta, id):
         
         return redirect('tiskalniki')
 
+    if vrsta == 'drugo':
+        drugo = Drugo.objects.get(pk=id)                
+        drugo.kolicina = (int(drugo.kolicina) - 1)
+        drugo.save()
+        if(int(drugo.kolicina) == 0):
+            drugo.delete()
+        
+        return redirect('drugo')    
+               
+        
     if vrsta == 'graficna':
         graficna = Graficna.objects.get(pk=id)                
         graficna.kolicina = (int(graficna.kolicina) - 1)
@@ -203,6 +275,7 @@ def delete(request, vrsta, id):
         procesor = Procesor.objects.get(pk=id)
         procesor.kolicina = (int(procesor.kolicina) - 1)
         procesor.save()
+        procesor.delete()
         if(int(procesor.kolicina) == 0):
             procesor.delete()
         return redirect('procesorji')
@@ -212,7 +285,15 @@ def delete(request, vrsta, id):
 def main(request):          
     context = {}
     
-    
+    if(request.session.session_key == None):
+            request.session.create()    
+            #request.SESSION_EXPIRE_AT_BROWSER_CLOSE = True           
+
+    #request.session.set_expiry(15)              
+   
+    context['idSeje'] = request.session.session_key       
+         
+                   
     return render(request, 'kalkulator/main.html', context)
   
  
@@ -223,17 +304,45 @@ def vrsteNapajalnikov(request):
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
 
 def vrsteDiskov(request):          
-    context = {}
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='disk', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='disk')
+    context['kategorije'] = kategorije
             
-        
-    return render(request, 'kalkulator/vrsteDiskov.html', context)
+    return render(request, 'kalkulator/vrsteDiskov.html', context)          
+
    
     
 def vrsteGraficnih(request):          
-    context = {}
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='graficna', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='graficna')
+    context['kategorije'] = kategorije
             
-        
-    return render(request, 'kalkulator/vrsteGraficnih.html', context)
+    return render(request, 'kalkulator/vrsteGraficnih.html', context)          
+ 
  
 def vrsteInputov(request):          
     context = {}
@@ -262,6 +371,28 @@ def vrsteRazsiritvenih(request):
             
     return render(request, 'kalkulator/vrsteRazsiritvenih.html', context)          
 
+def vrsteDrugo(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='drugo', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+             
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='drugo')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrsteDrugo.html', context)          
+    
+    
+    
+    
 def vrsteTiskalnikov(request):          
     context = {}         
 
@@ -456,33 +587,40 @@ def zasloni(request):
  
 def graficne(request):    
     
-    context = {}
-    graficne = Graficna.objects.all() 
-
+    context = {}         
+                              
+    graficne = Graficna.objects.all()
+    
+    # napolnimo dropdown samo s tistimi podkategorijami, ki smo jih prej dodali
+    vodila = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vodila = vodila.filter(kategorija='graficna')
+    context['vodila'] = vodila
+    
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    povezave = Graficna.objects.values('povezava').distinct().order_by(Lower('povezava')).values_list('povezava', flat=True)
+    vodilo = Graficna.objects.values('vodilo').distinct().order_by(Lower('vodilo')).values_list('vodilo', flat=True)
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by('pomnilnik').values_list('pomnilnik', flat=True)
  
     context['znamke'] = znamke
-    context['povezave'] = povezave
+    context['vodilo'] = vodilo
     context['pomnilniki'] = pomnilniki
       
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:   
-        print('v getu') 
-          
+                 
         # izbran prikljucek v dropdown listu  
-        znamka1 = request.GET['znamka']   
-        povezava1 = request.GET['povezava'] 
+        znamka = request.GET['znamka']   
+        vodilo = request.GET['vodilo'] 
         pomnilnik = request.GET['pomnilnik']              
-                
-        if znamka1 != 'Vsi':            
-            graficne = Graficna.objects.filter(znamka=znamka1) 
+         
+        
+         
+        if znamka != 'Vsi':            
+            graficne = graficne.filter(znamka=znamka) 
             
-        if povezava1 != 'Vsi':    
-            graficne = graficne.filter(povezava=povezava1)
+        if vodilo != 'Vsi':    
+            graficne = graficne.filter(vodilo=vodilo)
 
         if pomnilnik != 'Vsi':    
             graficne = graficne.filter(pomnilnik=pomnilnik)          
@@ -492,9 +630,12 @@ def graficne(request):
     
     izbrani = request.GET.get('izbrani', False)
     
+    
     if izbrani != False:
-        context['izbrani'] = izbrani
-        graficne = graficne.filter(povezava=izbrani)            
+        context['izbrani'] = izbrani      
+        graficne = graficne.filter(vodilo=izbrani) 
+ 
+        
     
     context['izbrani'] = izbrani         
     context['graficne'] = graficne  
@@ -835,7 +976,40 @@ def tiskalniki(request):
     
     return render(request, 'kalkulator/tiskalniki.html', context)    
      
+def drugo(request):          
+   
+    context = {}      
+            
+    # napolnimo dropdown samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='drugo')
+    context['vrste'] = vrste                               
+                   
+    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'vrsta' in request.GET:                  
+         
+        drugi = Drugo.objects.all() 
+         
+        # izbran prikljucek v dropdown listu  
+        vrsta = request.GET['vrsta']                     
+        
+        if vrsta != 'Vsi':
+            drugi = drugi.filter(vrsta=vrsta)
+                    
+        context['drugi'] = drugi
+        return render(request, 'kalkulator/drugo.html', context)
+     
+    # preverimo katero podkategorijo smo izbrali
+    izbrani = request.GET.get('izbrani', False)    
+    if izbrani != False:
+        drugi = Drugo.objects.filter(vrsta=izbrani) 
+    else: 
+        drugi = Drugo.objects.all()
+        
+    context['izbrani'] = izbrani          
+    context['drugi'] = drugi               
     
+    return render(request, 'kalkulator/drugo.html', context)    
  
 def razsiritvene(request):          
    
@@ -901,14 +1075,20 @@ def razsiritvene(request):
 def diski(request):    
     
     context = {}
-    diski = Disk.objects.all()  
+    diski = Disk.objects.all()              
+    
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    prikljucki = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    prikljucki = prikljucki.filter(kategorija='disk')
+    context['prikljucki'] = prikljucki 
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Disk.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
-    velikosti = Disk.objects.values('velikost').distinct().order_by(Lower('znamka')).values_list('velikost', flat=True)
+    velikosti = Disk.objects.values('velikost').distinct().order_by(Lower('velikost')).values_list('velikost', flat=True)
     context['znamke'] = znamke   
-    context['velikosti'] = velikosti           
-    
+    context['velikosti'] = velikosti  
+           
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
           
@@ -949,6 +1129,12 @@ def diski(request):
 def dodajDisk(request):
     
     context = {}
+        
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    prikljucki = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    prikljucki = prikljucki.filter(kategorija='disk')
+    context['prikljucki'] = prikljucki     
+        
         
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Disk.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
@@ -1112,8 +1298,8 @@ def dodajNapajalnik(request):
 @login_required
 def dodajInput(request):
     
-    context = {}
-        
+    context = {}          
+      
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     vrste = Input.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     znamke = Input.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
@@ -1151,11 +1337,19 @@ def dodajGraficno(request):
     
     context = {}
     
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vodila = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vodila = vodila.filter(kategorija='graficna')
+    context['vodila'] = vodila
+    
+    
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by(Lower('pomnilnik')).values_list('pomnilnik', flat=True)
     context['znamke'] = znamke   
     context['pomnilniki'] = pomnilniki
+    
+    
     if request.method == 'POST'  and 'znamka' in request.POST:
 
         znamka = request.POST['znamka']
@@ -1165,10 +1359,10 @@ def dodajGraficno(request):
         pomnilnik = request.POST['pomnilnik']
         if(request.POST['pomnilnik1'] != ''):
             pomnilnik = request.POST['pomnilnik1'] 
-        povezava = request.POST['povezava']
+        vodilo = request.POST['vodilo']
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
-        nova_graficna = Graficna(znamka=znamka, model=model, pomnilnik=pomnilnik, povezava=povezava, opis=opis, kolicina=kolicina)
+        nova_graficna = Graficna(znamka=znamka, model=model, pomnilnik=pomnilnik, vodilo=vodilo, opis=opis, kolicina=kolicina)
         
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -1368,7 +1562,34 @@ def dodajTiskalnik(request):
         nov_tiskalnik.save()                         
                
     return render(request, 'kalkulator/dodajTiskalnik.html', context)        
+
+@login_required
+def dodajDrugo(request):
     
+    context = {}
+     
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='drugo')
+    context['vrste'] = vrste 
+         
+    
+    if request.method == 'POST'  and 'vrsta' in request.POST:        
+        vrsta = request.POST['vrsta'] 
+        ime = request.POST['ime']
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']
+                         
+        nov_drugo = Drugo(vrsta=vrsta, ime=ime, opis=opis, kolicina=kolicina)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nov_drugo.image = form.cleaned_data['image']
+             
+        nov_drugo.save()                         
+               
+    return render(request, 'kalkulator/dodajDrugo.html', context)        
+     
     
     
 @login_required

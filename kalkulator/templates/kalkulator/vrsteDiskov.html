@@ -1,22 +1,24 @@
 {% extends "kalkulator/base.html" %}
 
 {% block main %}
-	<div id="Stanje"> 					
+	<div id="Stanje"> 			
+							
+		{% for kategorija in kategorije %}			
 						
-		
-		<a href="diski?izbrani=PATA">
-			<img src='https://lh4.googleusercontent.com/-ttoMViS-G5g/VO1_bEGmLMI/AAAAAAAAC1Q/eb72Rp5Q8C4/s720/Samsung_HD400LD_Hard_Disk_B.jpg' style="width:200px;height:150px;border:1;">
-		</a>
-		
-		<a href="diski?izbrani=SATA">			
-			<img src='https://c.76.my/Malaysia/samsung-hd502hj-500gb-3-5-sata-hdd-pc-desktop-hard-disk-drive-7200rpm-electgen-1707-27-electgen@2.jpg'
-			style="width:200px;height:150px;border:1;">
-		</a>
-		
-		<a href="diski?izbrani=Drugo">			
-			<img src='https://www.howtogeek.com/wp-content/uploads/2016/01/xhtssd2-650x275.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.8kNNdVVsIa.jpg'
-			style="width:200px;height:150px;border:1;">
-		</a>			
+			<a href="diski?izbrani={{ kategorija.podkategorija }}" >
+				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
+			</a>		
+			
+		{% endfor %}		
+						
+		<form action="vrsteDiskov" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+			
+			<input type="text" placeholder="Vpisite novo podkategorijo" name="podkategorija">									
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>				
 		
 	</div>
 {% endblock %}

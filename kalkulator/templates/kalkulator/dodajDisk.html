@@ -15,9 +15,9 @@
 										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">			
 			<label>Prikljucek:</label><select name="prikljucek">	
 										<option>Vsi</option>
-										<option>PATA</option>
-										<option>SATA</option>
-										<option>Ostalo</option>
+										{% for prikljucek in prikljucki %}													
+												<option>{{prikljucek}}</option>											
+										{% endfor%}
 										</select>
 			<label>Velikost v GB:</label><select name="velikost">
 										<option>Vsi</option>

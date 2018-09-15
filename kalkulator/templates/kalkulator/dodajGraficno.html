@@ -20,12 +20,10 @@
 										{% endfor%}																						
 										</select>	
 										<input type="number" placeholder="pomnilnik v MB" name="pomnilnik1">	
-			<label>Povezava:</label><select name="povezava">	
-										<option>Vsi</option>
-										<option>AGP</option>
-										<option>PCI</option>										
-										<option>PCIE</option>	
-										<option>ostalo</option>
+			<label>Vodilo:</label><select name="vodilo">	
+										{% for vodilo in vodila %}													
+												<option>{{vodilo}}</option>												
+										{% endfor%}
 										</select>	
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="number" placeholder="Vpisite kolicino" name="kolicina">	
