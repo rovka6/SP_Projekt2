@@ -64,6 +64,42 @@ def odstrani(request, idKomponente):
         
     return redirect(kosarica) 
 
+def potrditevNarocila(request):
+    context = {}
+    ime = request.POST['ime_in_priimek']
+    stevilka = request.POST['stevilka']
+    email = request.POST['email']
+    
+    idKomponent = request.session['idKomponent']    
+    vrstaKomponent = request.session['vrstaKomponent']
+	
+    nova = "\n"
+    
+    tekst = "Pozdravljeni! \n"  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n"
+    
+    for id, vrsta in zip(idKomponent, vrstaKomponent):
+        tekst = tekst +  str(id) + "\t - \t" + str(vrsta)
+        tekst += nova
+    
+    from django.core.mail import send_mail  
+    send_mail('Naročilo potrjeno',
+    tekst,  
+    'kristjan.bleiweis@gmail.com', #FROM
+    [email],  #TO
+    fail_silently=False,)
+       
+    context['ime_in_priimek'] = ime
+    context['email'] = email
+    context['idKomponent'] = idKomponent
+    context['vrstaKomponent'] = vrstaKomponent
+	
+	
+    return render(request, 'kalkulator/potrditevNarocila.html', context)
+	
+	
+	
+	
+	
 def kosarica(request):
     
     context = {}

@@ -15,7 +15,25 @@
 				<br>
 		{% endfor %}
 		
+		<form action="potrditevNarocila" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+
+			<label for="ime_in_priimek"><b>Ime in priimek</b></label>
+		    <input type="text" name="ime_in_priimek" placeholder="Janez Novak"  required>
+
+			<label for="stevilka"><b>Številka</b></label> <br>
+			<input type="text" name="stevilka" placeholder="070 123 456"required>
+			<br>
+			<label for="email"><b>E-mail</b></label> <br>
+			<input type="email" name="email" placeholder="kristjan.bleiweis@gmail.com"required>
+			<br>
+			<br>
+			<br>
+			<br>
 		
+		
+			<button type="submit" >Potrdi rezervacijo teh komponent</button>			
+			
+		</form>
 		
 	</div>
 {% endblock %}
