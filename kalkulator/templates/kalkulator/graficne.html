@@ -50,7 +50,7 @@
 		
 		{% for graficna in graficne %}	
 		
-		<div id="drek">
+		
 		
 		<img src="{{graficna.image.url}}" height="50" width="80">	
 			{{graficna.znamka}} {{graficna.model}} {{graficna.pomnilnik}}MB  {{graficna.povezava}}  {{graficna.opis}} {{graficna.kolicina}}  
@@ -92,7 +92,7 @@
 				<br>		
 		{% endfor %}
 	
-			</div>
+			
 
 			{% if user.is_authenticated %}			
 				<a href="dodajGraficno" name="dodaj">	

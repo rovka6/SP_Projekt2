@@ -18,9 +18,16 @@ def redirect_view(request):
     return response   
     
 def rezerviraj(request, idKomponente, vrstaKomponente):           
-          
+     
+    #request.SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+    #request.session.set_expiry(1)  
+    #context['idSeje'] = request.session.session_key 
+     
+    if(request.session.session_key == None):
+        request.session.create
+      
     if 'idKomponent' not in request.session:
-        print('ni komponente')
+        
         idKomponent = []
         vrstaKomponent = []
         #idKomponent.append(request.POST['idKomponente'])
@@ -30,7 +37,7 @@ def rezerviraj(request, idKomponente, vrstaKomponente):
         request.session['idKomponent'] = idKomponent
         request.session['vrstaKomponent'] = vrstaKomponent                 
     else:
-        print('je komponenta')              
+                   
         idKomponent = request.session['idKomponent']
         vrstaKomponent = request.session['vrstaKomponent']
         #idKomponent.append(request.POST['idKomponente'])
@@ -67,13 +74,29 @@ def odstrani(request, idKomponente):
 def kosarica(request):
     
     context = {}
+    list = []
+    context['opozorilo'] = ''
+    
+    if 'idKomponent' not in request.session:
+        
+        context['opozorilo'] = 'Kosarica je prazna'   
+        return render(request, 'kalkulator/kosarica.html', context)
+        
+        
+        
+    
     idKomponent = request.session['idKomponent']    
     vrstaKomponent = request.session['vrstaKomponent']
         
     list = []
     stElementov = len(idKomponent)
     
-    print('st elementov:' + str(stElementov))
+    if stElementov == 0:        
+        
+        context['opozorilo'] = 'Kosarica je prazna'   
+        return render(request, 'kalkulator/kosarica.html', context)
+    
+    
     for i in range(0, stElementov):           
     
         if vrstaKomponent[i] == 'graficne':
@@ -115,7 +138,7 @@ def kosarica(request):
         else: 
             print('neznana komponenta')
             print(vrstaKomponent[i])        
-               
+            print('.')   
        
     context['komponente'] = list           
     
@@ -336,13 +359,8 @@ def delete(request, vrsta, id):
 def main(request):          
     context = {}
     
-    if(request.session.session_key == None):
-            request.session.create()    
-            #request.SESSION_EXPIRE_AT_BROWSER_CLOSE = True           
-
-    #request.session.set_expiry(1)              
-   
-    context['idSeje'] = request.session.session_key       
+    
+          
          
                    
     return render(request, 'kalkulator/main.html', context)
@@ -365,16 +383,17 @@ def vrsteDiskov(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteDiskov')
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='disk')
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteDiskov.html', context)          
-
-   
-    
+       
 def vrsteGraficnih(request):          
     context = {}         
 
@@ -386,7 +405,10 @@ def vrsteGraficnih(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+          
+        if podkategorija == '':
+            return redirect('vrsteGraficnih')
+          
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='graficna')
@@ -397,7 +419,24 @@ def vrsteGraficnih(request):
  
 def vrsteInputov(request):          
     context = {}
-            
+     
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='input', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+         
+        if podkategorija == '':
+            return redirect('vrsteInputov')
+         
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='input')
+    context['kategorije'] = kategorije
+     
         
     return render(request, 'kalkulator/vrsteInputov.html', context)
   
@@ -414,7 +453,10 @@ def vrsteRazsiritvenih(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+         
+        if podkategorija == '':
+            return redirect('vrsteRazsiritvenih')
+         
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='razsiritvena')
@@ -433,7 +475,10 @@ def vrsteDrugo(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+         
+        if podkategorija == '':
+            return redirect('vrsteDrugo')
+         
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='drugo')
@@ -455,7 +500,11 @@ def vrsteTiskalnikov(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteTiskalnikov')
+
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='tiskalnik')
@@ -476,7 +525,10 @@ def vrsteKablov(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteKablov')
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='kabel')
@@ -495,7 +547,10 @@ def vrsteRama(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteRama')
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='ram')
@@ -514,7 +569,10 @@ def vrsteMaticnih(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteMaticnih')
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='maticna')
@@ -533,7 +591,10 @@ def vrsteProcesorjev(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():           
             nova_kategorija.image = form.cleaned_data['image']
-             
+        
+        if podkategorija == '':
+            return redirect('vrsteProcesorjev')
+        
         nova_kategorija.save()        
     
     kategorije = Kategorija.objects.filter(kategorija='procesor')
@@ -942,6 +1003,12 @@ def inputi(request):
     context['znamke'] = znamke
     context['vrste'] = vrste
     context['prikljucki'] = prikljucki
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    povezave = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    povezave = povezave.filter(kategorija='input')
+    context['povezave'] = povezave
+    
         
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
@@ -1204,7 +1271,10 @@ def dodajDisk(request):
             velikost = request.POST['velikost1']  
         opis = request.POST['opis']       
         kolicina = request.POST['kolicina']
-        
+       
+        if znamka == 'Vsi' or velikost == 'Vsi':
+             return redirect(dodajDisk)
+       
         nov_disk = Disk(znamka=znamka, prikljucek=prikljucek, velikost=velikost, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1241,12 +1311,15 @@ def dodajRam(request):
         opis = request.POST['opis']       
         kolicina = request.POST['kolicina']
         
-        nov_disk = Ram(znamka=znamka, vrsta=vrsta, velikost=velikost, opis=opis, kolicina=kolicina)
+        if znamka == 'Vsi' or velikost == 'Vsi':
+             return redirect(dodajRam)
+        
+        nov_ram = Ram(znamka=znamka, vrsta=vrsta, velikost=velikost, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            nov_disk.image = form.cleaned_data['image']
-            nov_disk.save()
+            nov_ram.image = form.cleaned_data['image']
+            nov_ram.save()
        
     # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
     vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
@@ -1298,7 +1371,11 @@ def dodajMaticno(request):
             graficna = request.POST['graficna1']        
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
-        
+       
+        if znamka == 'Vsi' or ram == 'Vsi' or graficna == 'Vsi':
+             return redirect(dodajMaticno)
+
+       
         nova_maticna = Maticna(znamka=znamka, model=model, podnozje=podnozje, ram=ram, graficna=graficna, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1337,6 +1414,9 @@ def dodajNapajalnik(request):
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
         
+        if znamka == 'Vsi' or moc == 'Vsi' or vrsta == 'Vsi':
+             return redirect(dodajNapajalnik)
+        
         nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1358,6 +1438,13 @@ def dodajInput(request):
     context['znamke'] = znamke
     context['vrste'] = vrste
     context['prikljucki'] = prikljucki
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    povezave = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    povezave = povezave.filter(kategorija='input')
+    context['povezave'] = povezave
+    
+    
         
     if request.method == 'POST'  and 'vrsta' in request.POST:
 
@@ -1374,6 +1461,9 @@ def dodajInput(request):
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
         
+        if znamka == 'Vsi' or prikljucek == 'Vsi' or povezava == 'Vsi':
+             return redirect(dodajInput)
+                
         nov_input = Input(vrsta=vrsta, znamka=znamka, prikljucek=prikljucek, povezava=povezava, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1392,15 +1482,13 @@ def dodajGraficno(request):
     vodila = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
     vodila = vodila.filter(kategorija='graficna')
     context['vodila'] = vodila
-    
-    
+        
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by(Lower('pomnilnik')).values_list('pomnilnik', flat=True)
     context['znamke'] = znamke   
     context['pomnilniki'] = pomnilniki
-    
-    
+        
     if request.method == 'POST'  and 'znamka' in request.POST:
 
         znamka = request.POST['znamka']
@@ -1413,6 +1501,10 @@ def dodajGraficno(request):
         vodilo = request.POST['vodilo']
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
+        
+        if znamka == 'Vsi' or pomnilnik == 'Vsi':
+             return redirect(dodajGraficno)  
+                
         nova_graficna = Graficna(znamka=znamka, model=model, pomnilnik=pomnilnik, vodilo=vodilo, opis=opis, kolicina=kolicina)
         
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1451,6 +1543,9 @@ def dodajProcesor(request):
             podnozje = request.POST['podnozje1']
         opis = request.POST['opis']    
         kolicina = request.POST['kolicina']
+        
+        if znamka == 'Vsi' or model == '':
+             return redirect(dodajProcesor)
         
         nov_procesor = Procesor(znamka=znamka, model=model, podnozje=podnozje, opis=opis, kolicina=kolicina)
 
@@ -1526,7 +1621,8 @@ def dodajZaslon(request):
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
         
-        print(input)
+        if znamka == 'Vsi' or pomnilnik == 'Vsi' or vrsta == 'Vsi' or velikost == 'Vsi' or input == 'Vsi':
+             return redirect(dodajZaslon)
         
         nov_zaslon = Zaslon(znamka=znamka, model=model, vrsta=vrsta, velikost=velikost, input=input, opis=opis, kolicina=kolicina)
 
@@ -1561,7 +1657,10 @@ def dodajRazsiritveno(request):
             prikljucek = request.POST['prikljucek1']
         opis = request.POST['opis']   
         kolicina = request.POST['kolicina']         
-               
+        
+        if znamka == 'Vsi' or prikljucek == 'Vsi':
+             return redirect(dodajGraficno)
+        
         nova_razsiritvena = Razsiritvena(znamka=znamka, model=model, vrsta=vrsta, prikljucek=prikljucek, opis=opis, kolicina=kolicina)
                 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1603,7 +1702,10 @@ def dodajTiskalnik(request):
             priklop = request.POST['priklop1']
         opis = request.POST['opis']   
         kolicina = request.POST['kolicina']         
-               
+         
+        if tip == 'Vsi' or priklop == 'Vsi':
+             return redirect(dodajTiskalnik)
+         
         nov_tiskalnik = Tiskalnik(vrsta=vrsta, tip=tip, priklop=priklop, opis=opis, kolicina=kolicina)
                 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1629,8 +1731,8 @@ def dodajDrugo(request):
         vrsta = request.POST['vrsta'] 
         ime = request.POST['ime']
         opis = request.POST['opis']
-        kolicina = request.POST['kolicina']
-                         
+        kolicina = request.POST['kolicina']                
+         
         nov_drugo = Drugo(vrsta=vrsta, ime=ime, opis=opis, kolicina=kolicina)
                 
         form = ImageUploadForm(request.POST, request.FILES)
@@ -1673,7 +1775,10 @@ def dodajAdapter(request):
             amperaza = request.POST['amperaza1']    
         opis = request.POST['opis']   
         kolicina = request.POST['kolicina']         
-               
+         
+        if znamka == 'Vsi' or voltaza == 'Vsi' or vrsta == 'Vsi' or amperaza == 'Vsi':
+             return redirect(dodajGraficno)
+         
         nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)

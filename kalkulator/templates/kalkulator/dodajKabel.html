@@ -6,8 +6,7 @@
 		
 		<form action="dodajKabel" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
-			<label>Vrsta:</label><select name="vrsta">	
-										<option>Vsi</option>
+			<label>Vrsta:</label><select name="vrsta">										
 										{% for vrsta in vrste %}													
 												<option>{{vrsta}}</option>												
 										{% endfor%}																						

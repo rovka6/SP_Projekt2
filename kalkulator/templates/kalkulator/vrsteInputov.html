@@ -4,19 +4,22 @@
 	<div id="Stanje"> 					
 						
 		
-		<a href="inputi?izbrani=Zicna">
-			<img src='https://images-na.ssl-images-amazon.com/images/I/81Z882NR-ZL._SX425_.jpg' style="width:200px;height:150px;border:1;">
-		</a>
-		
-		<a href="inputi?izbrani=Brezzicna">			
-			<img src='https://d2211byn0pk9fi.cloudfront.net/spree/products/65533/product/A7733111.jpg?1517800118'
-			style="width:200px;height:150px;border:1;">
-		</a>
-		
-		<a href="inputi?izbrani=Drugo">			
-			<img src='https://i.ebayimg.com/images/g/Cv8AAOSw5UZY-MFN/s-l300.jpg'
-			style="width:200px;height:150px;border:1;">
-		</a>			
+		{% for kategorija in kategorije %}			
+						
+			<a href="inputi?izbrani={{ kategorija.podkategorija }}" >
+				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
+			</a>		
+			
+		{% endfor %}		
+						
+		<form action="vrsteInputov" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+			
+			<input type="text" placeholder="Vpisite novo podkategorijo" name="podkategorija">									
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>				
 		
 	</div>
 {% endblock %}

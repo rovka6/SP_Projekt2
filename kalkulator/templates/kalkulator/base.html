@@ -4,7 +4,7 @@
 	<head>
 		<link href="{% static 'kalkulator/style.css' %}" rel="stylesheet"/>	
 		<meta charset="utf-8" />
-		<title>Kalkulator življenskih stroškov</title>
+		<title>Duh časa</title>
 	</head>
 	
 	<body>
@@ -18,10 +18,10 @@
 					<div id="logout">							
 							
 								{% if user.is_authenticated %}
-									<a href="kosarica">
+									
 									{{ user.username }}						
 							
-										</a>
+										
 									
 									
 									
@@ -41,7 +41,7 @@
 					<div id="back_button">	
 							
 						<a href="main">
-							{{idSeje}}
+							
 							<img src="https://image.flaticon.com/icons/svg/60/60817.svg" style="width:44px;height:44px;">
 							
 						</a>

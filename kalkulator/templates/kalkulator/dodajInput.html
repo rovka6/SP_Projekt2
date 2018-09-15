@@ -28,11 +28,10 @@
 										{% endfor%}											
 										</select>	
 										<input type="text" placeholder="Vpisite nov prikljucek" name="prikljucek1">	
-			<label>Povezava:</label><select name="povezava">	
-										<option>Vsi</option>
-										<option>Zicna</option>
-										<option>Brezzicna</option>
-										<option>Ostalo</option>
+			<label>Povezava:</label><select name="povezava">											
+										{% for povezava in povezave %}													
+												<option>{{povezava}}</option>												
+										{% endfor%}
 										</select>	
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>							
 			<label>Kolicina:</label><input type="number" placeholder="Kolicina" name="kolicina">										
