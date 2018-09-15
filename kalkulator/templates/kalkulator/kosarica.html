@@ -5,16 +5,17 @@
 		
 		
 		
-		
+		<table>
 		{% for komponenta in komponente %}	
-
-			{{komponenta.id}} {{komponenta}}  <a href="odstrani/{{komponenta.id}}" >	
-									<button>odstrani</button>					
-								</a>
+			<tr>
 		
-				<br>
+     		<td> {{forloop.counter}} </td>
+			<td> {{komponenta}}  </td>
+			<td> <a href="odstrani/{{komponenta.id}}" >	<button>odstrani</button> </a> </td>
+			
+		    </tr>
 		{% endfor %}
-		
+		</table>
 		<form action="potrditevNarocila" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
 			<label for="ime_in_priimek"><b>Ime in priimek</b></label>

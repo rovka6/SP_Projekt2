@@ -73,13 +73,10 @@ def potrditevNarocila(request):
     idKomponent = request.session['idKomponent']    
     vrstaKomponent = request.session['vrstaKomponent']
 	
-    nova = "\n"
-    
-    tekst = "Pozdravljeni! \n"  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n"
+    tekst = "Pozdravljeni! \n"  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
     
     for id, vrsta in zip(idKomponent, vrstaKomponent):
-        tekst = tekst +  str(id) + "\t - \t" + str(vrsta)
-        tekst += nova
+        tekst = tekst +  str(id) + "- " + str(vrsta) + "<br>" 
     
     from django.core.mail import send_mail  
     send_mail('Naročilo potrjeno',
