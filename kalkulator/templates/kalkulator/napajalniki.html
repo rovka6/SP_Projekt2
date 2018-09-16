@@ -5,8 +5,14 @@
 					
 		<form>
 			<label>Vrsta:</label><select name="vrsta">											
-										{% for vrsta in vrste %}													
-												<option>{{vrsta}}</option>												
+										{% for vrsta in vrste %}				
+										
+											{% if izbrani == vrsta %}
+												<option selected>{{vrsta}}</option>		
+											{% else %}	
+												<option >{{vrsta}}</option>												
+											{% endif %}	
+																																
 										{% endfor%}																						
 										</select>
 			<label>Znamka:</label><select name="znamka">	

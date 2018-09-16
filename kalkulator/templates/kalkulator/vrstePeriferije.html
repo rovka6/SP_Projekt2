@@ -10,7 +10,7 @@
 			</a>		
 			
 		{% endfor %}		
-						
+		{% if user.is_authenticated %}				
 		<form action="vrstePeriferije" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
 			
@@ -20,7 +20,7 @@
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>						
-		
+		{% endif %}
 		
 	</div>
 {% endblock %}

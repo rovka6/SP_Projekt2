@@ -9,6 +9,8 @@ from django.db.models.functions import Length
 from django.db.models.functions import Lower
 from .form_config.forms import ImageUploadForm
 from django.shortcuts import redirect
+import math
+
 
 import logging
 logger = logging.getLogger(__name__)   
@@ -934,10 +936,12 @@ def napajalniki(request):
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
     voltaze = Napajalnik.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
     amperaze = Napajalnik.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)    
-    context['znamke'] = znamke 
-    context['moci'] = convertToInteger(moci) 
-    context['voltaze'] = convertToInteger(voltaze)
-    context['amperaze'] = convertToInteger(amperaze)
+    context['znamke'] = znamke         
+    context['moci'] = moci
+    context['voltaze'] = voltaze
+    context['amperaze'] = amperaze
+    
+  
     
     
     izbrani = request.GET.get('izbrani', False)
@@ -1456,18 +1460,20 @@ def dodajNapajalnik(request):
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
     voltaze = Napajalnik.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
     amperaze = Napajalnik.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)    
-    context['znamke'] = znamke 
-    context['moci'] = convertToInteger(moci) 
-    context['voltaze'] = convertToInteger(voltaze)
-    context['amperaze'] = convertToInteger(amperaze)
     
+    print(znamke)
+    print(voltaze)
+    print(amperaze)
+    print(moci)
+    context['moci'] = moci
+    context['znamke'] = znamke         
+    context['voltaze'] = voltaze   
+    context['amperaze'] = amperaze
+               
     # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
     vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
     vrste = vrste.filter(kategorija='napajalnik')
-    context['vrste'] = vrste
-    
-    
-    
+    context['vrste'] = vrste           
 
     if request.method == 'POST'  and 'znamka' in request.POST:
 
@@ -1495,18 +1501,19 @@ def dodajNapajalnik(request):
         if voltaza == 'Vsi':
             voltaza = 0
             
-        if moc == 'Vsi':
-            moc = amperaza * voltaza
-            
+        if moc == 'Vsi':            
+            moc = float(amperaza) * float(voltaza)
+                   
         
-        
-        if znamka == 'Vsi' or moc == 'Vsi' or vrsta == 'Vsi':
+        if znamka == 'Vsi' or moc == 'Vsi' or moc == 0 or vrsta == 'Vsi':                
+             print(redirect)
              return redirect(dodajNapajalnik)
         
         nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, amperaza=amperaza, voltaza=voltaza, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
+
             nov_napajalnik.image = form.cleaned_data['image']
             nov_napajalnik.save()
             

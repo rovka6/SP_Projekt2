@@ -1,19 +1,7 @@
-1. /
-2. Povsod preverit da ni možnosti da bi kot novo kategorijo dodalo 'Vsi', èe vnašalec ne izbere niti ne vnese nobene kategorije, vrste, znamke, itd.
-3. / 
-4. povsod dodati podkategorije (to bom jst naredu - Kristijan)
-5. zdruzit napajalnike in adapterje
-6. pri adapterjih in laptop napajalnikih dt možnost decimalne cifre - v htmlju je input type number, ampak ta number sprejme samo integerje, mora pa decimalne
-7. nrdit tko da ko poveèaš/zmanjšaš kolièino komponente d ne vrže na default stran in pokaže vse (paè mora pokazat samo agp èe si prej bil v agp)
-8. /
-9. /
-10. also dodat bomo mogl še d pošlje na ugotov mail, pa d to loh spremenijo v admin naslov kam se pošlje
-11. /
-12. /
-13. /
-14. gumb ki te vrže na prejšnjo stran - 1 korak nazaj (html koda za to je .. - dvojna pika) (dela Kristjan)
-15. za navadne uporabnike košarica kamor bodo dajali rezervacije (20 itemov omejitev, poteèe po 1 tednu). Ko pride v košarico mora pred oddajo naroèila vpisati ime, priimek in mail,
-    nato se pošlje potrditveni mail na njegov email, ko zadevo potrdi se pošlje mail administratorju s seznamom rezerviranih itemov
-16. klik na katerikoli rezultat mora odpreti novo stran z full size sliko in polnim opisom
+1. omogocit v adminu vpis ugotovega maila kamor se poleg uporabniku pošlje mail
+2. logiko dt v kosarico da se bo loh posamezne komponente poslal na mail 
+3. nrdit tko da ko poveèaš/zmanjšaš kolièino komponente d ne vrže na default stran in pokaže vse (paè mora pokazat samo agp èe si prej bil v agp)
+4. dodat omejitev itemov na 20, rezervacija velja 1 teden
+
 
 

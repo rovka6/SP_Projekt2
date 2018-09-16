@@ -10,7 +10,9 @@
 			</a>		
 			
 		{% endfor %}		
-						
+		
+
+		{% if user.is_authenticated %}
 		<form action="vrsteGraficnih" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 			
 			<input type="text" placeholder="Vpisite novo podkategorijo" name="podkategorija">									
@@ -19,7 +21,7 @@
 			<input type="submit" id="vpisi" value="Vpisi">			
 			
 		</form>					
-					
+		{% endif %}			
 		
 	</div>
 {% endblock %}
