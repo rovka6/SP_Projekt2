@@ -3,14 +3,22 @@
 {% block main %}
 	<div id="Stanje"> 					
 						
-		<a href="napajalniki">
-			<img src='https://images-na.ssl-images-amazon.com/images/G/15/aplusautomation/vendorimages/62e89ab3-b685-431f-a3f7-8511909389fa.jpg._CB303318346_.jpg' style="width:200px;height:150px;border:1;">
-		</a>
-							
-		<a href="adapterji">			
-			<img src='http://www.eshop-pc.com/images/acer-ac-adapter-4.74a-90w.jpg'
-			style="width:200px;height:150px;border:1;">
-		</a>
+		{% for kategorija in kategorije %}			
+						
+			<a href="napajalniki?izbrani={{ kategorija.podkategorija }}" >
+				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
+			</a>		
+			
+		{% endfor %}		
+						
+		<form action="vrsteNapajalnikov" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+			
+			<input type="text" placeholder="Vpisite novo podkategorijo" name="podkategorija">									
+			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		
+						
+			<input type="submit" id="vpisi" value="Vpisi">			
+			
+		</form>		
 		
 		
 		

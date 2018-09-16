@@ -25,21 +25,15 @@
 										</select>
 			<label>Povezava:</label><select name="povezava">	
 										<option> Vsi </option>	
-										{% if izbrani == "Zicna" %}
-												<option selected>Zicna</option>		
+										{% for povezava in povezave %}				
+										
+											{% if izbrani == povezava %}
+												<option selected>{{povezava}}</option>		
 											{% else %}	
-												<option >Zicna</option>												
-											{% endif %}
-										{% if izbrani == "Brezzicna" %}
-												<option selected>Brezzicna</option>		
-											{% else %}	
-												<option>Brezzicna</option>												
+												<option >{{povezava}}</option>												
 											{% endif %}	
-										{% if izbrani == "Drugo" %}
-												<option selected>Drugo</option>		
-											{% else %}	
-												<option>Drugo</option>												
-											{% endif %}				
+																																
+										{% endfor%}			
 																				
 										</select>							
 			<input type="submit" id="vpisi" value="Prikazi">	

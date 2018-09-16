@@ -6,8 +6,7 @@
 		
 		<form action="dodajNapajalnik" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
 
-			<label>Vrsta:</label><select name="vrsta">	
-										<option>Vsi</option>
+			<label>Vrsta:</label><select name="vrsta">											
 										{% for vrsta in vrste %}													
 												<option>{{vrsta}}</option>												
 										{% endfor%}																						
@@ -20,13 +19,27 @@
 										{% endfor%}																						
 										</select>
 										<input type="text" placeholder="Vpisite novo znamko" name="znamka1">			
-			<label>Moc v W:</label><select name="moc">	
+			<label>Moc v W:</label><select name="amperaza">	
 										<option>Vsi</option>
 										{% for moc in moci %}													
 												<option>{{moc}}</option>												
 										{% endfor%}																						
 										</select>
-										<input type="number" placeholder="Vpisite moc v W" name="moc1">
+										<input type="number" placeholder="Vpisite moc v wattih" name="moc1">
+			<label>Voltaza:</label><select name="voltaza">	
+										<option>Vsi</option>
+										{% for voltaza in voltaze %}													
+												<option>{{voltaza}}</option>												
+										{% endfor%}																						
+										</select>
+										<input type="number" placeholder="Vpisite amperazo v amperih" name="voltaza1">
+			<label>Amperaza:</label><select name="moc">	
+										<option>Vsi</option>
+										{% for amperaza in amperaze %}													
+												<option>{{amperaza}}</option>												
+										{% endfor%}																						
+										</select>							
+										<input type="number" placeholder="Vpisite voltazo v voltih" name="amperaza1">	
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>
 			<label>Kolicina:</label><input type="number" placeholder="Kolicina" name="kolicina">							
 			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		

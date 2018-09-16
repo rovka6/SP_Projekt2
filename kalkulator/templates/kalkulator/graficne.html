@@ -61,7 +61,8 @@
 		
 		{% for graficna in graficne %}	
 		
-		<div id="drek">
+
+		
 			
 		<tr>
 		<td> <img src="{{graficna.image.url}}" height="50" width="80">		 </td>
@@ -72,6 +73,7 @@
 		<td> <center> {{graficna.povezava}} </center>  </td>
 		<td> <center> {{graficna.opis}}      </center>  </td>
 		<td> <center> {{graficna.kolicina}} </center>  </td>
+
 		
 				{% if user.is_authenticated %}			
 				<td>
@@ -112,8 +114,13 @@
 				
 				<br>		
 		{% endfor %}
+
+	
+			
+
 		</table>
-			</div>
+			
+
 
 			{% if user.is_authenticated %}			
 				<a href="dodajGraficno" name="dodaj">	

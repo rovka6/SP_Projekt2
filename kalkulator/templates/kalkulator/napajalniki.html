@@ -4,8 +4,7 @@
 	<div id="Stanje"> 
 					
 		<form>
-			<label>Vrsta:</label><select name="vrsta">	
-										<option>Vsi</option>
+			<label>Vrsta:</label><select name="vrsta">											
 										{% for vrsta in vrste %}													
 												<option>{{vrsta}}</option>												
 										{% endfor%}																						
@@ -21,10 +20,28 @@
 										{% for moc in moci %}													
 												<option>{{moc}}</option>												
 										{% endfor%}																						
-										</select>															
+										</select>
+			<label>Voltaza:</label><select name="voltaza">	
+										<option>Vsi</option>
+										{% for voltaza in voltaze %}													
+												<option>{{voltaza}}</option>												
+										{% endfor%}																						
+										</select>
+			
+			<label>Amperaza:</label><select name="amperaza">	
+										<option>Vsi</option>
+										{% for amperaza in amperaze %}													
+												<option>{{amperaza}}</option>												
+										{% endfor%}																						
+										</select>		
+										
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 		
+		<br>
+		<br>
+		<br>
+		<br>
 		<br>
 		<br>
 		<br>
