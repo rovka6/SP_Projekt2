@@ -100,10 +100,6 @@ def potrditevNarocila(request):
 	
     return render(request, 'kalkulator/potrditevNarocila.html', context)
 	
-	
-	
-	
-	
 def kosarica(request):
     
     context = {}
@@ -397,7 +393,6 @@ def main(request):
          
                    
     return render(request, 'kalkulator/main.html', context)
-  
  
 def vrsteNapajalnikov(request):          
     context = {}
@@ -426,7 +421,7 @@ def vrsteDiskov(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteDiskov.html', context)          
-       
+
 def vrsteGraficnih(request):          
     context = {}         
 
@@ -448,9 +443,9 @@ def vrsteGraficnih(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteGraficnih.html', context)          
- 
- 
+  
 def vrsteInputov(request):          
+
     context = {}
      
     if request.method == 'POST'  and 'podkategorija' in request.POST:  
@@ -470,10 +465,11 @@ def vrsteInputov(request):
     kategorije = Kategorija.objects.filter(kategorija='input')
     context['kategorije'] = kategorije
      
+
+    context = {}           
+
         
-    return render(request, 'kalkulator/vrsteInputov.html', context)
-  
-    
+    return render(request, 'kalkulator/vrsteInputov.html', context)    
     
 def vrsteRazsiritvenih(request):          
     context = {}         
@@ -519,9 +515,6 @@ def vrsteDrugo(request):
             
     return render(request, 'kalkulator/vrsteDrugo.html', context)          
     
-    
-    
-    
 def vrsteTiskalnikov(request):          
     context = {}         
 
@@ -544,8 +537,6 @@ def vrsteTiskalnikov(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteTiskalnikov.html', context)          
-   
-    
     
 def vrsteKablov(request):          
     context = {}         
@@ -634,8 +625,6 @@ def vrsteProcesorjev(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteProcesorjev.html', context)          
-   
-    
  
 def adapterji(request):          
     context = {} 
@@ -648,8 +637,8 @@ def adapterji(request):
     amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
     context['vrste'] = vrste 
     context['znamke'] = znamke 
-    context['voltaze'] = voltaze
-    context['amperaze'] = amperaze
+    context['voltaze'] = convertToInteger(voltaze)
+    context['amperaze'] = convertToInteger(amperaze)
 
     # Če želimo samo tipkovnice z določenim priključkom
     if request.method == 'GET'  and 'znamka' in request.GET: 
@@ -665,8 +654,7 @@ def adapterji(request):
             adapterji = Adapter.objects.filter(vrsta=vrsta)           
         
         if znamka != 'Vsi':                          
-            adapterji = adapterji.filter(znamka=znamka)   
-
+            adapterji = adapterji.filter(znamka=znamka)  
       
         if voltaza != 'Vsi':    
             adapterji = adapterji.filter(voltaza=voltaza)    
@@ -681,8 +669,6 @@ def adapterji(request):
     context['adapterji'] = adapterji  
     
     return render(request, 'kalkulator/adapterji.html', context)
-     
-  
  
 def zasloni(request):   
 
@@ -694,7 +680,7 @@ def zasloni(request):
     velikosti = Zaslon.objects.values('velikost').distinct().order_by(Lower('velikost')).values_list('velikost', flat=True)
     inputi = Zaslon.objects.values('input').distinct().order_by(Lower('input')).values_list('input', flat=True)
     context['znamke'] = znamke 
-    context['velikosti'] = velikosti
+    context['velikosti'] = convertToInteger(velikosti)
     context['inputi'] = inputi
 
     # Če želimo samo tipkovnice z določenim priključkom
@@ -727,9 +713,6 @@ def zasloni(request):
     
     return render(request, 'kalkulator/zasloni.html', context)
  
- 
- 
- 
 def graficne(request):    
     
     context = {}         
@@ -748,7 +731,7 @@ def graficne(request):
  
     context['znamke'] = znamke
     context['vodilo'] = vodilo
-    context['pomnilniki'] = pomnilniki
+    context['pomnilniki'] = convertToInteger(pomnilniki)
       
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
@@ -787,7 +770,6 @@ def graficne(request):
     
     return render(request, 'kalkulator/graficne.html', context)   
  
- 
 def rami(request):    
     
     context = {}
@@ -797,9 +779,9 @@ def rami(request):
     znamke = Ram.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     #vrste = Ram.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
     velikosti = Ram.objects.values('velikost').distinct().order_by(Lower('velikost')).values_list('velikost', flat=True)
-    context['znamke'] = znamke 
+    context['znamke'] = znamke
     #context['vrste'] = vrste
-    context['velikosti'] = velikosti  
+    context['velikosti'] = convertToInteger(velikosti)  
 
     # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
     vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
@@ -839,9 +821,6 @@ def rami(request):
     
     
     return render(request, 'kalkulator/rami.html', context)   
-  
- 
- 
  
 def procesorji(request):    
     
@@ -889,7 +868,6 @@ def procesorji(request):
     context['procesorji'] = procesorji  
     
     return render(request, 'kalkulator/procesorji.html', context)
-
  
 def maticne(request):     
     
@@ -945,7 +923,6 @@ def maticne(request):
     context['maticne'] = maticne  
     
     return render(request, 'kalkulator/maticne.html', context)
-
  
 def napajalniki(request):    
     
@@ -958,7 +935,7 @@ def napajalniki(request):
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
     context['vrste'] = vrste
     context['znamke'] = znamke 
-    context['moci'] = moci 
+    context['moci'] = convertToInteger(moci) 
     
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
@@ -980,7 +957,6 @@ def napajalniki(request):
     context['napajalniki'] = napajalniki  
     
     return render(request, 'kalkulator/napajalniki.html', context)    
-
  
 def kabli(request):    
     
@@ -1020,9 +996,6 @@ def kabli(request):
     context['kabli'] = kabli  
     
     return render(request, 'kalkulator/kabli.html', context)    
-   
-    
-    
  
 def inputi(request):    
     
@@ -1221,8 +1194,6 @@ def razsiritvene(request):
     
     return render(request, 'kalkulator/razsiritvene.html', context)    
  
-    
- 
 def diski(request):    
     
     context = {}
@@ -1238,7 +1209,7 @@ def diski(request):
     znamke = Disk.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
     velikosti = Disk.objects.values('velikost').distinct().order_by(Lower('velikost')).values_list('velikost', flat=True)
     context['znamke'] = znamke   
-    context['velikosti'] = velikosti  
+    context['velikosti'] = convertToInteger(velikosti)  
            
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
@@ -1271,10 +1242,6 @@ def diski(request):
     context['diski'] = diski  
     
     return render(request, 'kalkulator/diski.html', context)    
- 
- 
-
-    
 
 @login_required
 def dodajDisk(request):
@@ -1361,7 +1328,6 @@ def dodajRam(request):
 
        
     return render(request, 'kalkulator/dodajRam.html', context) 
- 
   
 @login_required
 def dodajMaticno(request):
@@ -1621,9 +1587,7 @@ def dodajKabel(request):
             nov_kabel.save()
             
     return render(request, 'kalkulator/dodajKabel.html', context)    
-    
-    
-    
+   
 @login_required
 def dodajZaslon(request):
     
@@ -1775,11 +1739,10 @@ def dodajDrugo(request):
         nov_drugo.save()                         
                
     return render(request, 'kalkulator/dodajDrugo.html', context)        
-     
-    
     
 @login_required
 def dodajAdapter(request):
+
     
     context = {}
         
@@ -1821,10 +1784,18 @@ def dodajAdapter(request):
             
     return render(request, 'kalkulator/dodajAdapter.html', context)    
     
+def convertToInteger(list_of_strings):
+    list = []
+    for el in list_of_strings:
+        list.append(int(el))
+    return sorted(list)
+ 
  
 
 
  
 
 
+ 
+ 
  
