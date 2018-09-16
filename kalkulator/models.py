@@ -14,14 +14,13 @@ class Graficna(models.Model):
     model = models.CharField(max_length=20)
     pomnilnik = models.CharField(max_length=20)
     vodilo = models.CharField(max_length=20)
+    izhod = models.CharField(max_length=20)
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/graficne', default="/media/no-image.jpg")
     
     def __str__(self):
-        return self.znamka + ", " + self.model + ", " + self.pomnilnik + ", " + self.vodilo + ", " + self.opis + ", " + self.kolicina
-    
-    
+        return self.znamka + ", " + self.model + ", " + self.pomnilnik + ", " + self.vodilo + ", " + self.izhod + ", " + self.opis + ", " + self.kolicina       
 
 class Procesor(models.Model):     
     znamka = models.CharField(max_length=20)
@@ -33,8 +32,7 @@ class Procesor(models.Model):
     
     def __str__(self):
         return self.znamka + ", " + self.model + ", " + self.podnozje + ", " + self.opis + ", " + self.kolicina
-    
-    
+        
 class Maticna(models.Model):     
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
@@ -46,8 +44,7 @@ class Maticna(models.Model):
     image = models.ImageField(upload_to='komponente/maticne', default="/media/no-image.jpg")
     
     def __str__(self):
-        return self.znamka + ", " + self.model + ", " + self.podnozje + ", " + self.ram + ", " + self.graficna + ", " + self.opis + ", " + self.kolicina
-    
+        return self.znamka + ", " + self.model + ", " + self.podnozje + ", " + self.ram + ", " + self.graficna + ", " + self.opis + ", " + self.kolicina  
     
 class Napajalnik(models.Model):    
     vrsta = models.CharField(max_length=20)

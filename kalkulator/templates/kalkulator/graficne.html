@@ -51,18 +51,12 @@
 		<td> <center> Znamka   </center> </td>
 		<td> <center> Model      </center> </td>
 		<td> <center> Pomnilnik      </center> </td>
-		<td> <center> Grafična povezava   </center> </td>
-		<td> <center> Priključki </center> </td>
+		<td> <center> Vodilo   </center> </td>
+		<td> <center> Izhod </center> </td>
 		<td> <center> Opis        </center> </td>
-		<td> <center> Količina   </center> </td>
-		
-		
-		
-		
-		{% for graficna in graficne %}	
-		
-
-		
+		<td> <center> Količina   </center> </td>				
+				
+		{% for graficna in graficne %}			
 			
 		<tr>
 		<td> <img src="{{graficna.image.url}}" height="50" width="80">		 </td>
@@ -70,7 +64,8 @@
 		<td> <center> {{graficna.znamka}} </center>  </td>
 		<td> <center> {{graficna.model}}    </center>  </td>
 		<td> <center> {{graficna.pomnilnik}}     </center>  </td>
-		<td> <center> {{graficna.povezava}} </center>  </td>
+		<td> <center> {{graficna.vodilo}} </center>  </td>
+		<td> <center> {{graficna.izhod}} </center>  </td>
 		<td> <center> {{graficna.opis}}      </center>  </td>
 		<td> <center> {{graficna.kolicina}} </center>  </td>
 

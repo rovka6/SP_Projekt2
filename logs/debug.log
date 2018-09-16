@@ -1,0 +1,991 @@
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:36.500964' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:36.500964', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:39.072646' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:39.072646', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:45.811743' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:45.811743', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1565
+"GET /media/komponente/kategorije/220px-AGP-Video-Card.jpg HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:51.852682' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:51.852682', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:53.187007' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:53.187007', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input'; args=('input',)
+"GET /app/vrsteInputov HTTP/1.1" 200 1556
+"GET /media/komponente/kategorije/download_cfPqUNT.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:11:55.894353' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:11:55.894353', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:12:59.663112' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:12:59.663112', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:01.412347' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:01.412347', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1565
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:02.106708' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:02.106708', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+Exception while resolving variable 'povezava' in template 'kalkulator/graficne.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Graficna' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Graficna' object has no attribute 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [povezava] in <Graficna: AMD, R9000, 64, AGP, Lepo ohranjena, 1>
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 6317
+"GET /media/komponente/graficne/titanx-shop_jnBOdOO.png HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:06.068421' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:06.068421', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'periferija'; args=('periferija',)
+"GET /app/vrstePeriferije HTTP/1.1" 200 1570
+"GET /media/komponente/kategorije/download_3_FqigIHw.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:06.914750' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:06.914750', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'periferija' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('periferija',)
+(0.001) SELECT "kalkulator_periferija"."id", "kalkulator_periferija"."vrsta", "kalkulator_periferija"."ime", "kalkulator_periferija"."opis", "kalkulator_periferija"."kolicina", "kalkulator_periferija"."image" FROM "kalkulator_periferija" WHERE "kalkulator_periferija"."vrsta" = 'Zvoèniki'; args=('Zvoèniki',)
+"GET /app/periferija?izbrani=Zvo%C4%8Dniki HTTP/1.1" 200 5710
+"GET /media/komponente/tiskalniki/download_3.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:08.210518' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:08.210518', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3562
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:35.927255' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:35.927255', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:37.718556' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:37.718556', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1554
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:39.031070' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:39.031070', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:40.070515' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:40.070515', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input'; args=('input',)
+"GET /app/vrsteInputov HTTP/1.1" 200 1545
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:42.027799' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:42.027799', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'disk'; args=('disk',)
+"GET /app/vrsteDiskov HTTP/1.1" 200 1546
+"GET /media/komponente/kategorije/computer-hard-disk-500x500.jpg HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:45.996244' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:45.996244', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:46.793108' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:46.793108', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'ram'; args=('ram',)
+"GET /app/vrsteRama HTTP/1.1" 200 1562
+"GET /media/komponente/kategorije/download_1.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:48.696023' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:48.696023', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'razsiritvena'; args=('razsiritvena',)
+"GET /app/vrsteRazsiritvenih HTTP/1.1" 200 1595
+"GET /media/komponente/kategorije/creative-sb-audigy-fx-lp-large_Dukzvo8.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:50.308891' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:50.308891', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'razsiritvena'; args=('razsiritvena',)
+"GET /app/vrsteRazsiritvenih HTTP/1.1" 200 1595
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:50.776655' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:50.776655', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."znamka", LOWER("kalkulator_razsiritvena"."znamka") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'razsiritvena' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('razsiritvena',)
+(0.000) SELECT DISTINCT "kalkulator_razsiritvena"."prikljucek", LOWER("kalkulator_razsiritvena"."prikljucek") FROM "kalkulator_razsiritvena" ORDER BY LOWER("kalkulator_razsiritvena"."prikljucek") ASC; args=()
+(0.001) SELECT "kalkulator_razsiritvena"."id", "kalkulator_razsiritvena"."znamka", "kalkulator_razsiritvena"."model", "kalkulator_razsiritvena"."vrsta", "kalkulator_razsiritvena"."prikljucek", "kalkulator_razsiritvena"."opis", "kalkulator_razsiritvena"."kolicina", "kalkulator_razsiritvena"."image" FROM "kalkulator_razsiritvena" WHERE "kalkulator_razsiritvena"."vrsta" = 'Zvoène kartice'; args=('Zvoène kartice',)
+"GET /app/razsiritvene?izbrani=Zvo%C4%8Dne%20kartice HTTP/1.1" 200 1678
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:53.633146' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:53.633146', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'maticna'; args=('maticna',)
+"GET /app/vrsteMaticnih HTTP/1.1" 200 1567
+"GET /media/komponente/kategorije/51XqY3bfccL.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:54.603351' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:54.603351', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_maticna"."znamka", LOWER("kalkulator_maticna"."znamka") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'maticna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('maticna',)
+(0.000) SELECT DISTINCT "kalkulator_maticna"."ram", LOWER("kalkulator_maticna"."ram") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."ram") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_maticna"."graficna", LOWER("kalkulator_maticna"."graficna") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."graficna") ASC; args=()
+(0.000) SELECT "kalkulator_maticna"."id", "kalkulator_maticna"."znamka", "kalkulator_maticna"."model", "kalkulator_maticna"."podnozje", "kalkulator_maticna"."ram", "kalkulator_maticna"."graficna", "kalkulator_maticna"."opis", "kalkulator_maticna"."kolicina", "kalkulator_maticna"."image" FROM "kalkulator_maticna" WHERE "kalkulator_maticna"."podnozje" = '1155'; args=('1155',)
+"GET /app/maticne?izbrani=1155 HTTP/1.1" 200 2236
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:55.696669' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:55.696669', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_maticna"."znamka", LOWER("kalkulator_maticna"."znamka") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."znamka") ASC; args=()
+(0.001) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'maticna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('maticna',)
+(0.000) SELECT DISTINCT "kalkulator_maticna"."ram", LOWER("kalkulator_maticna"."ram") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."ram") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_maticna"."graficna", LOWER("kalkulator_maticna"."graficna") FROM "kalkulator_maticna" ORDER BY LOWER("kalkulator_maticna"."graficna") ASC; args=()
+(0.000) SELECT "kalkulator_maticna"."id", "kalkulator_maticna"."znamka", "kalkulator_maticna"."model", "kalkulator_maticna"."podnozje", "kalkulator_maticna"."ram", "kalkulator_maticna"."graficna", "kalkulator_maticna"."opis", "kalkulator_maticna"."kolicina", "kalkulator_maticna"."image" FROM "kalkulator_maticna" WHERE "kalkulator_maticna"."podnozje" = '1155'; args=('1155',)
+"GET /app/maticne?izbrani=1155 HTTP/1.1" 200 2236
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:13:59.697440' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:13:59.697440', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT DISTINCT "kalkulator_zaslon"."velikost", LOWER("kalkulator_zaslon"."velikost") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."velikost") ASC; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:00.495493' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:00.495493', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."znamka", LOWER("kalkulator_zaslon"."znamka") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."input", LOWER("kalkulator_zaslon"."input") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."input") ASC; args=()
+(0.000) SELECT "kalkulator_zaslon"."id", "kalkulator_zaslon"."znamka", "kalkulator_zaslon"."model", "kalkulator_zaslon"."vrsta", "kalkulator_zaslon"."velikost", "kalkulator_zaslon"."input", "kalkulator_zaslon"."opis", "kalkulator_zaslon"."kolicina", "kalkulator_zaslon"."image" FROM "kalkulator_zaslon"; args=()
+"GET /app/zasloni HTTP/1.1" 200 2169
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:02.139302' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:02.139302', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_zaslon"."znamka", LOWER("kalkulator_zaslon"."znamka") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."velikost", LOWER("kalkulator_zaslon"."velikost") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."velikost") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."input", LOWER("kalkulator_zaslon"."input") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."input") ASC; args=()
+"GET /app/dodajZaslon HTTP/1.1" 200 2430
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:04.374162' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:04.374162', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'tiskalnik'; args=('tiskalnik',)
+"GET /app/vrsteTiskalnikov HTTP/1.1" 200 1403
+"POST /app/vrsteTiskalnikov HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:06.291485' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:06.291485', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'tiskalnik'; args=('tiskalnik',)
+"GET /app/vrsteTiskalnikov HTTP/1.1" 200 1403
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:07.844204' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:07.844204', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:17.699202' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:17.699202', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:44.416649' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:44.416649', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04050ED0>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0406F710>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03C94A10>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04050ED0>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0406F710>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03C94A10>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+(0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 1 ORDER BY "django_admin_log"."action_time" DESC  LIMIT 10; args=(1,)
+"GET /admin/ HTTP/1.1" 200 12327
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:44.567808' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:44.567808', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04050F18>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x03C940D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03C30C90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04050F18>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x03C940D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03C30C90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+(0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 1 ORDER BY "django_admin_log"."action_time" DESC  LIMIT 10; args=(1,)
+"GET /admin/ HTTP/1.1" 200 12327
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:14:54.554737' AND "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('2018-09-16 14:14:54.554737', 'z5s327woangqzhfh0nj5mwrz3fi7ojfa')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'z5s327woangqzhfh0nj5mwrz3fi7ojfa'; args=('z5s327woangqzhfh0nj5mwrz3fi7ojfa',)
+(0.000) BEGIN; args=None
+(0.001) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('z5s327woangqzhfh0nj5mwrz3fi7ojfa'); args=('z5s327woangqzhfh0nj5mwrz3fi7ojfa',)
+Exception while resolving variable 'is_popup' in template 'registration/logged_out.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x03CD5D20>>, 'request': <WSGIRequest: GET '/admin/logout/'>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x03D12AF0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x040748B0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D12CB0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'view': <django.contrib.auth.views.LogoutView object at 0x04074CF0>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'site': <django.contrib.sites.requests.RequestSite object at 0x03D12890>, 'site_name': 'localhost:8000', 'title': 'Logged out', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'registration/logged_out.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x03CD5D20>>, 'request': <WSGIRequest: GET '/admin/logout/'>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x03D12AF0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x040748B0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D12CB0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'view': <django.contrib.auth.views.LogoutView object at 0x04074CF0>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'site': <django.contrib.sites.requests.RequestSite object at 0x03D12890>, 'site_name': 'localhost:8000', 'title': 'Logged out', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+"GET /admin/logout/ HTTP/1.1" 200 1207
+"GET /app/main HTTP/1.1" 200 3505
+"GET /app/main HTTP/1.1" 200 3505
+Exception while resolving variable 'komponente' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [komponente] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04050F18>>, 'request': <WSGIRequest: GET '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x04081BF0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04096A50>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x04096130>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'opozorilo': 'Kosarica je prazna'}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x04096690>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}, {}]
+"GET /app/kosarica HTTP/1.1" 200 1674
+"GET /app/main HTTP/1.1" 200 3505
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET /app/main HTTP/1.1" 200 3505
+"GET /app/main HTTP/1.1" 200 3505
+"GET /app/main HTTP/1.1" 200 3505
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1508
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.001) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+Exception while resolving variable 'povezava' in template 'kalkulator/graficne.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Graficna' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Graficna' object has no attribute 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [povezava] in <Graficna: AMD, R9000, 64, AGP, Lepo ohranjena, 1>
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 2742
+"GET /admin/ HTTP/1.1" 302 0
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478A9C0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x03D476B0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0428BF30>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D473F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x03D475D0>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0425A850>, 'site_name': 'localhost:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478A9C0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x03D476B0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0428BF30>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D473F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x03D475D0>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0425A850>, 'site_name': 'localhost:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+"GET /admin/ HTTP/1.1" 302 0
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478AD68>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x046F6E70>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0428BFF0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x046F6E10>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x03CE0750>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0425AA70>, 'site_name': 'localhost:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478AD68>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x046F6E70>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0428BFF0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x046F6E10>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x03CE0750>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x0425AA70>, 'site_name': 'localhost:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=('admin',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'  LIMIT 1; args=('w6rcbkfw1d00wu220nk2d2o3pmb6v2kn',)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn', 'MTBhMmJhNjQ2ZWE4ZmY3Y2FhYTYzNDRiZjdkNDIxNDYzMzI5NzE4Nzp7fQ==', '2018-09-30 14:22:36.673447'; args=('w6rcbkfw1d00wu220nk2d2o3pmb6v2kn', 'MTBhMmJhNjQ2ZWE4ZmY3Y2FhYTYzNDRiZjdkNDIxNDYzMzI5NzE4Nzp7fQ==', '2018-09-30 14:22:36.673447')
+(0.000) BEGIN; args=None
+(0.001) UPDATE "auth_user" SET "last_login" = '2018-09-16 14:22:36.690458' WHERE "auth_user"."id" = 1; args=('2018-09-16 14:22:36.690458', 1)
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'MDM2ZmEwZjUyMDBiZmI3ZGFjOTVlM2I1NThkZTgwNzBhMzUwOGFlMjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0ZTcxMDUzMGY3YzA5NTMwN2U5NGI2ODQ0YmY3Y2YwNjA4YmZkYmU5In0=', "expire_date" = '2018-09-30 14:22:36.713808' WHERE "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'; args=('MDM2ZmEwZjUyMDBiZmI3ZGFjOTVlM2I1NThkZTgwNzBhMzUwOGFlMjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0ZTcxMDUzMGY3YzA5NTMwN2U5NGI2ODQ0YmY3Y2YwNjA4YmZkYmU5In0=', '2018-09-30 14:22:36.713808', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:22:36.742846' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:22:36.742846', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478AA08>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x03DE7970>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x046FA970>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0478AA08>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x03DE7970>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x046FA970>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Kalkulator', 'app_label': 'kalkulator', 'app_url': '/admin/kalkulator/', 'has_module_perms': True, 'models': [{'name': 'Disks', 'object_name': 'Disk', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/disk/', 'add_url': '/admin/kalkulator/disk/add/'}, {'name': 'Drugos', 'object_name': 'Drugo', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/drugo/', 'add_url': '/admin/kalkulator/drugo/add/'}, {'name': 'Graficnas', 'object_name': 'Graficna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/graficna/', 'add_url': '/admin/kalkulator/graficna/add/'}, {'name': 'Inputs', 'object_name': 'Input', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/input/', 'add_url': '/admin/kalkulator/input/add/'}, {'name': 'Kabels', 'object_name': 'Kabel', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kabel/', 'add_url': '/admin/kalkulator/kabel/add/'}, {'name': 'Kategorijas', 'object_name': 'Kategorija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/kategorija/', 'add_url': '/admin/kalkulator/kategorija/add/'}, {'name': 'Maticnas', 'object_name': 'Maticna', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/maticna/', 'add_url': '/admin/kalkulator/maticna/add/'}, {'name': 'Napajalniks', 'object_name': 'Napajalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/napajalnik/', 'add_url': '/admin/kalkulator/napajalnik/add/'}, {'name': 'Periferijas', 'object_name': 'Periferija', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/periferija/', 'add_url': '/admin/kalkulator/periferija/add/'}, {'name': 'Procesors', 'object_name': 'Procesor', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/procesor/', 'add_url': '/admin/kalkulator/procesor/add/'}, {'name': 'Rams', 'object_name': 'Ram', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/ram/', 'add_url': '/admin/kalkulator/ram/add/'}, {'name': 'Razsiritvenas', 'object_name': 'Razsiritvena', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/razsiritvena/', 'add_url': '/admin/kalkulator/razsiritvena/add/'}, {'name': 'Tiskalniks', 'object_name': 'Tiskalnik', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/tiskalnik/', 'add_url': '/admin/kalkulator/tiskalnik/add/'}, {'name': 'Zaslons', 'object_name': 'Zaslon', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/admin/kalkulator/zaslon/', 'add_url': '/admin/kalkulator/zaslon/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+(0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 1 ORDER BY "django_admin_log"."action_time" DESC  LIMIT 10; args=(1,)
+"GET /admin/ HTTP/1.1" 200 12327
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:22:40.161800' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:22:40.161800', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:22:42.956386' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:22:42.956386', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1554
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:22:44.063901' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:22:44.063901', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+Exception while resolving variable 'povezava' in template 'kalkulator/graficne.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Graficna' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Graficna' object has no attribute 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [povezava] in <Graficna: AMD, R9000, 64, AGP, Lepo ohranjena, 1>
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 6306
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:22:46.411287' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:22:46.411287', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+"GET /app/dodajGraficno HTTP/1.1" 200 2233
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:23:10.341107' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:23:10.341107', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "kalkulator_graficna" ("znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image") VALUES ('AMD', 'R9 Nano', '3000', 'AGP', '1', '1', 'komponente/graficne/RN_Car_678x452_l5uSikG.jpg'); args=['AMD', 'R9 Nano', '3000', 'AGP', '1', '1', 'komponente/graficne/RN_Car_678x452_l5uSikG.jpg']
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+"POST /app/dodajGraficno HTTP/1.1" 200 2303
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:23:11.705286' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:23:11.705286', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:23:12.751400' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:23:12.751400', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1554
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:23:13.852292' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:23:13.852292', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+Exception while resolving variable 'povezava' in template 'kalkulator/graficne.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Graficna' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Graficna' object has no attribute 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [povezava] in <Graficna: AMD, R9000, 64, AGP, Lepo ohranjena, 1>
+Exception while resolving variable 'povezava' in template 'kalkulator/graficne.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Graficna' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Graficna' object has no attribute 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'povezava'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [povezava] in <Graficna: AMD, R9 Nano, 3000, AGP, 1, 1>
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 10406
+"GET /media/komponente/graficne/RN_Car_678x452_l5uSikG.jpg HTTP/1.1" 200 29102
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:23:59.989907' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:23:59.989907', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 10400
+"GET /media/komponente/graficne/RN_Car_678x452_l5uSikG.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:24:30.213374' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:24:30.213374', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik", LOWER("kalkulator_graficna"."pomnilnik") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."pomnilnik") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+"GET /app/dodajGraficno HTTP/1.1" 200 2303
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:25:33.766329' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:25:33.766329', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:25:41.595951' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:25:41.595951', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:07.780159' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:07.780159', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:08.861070' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:08.861070', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1554
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:09.581435' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:09.581435', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.001) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."vodilo", LOWER("kalkulator_graficna"."vodilo") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."vodilo") ASC  LIMIT 21; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'  LIMIT 21; args=('AGP',)
+Internal Server Error: /app/graficne
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: kalkulator_graficna.izhod
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 768, in graficne
+    return render(request, 'kalkulator/graficne.html', context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 250, in __len__
+    self._fetch_all()
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: kalkulator_graficna.izhod
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 500 202839
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; args=()
+CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "vodilo" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "izhod" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "vodilo" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "izhod" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", "izhod") SELECT "id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", '' FROM "kalkulator_graficna__old"; (params ())
+(0.000) INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", "izhod") SELECT "id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", '' FROM "kalkulator_graficna__old"; args=()
+DROP TABLE "kalkulator_graficna__old"; (params ())
+(0.000) DROP TABLE "kalkulator_graficna__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0012_graficna_izhod', '2018-09-16 14:27:24.889376'); args=['kalkulator', '0012_graficna_izhod', '2018-09-16 14:27:24.889376']
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'disk'); args=('kalkulator', 'disk')
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'graficna'); args=('kalkulator', 'graficna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'input'); args=('kalkulator', 'input')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kabel'); args=('kalkulator', 'kabel')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'maticna'); args=('kalkulator', 'maticna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'napajalnik'); args=('kalkulator', 'napajalnik')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'procesor'); args=('kalkulator', 'procesor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'ram'); args=('kalkulator', 'ram')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'razsiritvena'); args=('kalkulator', 'razsiritvena')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'zaslon'); args=('kalkulator', 'zaslon')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kategorija'); args=('kalkulator', 'kategorija')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'tiskalnik'); args=('kalkulator', 'tiskalnik')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'drugo'); args=('kalkulator', 'drugo')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'periferija'); args=('kalkulator', 'periferija')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'kalkulator'; args=('kalkulator',)
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:56.470348' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:56.470348', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /app/main HTTP/1.1" 200 3551
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:58.849320' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:58.849320', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1554
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 14:27:59.665468' AND "django_session"."session_key" = 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn'); args=('2018-09-16 14:27:59.665468', 'w6rcbkfw1d00wu220nk2d2o3pmb6v2kn')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 10449
+"GET /media/komponente/graficne/RN_Car_678x452_l5uSikG.jpg HTTP/1.1" 304 0
