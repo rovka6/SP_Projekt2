@@ -25,6 +25,13 @@
 												<option>{{vodilo}}</option>												
 										{% endfor%}
 										</select>	
+			<label>Izhod:</label><select name="izhod">
+										<option>Vsi</option>
+										{% for izhod in izhodi %}													
+												<option>{{izhod}}</option>												
+										{% endfor%}																						
+										</select>							
+										<input type="number" placeholder="izhod" name="izhod1">
 			<label>Opis:</label><textarea rows="2" placeholder="Opis" name="opis"></textarea>	
 			<label>Kolicina:</label><input type="number" placeholder="Vpisite kolicino" name="kolicina">	
 			<label>Slika:</label><input id="id_image" type="file" class="" name="image">		

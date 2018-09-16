@@ -722,14 +722,14 @@ def graficne(request):
     context['vodila'] = vodila
     
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    vodilo = Graficna.objects.values('vodilo').distinct().order_by(Lower('vodilo')).values_list('vodilo', flat=True)
+    znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)    
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by('pomnilnik').values_list('pomnilnik', flat=True)
- 
-    context['znamke'] = znamke
-    context['vodilo'] = vodilo
+    izhodi = Graficna.objects.values('izhod').distinct().order_by('izhod').values_list('izhod', flat=True)   
+    
+    context['znamke'] = znamke    
     context['pomnilniki'] = convertToInteger(pomnilniki)
-      
+    context['izhodi'] = izhodi 
+    
       
     # Če želimo samo grafične z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:   
@@ -738,7 +738,7 @@ def graficne(request):
         znamka = request.GET['znamka']   
         vodilo = request.GET['vodilo'] 
         pomnilnik = request.GET['pomnilnik']              
-         
+        izhod = request.GET['izhod'] 
         
          
         if znamka != 'Vsi':            
@@ -749,7 +749,10 @@ def graficne(request):
 
         if pomnilnik != 'Vsi':    
             graficne = graficne.filter(pomnilnik=pomnilnik)          
-                          
+        
+        if izhod != 'Vsi':    
+            graficne = graficne.filter(izhod=izhod)          
+        
         context['graficne'] = graficne
         return render(request, 'kalkulator/graficne.html', context)
     
@@ -1569,9 +1572,11 @@ def dodajGraficno(request):
     # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
     znamke = Graficna.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)  
     pomnilniki = Graficna.objects.values('pomnilnik').distinct().order_by(Lower('pomnilnik')).values_list('pomnilnik', flat=True)
+    izhodi = Graficna.objects.values('izhod').distinct().order_by('izhod').values_list('izhod', flat=True)
     context['znamke'] = znamke   
-    context['pomnilniki'] = pomnilniki
-        
+    context['pomnilniki'] = pomnilniki    
+    context['izhodi'] = izhodi  
+    
     if request.method == 'POST'  and 'znamka' in request.POST:
 
         znamka = request.POST['znamka']

@@ -12,8 +12,7 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Vodilo:</label><select name="vodilo">	
-										<option> Vsi </option>
+			<label>Vodilo:</label><select name="vodilo">											
 										{% for vodilo in vodila %}				
 										
 											{% if izbrani == vodilo %}
@@ -30,7 +29,15 @@
 										{% for pomnilnik in pomnilniki %}													
 												<option>{{pomnilnik}}</option>												
 										{% endfor%}																						
-										</select>								
+										</select>
+			<label>Izhod:</label><select name="izhod">
+										<option>Vsi</option>
+										{% for izhod in izhodi %}													
+												<option>{{izhod}}</option>												
+										{% endfor%}																						
+										</select>
+			
+										
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 		
