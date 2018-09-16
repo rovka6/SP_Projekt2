@@ -4,7 +4,20 @@
 	<div id="Stanje"> 					
 		
 		
-
+		
+		{% for komponenta in komponente %}		
+			<div id="maindiv">	
+				<div id="minidiv">
+					<h3>{{komponenta.ime}}</h3><br>
+					<a href="{{komponenta.link}}" >
+						<img src='{{komponenta.image.url}}' style="width:200px;height:150px;border:1;">
+					</a>		
+				</div>
+			</div>
+		{% endfor %}
+		
+		
+		<!--
 		
 		<a href="vrsteGraficnih">
 			<img src='https://drscdn.500px.org/photo/271946801/m%3D900/v2?user_id=30116919&webp=true&sig=fe5c07becf61a95e353b3753bdabb69b1d46fd76a104ef6c0b2c95de0bba6576' style="width:200px;height:150px;border:1;">
@@ -70,7 +83,7 @@
 			style="width:200px;height:150px;border:1;">
 		</a>
 		
-		
+		-->
 		
 		
 	</div>

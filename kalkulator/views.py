@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Periferija, Drugo
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Periferija, Drugo, Komponenta
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -389,8 +389,8 @@ def delete(request, vrsta, id):
 def main(request):          
     context = {}
     
-    
-          
+    komponente = Komponenta.objects.all()
+    context['komponente'] = komponente    
          
                    
     return render(request, 'kalkulator/main.html', context)

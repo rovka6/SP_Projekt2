@@ -2,6 +2,8 @@
 2. logiko dt v kosarico da se bo loh posamezne komponente poslal na mail 
 3. nrdit tko da ko poveèaš/zmanjšaš kolièino komponente d ne vrže na default stran in pokaže vse (paè mora pokazat samo agp èe si prej bil v agp)
 4. dodat omejitev itemov na 20, rezervacija velja 1 teden
+5. v main moznost menjat slike komponent
+6. popravit izpis vseh komponent
 
 
 

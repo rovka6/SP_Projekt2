@@ -8,7 +8,12 @@ class Kategorija(models.Model):
     kategorija = models.CharField(max_length=20) 
     podkategorija = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/kategorije', default="/media/no-image.jpg")
-   
+  
+class Komponenta(models.Model):
+    ime = models.CharField(max_length=20)
+    link = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/komponente', default="/media/no-image.jpg")
+  
 class Graficna(models.Model):     
     znamka = models.CharField(max_length=20)
     model = models.CharField(max_length=20)
