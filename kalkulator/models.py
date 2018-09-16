@@ -151,5 +151,15 @@ class Drugo(models.Model):
     
     def __str__(self):
         return self.vrsta + ", " + self.ime + ", " + self.opis + ", " + self.kolicina
+
+class Periferija(models.Model): 
+    vrsta = models.CharField(max_length=20)
+    ime = models.CharField(max_length=20)
+    opis = models.CharField(max_length=20)
+    kolicina = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='komponente/tiskalniki', default="/media/no-image.jpg") 
     
+    def __str__(self):
+        return self.vrsta + ", " + self.ime + ", " + self.opis + ", " + self.kolicina
+        
    

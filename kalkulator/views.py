@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Drugo
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Periferija, Drugo
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -532,7 +532,31 @@ def vrsteDrugo(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteDrugo.html', context)          
+
+def vrstePeriferije(request):          
+    context = {}         
+
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
     
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='periferija', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+         
+        if podkategorija == '':
+            return redirect('vrstePeriferija')
+         
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='periferija')
+    context['kategorije'] = kategorije
+            
+    return render(request, 'kalkulator/vrstePeriferije.html', context)          
+ 
+    
+  
 def vrsteTiskalnikov(request):          
     context = {}         
 
@@ -1132,7 +1156,44 @@ def drugo(request):
     context['drugi'] = drugi               
     
     return render(request, 'kalkulator/drugo.html', context)    
+
+def periferija(request):          
+   
+    context = {}      
+            
+    # napolnimo dropdown samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='periferija')
+    context['vrste'] = vrste                               
+                   
+    # Če želimo samo zvocne z izbranimi parametri iz dropdowna
+    if request.method == 'GET'  and 'vrsta' in request.GET:                  
+         
+        drugi = Periferija.objects.all() 
+         
+        # izbran prikljucek v dropdown listu  
+        vrsta = request.GET['vrsta']                     
+        
+        if vrsta != 'Vsi':
+            drugi = drugi.filter(vrsta=vrsta)
+                    
+        context['drugi'] = drugi
+        return render(request, 'kalkulator/periferija.html', context)
+     
+    # preverimo katero podkategorijo smo izbrali
+    izbrani = request.GET.get('izbrani', False)    
+    if izbrani != False:
+        drugi = Periferija.objects.filter(vrsta=izbrani) 
+    else: 
+        drugi = Periferija.objects.all()
+        
+    context['izbrani'] = izbrani          
+    context['drugi'] = drugi               
+    
+    return render(request, 'kalkulator/periferija.html', context)    
  
+
+    
 def razsiritvene(request):          
    
     context = {}
@@ -1763,7 +1824,36 @@ def dodajDrugo(request):
         nov_drugo.save()                         
                
     return render(request, 'kalkulator/dodajDrugo.html', context)        
-       
+
+@login_required
+def dodajPeriferijo(request):
+    
+    context = {}
+     
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='periferija')
+    context['vrste'] = vrste 
+         
+    
+    if request.method == 'POST'  and 'vrsta' in request.POST:        
+        vrsta = request.POST['vrsta'] 
+        ime = request.POST['ime']
+        opis = request.POST['opis']
+        kolicina = request.POST['kolicina']                
+         
+        nov_drugo = Periferija(vrsta=vrsta, ime=ime, opis=opis, kolicina=kolicina)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nov_drugo.image = form.cleaned_data['image']
+             
+        nov_drugo.save()                         
+               
+    return render(request, 'kalkulator/dodajPeriferijo.html', context)        
+ 
+
+    
 def convertToInteger(list_of_strings):
     list = []
     for el in list_of_strings:

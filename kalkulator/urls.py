@@ -69,11 +69,17 @@ urlpatterns = [
     # kabli
     url(r'^kabli', views.kabli,  name='kabli'),
     
+    # periferija
+    url(r'^periferija', views.periferija,  name='periferija'), 
+    
     # drugo
     url(r'^drugo', views.drugo,  name='drugo'),       
     
     # vrsteNapajalnikov
     url(r'^vrsteNapajalnikov', views.vrsteNapajalnikov, name='vrsteNapajalnikov'),
+    
+    # vrstePeriferije
+    url(r'^vrstePeriferije', views.vrstePeriferije, name='vrstePeriferije'),
     
     # vrsteTiskalnikov
     url(r'^vrsteTiskalnikov', views.vrsteTiskalnikov, name='vrsteTiskalnikov'),
@@ -104,6 +110,9 @@ urlpatterns = [
     
     # dodajInput
     url(r'^dodajInput', views.dodajInput, name='dodajInput'),
+    
+    # dodajPeriferijo
+    url(r'^dodajPeriferijo', views.dodajPeriferijo, name='dodajPeriferijo'),
     
     # vrsteDiskov
     url(r'^vrsteDiskov', views.vrsteDiskov, name='vrsteDiskov'),
