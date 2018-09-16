@@ -190,3 +190,10 @@ LOGGING = {
     },
 }
 
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey' #kristjanBleiweis
+EMAIL_HOST_PASSWORD = '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'
+
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

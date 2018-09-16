@@ -1,0 +1,27 @@
+{% extends "kalkulator/base.html" %}
+
+{% block main %}
+	<div id="Stanje"> 
+			Bravo, {{ime_in_priimek}} uspešno ste rezervirali :)
+			Se vidimo v delavnici, ki obratuje:
+			
+			dan - ura : ura
+			dan - ura : ura
+			dan - ura : ura
+			
+			
+	<form action="main" method="post" enctype="multipart/form-data"> {% csrf_token %} 		
+
+				
+			<button type="submit" >OK</button>			
+			
+		</form>
+		
+		
+		
+					
+	</div>
+{% endblock %}
+		
+		
+		
