@@ -4,7 +4,7 @@
 	<head>
 		<link href="{% static 'kalkulator/style.css' %}" rel="stylesheet"/>	
 		<meta charset="utf-8" />
-		<title>Kalkulator življenskih stroškov</title>
+		<title>Podarjevalnica</title>
 	</head>
 	
 	<body>
@@ -19,35 +19,27 @@
 							
 								{% if user.is_authenticated %}
 									<a href="kosarica">
-									{{ user.username }}						
-							
-										</a>
-									
-									
-									
-									
-									
+										{{ user.username }}	
+									</a>									
 								{% else %}
 								
-									<a href="kosarica">
-									kosarica					
-							
-										</a>
+									<a href="kosarica">	kosarica  </a>
 								
 								{% endif %}
 														
 					</div>	
 					
 					<div id="back_button">	
-							
+						<form>
+							<input type="button" value="Back" onclick="history.back()">
+						</form>	
+						
 						<a href="main">
 							{{idSeje}}
 							<img src="https://image.flaticon.com/icons/svg/60/60817.svg" style="width:44px;height:44px;">
 							
-						</a>
-														
-					</div>	
-					
+						</a>														
+					</div>					
 				{% endblock %}		
 			</div>			
 						
@@ -55,8 +47,7 @@
 				
 				 {% block main %}
 					
-				 {% endblock %}
-				
+				 {% endblock %}			
 						
 			</div>						
 			
