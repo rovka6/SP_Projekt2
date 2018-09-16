@@ -151,7 +151,7 @@ urlpatterns = [
     url(r'^dodajDrugo', views.dodajDrugo, name='dodajDrugo'), 
 	
     # dodajDrugo
-    url(r'^potrditevNarocila', views.potrditevNarocila, name='potrditevNarocila'), 
+    #url(r'^potrditevNarocila', views.potrditevNarocila, name='potrditevNarocila'), 
     
 ]
 

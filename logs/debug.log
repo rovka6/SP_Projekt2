@@ -16282,3 +16282,636 @@ TypeError: bad operand type for unary +: 'str'
 (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:20:29.546374' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:20:29.546374', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
 (0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
 "GET /app/vrsteGraficnih HTTP/1.1" 200 1062
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:23:48.077632' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:23:48.077632', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:23:50.094660' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:23:50.094660', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2056
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:24:33.076864' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:24:33.076864', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /media/komponente/komponente/md04aba400v.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/Types-of-Computer-Cables.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/pdt-mhl-audigy-fx.png HTTP/1.1" 304 0
+"GET /media/komponente/komponente/product-500x500.jpeg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/51XqY3bfccL.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/acer_um_fg6aa_b01_gn246hl_bbid_24_3d_ready_1073477.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/download.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/intel-i5-2500k-quad-core-3-3ghz-lga-1155.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/u_01992098.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/3903016008_5.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/31kG-0EdPWL._SX425_.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:24:34.232780' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:24:34.232780', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2056
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:24:39.475394' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:24:39.475394', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+"POST /app/potrditevNarocila HTTP/1.1" 200 1310
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:25:39.980701' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:25:39.980701', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /media/komponente/komponente/msi-amd-radeon-rx580-gddr5-pci-express-video.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/81Z882NR-ZL._SX425_.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:25:41.740697' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:25:41.740697', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2056
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:25:45.186054' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:25:45.186054', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+"POST /app/potrditevNarocila HTTP/1.1" 200 1310
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:25:47.970349' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:25:47.970349', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:27:14.728952' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:27:14.728952', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:27:16.197022' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:27:16.197022', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2056
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:27:19.497798' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:27:19.497798', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+"POST /app/potrditevNarocila HTTP/1.1" 200 1310
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:27:22.391440' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:27:22.391440', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:28:48.094395' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:28:48.094395', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:28:49.903791' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:28:49.903791', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:28:53.949025' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:28:53.949025', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:29:42.776634' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:29:42.776634', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 200 2047
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:30:27.429685' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:30:27.429685', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:30:33.672178' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:30:33.672178', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Exception while resolving variable 'komponente' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [komponente] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x044AF150>>, 'request': <WSGIRequest: POST '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0450A130>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x044F85D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x044AEF30>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ime_in_priimek': 'Kristijan', 'email': 'goblinsly@gmail.com', 'idKomponent': ['11', '11'], 'vrstaKomponent': ['graficne', 'graficne']}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x044F8690>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}, {}]
+Exception while resolving variable 'opozorilo' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [opozorilo] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x044AF150>>, 'request': <WSGIRequest: POST '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0450A130>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x044F85D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x044AEF30>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ime_in_priimek': 'Kristijan', 'email': 'goblinsly@gmail.com', 'idKomponent': ['11', '11'], 'vrstaKomponent': ['graficne', 'graficne']}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x044F8690>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}]
+"POST /app/kosarica HTTP/1.1" 200 1665
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:30:57.578116' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:30:57.578116', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /media/komponente/komponente/md04aba400v.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/Types-of-Computer-Cables.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/pdt-mhl-audigy-fx.png HTTP/1.1" 304 0
+"GET /media/komponente/komponente/product-500x500.jpeg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/51XqY3bfccL.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/acer_um_fg6aa_b01_gn246hl_bbid_24_3d_ready_1073477.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/download.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/3903016008_5.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/u_01992098.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/intel-i5-2500k-quad-core-3-3ghz-lga-1155.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/31kG-0EdPWL._SX425_.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:30:58.618107' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:30:58.618107', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:31:09.342542' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:31:09.342542', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Internal Server Error: /app/kosarica
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 174, in kosarica
+    text = text + str(x)
+UnboundLocalError: local variable 'text' referenced before assignment
+"POST /app/kosarica HTTP/1.1" 500 71166
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:31:20.728315' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:31:20.728315', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:31:23.697013' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:31:23.697013', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Exception while resolving variable 'komponente' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [komponente] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x043FA1E0>>, 'request': <WSGIRequest: POST '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0440E0F0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x043F4590>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0446D4B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ime_in_priimek': 'Kristijan', 'email': 'goblinsly@gmail.com', 'idKomponent': ['11', '11'], 'vrstaKomponent': ['graficne', 'graficne']}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x043F4650>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}, {}]
+Exception while resolving variable 'opozorilo' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'opozorilo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [opozorilo] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x043FA1E0>>, 'request': <WSGIRequest: POST '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0440E0F0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x043F4590>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0446D4B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ime_in_priimek': 'Kristijan', 'email': 'goblinsly@gmail.com', 'idKomponent': ['11', '11'], 'vrstaKomponent': ['graficne', 'graficne']}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x043F4650>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}]
+"POST /app/kosarica HTTP/1.1" 200 1665
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:33:08.917024' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:33:08.917024', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+"GET /media/komponente/komponente/msi-amd-radeon-rx580-gddr5-pci-express-video.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/81Z882NR-ZL._SX425_.jpg HTTP/1.1" 304 0
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:34:30.540731' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:34:30.540731', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:34:31.711636' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:34:31.711636', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:34:36.079195' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:34:36.079195', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Internal Server Error: /app/kosarica
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 188, in kosarica
+    return redirect('potrditevNarocila')
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\shortcuts.py", line 58, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\shortcuts.py", line 148, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\urls\resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'potrditevNarocila' not found. 'potrditevNarocila' is not a valid view function or pattern name.
+"POST /app/kosarica HTTP/1.1" 500 89920
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:36:09.927935' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:36:09.927935', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:36:13.606238' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:36:13.606238', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:36:14.983008' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:36:14.983008', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:37:00.030121' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:37:00.030121', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:37:03.981717' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:37:03.981717', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:37:05.442332' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:37:05.442332', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:39:07.337202' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:39:07.337202', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:39:11.138958' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:39:11.138958', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Internal Server Error: /app/kosarica
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 172, in kosarica
+    tekst = tekst + str(x) + " ID: " + idKomponent[y] + " \n "
+TypeError: list indices must be integers or slices, not str
+"POST /app/kosarica HTTP/1.1" 500 71392
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:39:35.442733' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:39:35.442733', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Internal Server Error: /app/kosarica
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 172, in kosarica
+    tekst = tekst + str(x) + " ID: " + idKomponent[y] + " \n "
+TypeError: list indices must be integers or slices, not str
+"POST /app/kosarica HTTP/1.1" 500 71392
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:40:32.780245' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:40:32.780245', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:40:35.894451' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:40:35.894451', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:40:37.344926' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:40:37.344926', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:42:34.193824' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:42:34.193824', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:42:36.718442' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:42:36.718442', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:42:38.172127' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:42:38.172127', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:46:03.014430' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:46:03.014430', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:46:08.842690' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:46:08.842690', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+Internal Server Error: /app/kosarica
+Traceback (most recent call last):
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\goblinsly\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\goblinsly\Desktop\projekt\kalkulator\views.py", line 172, in kosarica
+    tekst = (y+1) + ": " + tekst + str(x) + " ID: " + idKomponent[y] + " \n "
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+"POST /app/kosarica HTTP/1.1" 500 70929
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:46:23.250767' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:46:23.250767', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:46:26.173608' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:46:26.173608', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:46:27.558659' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:46:27.558659', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:19.190677' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:19.190677', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:22.356209' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:22.356209', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:23.798806' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:23.798806', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:52.365797' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:52.365797', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:54.933837' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:54.933837', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:47:56.304913' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:47:56.304913', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:03.050385' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:03.050385', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+"GET /media/komponente/komponente/msi-amd-radeon-rx580-gddr5-pci-express-video.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/81Z882NR-ZL._SX425_.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/product-500x500.jpeg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/pdt-mhl-audigy-fx.png HTTP/1.1" 304 0
+"GET /media/komponente/komponente/51XqY3bfccL.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/download.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/acer_um_fg6aa_b01_gn246hl_bbid_24_3d_ready_1073477.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/Types-of-Computer-Cables.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/md04aba400v.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/u_01992098.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/3903016008_5.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/31kG-0EdPWL._SX425_.jpg HTTP/1.1" 304 0
+"GET /media/komponente/komponente/intel-i5-2500k-quad-core-3-3ghz-lga-1155.jpg HTTP/1.1" 304 0
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:36.622407' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:36.622407', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:37.314064' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:37.314064', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+"GET /app/kosarica HTTP/1.1" 200 2047
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:38.625133' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:38.625133', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:39.868019' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:39.868019', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input'; args=('input',)
+"GET /app/vrsteInputov HTTP/1.1" 200 1056
+"GET /media/komponente/kategorije/download_cfPqUNT.jpg HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:40.978488' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:40.978488', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.001) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('input',)
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input" WHERE "kalkulator_input"."povezava" = 'Žiène'; args=('Žiène',)
+"GET /app/inputi?izbrani=%C5%BDi%C4%8Dne HTTP/1.1" 200 1754
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:41.904962' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:41.904962', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:43.082731' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:43.082731', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1062
+(0.001) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:43.537818' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:43.537818', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."izhod" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."izhod" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 4534
+"GET /media/komponente/graficne/RN_Car_678x452_l5uSikG.jpg HTTP/1.1" 304 0
+"GET /media/komponente/graficne/titanx-shop_2zOttmN.png HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:44.951109' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:44.951109', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'MGFhZDllZjY5NGM3ZmU1YTdlYTVkM2Q0NDY1ZmJjYjQ3M2IwOWY4Yjp7ImlkS29tcG9uZW50IjpbIjExIiwiMTEiLCIxMiJdLCJ2cnN0YUtvbXBvbmVudCI6WyJncmFmaWNuZSIsImdyYWZpY25lIiwiZ3JhZmljbmUiXX0=', "expire_date" = '2018-09-30 18:48:44.978134' WHERE "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'; args=('MGFhZDllZjY5NGM3ZmU1YTdlYTVkM2Q0NDY1ZmJjYjQ3M2IwOWY4Yjp7ImlkS29tcG9uZW50IjpbIjExIiwiMTEiLCIxMiJdLCJ2cnN0YUtvbXBvbmVudCI6WyJncmFmaWNuZSIsImdyYWZpY25lIiwiZ3JhZmljbmUiXX0=', '2018-09-30 18:48:44.978134', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+"GET /app/rezerviraj/12/graficne HTTP/1.1" 302 0
+(0.002) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:45.268144' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:45.268144', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."izhod" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."izhod" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 4537
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:47.027343' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:47.027343', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:48.312876' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:48.312876', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 12; args=(12,)
+"GET /app/kosarica HTTP/1.1" 200 2222
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:53.900004' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:53.900004', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.001) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 12; args=(12,)
+"POST /app/kosarica HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:48:55.342702' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:48:55.342702', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 11; args=(11,)
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."id" = 12; args=(12,)
+"GET /app/kosarica HTTP/1.1" 200 2222
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:50:43.259104' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:50:43.259104', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:50:45.428089' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:50:45.428089', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
+"GET /app/vrsteGraficnih HTTP/1.1" 200 1062
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:50:46.142115' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:50:46.142115', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.001) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."izhod" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."izhod" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna" WHERE "kalkulator_graficna"."vodilo" = 'AGP'; args=('AGP',)
+"GET /app/graficne?izbrani=AGP HTTP/1.1" 200 4534
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:51:21.517625' AND "django_session"."session_key" = '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a'); args=('2018-09-16 18:51:21.517625', '3vkbbo8b16n5y4oxawrb5iw9ejsvyz0a')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 6959
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()

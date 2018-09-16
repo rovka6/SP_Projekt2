@@ -73,39 +73,13 @@ def odstrani(request, idKomponente):
         
     return redirect(kosarica) 
 
-def potrditevNarocila(request):
-    context = {}
-    ime = request.POST['ime_in_priimek']
-    stevilka = request.POST['stevilka']
-    email = request.POST['email']
     
-    idKomponent = request.session['idKomponent']    
-    vrstaKomponent = request.session['vrstaKomponent']
+    
+
 	
-    tekst = "Pozdravljeni! \n "  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
-    
-    for id, vrsta in zip(idKomponent, vrstaKomponent):
-        tekst = tekst +  str(id) + "- " + str(vrsta) + "\n" 
-    
-    from django.core.mail import send_mail  
-    send_mail('Naročilo potrjeno',
-    tekst,  
-    'kristjan.bleiweis@gmail.com', #FROM
-    [email],  #TO
-    fail_silently=False,)
+def kosarica(request):                  
+             
        
-    context['ime_in_priimek'] = ime
-    context['email'] = email
-    context['idKomponent'] = idKomponent
-    context['vrstaKomponent'] = vrstaKomponent
-	
-    
-    
-  
-	
-    return render(request, 'kalkulator/potrditevNarocila.html', context)
-	
-def kosarica(request):                     
        
     context = {}
     list = []
@@ -172,11 +146,11 @@ def kosarica(request):
         else: 
             print('neznana komponenta')
             print(vrstaKomponent[i])        
-            print('.')   
-       
+            print('.')       
+               
     context['komponente'] = list  
 
-    if request.method == 'POST'  and 'ime' in request.POST:
+    if request.method == 'POST' :
     
         context = {}
         ime = request.POST['ime_in_priimek']
@@ -186,10 +160,13 @@ def kosarica(request):
         idKomponent = request.session['idKomponent']    
         vrstaKomponent = request.session['vrstaKomponent']
         
-        tekst = "Pozdravljeni! \n "  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
+        tekst = "Pozdravljeni! \n \n \n "  + " \n \n \n " + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"               
         
-        for id, vrsta in zip(idKomponent, vrstaKomponent):
-            tekst = tekst +  str(id) + "- " + str(vrsta) + "\n" 
+        y = 0
+        for x in list:            
+            tekst = tekst + str((y+1)) + ": " +  str(x) + " ID: " + idKomponent[y] + " \n "
+            y = y + 1
+        
         
         from django.core.mail import send_mail  
         send_mail('Naročilo potrjeno',
@@ -203,11 +180,13 @@ def kosarica(request):
         context['idKomponent'] = idKomponent
         context['vrstaKomponent'] = vrstaKomponent 
 
-
+        return redirect('kosarica')
     
     
     return render(request, 'kalkulator/kosarica.html', context)         
-  
+
+
+    
 def add(request, vrsta, id):     
 
     if vrsta == 'tiskalnik':
@@ -1747,7 +1726,7 @@ def dodajZaslon(request):
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
         
-        if znamka == 'Vsi' or pomnilnik == 'Vsi' or vrsta == 'Vsi' or velikost == 'Vsi' or input == 'Vsi':
+        if znamka == 'Vsi' or vrsta == 'Vsi' or velikost == 'Vsi' or input == 'Vsi':
              return redirect(dodajZaslon)
         
         nov_zaslon = Zaslon(znamka=znamka, model=model, vrsta=vrsta, velikost=velikost, input=input, opis=opis, kolicina=kolicina)
