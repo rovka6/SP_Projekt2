@@ -15807,3 +15807,8 @@ Not Found: /favicon.ico
 (0.000) SELECT "kalkulator_kategorija"."id", "kalkulator_kategorija"."kategorija", "kalkulator_kategorija"."podkategorija", "kalkulator_kategorija"."image" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna'; args=('graficna',)
 "GET /app/vrsteGraficnih HTTP/1.1" 200 1518
 "GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
