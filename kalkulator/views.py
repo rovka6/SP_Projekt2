@@ -643,51 +643,7 @@ def vrsteProcesorjev(request):
     context['kategorije'] = kategorije
             
     return render(request, 'kalkulator/vrsteProcesorjev.html', context)          
- 
-def adapterji(request):          
-    context = {} 
-    adapterji = Adapter.objects.all() 
-        
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    vrste = Adapter.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
-    znamke = Adapter.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    voltaze = Adapter.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
-    amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
-    context['vrste'] = vrste 
-    context['znamke'] = znamke 
-    context['voltaze'] = convertToInteger(voltaze)
-    context['amperaze'] = convertToInteger(amperaze)
-
-    # Če želimo samo tipkovnice z določenim priključkom
-    if request.method == 'GET'  and 'znamka' in request.GET: 
-             
-        # izbran prikljucek v dropdown listu 
-        vrsta = request.GET['vrsta']
-        znamka = request.GET['znamka']        
-        voltaza = request.GET['voltaza']
-        amperaza = request.GET['amperaza']
-        
-        # v primeru da so izbrani vsi priljučki, prikažemo vse tipkovnice  
-        if vrsta != 'Vsi':    
-            adapterji = Adapter.objects.filter(vrsta=vrsta)           
-        
-        if znamka != 'Vsi':                          
-            adapterji = adapterji.filter(znamka=znamka)  
-      
-        if voltaza != 'Vsi':    
-            adapterji = adapterji.filter(voltaza=voltaza)    
-
-        if amperaza != 'Vsi':    
-            adapterji = adapterji.filter(amperaza=amperaza)    
-            
-        context['adapterji'] = adapterji
-        return render(request, 'kalkulator/adapterji.html', context)
-          
-    zasloni = Adapter.objects.all()       
-    context['adapterji'] = adapterji  
-    
-    return render(request, 'kalkulator/adapterji.html', context)
- 
+  
 def zasloni(request):   
 
     context = {} 
@@ -1807,51 +1763,7 @@ def dodajDrugo(request):
         nov_drugo.save()                         
                
     return render(request, 'kalkulator/dodajDrugo.html', context)        
-    
-@login_required
-def dodajAdapter(request):
-
-    
-    context = {}
-        
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    vrste = Adapter.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
-    znamke = Adapter.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
-    voltaze = Adapter.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
-    amperaze = Adapter.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)
-    context['vrste'] = vrste 
-    context['znamke'] = znamke 
-    context['voltaze'] = voltaze
-    context['amperaze'] = amperaze
-    
-    if request.method == 'POST'  and 'znamka' in request.POST:        
-        vrsta = request.POST['vrsta']  
-        if(request.POST['vrsta1'] != ''):
-            vrsta = request.POST['vrsta1']
-        znamka = request.POST['znamka']        
-        if(request.POST['znamka1'] != ''):
-            znamka = request.POST['znamka1']                     
-        voltaza = request.POST['voltaza']
-        if(request.POST['voltaza1'] != ''):
-            voltaza = request.POST['voltaza1']
-        amperaza = request.POST['amperaza']
-        if(request.POST['amperaza1'] != ''):
-            amperaza = request.POST['amperaza1']    
-        opis = request.POST['opis']   
-        kolicina = request.POST['kolicina']         
-         
-        if znamka == 'Vsi' or voltaza == 'Vsi' or vrsta == 'Vsi' or amperaza == 'Vsi':
-             return redirect(dodajGraficno)
-         
-        nov_adapter = Adapter(vrsta=vrsta, znamka=znamka, voltaza=voltaza, amperaza=amperaza, opis=opis, kolicina=kolicina)
-
-        form = ImageUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            nov_adapter.image = form.cleaned_data['image']
-            nov_adapter.save()
-            
-    return render(request, 'kalkulator/dodajAdapter.html', context)    
-    
+       
 def convertToInteger(list_of_strings):
     list = []
     for el in list_of_strings:

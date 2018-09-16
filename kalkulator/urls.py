@@ -133,10 +133,7 @@ urlpatterns = [
     url(r'^dodajRazsiritveno', views.dodajRazsiritveno, name='dodajRazsiritveno'),
     
     # dodajKabel
-    url(r'^dodajKabel', views.dodajKabel, name='dodajKabel'),  
-
-    # dodajAdapter
-    url(r'^dodajAdapter', views.dodajAdapter, name='dodajAdapter'),      
+    url(r'^dodajKabel', views.dodajKabel, name='dodajKabel'),        
     
     # dodajTiskalnik
     url(r'^dodajTiskalnik', views.dodajTiskalnik, name='dodajTiskalnik'), 
