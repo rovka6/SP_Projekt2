@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input, Adapter, Kategorija, Tiskalnik, Drugo
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Drugo
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -396,6 +396,24 @@ def main(request):
  
 def vrsteNapajalnikov(request):          
     context = {}
+    
+    if request.method == 'POST'  and 'podkategorija' in request.POST:  
+    
+        podkategorija = request.POST['podkategorija']
+        nova_kategorija = Kategorija(kategorija='napajalnik', podkategorija=podkategorija)
+                
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():           
+            nova_kategorija.image = form.cleaned_data['image']
+          
+        if podkategorija == '':
+            return redirect('vrsteNapajalnikov')
+          
+        nova_kategorija.save()        
+    
+    kategorije = Kategorija.objects.filter(kategorija='napajalnik')
+    context['kategorije'] = kategorije
+    
             
         
     return render(request, 'kalkulator/vrsteNapajalnikov.html', context)
@@ -466,7 +484,7 @@ def vrsteInputov(request):
     context['kategorije'] = kategorije
      
 
-    context = {}           
+            
 
         
     return render(request, 'kalkulator/vrsteInputov.html', context)    
@@ -929,13 +947,31 @@ def napajalniki(request):
     context = {}
     napajalniki = Napajalnik.objects.all() 
 
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk    
-    vrste = Napajalnik.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk        
     znamke = Napajalnik.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
-    context['vrste'] = vrste
+    voltaze = Napajalnik.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
+    amperaze = Napajalnik.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)    
     context['znamke'] = znamke 
     context['moci'] = convertToInteger(moci) 
+    context['voltaze'] = convertToInteger(voltaze)
+    context['amperaze'] = convertToInteger(amperaze)
+    
+    
+    izbrani = request.GET.get('izbrani', False)
+    
+    if izbrani != False:
+        napajalniki = napajalniki.filter(vrsta=izbrani)
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='napajalnik')
+    context['vrste'] = vrste       
+    
+    context['izbrani'] = izbrani 
+    
+   
+    
     
     # Če želimo samo zvocne z izbranimi parametri iz dropdowna
     if request.method == 'GET'  and 'znamka' in request.GET:                   
@@ -948,9 +984,15 @@ def napajalniki(request):
         if znamka != 'Vsi':
             napajalniki = Napajalnik.objects.filter(znamka=znamka)
         moc = request.GET['moc'] 
-        if moc != 'Vsi':   
-            napajalniki = napajalniki.filter(moc=moc)         
-                                
+        if moc != 'Vsi':
+            napajalniki = Napajalnik.objects.filter(moc=moc)        
+        voltaza = request.GET['voltaza']
+        if voltaza != 'Vsi':
+            napajalniki = Napajalnik.objects.filter(voltaza=voltaza) 
+        amperaza = request.GET['amperaza']
+        if amperaza != 'Vsi':
+            napajalniki = Napajalnik.objects.filter(amperaza=amperaza)         
+                                                   
         context['napajalniki'] = napajalniki
         return render(request, 'kalkulator/napajalniki.html', context)
                   
@@ -1390,13 +1432,22 @@ def dodajNapajalnik(request):
     context = {}
     
     
-    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk
-    vrste = Napajalnik.objects.values('vrsta').distinct().order_by(Lower('vrsta')).values_list('vrsta', flat=True)
+    # S temi parametri napolnimo dropdown-e v htmlju, torej npr. seznam vseh znamk        
     znamke = Napajalnik.objects.values('znamka').distinct().order_by(Lower('znamka')).values_list('znamka', flat=True)
     moci = Napajalnik.objects.values('moc').distinct().order_by(Lower('moc')).values_list('moc', flat=True)  
-    context['vrste'] = vrste
+    voltaze = Napajalnik.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
+    amperaze = Napajalnik.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)    
     context['znamke'] = znamke 
-    context['moci'] = moci
+    context['moci'] = convertToInteger(moci) 
+    context['voltaze'] = convertToInteger(voltaze)
+    context['amperaze'] = convertToInteger(amperaze)
+    
+    # napolnimo samo s tistimi podkategorijami, ki smo jih prej dodali
+    vrste = Kategorija.objects.values('podkategorija').order_by(Lower('podkategorija')).values_list('podkategorija', flat=True)
+    vrste = vrste.filter(kategorija='napajalnik')
+    context['vrste'] = vrste
+    
+    
     
 
     if request.method == 'POST'  and 'znamka' in request.POST:
@@ -1410,13 +1461,30 @@ def dodajNapajalnik(request):
         moc = request.POST['moc']  
         if(request.POST['moc1'] != ''):
             moc = request.POST['moc1']
+        voltaza = request.POST['voltaza']
+        if(request.POST['voltaza1'] != ''):
+            voltaza = request.POST['voltaza1']
+        amperaza = request.POST['amperaza']
+        if(request.POST['amperaza1'] != ''):
+            amperaza = request.POST['amperaza1']    
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
+        
+        if amperaza == 'Vsi':  
+            amperaza = 0
+            
+        if voltaza == 'Vsi':
+            voltaza = 0
+            
+        if moc == 'Vsi':
+            moc = amperaza * voltaza
+            
+        
         
         if znamka == 'Vsi' or moc == 'Vsi' or vrsta == 'Vsi':
              return redirect(dodajNapajalnik)
         
-        nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, opis=opis, kolicina=kolicina)
+        nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, amperaza=amperaza, voltaza=voltaza, opis=opis, kolicina=kolicina)
 
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():

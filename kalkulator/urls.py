@@ -70,10 +70,7 @@ urlpatterns = [
     url(r'^kabli', views.kabli,  name='kabli'),
     
     # drugo
-    url(r'^drugo', views.drugo,  name='drugo'),
-    
-    # adapterji
-    url(r'^adapterji', views.adapterji,  name='adapterji'),
+    url(r'^drugo', views.drugo,  name='drugo'),       
     
     # vrsteNapajalnikov
     url(r'^vrsteNapajalnikov', views.vrsteNapajalnikov, name='vrsteNapajalnikov'),

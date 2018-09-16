@@ -52,13 +52,15 @@ class Maticna(models.Model):
 class Napajalnik(models.Model):    
     vrsta = models.CharField(max_length=20)
     znamka = models.CharField(max_length=20)    
-    moc = models.CharField(max_length=20)       
+    moc = models.CharField(max_length=20)
+    voltaza = models.CharField(max_length=20)       
+    amperaza = models.CharField(max_length=20)    
     opis = models.CharField(max_length=20)
     kolicina = models.CharField(max_length=20)
     image = models.ImageField(upload_to='komponente/napajalniki', default="/media/no-image.jpg")   
     
     def __str__(self):
-        return self.znamka + ", " + self.vrsta + ", " + self.moc + ", " + self.opis + ", " + self.kolicina
+        return self.znamka + ", " + self.vrsta + ", " + self.moc + ", " + self.voltaza + ", " + self.amperaza + ", " + self.opis + ", " + self.kolicina
 
 class Disk(models.Model):     
     znamka = models.CharField(max_length=20)    
@@ -127,19 +129,8 @@ class Input(models.Model):
     
     def __str__(self):
         return self.znamka + ", " + self.vrsta + ", " + self.prikljucek + ", " + self.povezava + ", " + self.opis + ", " + self.kolicina
-   
-class Adapter(models.Model):   
-    vrsta = models.CharField(max_length=20)
-    znamka = models.CharField(max_length=20)    
-    voltaza = models.CharField(max_length=20)       
-    amperaza = models.CharField(max_length=20) 
-    opis = models.CharField(max_length=20)
-    kolicina = models.CharField(max_length=20)
-    image = models.ImageField(upload_to='komponente/adapterji', default="/media/no-image.jpg")
- 
-    def __str__(self):
-        return self.znamka + ", " + self.vrsta + ", " + self.voltaza + ", " + self.amperaza + ", " + self.opis + ", " + self.kolicina    
- 
+  
+
 class Tiskalnik(models.Model):  
     vrsta = models.CharField(max_length=20)
     tip = models.CharField(max_length=20)
