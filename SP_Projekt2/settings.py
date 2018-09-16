@@ -198,8 +198,8 @@ LOGGING = {
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey' #kristjanBleiweis
-EMAIL_HOST_PASSWORD = 'geslo'
-
+#EMAIL_HOST_PASSWORD = 'geslo'
+EMAIL_HOST_PASSWORD = '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'
 
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False

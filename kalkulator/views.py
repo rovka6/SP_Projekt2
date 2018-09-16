@@ -88,10 +88,8 @@ def kosarica(request):
     if 'idKomponent' not in request.session:
         
         context['opozorilo'] = 'Kosarica je prazna'   
-        return render(request, 'kalkulator/kosarica.html', context)
-        
-        
-        
+        return render(request, 'kalkulator/kosarica.html', context)       
+                
     
     idKomponent = request.session['idKomponent']    
     vrstaKomponent = request.session['vrstaKomponent']
@@ -1681,9 +1679,7 @@ def dodajKabel(request):
     
     if request.method == 'POST'  and 'vrsta' in request.POST:
 
-        vrsta = request.POST['vrsta']
-        if(request.POST['vrsta1'] != ''):
-            vrsta = request.POST['vrsta1']
+        vrsta = request.POST['vrsta']        
         opis = request.POST['opis']
         kolicina = request.POST['kolicina']
         
