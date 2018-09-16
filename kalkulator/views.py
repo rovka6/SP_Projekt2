@@ -82,7 +82,7 @@ def potrditevNarocila(request):
     idKomponent = request.session['idKomponent']    
     vrstaKomponent = request.session['vrstaKomponent']
 	
-    tekst = "Pozdravljeni! \n"  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
+    tekst = "Pozdravljeni! \n "  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
     
     for id, vrsta in zip(idKomponent, vrstaKomponent):
         tekst = tekst +  str(id) + "- " + str(vrsta) + "\n" 
@@ -99,11 +99,14 @@ def potrditevNarocila(request):
     context['idKomponent'] = idKomponent
     context['vrstaKomponent'] = vrstaKomponent
 	
+    
+    
+  
 	
     return render(request, 'kalkulator/potrditevNarocila.html', context)
 	
-def kosarica(request):
-    
+def kosarica(request):                     
+       
     context = {}
     list = []
     context['opozorilo'] = ''
@@ -171,7 +174,37 @@ def kosarica(request):
             print(vrstaKomponent[i])        
             print('.')   
        
-    context['komponente'] = list           
+    context['komponente'] = list  
+
+    if request.method == 'POST'  and 'ime' in request.POST:
+    
+        context = {}
+        ime = request.POST['ime_in_priimek']
+        stevilka = request.POST['stevilka']
+        email = request.POST['email']
+        
+        idKomponent = request.session['idKomponent']    
+        vrstaKomponent = request.session['vrstaKomponent']
+        
+        tekst = "Pozdravljeni! \n "  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
+        
+        for id, vrsta in zip(idKomponent, vrstaKomponent):
+            tekst = tekst +  str(id) + "- " + str(vrsta) + "\n" 
+        
+        from django.core.mail import send_mail  
+        send_mail('Naročilo potrjeno',
+        tekst,  
+        'kristjan.bleiweis@gmail.com', #FROM
+        [email],  #TO
+        fail_silently=False,)
+           
+        context['ime_in_priimek'] = ime
+        context['email'] = email
+        context['idKomponent'] = idKomponent
+        context['vrstaKomponent'] = vrstaKomponent 
+
+
+    
     
     return render(request, 'kalkulator/kosarica.html', context)         
   
