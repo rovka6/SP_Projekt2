@@ -19,33 +19,17 @@
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
 		
 		<table>
 		<td> <center> Slika   </center> </td>
-		<td> <center> Znamka   </center> </td>
-		<td> <center> Model      </center> </td>
-		<td> <center> Vrsta       </center> </td>
-		<td> <center> Velikost   </center> </td>
-		<td> <center> Priključki </center> </td>
+		<td> <center> Vrsta   </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
 		
 		{% for kabel in kabli %}		
 		<tr>
-		<td> <img src="{{kabel.image.url}}" height="50" width="80">			 </td>
-	    
+		<td> <img src="{{kabel.image.url}}" height="50" width="80">			 </td>	    
 		<td> <center> {{kabel.vrsta}}     </center>  </td>
 		<td> <center> {{kabel.opis}}      </center>  </td>
 		<td> <center> {{kabel.kolicina}} </center>  </td>

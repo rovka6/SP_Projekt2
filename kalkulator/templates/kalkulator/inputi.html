@@ -52,10 +52,27 @@
 		<br>
 		<br>
 		
-		{% for input in inputi %}
-		<img src="{{input.image.url}}" height="50" width="80">	
+		<table>
+		<td> <center> Slika   </center> </td>
+		<td> <center> Vrsta   </center> </td>
+		<td> <center> Znamka      </center> </td>
+		<td> <center> Priključek      </center> </td>
+		<td> <center> Povezava   </center> </td>
+		<td> <center> Količina   </center> </td>				
+				
+		{% for input in inputi %}			
 			
-		{{input.vrsta}} {{input.znamka}}   {{input.prikljucek}} {{input.povezava}} {{input.kolicina}}
+		<tr>
+		<td> <img src="{{input.image.url}}" height="50" width="80">	 </td>
+	    
+		<td> <center> {{input.vrsta}} </center>  </td>
+		<td> <center> {{input.znamka}}    </center>  </td>
+		<td> <center> {{input.prikljucek}}     </center>  </td>
+		<td> <center> {{input.povezava}} </center>  </td>
+		<td> <center> {{input.kolicina}} </center>  </td>
+
+		
+		
 		
 		{% if user.is_authenticated %}			
 				

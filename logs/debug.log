@@ -16915,3 +16915,1193 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); (params None)
+(0.001) CREATE TABLE "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); (params ())
+(0.000) CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2018-09-16 18:54:04.693602'); args=['contenttypes', '0001_initial', '2018-09-16 18:54:04.693602']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL); args=None
+CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); args=None
+CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); args=None
+CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "group_id" integer NOT NULL REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+CREATE UNIQUE INDEX auth_permission_content_type_id_codename_01ab375a_uniq ON "auth_permission" ("content_type_id", "codename"); (params ())
+(0.000) CREATE UNIQUE INDEX auth_permission_content_type_id_codename_01ab375a_uniq ON "auth_permission" ("content_type_id", "codename"); args=()
+CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); (params ())
+(0.000) CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); args=()
+CREATE UNIQUE INDEX auth_group_permissions_group_id_permission_id_0cd325b0_uniq ON "auth_group_permissions" ("group_id", "permission_id"); (params ())
+(0.000) CREATE UNIQUE INDEX auth_group_permissions_group_id_permission_id_0cd325b0_uniq ON "auth_group_permissions" ("group_id", "permission_id"); args=()
+CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id"); (params ())
+(0.000) CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id"); args=()
+CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permission_id"); (params ())
+(0.000) CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permission_id"); args=()
+CREATE UNIQUE INDEX auth_user_groups_user_id_group_id_94350c0c_uniq ON "auth_user_groups" ("user_id", "group_id"); (params ())
+(0.000) CREATE UNIQUE INDEX auth_user_groups_user_id_group_id_94350c0c_uniq ON "auth_user_groups" ("user_id", "group_id"); args=()
+CREATE INDEX "auth_user_groups_user_id_6a12ed8b" ON "auth_user_groups" ("user_id"); (params ())
+(0.000) CREATE INDEX "auth_user_groups_user_id_6a12ed8b" ON "auth_user_groups" ("user_id"); args=()
+CREATE INDEX "auth_user_groups_group_id_97559544" ON "auth_user_groups" ("group_id"); (params ())
+(0.000) CREATE INDEX "auth_user_groups_group_id_97559544" ON "auth_user_groups" ("group_id"); args=()
+CREATE UNIQUE INDEX auth_user_user_permissions_user_id_permission_id_14a6b632_uniq ON "auth_user_user_permissions" ("user_id", "permission_id"); (params ())
+(0.000) CREATE UNIQUE INDEX auth_user_user_permissions_user_id_permission_id_14a6b632_uniq ON "auth_user_user_permissions" ("user_id", "permission_id"); args=()
+CREATE INDEX "auth_user_user_permissions_user_id_a95ead1b" ON "auth_user_user_permissions" ("user_id"); (params ())
+(0.000) CREATE INDEX "auth_user_user_permissions_user_id_a95ead1b" ON "auth_user_user_permissions" ("user_id"); args=()
+CREATE INDEX "auth_user_user_permissions_permission_id_1fbb5f2c" ON "auth_user_user_permissions" ("permission_id"); (params ())
+(0.000) CREATE INDEX "auth_user_user_permissions_permission_id_1fbb5f2c" ON "auth_user_user_permissions" ("permission_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2018-09-16 18:54:04.743480'); args=['auth', '0001_initial', '2018-09-16 18:54:04.743480']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.001) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); args=()
+CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2018-09-16 18:54:04.779054'); args=['admin', '0001_initial', '2018-09-16 18:54:04.779054']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; (params ())
+(0.001) ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; args=()
+CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "action_time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "action_time" datetime NOT NULL); args=None
+INSERT INTO "django_admin_log" ("id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time") SELECT "id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time" FROM "django_admin_log__old"; (params ())
+(0.000) INSERT INTO "django_admin_log" ("id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time") SELECT "id", "object_id", "object_repr", "action_flag", "change_message", "content_type_id", "user_id", "action_time" FROM "django_admin_log__old"; args=()
+DROP TABLE "django_admin_log__old"; (params ())
+(0.000) DROP TABLE "django_admin_log__old"; args=()
+CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); args=()
+CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2018-09-16 18:54:04.815297'); args=['admin', '0002_logentry_remove_auto_add', '2018-09-16 18:54:04.815297']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; (params ())
+(0.001) ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; args=()
+CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "action_flag" smallint unsigned NOT NULL); (params None)
+(0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "action_flag" smallint unsigned NOT NULL); args=None
+INSERT INTO "django_admin_log" ("id", "action_time", "object_id", "object_repr", "change_message", "content_type_id", "user_id", "action_flag") SELECT "id", "action_time", "object_id", "object_repr", "change_message", "content_type_id", "user_id", "action_flag" FROM "django_admin_log__old"; (params ())
+(0.000) INSERT INTO "django_admin_log" ("id", "action_time", "object_id", "object_repr", "change_message", "content_type_id", "user_id", "action_flag") SELECT "id", "action_time", "object_id", "object_repr", "change_message", "content_type_id", "user_id", "action_flag" FROM "django_admin_log__old"; args=()
+DROP TABLE "django_admin_log__old"; (params ())
+(0.000) DROP TABLE "django_admin_log__old"; args=()
+CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); args=()
+CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params ())
+(0.000) CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0003_logentry_add_action_flag_choices', '2018-09-16 18:54:04.851567'); args=['admin', '0003_logentry_add_action_flag_choices', '2018-09-16 18:54:04.851567']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params ())
+(0.001) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=()
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); (params None)
+(0.001) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); args=None
+INSERT INTO "django_content_type" ("id", "app_label", "model", "name") SELECT "id", "app_label", "model", "name" FROM "django_content_type__old"; (params ())
+(0.000) INSERT INTO "django_content_type" ("id", "app_label", "model", "name") SELECT "id", "app_label", "model", "name" FROM "django_content_type__old"; args=()
+DROP TABLE "django_content_type__old"; (params ())
+(0.000) DROP TABLE "django_content_type__old"; args=()
+CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); (params ())
+(0.000) CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); args=()
+ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params ())
+(0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=()
+CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+INSERT INTO "django_content_type" ("id", "app_label", "model") SELECT "id", "app_label", "model" FROM "django_content_type__old"; (params ())
+(0.000) INSERT INTO "django_content_type" ("id", "app_label", "model") SELECT "id", "app_label", "model" FROM "django_content_type__old"; args=()
+DROP TABLE "django_content_type__old"; (params ())
+(0.000) DROP TABLE "django_content_type__old"; args=()
+CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); (params ())
+(0.000) CREATE UNIQUE INDEX django_content_type_app_label_model_76bd3d3b_uniq ON "django_content_type" ("app_label", "model"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2018-09-16 18:54:04.908433'); args=['contenttypes', '0002_remove_content_type_name', '2018-09-16 18:54:04.908433']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; (params ())
+(0.001) ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; args=()
+CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED, "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); args=None
+INSERT INTO "auth_permission" ("id", "content_type_id", "codename", "name") SELECT "id", "content_type_id", "codename", "name" FROM "auth_permission__old"; (params ())
+(0.000) INSERT INTO "auth_permission" ("id", "content_type_id", "codename", "name") SELECT "id", "content_type_id", "codename", "name" FROM "auth_permission__old"; args=()
+DROP TABLE "auth_permission__old"; (params ())
+(0.000) DROP TABLE "auth_permission__old"; args=()
+CREATE UNIQUE INDEX auth_permission_content_type_id_codename_01ab375a_uniq ON "auth_permission" ("content_type_id", "codename"); (params ())
+(0.000) CREATE UNIQUE INDEX auth_permission_content_type_id_codename_01ab375a_uniq ON "auth_permission" ("content_type_id", "codename"); args=()
+CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); (params ())
+(0.000) CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2018-09-16 18:54:04.942424'); args=['auth', '0002_alter_permission_name_max_length', '2018-09-16 18:54:04.942424']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.003) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); args=None
+INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "username", "first_name", "last_name", "is_staff", "is_active", "date_joined", "email") SELECT "id", "password", "last_login", "is_superuser", "username", "first_name", "last_name", "is_staff", "is_active", "date_joined", "email" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "username", "first_name", "last_name", "is_staff", "is_active", "date_joined", "email") SELECT "id", "password", "last_login", "is_superuser", "username", "first_name", "last_name", "is_staff", "is_active", "date_joined", "email" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2018-09-16 18:54:04.988005'); args=['auth', '0003_alter_user_email_max_length', '2018-09-16 18:54:04.988005']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.001) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0004_alter_user_username_opts', '2018-09-16 18:54:05.024445'); args=['auth', '0004_alter_user_username_opts', '2018-09-16 18:54:05.024445']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.001) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); args=None
+INSERT INTO "auth_user" ("id", "password", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "last_login") SELECT "id", "password", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "last_login" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "last_login") SELECT "id", "password", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "last_login" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0005_alter_user_last_login_null', '2018-09-16 18:54:05.067570'); args=['auth', '0005_alter_user_last_login_null', '2018-09-16 18:54:05.067570']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.001) BEGIN; args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0006_require_contenttypes_0002', '2018-09-16 18:54:05.080028'); args=['auth', '0006_require_contenttypes_0002', '2018-09-16 18:54:05.080028']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.001) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0007_alter_validators_add_error_messages', '2018-09-16 18:54:05.122828'); args=['auth', '0007_alter_validators_add_error_messages', '2018-09-16 18:54:05.122828']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.001) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(150) NOT NULL UNIQUE); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(150) NOT NULL UNIQUE); args=None
+INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username") SELECT "id", "password", "last_login", "is_superuser", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined", "username" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0008_alter_user_username_max_length', '2018-09-16 18:54:05.174230'); args=['auth', '0008_alter_user_username_max_length', '2018-09-16 18:54:05.174230']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params ())
+(0.001) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=()
+CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_name" varchar(150) NOT NULL); (params None)
+(0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "username" varchar(150) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_name" varchar(150) NOT NULL); args=None
+INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "username", "first_name", "email", "is_staff", "is_active", "date_joined", "last_name") SELECT "id", "password", "last_login", "is_superuser", "username", "first_name", "email", "is_staff", "is_active", "date_joined", "last_name" FROM "auth_user__old"; (params ())
+(0.000) INSERT INTO "auth_user" ("id", "password", "last_login", "is_superuser", "username", "first_name", "email", "is_staff", "is_active", "date_joined", "last_name") SELECT "id", "password", "last_login", "is_superuser", "username", "first_name", "email", "is_staff", "is_active", "date_joined", "last_name" FROM "auth_user__old"; args=()
+DROP TABLE "auth_user__old"; (params ())
+(0.000) DROP TABLE "auth_user__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0009_alter_user_last_name_max_length', '2018-09-16 18:54:05.211354'); args=['auth', '0009_alter_user_last_name_max_length', '2018-09-16 18:54:05.211354']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0001_initial', '2018-09-16 18:54:05.267764'); args=['kalkulator', '0001_initial', '2018-09-16 18:54:05.267764']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_adapter" RENAME TO "kalkulator_adapter__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_adapter" RENAME TO "kalkulator_adapter__old"; args=()
+CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_adapter" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL, "amperaza" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_adapter" ("id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_adapter__old"; (params ())
+(0.000) INSERT INTO "kalkulator_adapter" ("id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "voltaza", "amperaza", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_adapter__old"; args=()
+DROP TABLE "kalkulator_adapter__old"; (params ())
+(0.000) DROP TABLE "kalkulator_adapter__old"; args=()
+ALTER TABLE "kalkulator_disk" RENAME TO "kalkulator_disk__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_disk" RENAME TO "kalkulator_disk__old"; args=()
+CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_disk" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_disk" ("id", "znamka", "prikljucek", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "prikljucek", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_disk__old"; (params ())
+(0.000) INSERT INTO "kalkulator_disk" ("id", "znamka", "prikljucek", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "prikljucek", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_disk__old"; args=()
+DROP TABLE "kalkulator_disk__old"; (params ())
+(0.000) DROP TABLE "kalkulator_disk__old"; args=()
+ALTER TABLE "kalkulator_input" RENAME TO "kalkulator_input__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_input" RENAME TO "kalkulator_input__old"; args=()
+CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_input" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "povezava" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_input" ("id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_input__old"; (params ())
+(0.000) INSERT INTO "kalkulator_input" ("id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "prikljucek", "povezava", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_input__old"; args=()
+DROP TABLE "kalkulator_input__old"; (params ())
+(0.000) DROP TABLE "kalkulator_input__old"; args=()
+ALTER TABLE "kalkulator_kabel" RENAME TO "kalkulator_kabel__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_kabel" RENAME TO "kalkulator_kabel__old"; args=()
+CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_kabel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_kabel" ("id", "vrsta", "opis", "kolicina", "image") SELECT "id", "vrsta", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_kabel__old"; (params ())
+(0.000) INSERT INTO "kalkulator_kabel" ("id", "vrsta", "opis", "kolicina", "image") SELECT "id", "vrsta", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_kabel__old"; args=()
+DROP TABLE "kalkulator_kabel__old"; (params ())
+(0.000) DROP TABLE "kalkulator_kabel__old"; args=()
+ALTER TABLE "kalkulator_maticna" RENAME TO "kalkulator_maticna__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_maticna" RENAME TO "kalkulator_maticna__old"; args=()
+CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_maticna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "ram" varchar(20) NOT NULL, "graficna" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_maticna" ("id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_maticna__old"; (params ())
+(0.000) INSERT INTO "kalkulator_maticna" ("id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "ram", "graficna", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_maticna__old"; args=()
+DROP TABLE "kalkulator_maticna__old"; (params ())
+(0.000) DROP TABLE "kalkulator_maticna__old"; args=()
+ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; args=()
+CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_napajalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_napajalnik__old"; args=()
+DROP TABLE "kalkulator_napajalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_napajalnik__old"; args=()
+ALTER TABLE "kalkulator_procesor" RENAME TO "kalkulator_procesor__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_procesor" RENAME TO "kalkulator_procesor__old"; args=()
+CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_procesor" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "podnozje" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_procesor" ("id", "znamka", "model", "podnozje", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_procesor__old"; (params ())
+(0.000) INSERT INTO "kalkulator_procesor" ("id", "znamka", "model", "podnozje", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "podnozje", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_procesor__old"; args=()
+DROP TABLE "kalkulator_procesor__old"; (params ())
+(0.000) DROP TABLE "kalkulator_procesor__old"; args=()
+ALTER TABLE "kalkulator_ram" RENAME TO "kalkulator_ram__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_ram" RENAME TO "kalkulator_ram__old"; args=()
+CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_ram" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_ram" ("id", "znamka", "vrsta", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "vrsta", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_ram__old"; (params ())
+(0.000) INSERT INTO "kalkulator_ram" ("id", "znamka", "vrsta", "velikost", "opis", "kolicina", "image") SELECT "id", "znamka", "vrsta", "velikost", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_ram__old"; args=()
+DROP TABLE "kalkulator_ram__old"; (params ())
+(0.000) DROP TABLE "kalkulator_ram__old"; args=()
+ALTER TABLE "kalkulator_razsiritvena" RENAME TO "kalkulator_razsiritvena__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_razsiritvena" RENAME TO "kalkulator_razsiritvena__old"; args=()
+CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_razsiritvena" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "prikljucek" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_razsiritvena" ("id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_razsiritvena__old"; (params ())
+(0.000) INSERT INTO "kalkulator_razsiritvena" ("id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "prikljucek", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_razsiritvena__old"; args=()
+DROP TABLE "kalkulator_razsiritvena__old"; (params ())
+(0.000) DROP TABLE "kalkulator_razsiritvena__old"; args=()
+ALTER TABLE "kalkulator_zaslon" RENAME TO "kalkulator_zaslon__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_zaslon" RENAME TO "kalkulator_zaslon__old"; args=()
+CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_zaslon" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "vrsta" varchar(20) NOT NULL, "velikost" varchar(20) NOT NULL, "input" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_zaslon" ("id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_zaslon__old"; (params ())
+(0.000) INSERT INTO "kalkulator_zaslon" ("id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", "image") SELECT "id", "znamka", "model", "vrsta", "velikost", "input", "opis", "kolicina", '/media/no-image.jpg' FROM "kalkulator_zaslon__old"; args=()
+DROP TABLE "kalkulator_zaslon__old"; (params ())
+(0.000) DROP TABLE "kalkulator_zaslon__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0002_auto_20180909_2321', '2018-09-16 18:54:05.342573'); args=['kalkulator', '0002_auto_20180909_2321', '2018-09-16 18:54:05.342573']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_kategorija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "kategorija" varchar(20) NOT NULL, "podkategorija" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_kategorija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "kategorija" varchar(20) NOT NULL, "podkategorija" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0003_kategorija', '2018-09-16 18:54:05.369984'); args=['kalkulator', '0003_kategorija', '2018-09-16 18:54:05.369984']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0004_tiskalnik', '2018-09-16 18:54:05.399897'); args=['kalkulator', '0004_tiskalnik', '2018-09-16 18:54:05.399897']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; args=()
+CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image") SELECT "id", "vrsta", "tip", "priklop", '/media/no-image.jpg' FROM "kalkulator_tiskalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image") SELECT "id", "vrsta", "tip", "priklop", '/media/no-image.jpg' FROM "kalkulator_tiskalnik__old"; args=()
+DROP TABLE "kalkulator_tiskalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_tiskalnik__old"; args=()
+ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; args=()
+CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "kolicina" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "kolicina" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image", "kolicina") SELECT "id", "vrsta", "tip", "priklop", "image", '' FROM "kalkulator_tiskalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image", "kolicina") SELECT "id", "vrsta", "tip", "priklop", "image", '' FROM "kalkulator_tiskalnik__old"; args=()
+DROP TABLE "kalkulator_tiskalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_tiskalnik__old"; args=()
+ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_tiskalnik" RENAME TO "kalkulator_tiskalnik__old"; args=()
+CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "kolicina" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_tiskalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "tip" varchar(20) NOT NULL, "priklop" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "kolicina" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image", "kolicina", "opis") SELECT "id", "vrsta", "tip", "priklop", "image", "kolicina", '' FROM "kalkulator_tiskalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_tiskalnik" ("id", "vrsta", "tip", "priklop", "image", "kolicina", "opis") SELECT "id", "vrsta", "tip", "priklop", "image", "kolicina", '' FROM "kalkulator_tiskalnik__old"; args=()
+DROP TABLE "kalkulator_tiskalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_tiskalnik__old"; args=()
+(0.001) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0005_auto_20180912_2000', '2018-09-16 18:54:05.448992'); args=['kalkulator', '0005_auto_20180912_2000', '2018-09-16 18:54:05.448992']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0006_drugo', '2018-09-16 18:54:05.474686'); args=['kalkulator', '0006_drugo', '2018-09-16 18:54:05.474686']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_drugo" RENAME TO "kalkulator_drugo__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_drugo" RENAME TO "kalkulator_drugo__old"; args=()
+CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "tip" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "tip" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_drugo" ("id", "ime", "opis", "kolicina", "image", "tip") SELECT "id", "ime", "opis", "kolicina", "image", '' FROM "kalkulator_drugo__old"; (params ())
+(0.000) INSERT INTO "kalkulator_drugo" ("id", "ime", "opis", "kolicina", "image", "tip") SELECT "id", "ime", "opis", "kolicina", "image", '' FROM "kalkulator_drugo__old"; args=()
+DROP TABLE "kalkulator_drugo__old"; (params ())
+(0.000) DROP TABLE "kalkulator_drugo__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0007_drugo_tip', '2018-09-16 18:54:05.506208'); args=['kalkulator', '0007_drugo_tip', '2018-09-16 18:54:05.506208']
+(0.001) PRAGMA foreign_keys = OFF; args=None
+(0.001) BEGIN; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_key_list("auth_group"); args=None
+(0.000) PRAGMA foreign_key_list("auth_group_permissions"); args=None
+(0.000) PRAGMA foreign_key_list("auth_permission"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user_groups"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user_user_permissions"); args=None
+(0.000) PRAGMA foreign_key_list("django_admin_log"); args=None
+(0.000) PRAGMA foreign_key_list("django_content_type"); args=None
+(0.000) PRAGMA foreign_key_list("django_migrations"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_adapter"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_disk"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_graficna"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_input"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_kabel"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_kategorija"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_maticna"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_napajalnik"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_procesor"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_ram"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_razsiritvena"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_tiskalnik"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_zaslon"); args=None
+ALTER TABLE "kalkulator_drugo" RENAME TO "kalkulator_drugo__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_drugo" RENAME TO "kalkulator_drugo__old"; args=()
+CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "vrsta" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_drugo" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "vrsta" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_drugo" ("id", "ime", "opis", "kolicina", "image", "vrsta") SELECT "id", "ime", "opis", "kolicina", "image", "tip" FROM "kalkulator_drugo__old"; (params ())
+(0.000) INSERT INTO "kalkulator_drugo" ("id", "ime", "opis", "kolicina", "image", "vrsta") SELECT "id", "ime", "opis", "kolicina", "image", "tip" FROM "kalkulator_drugo__old"; args=()
+DROP TABLE "kalkulator_drugo__old"; (params ())
+(0.000) DROP TABLE "kalkulator_drugo__old"; args=()
+(0.001) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0008_auto_20180913_0002', '2018-09-16 18:54:05.540907'); args=['kalkulator', '0008_auto_20180913_0002', '2018-09-16 18:54:05.540907']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_key_list("auth_group"); args=None
+(0.000) PRAGMA foreign_key_list("auth_group_permissions"); args=None
+(0.000) PRAGMA foreign_key_list("auth_permission"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user_groups"); args=None
+(0.000) PRAGMA foreign_key_list("auth_user_user_permissions"); args=None
+(0.000) PRAGMA foreign_key_list("django_admin_log"); args=None
+(0.000) PRAGMA foreign_key_list("django_content_type"); args=None
+(0.000) PRAGMA foreign_key_list("django_migrations"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_adapter"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_disk"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_drugo"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_input"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_kabel"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_kategorija"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_maticna"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_napajalnik"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_procesor"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_ram"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_razsiritvena"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_tiskalnik"); args=None
+(0.000) PRAGMA foreign_key_list("kalkulator_zaslon"); args=None
+ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; args=()
+CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "vodilo" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "vodilo" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "opis", "kolicina", "image", "vodilo") SELECT "id", "znamka", "model", "pomnilnik", "opis", "kolicina", "image", "povezava" FROM "kalkulator_graficna__old"; (params ())
+(0.000) INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "opis", "kolicina", "image", "vodilo") SELECT "id", "znamka", "model", "pomnilnik", "opis", "kolicina", "image", "povezava" FROM "kalkulator_graficna__old"; args=()
+DROP TABLE "kalkulator_graficna__old"; (params ())
+(0.000) DROP TABLE "kalkulator_graficna__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0009_auto_20180913_0041', '2018-09-16 18:54:05.575062'); args=['kalkulator', '0009_auto_20180913_0041', '2018-09-16 18:54:05.575062']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+DROP TABLE "kalkulator_adapter"; (params ())
+(0.001) DROP TABLE "kalkulator_adapter"; args=()
+ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; args=()
+CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "amperaza" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "amperaza" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", '' FROM "kalkulator_napajalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", '' FROM "kalkulator_napajalnik__old"; args=()
+DROP TABLE "kalkulator_napajalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_napajalnik__old"; args=()
+ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; (params ())
+(0.000) ALTER TABLE "kalkulator_napajalnik" RENAME TO "kalkulator_napajalnik__old"; args=()
+CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "amperaza" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_napajalnik" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "znamka" varchar(20) NOT NULL, "moc" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "amperaza" varchar(20) NOT NULL, "voltaza" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza", "voltaza") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza", '' FROM "kalkulator_napajalnik__old"; (params ())
+(0.000) INSERT INTO "kalkulator_napajalnik" ("id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza", "voltaza") SELECT "id", "vrsta", "znamka", "moc", "opis", "kolicina", "image", "amperaza", '' FROM "kalkulator_napajalnik__old"; args=()
+DROP TABLE "kalkulator_napajalnik__old"; (params ())
+(0.000) DROP TABLE "kalkulator_napajalnik__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0010_auto_20180916_1455', '2018-09-16 18:54:05.611173'); args=['kalkulator', '0010_auto_20180916_1455', '2018-09-16 18:54:05.611173']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_periferija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_periferija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "vrsta" varchar(20) NOT NULL, "ime" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0011_periferija', '2018-09-16 18:54:05.641202'); args=['kalkulator', '0011_periferija', '2018-09-16 18:54:05.641202']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; (params ())
+(0.002) ALTER TABLE "kalkulator_graficna" RENAME TO "kalkulator_graficna__old"; args=()
+CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "vodilo" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "izhod" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_graficna" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "znamka" varchar(20) NOT NULL, "model" varchar(20) NOT NULL, "pomnilnik" varchar(20) NOT NULL, "vodilo" varchar(20) NOT NULL, "opis" varchar(20) NOT NULL, "kolicina" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "izhod" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", "izhod") SELECT "id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", '' FROM "kalkulator_graficna__old"; (params ())
+(0.001) INSERT INTO "kalkulator_graficna" ("id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", "izhod") SELECT "id", "znamka", "model", "pomnilnik", "vodilo", "opis", "kolicina", "image", '' FROM "kalkulator_graficna__old"; args=()
+DROP TABLE "kalkulator_graficna__old"; (params ())
+(0.000) DROP TABLE "kalkulator_graficna__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0012_graficna_izhod', '2018-09-16 18:54:05.675698'); args=['kalkulator', '0012_graficna_izhod', '2018-09-16 18:54:05.675698']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "kalkulator_komponenta" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); (params None)
+(0.001) CREATE TABLE "kalkulator_komponenta" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "image" varchar(100) NOT NULL); args=None
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0013_komponenta', '2018-09-16 18:54:05.741574'); args=['kalkulator', '0013_komponenta', '2018-09-16 18:54:05.741574']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "kalkulator_komponenta" RENAME TO "kalkulator_komponenta__old"; (params ())
+(0.001) ALTER TABLE "kalkulator_komponenta" RENAME TO "kalkulator_komponenta__old"; args=()
+CREATE TABLE "kalkulator_komponenta" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "link" varchar(20) NOT NULL); (params None)
+(0.000) CREATE TABLE "kalkulator_komponenta" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ime" varchar(20) NOT NULL, "image" varchar(100) NOT NULL, "link" varchar(20) NOT NULL); args=None
+INSERT INTO "kalkulator_komponenta" ("id", "ime", "image", "link") SELECT "id", "ime", "image", '' FROM "kalkulator_komponenta__old"; (params ())
+(0.000) INSERT INTO "kalkulator_komponenta" ("id", "ime", "image", "link") SELECT "id", "ime", "image", '' FROM "kalkulator_komponenta__old"; args=()
+DROP TABLE "kalkulator_komponenta__old"; (params ())
+(0.000) DROP TABLE "kalkulator_komponenta__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('kalkulator', '0014_komponenta_link', '2018-09-16 18:54:05.780499'); args=['kalkulator', '0014_komponenta_link', '2018-09-16 18:54:05.780499']
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params None)
+(0.001) CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); args=None
+CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date"); (params ())
+(0.000) CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sessions', '0001_initial', '2018-09-16 18:54:05.812443'); args=['sessions', '0001_initial', '2018-09-16 18:54:05.812443']
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('admin', 'logentry'); args=['admin', 'logentry']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add log entry', 1, 'add_logentry' UNION ALL SELECT 'Can change log entry', 1, 'change_logentry' UNION ALL SELECT 'Can delete log entry', 1, 'delete_logentry' UNION ALL SELECT 'Can view log entry', 1, 'view_logentry'; args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry', 'Can view log entry', 1, 'view_logentry')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'permission'); args=['auth', 'permission']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'group'); args=['auth', 'group']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'user'); args=['auth', 'user']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add permission', 2, 'add_permission' UNION ALL SELECT 'Can change permission', 2, 'change_permission' UNION ALL SELECT 'Can delete permission', 2, 'delete_permission' UNION ALL SELECT 'Can view permission', 2, 'view_permission' UNION ALL SELECT 'Can add group', 3, 'add_group' UNION ALL SELECT 'Can change group', 3, 'change_group' UNION ALL SELECT 'Can delete group', 3, 'delete_group' UNION ALL SELECT 'Can view group', 3, 'view_group' UNION ALL SELECT 'Can add user', 4, 'add_user' UNION ALL SELECT 'Can change user', 4, 'change_user' UNION ALL SELECT 'Can delete user', 4, 'delete_user' UNION ALL SELECT 'Can view user', 4, 'view_user'; args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can view permission', 2, 'view_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can view group', 3, 'view_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user', 'Can view user', 4, 'view_user')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add content type', 5, 'add_contenttype' UNION ALL SELECT 'Can change content type', 5, 'change_contenttype' UNION ALL SELECT 'Can delete content type', 5, 'delete_contenttype' UNION ALL SELECT 'Can view content type', 5, 'view_contenttype'; args=('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype', 'Can view content type', 5, 'view_contenttype')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sessions', 'session'); args=['sessions', 'session']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add session', 6, 'add_session' UNION ALL SELECT 'Can change session', 6, 'change_session' UNION ALL SELECT 'Can delete session', 6, 'delete_session' UNION ALL SELECT 'Can view session', 6, 'view_session'; args=('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session', 'Can view session', 6, 'view_session')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'disk'); args=('kalkulator', 'disk')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'disk'); args=('kalkulator', 'disk')
+(0.000) BEGIN; args=None
+(0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'disk'); args=['kalkulator', 'disk']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'graficna'); args=('kalkulator', 'graficna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'graficna'); args=('kalkulator', 'graficna')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'graficna'); args=['kalkulator', 'graficna']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'input'); args=('kalkulator', 'input')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'input'); args=('kalkulator', 'input')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'input'); args=['kalkulator', 'input']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kabel'); args=('kalkulator', 'kabel')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kabel'); args=('kalkulator', 'kabel')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'kabel'); args=['kalkulator', 'kabel']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'maticna'); args=('kalkulator', 'maticna')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'maticna'); args=('kalkulator', 'maticna')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'maticna'); args=['kalkulator', 'maticna']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'napajalnik'); args=('kalkulator', 'napajalnik')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'napajalnik'); args=('kalkulator', 'napajalnik')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'napajalnik'); args=['kalkulator', 'napajalnik']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'procesor'); args=('kalkulator', 'procesor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'procesor'); args=('kalkulator', 'procesor')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'procesor'); args=['kalkulator', 'procesor']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'ram'); args=('kalkulator', 'ram')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'ram'); args=('kalkulator', 'ram')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'ram'); args=['kalkulator', 'ram']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'razsiritvena'); args=('kalkulator', 'razsiritvena')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'razsiritvena'); args=('kalkulator', 'razsiritvena')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'razsiritvena'); args=['kalkulator', 'razsiritvena']
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'zaslon'); args=('kalkulator', 'zaslon')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'zaslon'); args=('kalkulator', 'zaslon')
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'zaslon'); args=['kalkulator', 'zaslon']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kategorija'); args=('kalkulator', 'kategorija')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'kategorija'); args=('kalkulator', 'kategorija')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'kategorija'); args=['kalkulator', 'kategorija']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'tiskalnik'); args=('kalkulator', 'tiskalnik')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'tiskalnik'); args=('kalkulator', 'tiskalnik')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'tiskalnik'); args=['kalkulator', 'tiskalnik']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'drugo'); args=('kalkulator', 'drugo')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'drugo'); args=('kalkulator', 'drugo')
+(0.000) BEGIN; args=None
+(0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'drugo'); args=['kalkulator', 'drugo']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'periferija'); args=('kalkulator', 'periferija')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'periferija'); args=('kalkulator', 'periferija')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'periferija'); args=['kalkulator', 'periferija']
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'komponenta'); args=('kalkulator', 'komponenta')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'kalkulator' AND "django_content_type"."model" = 'komponenta'); args=('kalkulator', 'komponenta')
+(0.000) BEGIN; args=None
+(0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('kalkulator', 'komponenta'); args=['kalkulator', 'komponenta']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+(0.000) BEGIN; args=None
+(0.002) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add disk', 7, 'add_disk' UNION ALL SELECT 'Can change disk', 7, 'change_disk' UNION ALL SELECT 'Can delete disk', 7, 'delete_disk' UNION ALL SELECT 'Can view disk', 7, 'view_disk' UNION ALL SELECT 'Can add graficna', 8, 'add_graficna' UNION ALL SELECT 'Can change graficna', 8, 'change_graficna' UNION ALL SELECT 'Can delete graficna', 8, 'delete_graficna' UNION ALL SELECT 'Can view graficna', 8, 'view_graficna' UNION ALL SELECT 'Can add input', 9, 'add_input' UNION ALL SELECT 'Can change input', 9, 'change_input' UNION ALL SELECT 'Can delete input', 9, 'delete_input' UNION ALL SELECT 'Can view input', 9, 'view_input' UNION ALL SELECT 'Can add kabel', 10, 'add_kabel' UNION ALL SELECT 'Can change kabel', 10, 'change_kabel' UNION ALL SELECT 'Can delete kabel', 10, 'delete_kabel' UNION ALL SELECT 'Can view kabel', 10, 'view_kabel' UNION ALL SELECT 'Can add maticna', 11, 'add_maticna' UNION ALL SELECT 'Can change maticna', 11, 'change_maticna' UNION ALL SELECT 'Can delete maticna', 11, 'delete_maticna' UNION ALL SELECT 'Can view maticna', 11, 'view_maticna' UNION ALL SELECT 'Can add napajalnik', 12, 'add_napajalnik' UNION ALL SELECT 'Can change napajalnik', 12, 'change_napajalnik' UNION ALL SELECT 'Can delete napajalnik', 12, 'delete_napajalnik' UNION ALL SELECT 'Can view napajalnik', 12, 'view_napajalnik' UNION ALL SELECT 'Can add procesor', 13, 'add_procesor' UNION ALL SELECT 'Can change procesor', 13, 'change_procesor' UNION ALL SELECT 'Can delete procesor', 13, 'delete_procesor' UNION ALL SELECT 'Can view procesor', 13, 'view_procesor' UNION ALL SELECT 'Can add ram', 14, 'add_ram' UNION ALL SELECT 'Can change ram', 14, 'change_ram' UNION ALL SELECT 'Can delete ram', 14, 'delete_ram' UNION ALL SELECT 'Can view ram', 14, 'view_ram' UNION ALL SELECT 'Can add razsiritvena', 15, 'add_razsiritvena' UNION ALL SELECT 'Can change razsiritvena', 15, 'change_razsiritvena' UNION ALL SELECT 'Can delete razsiritvena', 15, 'delete_razsiritvena' UNION ALL SELECT 'Can view razsiritvena', 15, 'view_razsiritvena' UNION ALL SELECT 'Can add zaslon', 16, 'add_zaslon' UNION ALL SELECT 'Can change zaslon', 16, 'change_zaslon' UNION ALL SELECT 'Can delete zaslon', 16, 'delete_zaslon' UNION ALL SELECT 'Can view zaslon', 16, 'view_zaslon' UNION ALL SELECT 'Can add kategorija', 17, 'add_kategorija' UNION ALL SELECT 'Can change kategorija', 17, 'change_kategorija' UNION ALL SELECT 'Can delete kategorija', 17, 'delete_kategorija' UNION ALL SELECT 'Can view kategorija', 17, 'view_kategorija' UNION ALL SELECT 'Can add tiskalnik', 18, 'add_tiskalnik' UNION ALL SELECT 'Can change tiskalnik', 18, 'change_tiskalnik' UNION ALL SELECT 'Can delete tiskalnik', 18, 'delete_tiskalnik' UNION ALL SELECT 'Can view tiskalnik', 18, 'view_tiskalnik' UNION ALL SELECT 'Can add drugo', 19, 'add_drugo' UNION ALL SELECT 'Can change drugo', 19, 'change_drugo' UNION ALL SELECT 'Can delete drugo', 19, 'delete_drugo' UNION ALL SELECT 'Can view drugo', 19, 'view_drugo' UNION ALL SELECT 'Can add periferija', 20, 'add_periferija' UNION ALL SELECT 'Can change periferija', 20, 'change_periferija' UNION ALL SELECT 'Can delete periferija', 20, 'delete_periferija' UNION ALL SELECT 'Can view periferija', 20, 'view_periferija' UNION ALL SELECT 'Can add komponenta', 21, 'add_komponenta' UNION ALL SELECT 'Can change komponenta', 21, 'change_komponenta' UNION ALL SELECT 'Can delete komponenta', 21, 'delete_komponenta' UNION ALL SELECT 'Can view komponenta', 21, 'view_komponenta'; args=('Can add disk', 7, 'add_disk', 'Can change disk', 7, 'change_disk', 'Can delete disk', 7, 'delete_disk', 'Can view disk', 7, 'view_disk', 'Can add graficna', 8, 'add_graficna', 'Can change graficna', 8, 'change_graficna', 'Can delete graficna', 8, 'delete_graficna', 'Can view graficna', 8, 'view_graficna', 'Can add input', 9, 'add_input', 'Can change input', 9, 'change_input', 'Can delete input', 9, 'delete_input', 'Can view input', 9, 'view_input', 'Can add kabel', 10, 'add_kabel', 'Can change kabel', 10, 'change_kabel', 'Can delete kabel', 10, 'delete_kabel', 'Can view kabel', 10, 'view_kabel', 'Can add maticna', 11, 'add_maticna', 'Can change maticna', 11, 'change_maticna', 'Can delete maticna', 11, 'delete_maticna', 'Can view maticna', 11, 'view_maticna', 'Can add napajalnik', 12, 'add_napajalnik', 'Can change napajalnik', 12, 'change_napajalnik', 'Can delete napajalnik', 12, 'delete_napajalnik', 'Can view napajalnik', 12, 'view_napajalnik', 'Can add procesor', 13, 'add_procesor', 'Can change procesor', 13, 'change_procesor', 'Can delete procesor', 13, 'delete_procesor', 'Can view procesor', 13, 'view_procesor', 'Can add ram', 14, 'add_ram', 'Can change ram', 14, 'change_ram', 'Can delete ram', 14, 'delete_ram', 'Can view ram', 14, 'view_ram', 'Can add razsiritvena', 15, 'add_razsiritvena', 'Can change razsiritvena', 15, 'change_razsiritvena', 'Can delete razsiritvena', 15, 'delete_razsiritvena', 'Can view razsiritvena', 15, 'view_razsiritvena', 'Can add zaslon', 16, 'add_zaslon', 'Can change zaslon', 16, 'change_zaslon', 'Can delete zaslon', 16, 'delete_zaslon', 'Can view zaslon', 16, 'view_zaslon', 'Can add kategorija', 17, 'add_kategorija', 'Can change kategorija', 17, 'change_kategorija', 'Can delete kategorija', 17, 'delete_kategorija', 'Can view kategorija', 17, 'view_kategorija', 'Can add tiskalnik', 18, 'add_tiskalnik', 'Can change tiskalnik', 18, 'change_tiskalnik', 'Can delete tiskalnik', 18, 'delete_tiskalnik', 'Can view tiskalnik', 18, 'view_tiskalnik', 'Can add drugo', 19, 'add_drugo', 'Can change drugo', 19, 'change_drugo', 'Can delete drugo', 19, 'delete_drugo', 'Can view drugo', 19, 'view_drugo', 'Can add periferija', 20, 'add_periferija', 'Can change periferija', 20, 'change_periferija', 'Can delete periferija', 20, 'delete_periferija', 'Can view periferija', 20, 'view_periferija', 'Can add komponenta', 21, 'add_komponenta', 'Can change komponenta', 21, 'change_komponenta', 'Can delete komponenta', 21, 'delete_komponenta', 'Can view komponenta', 21, 'view_komponenta')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'kalkulator'; args=('kalkulator',)
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'kristjan'; args=('kristjan',)
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'kristjan'; args=('kristjan',)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$120000$fAP2iOzInf3T$Zi3/kYaSPd12jZuHbzlnBYuPDhTIfBYZ1tOiSvXwEDs=', NULL, 1, 'kristjan', '', '', 'kristjan.bleiweis@gmail.com', 1, 1, '2018-09-16 18:54:12.623591'); args=['pbkdf2_sha256$120000$fAP2iOzInf3T$Zi3/kYaSPd12jZuHbzlnBYuPDhTIfBYZ1tOiSvXwEDs=', None, True, 'kristjan', '', '', 'kristjan.bleiweis@gmail.com', True, True, '2018-09-16 18:54:12.623591']
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-09-16 18:54:34.081602' AND "django_session"."session_key" = 'm15dxriegfj2ij6eibibm980ki8v1n8t'); args=('2018-09-16 18:54:34.081602', 'm15dxriegfj2ij6eibibm980ki8v1n8t')
+(0.000) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 3544
+"GET /static/kalkulator/style.css HTTP/1.1" 200 2322
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) '^admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2210
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 3544
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 3544
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+Exception while resolving variable 'komponente' in template 'kalkulator/kosarica.html'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'komponente'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [komponente] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000026509552A60>>, 'request': <WSGIRequest: GET '/app/kosarica'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x00000265095618D0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002650953FC50>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000026509554668>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'opozorilo': 'Kosarica je prazna'}, {'block': <Block Node: main. Contents: [<TextNode: '\n\t<div id="Stanje"> \t\t\n\t\t'>, <ForNode: for komponenta in komponente, tail_len: 7>, <TextNode: '\n\n\t\t\n\t\t\n\t\t\t'>, <Variable Node: opozorilo>, <TextNode: '\n\t\t\n\t\t\n\n\t\t</table>\n\t\t<for'>, <django.template.defaulttags.CsrfTokenNode object at 0x000002650953F710>, <TextNode: ' \t\t\n\n\t\t\t<label for="ime_i'>]>}, {}]
+"GET /app/kosarica HTTP/1.1" 200 1683
+(0.001) SELECT DISTINCT "kalkulator_zaslon"."velikost", LOWER("kalkulator_zaslon"."velikost") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."velikost") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."znamka", LOWER("kalkulator_zaslon"."znamka") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."znamka") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_zaslon"."input", LOWER("kalkulator_zaslon"."input") FROM "kalkulator_zaslon" ORDER BY LOWER("kalkulator_zaslon"."input") ASC; args=()
+(0.000) SELECT "kalkulator_zaslon"."id", "kalkulator_zaslon"."znamka", "kalkulator_zaslon"."model", "kalkulator_zaslon"."vrsta", "kalkulator_zaslon"."velikost", "kalkulator_zaslon"."input", "kalkulator_zaslon"."opis", "kalkulator_zaslon"."kolicina", "kalkulator_zaslon"."image" FROM "kalkulator_zaslon"; args=()
+"GET /app/zasloni HTTP/1.1" 200 2070
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 3544
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT DISTINCT "kalkulator_graficna"."pomnilnik" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."pomnilnik" ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_graficna"."znamka", LOWER("kalkulator_graficna"."znamka") FROM "kalkulator_graficna" ORDER BY LOWER("kalkulator_graficna"."znamka") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'graficna' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('graficna',)
+(0.000) SELECT DISTINCT "kalkulator_graficna"."izhod" FROM "kalkulator_graficna" ORDER BY "kalkulator_graficna"."izhod" ASC; args=()
+(0.000) SELECT "kalkulator_graficna"."id", "kalkulator_graficna"."znamka", "kalkulator_graficna"."model", "kalkulator_graficna"."pomnilnik", "kalkulator_graficna"."vodilo", "kalkulator_graficna"."izhod", "kalkulator_graficna"."opis", "kalkulator_graficna"."kolicina", "kalkulator_graficna"."image" FROM "kalkulator_graficna"; args=()
+"GET /app/graficne HTTP/1.1" 200 1980
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'kabel' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('kabel',)
+(0.000) SELECT "kalkulator_kabel"."id", "kalkulator_kabel"."vrsta", "kalkulator_kabel"."opis", "kalkulator_kabel"."kolicina", "kalkulator_kabel"."image" FROM "kalkulator_kabel"; args=()
+"GET /app/kabli HTTP/1.1" 200 1532
+"GET /static/kalkulator/style.css HTTP/1.1" 304 0
+(0.001) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'kabel' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('kabel',)
+(0.000) SELECT "kalkulator_kabel"."id", "kalkulator_kabel"."vrsta", "kalkulator_kabel"."opis", "kalkulator_kabel"."kolicina", "kalkulator_kabel"."image" FROM "kalkulator_kabel"; args=()
+"GET /app/kabli HTTP/1.1" 200 1324
+"GET /static/kalkulator/style.css HTTP/1.1" 200 2322
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) '^admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2210
+(0.001) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('input',)
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1622
+(0.001) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('input',)
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1901
+"GET /static/kalkulator/style.css HTTP/1.1" 200 2322
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) '^admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2210
+(0.001) SELECT DISTINCT "kalkulator_input"."vrsta", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."znamka", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT DISTINCT "kalkulator_input"."prikljucek", LOWER("kalkulator_input"."vrsta") FROM "kalkulator_input" ORDER BY LOWER("kalkulator_input"."vrsta") ASC; args=()
+(0.000) SELECT "kalkulator_kategorija"."podkategorija" FROM "kalkulator_kategorija" WHERE "kalkulator_kategorija"."kategorija" = 'input' ORDER BY LOWER("kalkulator_kategorija"."podkategorija") ASC; args=('input',)
+(0.000) SELECT "kalkulator_input"."id", "kalkulator_input"."vrsta", "kalkulator_input"."znamka", "kalkulator_input"."prikljucek", "kalkulator_input"."povezava", "kalkulator_input"."opis", "kalkulator_input"."kolicina", "kalkulator_input"."image" FROM "kalkulator_input"; args=()
+"GET /app/inputi HTTP/1.1" 200 1901
+"GET /static/kalkulator/style.css HTTP/1.1" 200 2322
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) '^admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) '^admin/'>], [<URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\krist\Anaconda3\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'kalkulator.urls' from 'C:\\GIT\\kalkulator\\urls.py'> (None:None) '^app/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2210
+(0.001) SELECT "kalkulator_komponenta"."id", "kalkulator_komponenta"."ime", "kalkulator_komponenta"."link", "kalkulator_komponenta"."image" FROM "kalkulator_komponenta"; args=()
+"GET /app/main HTTP/1.1" 200 3544
