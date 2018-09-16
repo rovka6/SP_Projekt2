@@ -83,7 +83,7 @@ def potrditevNarocila(request):
     tekst = "Pozdravljeni! \n"  + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"
     
     for id, vrsta in zip(idKomponent, vrstaKomponent):
-        tekst = tekst +  str(id) + "- " + str(vrsta) + "<br>" 
+        tekst = tekst +  str(id) + "- " + str(vrsta) + "\n" 
     
     from django.core.mail import send_mail  
     send_mail('Naročilo potrjeno',
@@ -171,8 +171,7 @@ def kosarica(request):
        
     context['komponente'] = list           
     
-    return render(request, 'kalkulator/kosarica.html', context)
-                  
+    return render(request, 'kalkulator/kosarica.html', context)         
   
 def add(request, vrsta, id):     
 
