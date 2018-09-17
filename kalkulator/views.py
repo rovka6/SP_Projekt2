@@ -162,7 +162,7 @@ def kosarica(request):
             list.append(Drugo.objects.get(id=idKomponent[i]))             
             
         else: 
-               
+            print('neznana komponenta')    
                
     context['komponente'] = list  
 
