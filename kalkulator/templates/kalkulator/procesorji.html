@@ -10,7 +10,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>									
-			<label>Podnozje:</label><select name="podnozje">																			
+			<label>Podnozje:</label><select name="podnozje">	
+										<option>Vsi</option>
 										{% for podnozje in podnozja %}					
 										
 											{% if izbrani == podnozje %}
@@ -20,7 +21,10 @@
 											{% endif %}	
 											
 										{% endfor%}										
-										</select>																												
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}								
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 		
@@ -41,8 +45,9 @@
 		<td> <center> Znamka   </center> </td>
 		<td> <center> Model      </center> </td>
 		<td> <center> Podnožje       </center> </td>
+		<td> <center> Opis   </center> </td>
 		<td> <center> Količina   </center> </td>
-					
+		<td> <center> ID   </center> </td>			
 		
 		
 		
@@ -54,7 +59,9 @@
 		<td> <center> {{procesor.znamka}} </center>  </td>
 		<td> <center> {{procesor.model}}  </center>  </td>
 		<td> <center> {{procesor.podnozje}}    </center>  </td>
+		<td> <center> {{procesor.opis}} </center>  </td>
 		<td> <center> {{procesor.kolicina}} </center>  </td>
+		<td> <center> {{procesor.id}} </center>  </td>
 		
 		<td>
 		{% if user.is_authenticated %}			

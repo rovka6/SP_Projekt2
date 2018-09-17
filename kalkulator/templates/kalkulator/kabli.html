@@ -5,7 +5,8 @@
 			
 		
 		<form> 	
-			<label>Vrsta:</label><select name="vrsta">											
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
 										{% for vrsta in vrste %}					
 										
 											{% if izbrani == vrsta %}
@@ -15,7 +16,10 @@
 											{% endif %}	
 											
 										{% endfor%}						
-										</select>						
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}							
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 
@@ -26,6 +30,7 @@
 		<td> <center> Vrsta   </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
+		<td> <center> ID   </center> </td>
 		
 		{% for kabel in kabli %}		
 		<tr>
@@ -33,7 +38,7 @@
 		<td> <center> {{kabel.vrsta}}     </center>  </td>
 		<td> <center> {{kabel.opis}}      </center>  </td>
 		<td> <center> {{kabel.kolicina}} </center>  </td>
-		
+		<td> <center> {{kabel.id}} </center>  </td>
 	
 		{% if user.is_authenticated %}			
 					<td>

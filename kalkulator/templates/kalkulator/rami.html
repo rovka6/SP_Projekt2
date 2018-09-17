@@ -11,7 +11,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>vrsta:</label><select name="vrsta">											
+			<label>vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
 										{% for vrsta in vrste %}					
 										
 											{% if izbrani == vrsta %}
@@ -32,7 +33,10 @@
 										{% for velikost in velikosti %}													
 												<option>{{velikost}}MB</option>												
 										{% endfor%}																						
-										</select>			
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}								
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 
@@ -57,7 +61,7 @@
 		<td> <center> Velikost   </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
-		
+		<td> <center> ID   </center> </td>
 		{% for ram in rami %}		
 		<tr>
 		<td> <img src="{{ram.image.url}}" height="50" width="80">	 </td>
@@ -67,6 +71,7 @@
 		<td> <center> {{ram.velikost}}</center>  </td>
 		<td> <center> {{ram.opis}}     </center>  </td>
 		<td> <center>  {{ram.kolicina}} </center>  </td>
+		<td> <center>  {{ram.id}} </center>  </td>
 		
 			
 			{% if user.is_authenticated %}			

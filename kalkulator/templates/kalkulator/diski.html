@@ -11,7 +11,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Prikljucek:</label><select name="prikljucek">										
+			<label>Prikljucek:</label><select name="prikljucek">
+										<option>Vsi</option>
 										{% for prikljucek in prikljucki %}					
 										
 											{% if izbrani == prikljucek %}
@@ -27,7 +28,10 @@
 										{% for velikost in velikosti %}																									
 												<option>{{velikost}}</option>												
 										{% endfor%}																						
-										</select>			
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}									
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 
@@ -50,6 +54,7 @@
 		<td> <center> Velikost       </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
+		<td> <center> ID   </center> </td>
 		
 		{% for disk in diski %}		
 		<tr>
@@ -60,6 +65,7 @@
 		<td> <center> {{disk.velikost}}GB    </center>  </td>
 		<td> <center> {{disk.opis}}      </center>  </td>
 		<td> <center> {{disk.kolicina}} </center>  </td>
+		<td> <center> {{disk.id}} </center>  </td>
 		
 			{% if user.is_authenticated %}			
 					<td>

@@ -12,7 +12,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Vodilo:</label><select name="vodilo">											
+			<label>Vodilo:</label><select name="vodilo">
+										<option>Vsi</option>
 										{% for vodilo in vodila %}				
 										
 											{% if izbrani == vodilo %}
@@ -36,6 +37,9 @@
 												<option>{{izhod}}</option>												
 										{% endfor%}																						
 										</select>
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}
 			
 										
 			<input type="submit" id="vpisi" value="Prikazi">	
@@ -62,7 +66,7 @@
 		<td> <center> Izhod </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>				
-				
+		<td> <center> ID   </center> </td>		
 		{% for graficna in graficne %}			
 			
 		<tr>
@@ -75,7 +79,7 @@
 		<td> <center> {{graficna.izhod}} </center>  </td>
 		<td> <center> {{graficna.opis}}      </center>  </td>
 		<td> <center> {{graficna.kolicina}} </center>  </td>
-
+		<td> <center> {{graficna.id}} </center>  </td>
 		
 				{% if user.is_authenticated %}			
 				<td>

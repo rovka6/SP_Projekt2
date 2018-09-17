@@ -748,7 +748,14 @@ def zasloni(request):
 
         if input != 'Vsi':    
             zasloni = zasloni.filter(input=input)    
-            
+        
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            zasloni = zasloni.filter(id=id)
+        
         context['zasloni'] = zasloni
         return render(request, 'kalkulator/zasloni.html', context)
           
@@ -786,7 +793,8 @@ def graficne(request):
         vodilo = request.GET['vodilo'] 
         pomnilnik = request.GET['pomnilnik']              
         izhod = request.GET['izhod'] 
-        
+       
+             
          
         if znamka != 'Vsi':            
             graficne = graficne.filter(znamka=znamka) 
@@ -798,7 +806,15 @@ def graficne(request):
             graficne = graficne.filter(pomnilnik=pomnilnik)          
         
         if izhod != 'Vsi':    
-            graficne = graficne.filter(izhod=izhod)          
+            graficne = graficne.filter(izhod=izhod)    
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            graficne = graficne.filter(id=id)    
         
         context['graficne'] = graficne
         return render(request, 'kalkulator/graficne.html', context)
@@ -852,7 +868,14 @@ def rami(request):
 
         if velikost != 'Vsi':    
             rami = rami.filter(velikost=velikost)          
-                          
+          
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            rami = rami.filter(id=id)  
+          
         context['rami'] = rami
         return render(request, 'kalkulator/rami.html', context)
       
@@ -897,18 +920,24 @@ def procesorji(request):
           
         # izbran prikljucek v dropdown listu  
         znamka = request.GET['znamka']
-        model = request.GET['model']
+        
         podnozje = request.GET['podnozje'] 
                 
         if znamka != 'Vsi':
-            procesorji = Procesor.objects.filter(znamka=znamka)
-         
-        if model != '':   
-            procesorji = procesorji.filter(model=model)         
+            procesorji = Procesor.objects.filter(znamka=znamka)                     
             
         if podnozje != 'Vsi':    
             procesorji = procesorji.filter(podnozje=podnozje)   
-                          
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            procesorji = procesorji.filter(id=id)
+
+         
         context['procesorji'] = procesorji
         return render(request, 'kalkulator/procesorji.html', context)
                   
@@ -962,7 +991,14 @@ def maticne(request):
         
         if graficna != 'Vsi':    
             maticne = maticne.filter(graficna=graficna)
-            
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            maticne = maticne.filter(id=id)
+         
                           
         context['maticne'] = maticne
         return render(request, 'kalkulator/maticne.html', context)
@@ -1023,7 +1059,14 @@ def napajalniki(request):
         amperaza = request.GET['amperaza']
         if amperaza != 'Vsi':
             napajalniki = Napajalnik.objects.filter(amperaza=amperaza)         
-                                                   
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            napajalniki = napajalniki.filter(id=id)
+         
         context['napajalniki'] = napajalniki
         return render(request, 'kalkulator/napajalniki.html', context)
                   
@@ -1061,7 +1104,13 @@ def kabli(request):
         if vrsta != 'Vsi':
             kabli = Kabel.objects.filter(vrsta=vrsta)
          
-                 
+        
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            kabli = kabli.filter(id=id)    
                                 
         context['kabli'] = kabli
         return render(request, 'kalkulator/kabli.html', context)
@@ -1109,7 +1158,16 @@ def inputi(request):
          
         if povezava != 'Vsi':   
             inputi = inputi.filter(povezava=povezava)         
-                  
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            inputi = inputi.filter(id=id)     
+
+         
         context['inputi'] = inputi
         return render(request, 'kalkulator/inputi.html', context)
     
@@ -1157,7 +1215,15 @@ def tiskalniki(request):
                      
         if priklop != 'Vsi':   
             tiskalniki = tiskalniki.filter(priklop=priklop)         
-                        
+        
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            tiskalniki = tiskalniki.filter(id=id)
+        
         context['tiskalniki'] = tiskalniki
         return render(request, 'kalkulator/tiskalniki.html', context)
      
@@ -1192,7 +1258,15 @@ def drugo(request):
         
         if vrsta != 'Vsi':
             drugi = drugi.filter(vrsta=vrsta)
-                    
+        
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            drugi = drugi.filter(id=id)
+        
         context['drugi'] = drugi
         return render(request, 'kalkulator/drugo.html', context)
      
@@ -1227,7 +1301,16 @@ def periferija(request):
         
         if vrsta != 'Vsi':
             drugi = drugi.filter(vrsta=vrsta)
-                    
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':   
+            print(id)
+            drugi = drugi.filter(id=id)
+
+         
         context['drugi'] = drugi
         return render(request, 'kalkulator/periferija.html', context)
      
@@ -1291,6 +1374,12 @@ def razsiritvene(request):
         if prikljucek != 'Vsi':   
             razsiritvene = razsiritvene.filter(prikljucek=prikljucek)         
          
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            razsiritvene = razsiritvene.filter(id=id)
       
          
         context['razsiritvene'] = razsiritvene
@@ -1337,6 +1426,13 @@ def diski(request):
          
         if velikost != 'Vsi':   
             diski = diski.filter(velikost=velikost)         
+         
+        id = ''        
+        if 'id' in request.GET:            
+            id = request.GET['id']
+         
+        if id != '':         
+            diski = diski.filter(id=id)  
          
          
         context['diski'] = diski

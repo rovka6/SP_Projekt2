@@ -11,7 +11,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>
-			<label>Vrsta:</label><select name="vrsta">											
+			<label>Vrsta:</label><select name="vrsta">	
+										<option>Vsi</option>
 										{% for vrsta in vrste %}					
 										
 											{% if izbrani1 == vrsta %}
@@ -28,7 +29,10 @@
 										{% for prikljucek in prikljucki %}													
 												<option>{{prikljucek}}</option>												
 										{% endfor%}	
-										</select>			
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}								
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 
@@ -54,6 +58,7 @@
 		<td> <center> Priključek   </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
+		<td> <center> ID   </center> </td>
 		
 		{% for razsiritvena in razsiritvene %}	
 		<tr>
@@ -64,6 +69,7 @@
 		<td> <center>  {{razsiritvena.prikljucek}}</center>  </td>
 		<td> <center> {{razsiritvena.opis}}     </center>  </td>
 		<td> <center>  {{razsiritvena.kolicina}} </center>  </td>
+		<td> <center>  {{razsiritvena.id}} </center>  </td>
 		
 		
 		

@@ -10,7 +10,8 @@
 												<option>{{znamka}}</option>												
 										{% endfor%}																						
 										</select>				
-			<label>Podnozje:</label><select name="podnozje">											
+			<label>Podnozje:</label><select name="podnozje">	
+										<option>Vsi</option>
 										{% for podnozje in podnozja %}					
 										
 											{% if izbrani == podnozje %}
@@ -32,7 +33,10 @@
 										{% for graficna in graficne %}													
 												<option>{{graficna}}</option>												
 										{% endfor%}																						
-										</select>						
+										</select>
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}									
 																									
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
@@ -63,6 +67,7 @@
 		<td> <center> Grafična </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
+		<td> <center> ID   </center> </td>
 		
 		{% for maticna in maticne %}		
 		<tr>
@@ -75,6 +80,7 @@
 		<td> <center> {{ maticna.graficna }}    </center>  </td>
 		<td> <center> {{ maticna.opis}}      </center>  </td>
 		<td> <center> {{ maticna.kolicina }} </center>  </td>
+		<td> <center> {{ maticna.id }} </center>  </td>
 		
 		
 			

@@ -31,7 +31,10 @@
 										{% for input in inputi %}													
 												<option>{{input}}</option>												
 										{% endfor%}																						
-										</select>									
+										</select>	
+			{% if user.is_authenticated %}
+				<label>Id:</label><input type="number" placeholder="id" name="id">			
+			{% endif %}								
 			<input type="submit" id="vpisi" value="Prikazi">
 				
 		</form>
@@ -57,6 +60,7 @@
 		<td> <center> Priključki </center> </td>
 		<td> <center> Opis        </center> </td>
 		<td> <center> Količina   </center> </td>
+		<td> <center> ID   </center> </td>
 		
 		{% for zaslon in zasloni %}		
 		<tr>
@@ -69,6 +73,7 @@
 		<td> <center> {{zaslon.input}}    </center>  </td>
 		<td> <center> {{zaslon.opis}}      </center>  </td>
 		<td> <center> {{zaslon.kolicina}} </center>  </td>
+		<td> <center> {{zaslon.id}} </center>  </td>
 		
 			{% if user.is_authenticated %}			
 				
