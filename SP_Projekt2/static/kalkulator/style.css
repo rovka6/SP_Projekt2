@@ -6,19 +6,22 @@ body{
 
 div { 	
 	
+	
+	
 }
 
 #maindiv {
 
 	display: inline-block;
+	margin: 1%;
 
 }
 
 #minidiv {
 
 	clear: left;
-	text-align: center;
-	
+	text-align: center;	
+	font-size: 100%;	
 }
 
 #page {	
@@ -44,8 +47,8 @@ div {
 #back_button{
 	
 	position: relative;
-	margin-right : 90%;
-	margin-top : 4%;
+	margin-left : -4%;
+	margin-top : 2.7%;
 	width: 100px;
 	height: 100px;
 	
@@ -56,12 +59,17 @@ div {
 	border: 1px solid black;
 	min-height: 85vh;
 	box-sizing: border-box;	
+    
+		
+	
 }
 
 #logout {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	
+	
 }
 
 #tekst {	
@@ -92,11 +100,21 @@ div {
 a:link { color: white; text-decoration: none;}
 a:visited { color: white; text-decoration: none;}
 
-#Obrazec, #Stanje, #Porocilo {	
-	padding: 8% 15%;
-	
+#Obrazec, #Porocilo {	
+	padding: 0% 15%;	
+	margin: auto;
 	
 }
+
+#Stanje {	
+	
+	
+	display: block;
+    margin-left: 20%;
+	margin-right: 20%;
+		
+}
+
 
 select {	
 	clear: both;
@@ -182,9 +200,9 @@ button {
 
 }
 
-#drek {
-
+#backbutton {
+	color: black;
+	text-decoration: underline;
+	margin: 10% 10%;
 	
-	
-
 }

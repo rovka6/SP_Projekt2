@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Periferija, Drugo, Komponenta
+from .models import Graficna, Procesor, Maticna, Napajalnik,  Disk, Ram, Razsiritvena, Zaslon, Kabel, Input,  Kategorija, Tiskalnik, Periferija, Drugo, Komponenta, Mail
 from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login
@@ -18,6 +18,12 @@ logger = logging.getLogger(__name__)
 def redirect_view(request):
     response = redirect('/redirect-success/')
     return response   
+    
+def potrditevNarocila(request): 
+    
+    context = {}
+    
+    return render(request, 'kalkulator/potrditevNarocila.html', context) 
     
 def rezerviraj(request, idKomponente, vrstaKomponente):           
      
@@ -42,6 +48,11 @@ def rezerviraj(request, idKomponente, vrstaKomponente):
                    
         idKomponent = request.session['idKomponent']
         vrstaKomponent = request.session['vrstaKomponent']
+        
+           
+        
+        
+        
         #idKomponent.append(request.POST['idKomponente'])
         #vrstaKomponent.append(request.POST['vrstaKomponente'])
         idKomponent.append(idKomponente)
@@ -49,7 +60,8 @@ def rezerviraj(request, idKomponente, vrstaKomponente):
         request.session['idKomponent'] = idKomponent
         request.session['vrstaKomponent'] = vrstaKomponent        
                   
-       
+        if(len(idKomponent) >= 20):
+            return redirect(kosarica)
         
     return redirect(vrstaKomponente)   
  
@@ -88,12 +100,15 @@ def kosarica(request):
     if 'idKomponent' not in request.session:
         
         context['opozorilo'] = 'Kosarica je prazna'   
-        return render(request, 'kalkulator/kosarica.html', context)       
-                
+        return render(request, 'kalkulator/kosarica.html', context)        
     
     idKomponent = request.session['idKomponent']    
     vrstaKomponent = request.session['vrstaKomponent']
-        
+    
+    if len(idKomponent) >= 20:
+        context['opozorilo'] = 'Rezervirali ste največje dovoljeno število komponent.'
+
+    
     list = []
     stElementov = len(idKomponent)
     
@@ -107,6 +122,9 @@ def kosarica(request):
     
         if vrstaKomponent[i] == 'graficne':
             list.append(Graficna.objects.get(id=idKomponent[i]))
+         
+        elif vrstaKomponent[i] == 'tiskalniki':
+            list.append(Tiskalnik.objects.get(id=idKomponent[i])) 
          
         elif vrstaKomponent[i] == 'inputi':
             list.append(Input.objects.get(id=idKomponent[i]))
@@ -136,21 +154,26 @@ def kosarica(request):
 
         elif vrstaKomponent[i] == 'procesorji':
             list.append(Procesor.objects.get(id=idKomponent[i]))    
-            
-            
+         
+        elif vrstaKomponent[i] == 'periferija':
+            list.append(Periferija.objects.get(id=idKomponent[i]))
+                     
         elif vrstaKomponent[i] == 'drugo':
             list.append(Drugo.objects.get(id=idKomponent[i]))             
             
         else: 
-            print('neznana komponenta')
-            print(vrstaKomponent[i])        
-            print('.')       
+               
                
     context['komponente'] = list  
 
     if request.method == 'POST' :
     
         context = {}
+        
+        mail = Mail.objects.get()
+        
+        
+        
         ime = request.POST['ime_in_priimek']
         stevilka = request.POST['stevilka']
         email = request.POST['email']
@@ -158,10 +181,12 @@ def kosarica(request):
         idKomponent = request.session['idKomponent']    
         vrstaKomponent = request.session['vrstaKomponent']
         
-        tekst = "Pozdravljeni! \n \n \n "  + " \n \n \n " + " Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: \n" + "\n"               
+        tekst = "Pozdravljeni! "  + " \n " + "Sporočamo vam, da ste preko naše spletne strani upešno rezervirali naslednje komponente: " + " \n \n "               
+        tekst1 = "Nova rezervacija " + " \n \n " + "ime in priimek: " + ime + "\n " + "email: " + email + " \n " + "gsm: " + stevilka + " \n \n "
         
         y = 0
-        for x in list:            
+        for x in list:   
+            tekst1 = tekst1 + str((y+1)) + ": " +  str(x) + " ID: " + idKomponent[y] + " \n "
             tekst = tekst + str((y+1)) + ": " +  str(x) + " ID: " + idKomponent[y] + " \n "
             y = y + 1
         
@@ -169,16 +194,27 @@ def kosarica(request):
         from django.core.mail import send_mail  
         send_mail('Naročilo potrjeno',
         tekst,  
-        'kristjan.bleiweis@gmail.com', #FROM
+        mail.posiljatelj, #FROM
         [email],  #TO
-        fail_silently=False,)
-           
+        fail_silently=False,)  
+
+        send_mail('Naročilo potrjeno',
+        tekst1,  
+        mail.posiljatelj, #FROM
+        [mail.administrator],  #TO
+        fail_silently=False,)     
+         
         context['ime_in_priimek'] = ime
         context['email'] = email
         context['idKomponent'] = idKomponent
         context['vrstaKomponent'] = vrstaKomponent 
 
-        return redirect('kosarica')
+        request.session['idKomponent'] = []  
+        request.session['vrstaKomponent'] = []
+        
+                
+                
+        return redirect('potrditevNarocila')
     
     
     return render(request, 'kalkulator/kosarica.html', context)         
@@ -265,12 +301,12 @@ def add(request, vrsta, id):
        
         return redirect('kabli')
     
-    if vrsta == 'adapter':
-        adapter = Adapter.objects.get(pk=id)
-        adapter.kolicina = (int(adapter.kolicina) + 1)
-        adapter.save()
+    if vrsta == 'periferija':
+        periferija = Periferija.objects.get(pk=id)
+        periferija.kolicina = (int(periferija.kolicina) + 1)
+        periferija.save()
        
-        return redirect('adapterji')
+        return redirect('periferija')
     
     
     if vrsta == 'procesor':
@@ -376,20 +412,19 @@ def delete(request, vrsta, id):
             kabel.delete()
         return redirect('kabli')
     
-    if vrsta == 'adapter':
-        adapter = Adapter.objects.get(pk=id)
-        adapter.kolicina = (int(adapter.kolicina) - 1)
-        adapter.save()
-        if(int(adapter.kolicina) == 0):
-            adapter.delete()
-        return redirect('adapterji')
+    if vrsta == 'periferija':
+        periferija = Periferija.objects.get(pk=id)
+        periferija.kolicina = (int(periferija.kolicina) - 1)
+        periferija.save()
+        if(int(periferija.kolicina) == 0):
+            periferija.delete()
+        return redirect('periferija')
     
     
     if vrsta == 'procesor':
         procesor = Procesor.objects.get(pk=id)
         procesor.kolicina = (int(procesor.kolicina) - 1)
-        procesor.save()
-        procesor.delete()
+        procesor.save()        
         if(int(procesor.kolicina) == 0):
             procesor.delete()
         return redirect('procesorji')
@@ -1471,10 +1506,7 @@ def dodajNapajalnik(request):
     voltaze = Napajalnik.objects.values('voltaza').distinct().order_by(Lower('voltaza')).values_list('voltaza', flat=True)
     amperaze = Napajalnik.objects.values('amperaza').distinct().order_by(Lower('amperaza')).values_list('amperaza', flat=True)    
     
-    print(znamke)
-    print(voltaze)
-    print(amperaze)
-    print(moci)
+    
     context['moci'] = moci
     context['znamke'] = znamke         
     context['voltaze'] = voltaze   
@@ -1516,7 +1548,7 @@ def dodajNapajalnik(request):
                    
         
         if znamka == 'Vsi' or moc == 'Vsi' or moc == 0 or vrsta == 'Vsi':                
-             print(redirect)
+             
              return redirect(dodajNapajalnik)
         
         nov_napajalnik = Napajalnik(vrsta=vrsta, znamka=znamka, moc=moc, amperaza=amperaza, voltaza=voltaza, opis=opis, kolicina=kolicina)

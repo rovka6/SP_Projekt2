@@ -2,22 +2,20 @@
 
 {% block main %}
 	<div id="Stanje"> 					
-						
-		
-		
-		
-		
-		
-		
-							
+										
 		{% for kategorija in kategorije %}			
 			
-
+			<div id="maindiv">	
+				<div id="minidiv">
+					<b>{{kategorija.podkategorija}}</b><br>
+					<a href="tiskalniki?izbrani={{ kategorija.podkategorija }}" >
+				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
+			</a>
+				</div>
+			</div>
 
 			
-			<a href="tiskalniki?izbrani={{ kategorija.podkategorija }}" >
-				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
-			</a>		
+					
 			
 		{% endfor %}		
 		{% if user.is_authenticated %}				

@@ -1,11 +1,2 @@
-1. omogocit v adminu vpis ugotovega maila kamor se poleg uporabniku pošlje mail
-2. preverit èe je mozna rezervacija in dodajanje in odstranjevanje res vseh vrst komponent
-3. nrdit tko da ko poveèaš/zmanjšaš kolièino komponente d ne vrže na default stran in pokaže vse (paè mora pokazat samo agp èe si prej bil v agp)
-4. dodat omejitev itemov na 20, rezervacija velja 1 teden
-5. /
-6. /
-7. back button d bo neèemu podobn
-8. pri kablih odstranit input za vrsto
-
 
 

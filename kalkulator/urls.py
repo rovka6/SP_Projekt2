@@ -150,8 +150,8 @@ urlpatterns = [
     # dodajDrugo
     url(r'^dodajDrugo', views.dodajDrugo, name='dodajDrugo'), 
 	
-    # dodajDrugo
-    #url(r'^potrditevNarocila', views.potrditevNarocila, name='potrditevNarocila'), 
+    # potrditevNarocila
+    url(r'^potrditevNarocila', views.potrditevNarocila, name='potrditevNarocila'), 
     
 ]
 

@@ -4,10 +4,17 @@
 	<div id="Stanje"> 					
 												
 		{% for kategorija in kategorije %}			
-						
-			<a href="razsiritvene?izbrani={{ kategorija.podkategorija }}" >
+			
+			<div id="maindiv">	
+				<div id="minidiv">
+					<b>{{kategorija.podkategorija}}</b><br>
+					<a href="razsiritvene?izbrani={{ kategorija.podkategorija }}" >
 				<img src='{{kategorija.image.url}}' style="width:200px;height:150px;border:1;">
-			</a>		
+			</a>
+				</div>
+			</div>
+			
+					
 			
 		{% endfor %}		
 		{% if user.is_authenticated %}				
